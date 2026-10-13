@@ -87,10 +87,6 @@
             border-color: #8B3A2B;
             box-shadow: 0 0 0 2px rgba(139, 58, 43, 0.2);
         }
-
-        .row-success {
-            display: none;
-        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center pt-12 sm:pt-20 pb-8 px-4 sm:px-6 lg:px-8">
@@ -111,10 +107,9 @@
     </header>
 
     <section class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
-        <!-- Card 1 -->
         <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
             <div class="bg-[#FFFFFF] p-3 rounded-full mb-4 text-[#8B3A2B] shadow-sm">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Exceptional Value</h3>
             <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
@@ -122,10 +117,9 @@
             </p>
         </div>
 
-        <!-- Card 2 -->
         <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
             <div class="bg-[#FFFFFF] p-3 rounded-full mb-4 text-[#8B3A2B] shadow-sm">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Thoughtfully Curated</h3>
             <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
@@ -133,10 +127,9 @@
             </p>
         </div>
 
-        <!-- Card 3 -->
         <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
             <div class="bg-[#FFFFFF] p-3 rounded-full mb-4 text-[#8B3A2B] shadow-sm">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Your Next Favorite</h3>
             <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
@@ -145,97 +138,62 @@
         </div>
     </section>
 
-    <section class="form-container max-w-2xl w-full rounded-2xl p-8 sm:p-10 border border-[#EBE5DF] mb-16 ml-subscribe-form ml-subscribe-form-47089413">
+    <!-- FORM SECTION -->
+    <section class="form-container max-w-2xl w-full rounded-2xl p-8 sm:p-10 border border-[#EBE5DF] mb-16">
         
-        <!-- VISIBLE FORM SECTION -->
-        <div class="row-form">
-            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-playfair text-[#1A1715]">Join the Reading List</h2>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-playfair text-[#1A1715]">Join the Reading List</h2>
+        
+        <!-- The form now targets our hidden iframe and triggers the popup on submit -->
+        <form id="subscribe-form" class="flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" method="post" target="hidden_iframe" onsubmit="showThanksModal()">
             
-            <form class="ml-block-form flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" data-code="" method="post" target="_blank">
-                
-                <!-- Genre Selection -->
-                <div>
-                    <p class="text-center text-[#5A524D] mb-4 text-sm uppercase tracking-widest font-semibold">Choose Your Genres</p>
-                    <div class="flex flex-wrap justify-center gap-3">
-                        
-                        <label>
-                            <input type="checkbox" name="groups[]" value="201220938717463907" class="genre-checkbox" checked>
-                            <span class="genre-label">Sci-Fi</span>
-                        </label>
-                        
-                        <label>
-                            <input type="checkbox" name="groups[]" value="201220954450298498" class="genre-checkbox">
-                            <span class="genre-label">Historical Fiction</span>
-                        </label>
-
-                        <label>
-                            <input type="checkbox" name="groups[]" value="201220964201006584" class="genre-checkbox" checked>
-                            <span class="genre-label">Literary Fiction</span>
-                        </label>
-
-                        <label>
-                            <input type="checkbox" name="groups[]" value="201220945613948200" class="genre-checkbox">
-                            <span class="genre-label">Romance</span>
-                        </label>
-
-                    </div>
+            <!-- Genre Selection -->
+            <div>
+                <p class="text-center text-[#5A524D] mb-4 text-sm uppercase tracking-widest font-semibold">Choose Your Genres</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <label>
+                        <input type="checkbox" name="groups[]" value="201220938717463907" class="genre-checkbox" checked>
+                        <span class="genre-label">Sci-Fi</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="groups[]" value="201220954450298498" class="genre-checkbox">
+                        <span class="genre-label">Historical Fiction</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="groups[]" value="201220964201006584" class="genre-checkbox" checked>
+                        <span class="genre-label">Literary Fiction</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="groups[]" value="201220945613948200" class="genre-checkbox">
+                        <span class="genre-label">Romance</span>
+                    </label>
                 </div>
-
-                <!-- Email Input & Submit -->
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <input 
-                        type="email" 
-                        name="fields[email]"
-                        placeholder="Enter your email address..." 
-                        required
-                        autocomplete="email"
-                        class="flex-1 px-5 py-4 rounded-lg border border-[#CBBAB3] bg-[#FFFFFF] text-[#2C2725] input-focus-ring text-base placeholder:text-[#A39A96]"
-                    >
-                    
-                    <!-- Added ml-form-embedSubmit wrapper for JS to find -->
-                    <div class="ml-form-embedSubmit flex w-full sm:w-auto">
-                        <!-- Primary Button (Hidden on click by JS) -->
-                        <button 
-                            type="submit" 
-                            class="primary w-full bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-4 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md whitespace-nowrap"
-                        >
-                            Subscribe Free
-                        </button>
-                        
-                        <!-- Loading Button (Shown on click by JS) -->
-                        <button 
-                            disabled="disabled" 
-                            style="display: none;" 
-                            type="button" 
-                            class="loading w-full bg-[#8B3A2B] text-white px-8 py-4 rounded-lg font-playfair text-lg opacity-75 cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
-                        >
-                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                            Loading...
-                        </button>
-                    </div>
-                </div>
-                
-                <p class="text-center text-xs text-[#A39A96] mt-[-10px]">
-                    We respect your inbox. Unsubscribe at any time.
-                </p>
-
-                <!-- Hidden MailerLite Required Fields -->
-                <input type="hidden" name="ml-submit" value="1">
-                <input type="hidden" name="anticsrf" value="true">
-            </form>
-        </div>
-
-        <!-- SUCCESS MESSAGE SECTION -->
-        <div class="row-success text-center py-8">
-            <div class="bg-[#FFFFFF] p-4 rounded-full inline-block mb-4 text-[#8B3A2B] shadow-sm">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 font-playfair text-[#1A1715]">Thank you!</h2>
-            <p class="text-[#5A524D] leading-relaxed">
-                You have successfully joined The Curated Spine. Keep an eye on your inbox for tomorrow's deals!
-            </p>
-        </div>
 
+            <!-- Email Input & Submit -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <input 
+                    type="email" 
+                    name="fields[email]"
+                    placeholder="Enter your email address..." 
+                    required
+                    autocomplete="email"
+                    class="flex-1 px-5 py-4 rounded-lg border border-[#CBBAB3] bg-[#FFFFFF] text-[#2C2725] input-focus-ring text-base placeholder:text-[#A39A96]"
+                >
+                <button 
+                    type="submit" 
+                    class="bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-4 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md whitespace-nowrap"
+                >
+                    Subscribe Free
+                </button>
+            </div>
+            
+            <p class="text-center text-xs text-[#A39A96] mt-[-10px]">
+                We respect your inbox. Unsubscribe at any time.
+            </p>
+
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+        </form>
     </section>
 
     <footer class="w-full max-w-4xl border-t border-[#EBE5DF]/20 pt-8 pb-12 mt-auto text-center">
@@ -250,17 +208,41 @@
         </p>
     </footer>
 
-    <!-- MailerLite Logic Scripts -->
+    <!-- HIDDEN IFRAME (Catches the MailerLite redirect silently) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- POPUP THANK YOU MODAL (Hidden by default) -->
+    <div id="thank-you-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-[#1A1715]/80 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-[#FAF7F2] p-8 sm:p-12 rounded-2xl max-w-md w-full text-center shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-[#CBBAB3] transform scale-100 transition-transform">
+            <div class="bg-[#FFFFFF] p-4 rounded-full inline-block mb-4 text-[#8B3A2B] shadow-sm">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h2 class="text-3xl font-semibold mb-4 font-playfair text-[#1A1715]">Thank you!</h2>
+            <p class="text-[#5A524D] leading-relaxed mb-8">
+                You have successfully joined The Curated Spine. Keep an eye on your inbox for tomorrow's deals!
+            </p>
+            <button onclick="closeModal()" class="bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-3 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom Script to trigger the Modal -->
     <script>
-        function ml_webform_success_47089413() {
-            var $ = ml_jQuery || jQuery;
-            $('.ml-subscribe-form-47089413 .row-success').show();
-            $('.ml-subscribe-form-47089413 .row-form').hide();
+        function showThanksModal() {
+            // Unhide the popup modal
+            document.getElementById('thank-you-modal').classList.remove('hidden');
+            
+            // Clear the form fields after a brief delay so it's empty if they close the modal
+            setTimeout(() => {
+                document.getElementById('subscribe-form').reset();
+            }, 500);
         }
-    </script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
-    <script>
-        fetch("https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/takel")
+
+        function closeModal() {
+            // Hide the popup modal
+            document.getElementById('thank-you-modal').classList.add('hidden');
+        }
     </script>
 
 </body>
