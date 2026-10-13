@@ -145,15 +145,13 @@
         </div>
     </section>
 
-    <!-- ADDED ML-SUBSCRIBE-FORM CLASS TO THIS SECTION -->
     <section class="form-container max-w-2xl w-full rounded-2xl p-8 sm:p-10 border border-[#EBE5DF] mb-16 ml-subscribe-form ml-subscribe-form-47089413">
         
         <!-- VISIBLE FORM SECTION -->
         <div class="row-form">
             <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-playfair text-[#1A1715]">Join the Reading List</h2>
             
-            <!-- REMOVED TARGET="_BLANK" FROM FORM ACTION -->
-            <form class="ml-block-form flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" data-code="" method="post">
+            <form class="ml-block-form flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" data-code="" method="post" target="_blank">
                 
                 <!-- Genre Selection -->
                 <div>
@@ -193,12 +191,28 @@
                         autocomplete="email"
                         class="flex-1 px-5 py-4 rounded-lg border border-[#CBBAB3] bg-[#FFFFFF] text-[#2C2725] input-focus-ring text-base placeholder:text-[#A39A96]"
                     >
-                    <button 
-                        type="submit" 
-                        class="bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-4 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md whitespace-nowrap"
-                    >
-                        Subscribe Free
-                    </button>
+                    
+                    <!-- Added ml-form-embedSubmit wrapper for JS to find -->
+                    <div class="ml-form-embedSubmit flex w-full sm:w-auto">
+                        <!-- Primary Button (Hidden on click by JS) -->
+                        <button 
+                            type="submit" 
+                            class="primary w-full bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-4 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md whitespace-nowrap"
+                        >
+                            Subscribe Free
+                        </button>
+                        
+                        <!-- Loading Button (Shown on click by JS) -->
+                        <button 
+                            disabled="disabled" 
+                            style="display: none;" 
+                            type="button" 
+                            class="loading w-full bg-[#8B3A2B] text-white px-8 py-4 rounded-lg font-playfair text-lg opacity-75 cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
+                        >
+                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Loading...
+                        </button>
+                    </div>
                 </div>
                 
                 <p class="text-center text-xs text-[#A39A96] mt-[-10px]">
