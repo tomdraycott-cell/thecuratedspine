@@ -145,13 +145,15 @@
         </div>
     </section>
 
-    <section class="form-container max-w-2xl w-full rounded-2xl p-8 sm:p-10 border border-[#EBE5DF] mb-16 ml-subscribe-form-47089413">
+    <!-- ADDED ML-SUBSCRIBE-FORM CLASS TO THIS SECTION -->
+    <section class="form-container max-w-2xl w-full rounded-2xl p-8 sm:p-10 border border-[#EBE5DF] mb-16 ml-subscribe-form ml-subscribe-form-47089413">
         
         <!-- VISIBLE FORM SECTION -->
         <div class="row-form">
             <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-playfair text-[#1A1715]">Join the Reading List</h2>
             
-            <form class="ml-block-form flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" data-code="" method="post" target="_blank">
+            <!-- REMOVED TARGET="_BLANK" FROM FORM ACTION -->
+            <form class="ml-block-form flex flex-col gap-8" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" data-code="" method="post">
                 
                 <!-- Genre Selection -->
                 <div>
