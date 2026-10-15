@@ -1,0 +1,61 @@
+{
+  "updated_at": "2026-10-15T11:31:30.977274+00:00",
+  "books": [
+    {
+      "genre": "Sci-Fi",
+      "title": "Cloak of Dragons (Cloak Mage Book 1)",
+      "author": "Featured Daily Pick",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/61UVE402tJS._AC_UL300_SR300,200_.jpg",
+      "price_uk": "FREE",
+      "price_us": "FREE",
+      "rating": 4.6,
+      "reviews": "613",
+      "ctr_badge": "\u2605 #1 in Sci-Fi Today",
+      "hook": "An acclaimed selection hand-picked from today's top Kindle deals.",
+      "link_uk": "https://www.amazon.co.uk/Cloak-Dragons-Mage-Book-ebook/dp/B07QGR78KH",
+      "link_us": "https://www.amazon.com/Cloak-Dragons-Mage-Book-ebook/dp/B07QGR78KH"
+    },
+    {
+      "genre": "Sci-Fi",
+      "title": "The Queen's Witch (The Tudor Witches Book 1)",
+      "author": "Featured Daily Pick",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81YTcBWYMTL._UX300__PJafr-sticker-v3,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$1.99",
+      "rating": 4.2,
+      "reviews": "284",
+      "ctr_badge": "\u2605 #1 in Sci-Fi Today",
+      "hook": "An acclaimed selection hand-picked from today's top Kindle deals.",
+      "link_uk": "https://www.amazon.co.uk/Queens-Witch-Nancy-Kress-ebook/dp/B0G4ND866J",
+      "link_us": "https://www.amazon.com/Queens-Witch-Nancy-Kress-ebook/dp/B0G4ND866J"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "On Distant Shores: A riveting historical epic of love, lust, ambition and revenge.",
+      "author": "Featured Daily Pick",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81mGsrwoyOL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
+      "price_uk": "FREE",
+      "price_us": "FREE",
+      "rating": 4.7,
+      "reviews": "355",
+      "ctr_badge": "\u2605 #1 in Historical Fiction Today",
+      "hook": "An acclaimed selection hand-picked from today's top Kindle deals.",
+      "link_uk": "https://www.amazon.co.uk/Distant-Shores-riveting-historical-ambition-ebook/dp/B09418DQ5B",
+      "link_us": "https://www.amazon.com/Distant-Shores-riveting-historical-ambition-ebook/dp/B09418DQ5B"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "The Lost Kingdom of Daughters: A Novel",
+      "author": "Featured Daily Pick",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/91VmckC-zVL._UX300__PJafr-sticker-v3,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$1.99",
+      "rating": 4.4,
+      "reviews": "466",
+      "ctr_badge": "\u2605 #1 in Historical Fiction Today",
+      "hook": "An acclaimed selection hand-picked from today's top Kindle deals.",
+      "link_uk": "https://www.amazon.co.uk/Lost-Kingdom-Daughters-Novel-ebook/dp/B0GHSSWGBX",
+      "link_us": "https://www.amazon.com/Lost-Kingdom-Daughters-Novel-ebook/dp/B0GHSSWGBX"
+    }
+  ]
+}
