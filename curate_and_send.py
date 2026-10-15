@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import smtplib
 import urllib.request
@@ -12,6 +13,7 @@ from playwright_stealth import stealth_sync
 HISTORY_FILE = "sent_history.json"
 LATEST_ISSUE_FILE = "latest_issue.json"
 DAYS_TO_REMEMBER = 30
+AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "curatedspine-20")
 
 GENRES = {
     "Science Fiction & Fantasy": {
@@ -55,6 +57,25 @@ GENRES = {
         "ml_group_id": "201220945613948200"
     },
 }
+
+
+def format_store_links(raw_url):
+    """Strips bloated Amazon URLs down to the fast /dp/ASIN format and attaches curatedspine-20."""
+    match = re.search(r"/dp/([A-Z0-9]{10})", raw_url)
+    tag_suffix = f"?tag={AFFILIATE_TAG}" if AFFILIATE_TAG else ""
+
+    if match:
+        asin = match.group(1)
+        us_url = f"https://www.amazon.com/dp/{asin}{tag_suffix}"
+        uk_url = f"https://www.amazon.co.uk/dp/{asin}{tag_suffix}"
+        return us_url, uk_url
+
+    clean_us = raw_url.split("/ref=")[0]
+    clean_uk = clean_us.replace("amazon.com", "amazon.co.uk")
+    if tag_suffix and "?" not in clean_us:
+        clean_us += tag_suffix
+        clean_uk += tag_suffix
+    return clean_us, clean_uk
 
 
 def load_and_clean_history():
@@ -211,9 +232,13 @@ def scrape_genre(page, genre_name, url, sent_links):
                 continue
 
             href = link_elem.get_attribute("href") or ""
-            link = "https://www.amazon.com" + href.split("/ref=")[0] if href.startswith("/") else href
+            raw_link = "https://www.amazon.com" + href.split("/ref=")[0] if href.startswith("/") else href
 
-            if link in sent_links:
+            # Normalize link by ASIN for history deduplication
+            asin_match = re.search(r"/dp/([A-Z0-9]{10})", raw_link)
+            canonical_link = f"https://www.amazon.com/dp/{asin_match.group(1)}" if asin_match else raw_link
+
+            if canonical_link in sent_links or raw_link in sent_links:
                 continue
 
             price = price_elem.inner_text().strip()
@@ -252,7 +277,7 @@ def scrape_genre(page, genre_name, url, sent_links):
 
             candidates.append({
                 "title": title,
-                "link": link,
+                "link": canonical_link,
                 "image": img_url,
                 "rating": rating,
                 "reviews": reviews,
@@ -296,12 +321,13 @@ def build_bohemian_email_html(recommendations):
                   </h2>
         """
         for b in books:
+            us_link, uk_link = format_store_links(b['link'])
             rating_display = f"<span style='color:#B45309;'>★ {b['rating']}</span> ({b['reviews']:,} ratings)" if b['reviews'] > 0 else "<span style='color:#8B3A2B; font-style:italic;'>★ Hot New Release</span>"
             cover_html = ""
             if b.get("image"):
                 cover_html = f"""
                 <td width="75" valign="top" style="padding-right: 16px;">
-                  <a href="{b['link']}" style="text-decoration:none;">
+                  <a href="{us_link}" style="text-decoration:none;">
                     <img src="{b['image']}" alt="Cover" width="75" style="width:75px; border-radius:4px; border:1px solid #D8CFC8; display:block;" />
                   </a>
                 </td>
@@ -312,7 +338,7 @@ def build_bohemian_email_html(recommendations):
                     <tr>
                       {cover_html}
                       <td valign="top">
-                        <a href="{b['link']}" style="font-size: 16px; font-weight: bold; color: #8B3A2B; text-decoration: none; line-height: 1.3;">
+                        <a href="{us_link}" style="font-size: 16px; font-weight: bold; color: #8B3A2B; text-decoration: none; line-height: 1.3;">
                           {b['title']}
                         </a>
                         <div style="font-size: 13px; color: #5A524D; margin: 5px 0;">
@@ -322,9 +348,14 @@ def build_bohemian_email_html(recommendations):
                         <p style="font-size: 13.5px; color: #3D3633; font-style: italic; margin: 6px 0 10px 0; line-height: 1.45;">
                           "{b.get('hook', '')}"
                         </p>
-                        <a href="{b['link']}" style="display:inline-block; font-size: 12px; font-weight: bold; color: #FFFFFF; background-color: #8B3A2B; padding: 6px 12px; border-radius: 4px; text-decoration: none;">
-                          View on Amazon &rarr;
-                        </a>
+                        <div>
+                          <a href="{us_link}" style="display:inline-block; font-size: 12px; font-weight: bold; color: #FFFFFF; background-color: #8B3A2B; padding: 6px 12px; border-radius: 4px; text-decoration: none;">
+                            View on Amazon &rarr;
+                          </a>
+                          <a href="{uk_link}" style="display:inline-block; font-size: 11px; color: #786E68; text-decoration: underline; margin-left: 10px;">
+                            UK (.co.uk)
+                          </a>
+                        </div>
                       </td>
                     </tr>
                   </table>
@@ -335,7 +366,7 @@ def build_bohemian_email_html(recommendations):
               </tr>
               <tr>
                 <td style="background-color:#F3EDE4; padding: 20px 24px; text-align: center; border-top: 1px solid #EBE5DF; font-size: 12px; color: #786E68;">
-                  <p style="margin: 0 0 6px 0;">Prices and availability are accurate as of dispatch and may change quickly on Amazon.</p>
+                  <p style="margin: 0 0 6px 0;">Prices and availability are accurate as of dispatch and may change quickly on Amazon. As an Amazon Associate, The Curated Spine earns from qualifying purchases.</p>
                   <p style="margin: 0;">&copy; 2026 The Curated Spine &bull; <a href="https://thecuratedspine.com" style="color:#8B3A2B;">thecuratedspine.com</a> &bull; <a href="{$unsubscribe}" style="color:#786E68; text-decoration:underline;">Unsubscribe</a></p>
                 </td>
               </tr>
@@ -355,6 +386,7 @@ def save_latest_issue_for_website(recommendations):
         base_genre = GENRES.get(genre_label, {}).get("base_genre", genre_label)
         for i, b in enumerate(books):
             if i == 0 and len(featured) < 4:
+                us_link, uk_link = format_store_links(b["link"])
                 featured.append({
                     "genre": base_genre,
                     "title": b["title"],
@@ -366,8 +398,8 @@ def save_latest_issue_for_website(recommendations):
                     "reviews": f"{b['reviews']:,}" if b["reviews"] > 0 else "New Release",
                     "ctr_badge": f"★ #1 in {base_genre} Today",
                     "hook": b.get("hook", ""),
-                    "link_uk": b["link"].replace("amazon.com", "amazon.co.uk"),
-                    "link_us": b["link"]
+                    "link_uk": uk_link,
+                    "link_us": us_link
                 })
     with open(LATEST_ISSUE_FILE, "w", encoding="utf-8") as f:
         json.dump({"updated_at": datetime.now(timezone.utc).isoformat(), "books": featured[:4]}, f, indent=2)
@@ -375,7 +407,6 @@ def save_latest_issue_for_website(recommendations):
 
 
 def dispatch_via_mailerlite(html_content):
-    """Creates and immediately sends the daily campaign to your MailerLite subscribers."""
     ml_key = os.environ.get("MAILERLITE_API_KEY")
     sender_email = os.environ.get("MAILERLITE_SENDER_EMAIL", "hello@thecuratedspine.com")
 
@@ -450,7 +481,7 @@ def run_bot():
                 "--disable-setuid-sandbox"
             ]
         )
-        context = browser.new_context(
+        context = browser.new_page() if False else browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             locale="en-US",
             timezone_id="America/New_York",
@@ -479,38 +510,9 @@ def run_bot():
         history[link] = today_iso
     save_history(history)
 
-    # 1. Update website showcase JSON
     save_latest_issue_for_website(recommendations)
-
-    # 2. Build the Bohemian HTML Email
     html = build_bohemian_email_html(recommendations)
-
-    # 3. Broadcast to all subscribers via MailerLite!
     dispatch_via_mailerlite(html)
-
-    # 4. Optional backup: Send via Gmail SMTP if credentials are set
-    sender = os.environ.get("EMAIL_SENDER")
-    password = os.environ.get("EMAIL_PASSWORD")
-    receiver = os.environ.get("EMAIL_RECEIVER")
-
-    if sender and password and receiver:
-        msg = MIMEMultipart("alternative")
-        msg["Subject"] = f"[Admin Copy] The Curated Spine — {datetime.now().strftime('%d %b %Y')}"
-        msg["From"] = f"The Curated Spine <{sender}>"
-        msg["To"] = receiver
-        msg.attach(MIMEText(html, "html"))
-
-        try:
-            server = smtplib.SMTP("smtp.gmail.com", 587)
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
-            server.login(sender, password)
-            server.send_message(msg)
-            server.quit()
-            print("-> Admin Gmail copy sent successfully!")
-        except Exception as e:
-            print(f"-> Admin Gmail dispatch failed: {e}")
 
 
 if __name__ == "__main__":
