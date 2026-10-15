@@ -2,6 +2,7 @@ import os
 import json
 import smtplib
 import urllib.request
+import urllib.error
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timedelta, timezone
@@ -12,7 +13,6 @@ HISTORY_FILE = "sent_history.json"
 LATEST_ISSUE_FILE = "latest_issue.json"
 DAYS_TO_REMEMBER = 30
 
-# Map each Amazon scrape category to its parent Genre on the website/MailerLite
 GENRES = {
     "Science Fiction & Fantasy": {
         "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tf=1",
@@ -86,21 +86,15 @@ def save_history(history):
 
 
 def vet_and_summarize_with_gemini(candidates, genre_name):
-    """
-    Uses the Gemini API to:
-    1. Filter out disguised romance/erotica (like 'My Human Pet') from non-Romance genres.
-    2. Write a 1-sentence 'Literary Sommelier' hook for each approved book.
-    """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or not candidates:
-        # Fallback if GEMINI_API_KEY isn't set yet
         for c in candidates:
             c["hook"] = "An acclaimed selection hand-picked from today's top Kindle deals."
         return candidates[:3]
 
     allow_romance = "Romance" in genre_name
     books_payload = [
-        {"index": i, "title": c["title"], "author_info": c.get("author", ""), "category": genre_name}
+        {"index": i, "title": c["title"], "category": genre_name}
         for i, c in enumerate(candidates)
     ]
 
@@ -144,13 +138,13 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
         decision_map = {item["index"]: item for item in ai_decisions if isinstance(item, dict)}
         for idx, c in enumerate(candidates):
             decision = decision_map.get(idx, {"keep": True, "hook": ""})
-            # Always keep priority authors!
             if c.get("is_priority_author") or decision.get("keep", True):
                 c["hook"] = decision.get("hook") or "A standout deal climbing the Kindle charts today."
                 vetted.append(c)
             else:
                 print(f"   [AI Bouncer] Filtered out disguised romance/spam: {c['title']}")
 
+        print(f"   [AI Curated] Kept {len(vetted[:3])} books with custom hooks.")
         return vetted[:3]
     except Exception as e:
         print(f"   [AI Warning] Gemini check skipped ({e}). Using top mathematical picks.")
@@ -200,7 +194,6 @@ def scrape_genre(page, genre_name, url, sent_links):
 
             title = title.strip()
 
-            # Fast Keyword Quarantine before AI check
             if "Romance" not in genre_name and any(
                 kw in title.lower() for kw in ["romance", "harem", "billionaire", "alpha's", "human pet", "reverse harem"]
             ):
@@ -272,13 +265,10 @@ def scrape_genre(page, genre_name, url, sent_links):
 
     print(f"   Parsed candidates (after deduplication): {len(candidates)}")
     candidates.sort(key=lambda b: b["score"], reverse=True)
-
-    # Pass top 8 candidates to Gemini so we still have 3 left if it filters out disguised romance
     return vet_and_summarize_with_gemini(candidates[:8], genre_name)
 
 
 def build_bohemian_email_html(recommendations):
-    """Generates the Dark Academia / Warm Parchment HTML email with book covers and hooks."""
     date_str = datetime.now().strftime('%A, %d %B %Y')
     html = f"""
     <!DOCTYPE html>
@@ -288,8 +278,6 @@ def build_bohemian_email_html(recommendations):
         <tr>
           <td align="center">
             <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; background-color:#FAF7F2; border-radius: 12px; overflow: hidden; border: 1px solid #CBBAB3;">
-              
-              <!-- Header -->
               <tr>
                 <td style="background-color:#231E1B; padding: 32px 24px; text-align: center; border-bottom: 2px solid #8B3A2B;">
                   <p style="margin: 0 0 6px 0; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #CBBAB3;">{date_str}</p>
@@ -297,8 +285,6 @@ def build_bohemian_email_html(recommendations):
                   <p style="margin: 8px 0 0 0; font-size: 14px; color: #EBE5DF; font-style: italic;">Your morning shelf of hand-picked Kindle deals</p>
                 </td>
               </tr>
-
-              <!-- Body Content -->
               <tr>
                 <td style="padding: 24px 24px 12px 24px;">
     """
@@ -347,15 +333,12 @@ def build_bohemian_email_html(recommendations):
     html += """
                 </td>
               </tr>
-
-              <!-- Footer -->
               <tr>
                 <td style="background-color:#F3EDE4; padding: 20px 24px; text-align: center; border-top: 1px solid #EBE5DF; font-size: 12px; color: #786E68;">
-                  <p style="margin: 0 0 6px 0;">Prices and availability are accurate as of 06:20 UTC and may change quickly on Amazon.</p>
-                  <p style="margin: 0;">&copy; 2026 The Curated Spine &bull; <a href="https://thecuratedspine.com" style="color:#8B3A2B;">thecuratedspine.com</a></p>
+                  <p style="margin: 0 0 6px 0;">Prices and availability are accurate as of dispatch and may change quickly on Amazon.</p>
+                  <p style="margin: 0;">&copy; 2026 The Curated Spine &bull; <a href="https://thecuratedspine.com" style="color:#8B3A2B;">thecuratedspine.com</a> &bull; <a href="{$unsubscribe}" style="color:#786E68; text-decoration:underline;">Unsubscribe</a></p>
                 </td>
               </tr>
-
             </table>
           </td>
         </tr>
@@ -367,12 +350,11 @@ def build_bohemian_email_html(recommendations):
 
 
 def save_latest_issue_for_website(recommendations):
-    """Exports a clean latest_issue.json so index.html automatically shows today's top picks."""
     featured = []
     for genre_label, books in recommendations.items():
         base_genre = GENRES.get(genre_label, {}).get("base_genre", genre_label)
         for i, b in enumerate(books):
-            if i == 0 and len(featured) < 4:  # Take the #1 pick from each main category for the homepage
+            if i == 0 and len(featured) < 4:
                 featured.append({
                     "genre": base_genre,
                     "title": b["title"],
@@ -389,7 +371,69 @@ def save_latest_issue_for_website(recommendations):
                 })
     with open(LATEST_ISSUE_FILE, "w", encoding="utf-8") as f:
         json.dump({"updated_at": datetime.now(timezone.utc).isoformat(), "books": featured[:4]}, f, indent=2)
-    print(f"-> Saved {len(featured[:4])} showcase books to {LATEST_ISSUE_FILE} for the website!")
+    print(f"-> Saved {len(featured[:4])} showcase books to {LATEST_ISSUE_FILE}!")
+
+
+def dispatch_via_mailerlite(html_content):
+    """Creates and immediately sends the daily campaign to your MailerLite subscribers."""
+    ml_key = os.environ.get("MAILERLITE_API_KEY")
+    sender_email = os.environ.get("MAILERLITE_SENDER_EMAIL", "hello@thecuratedspine.com")
+
+    if not ml_key:
+        print("-> No MAILERLITE_API_KEY found in GitHub Secrets. Skipping MailerLite broadcast.")
+        return
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {ml_key}",
+        "User-Agent": "TheCuratedSpineBot/1.0"
+    }
+
+    campaign_payload = {
+        "name": f"Daily Dispatch — {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+        "type": "regular",
+        "emails": [{
+            "subject": f"The Curated Spine — {datetime.now().strftime('%d %b %Y')}",
+            "from_name": "The Curated Spine",
+            "from": sender_email,
+            "content": html_content
+        }],
+        "groups": [
+            "201220938717463907",  # Sci-Fi
+            "201220954450298498",  # Historical Fiction
+            "201220964201006584",  # Literary Fiction
+            "201220945613948200"   # Romance
+        ]
+    }
+
+    try:
+        print(f"-> Creating MailerLite campaign from '{sender_email}'...")
+        req = urllib.request.Request(
+            "https://connect.mailerlite.com/api/campaigns",
+            data=json.dumps(campaign_payload).encode("utf-8"),
+            headers=headers,
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            campaign_data = json.loads(resp.read().decode("utf-8"))
+            campaign_id = campaign_data["data"]["id"]
+            print(f"   Campaign created! ID: {campaign_id}")
+
+        send_req = urllib.request.Request(
+            f"https://connect.mailerlite.com/api/campaigns/{campaign_id}/schedule",
+            data=json.dumps({"delivery": "instant"}).encode("utf-8"),
+            headers=headers,
+            method="POST"
+        )
+        with urllib.request.urlopen(send_req, timeout=30) as send_resp:
+            print("-> SUCCESS: MailerLite campaign dispatched to all subscribers!")
+
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode("utf-8", errors="ignore")
+        print(f"-> MailerLite HTTP Error {e.code}: {error_body}")
+    except Exception as e:
+        print(f"-> MailerLite API Error: {e}")
 
 
 def run_bot():
@@ -435,26 +479,28 @@ def run_bot():
         history[link] = today_iso
     save_history(history)
 
-    # 1. Save JSON for the website's "Recent Reader Favourites" shelf
+    # 1. Update website showcase JSON
     save_latest_issue_for_website(recommendations)
 
     # 2. Build the Bohemian HTML Email
     html = build_bohemian_email_html(recommendations)
 
-    # 3. Send via Gmail (for your personal test copy)
+    # 3. Broadcast to all subscribers via MailerLite!
+    dispatch_via_mailerlite(html)
+
+    # 4. Optional backup: Send via Gmail SMTP if credentials are set
     sender = os.environ.get("EMAIL_SENDER")
     password = os.environ.get("EMAIL_PASSWORD")
     receiver = os.environ.get("EMAIL_RECEIVER")
 
     if sender and password and receiver:
         msg = MIMEMultipart("alternative")
-        msg["Subject"] = f"The Curated Spine — {datetime.now().strftime('%d %b %Y')}"
+        msg["Subject"] = f"[Admin Copy] The Curated Spine — {datetime.now().strftime('%d %b %Y')}"
         msg["From"] = f"The Curated Spine <{sender}>"
         msg["To"] = receiver
         msg.attach(MIMEText(html, "html"))
 
         try:
-            print("-> Connecting to SMTP on Port 587...")
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.ehlo()
             server.starttls()
@@ -462,9 +508,9 @@ def run_bot():
             server.login(sender, password)
             server.send_message(msg)
             server.quit()
-            print("-> Personal test email sent successfully!")
+            print("-> Admin Gmail copy sent successfully!")
         except Exception as e:
-            print(f"-> Email dispatch failed: {e}")
+            print(f"-> Admin Gmail dispatch failed: {e}")
 
 
 if __name__ == "__main__":
