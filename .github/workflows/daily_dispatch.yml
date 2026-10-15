@@ -1,0 +1,45 @@
+name: Daily Book Curation & Dispatch
+
+on:
+  schedule:
+    # Runs automatically every morning at 06:20 UTC
+    - cron: '20 6 * * *'
+  workflow_dispatch: # Gives you the manual "Run workflow" button in the Actions tab!
+
+permissions:
+  contents: write
+
+jobs:
+  curate-and-send:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright & Stealth
+        run: |
+          pip install playwright playwright-stealth
+          playwright install --with-deps chromium
+
+      - name: Run Curation & Email Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MAILERLITE_API_KEY: ${{ secrets.MAILERLITE_API_KEY }}
+          MAILERLITE_SENDER_EMAIL: ${{ secrets.MAILERLITE_SENDER_EMAIL }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+        run: python curate_and_send.py
+
+      - name: Save Updated History & Website Showcase JSON
+        run: |
+          git config --global user.name "Curated Spine Bot"
+          git config --global user.email "bot@thecuratedspine.com"
+          git add sent_history.json latest_issue.json || true
+          git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
