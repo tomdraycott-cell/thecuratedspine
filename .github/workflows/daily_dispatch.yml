@@ -24,7 +24,7 @@ jobs:
 
       - name: Install Playwright & Stealth
         run: |
-          pip install playwright playwright-stealth
+          pip install playwright "playwright-stealth<2.0.0"
           playwright install --with-deps chromium
 
       - name: Run Curation & Email Script
