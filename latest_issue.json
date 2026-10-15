@@ -1,61 +1,61 @@
 {
-  "updated_at": "2026-10-15T13:53:12.380381+00:00",
+  "updated_at": "2026-10-15T16:38:00.522539+00:00",
   "books": [
     {
       "genre": "Sci-Fi",
-      "title": "Soldier of Fortune: Fortune Chronicles 1",
+      "title": "Zero: A gloriously funny, feelgood, stick-it-to-the-man sci-fi romp (Hal Spacejock)",
       "author": "Featured Daily Pick",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81+dUHzRYtL._AC_UL600_SR600,400_.jpg",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81KbV43b0+L._AC_UL300_SR300,200_.jpg",
       "price_uk": "FREE",
       "price_us": "FREE",
       "rating": 4.4,
-      "reviews": "1,691",
+      "reviews": "677",
       "ctr_badge": "\u2605 #1 in Sci-Fi Today",
-      "hook": "A tale of interstellar mercenaries where destiny and danger intertwine, promising high stakes and bold escapades.",
-      "link_uk": "https://www.amazon.co.uk/Soldier-Fortune-Chronicles-1-ebook/dp/B0DJCFR411",
-      "link_us": "https://www.amazon.com/Soldier-Fortune-Chronicles-1-ebook/dp/B0DJCFR411"
-    },
-    {
-      "genre": "Sci-Fi",
-      "title": "The City Built by the Dead (The Saucer Series Book 2)",
-      "author": "Featured Daily Pick",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81jYv5TpvjL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
-      "price_uk": "\u00a30.99",
-      "price_us": "$2.99",
-      "rating": 4.2,
-      "reviews": "163",
-      "ctr_badge": "\u2605 #1 in Sci-Fi Today",
-      "hook": "Explore a haunting metropolis where the echoes of the departed hold the keys to its unsettling sci-fi secrets.",
-      "link_uk": "https://www.amazon.co.uk/City-Built-Dead-Saucer-Book-ebook/dp/B0HCDT8NZD",
-      "link_us": "https://www.amazon.com/City-Built-Dead-Saucer-Book-ebook/dp/B0HCDT8NZD"
+      "hook": "Embark on a gloriously funny, feelgood sci-fi romp that defies expectations and sticks it to the man in outer space.",
+      "link_uk": "https://www.amazon.co.uk/dp/B08BSSXDZ7?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B08BSSXDZ7?tag=curatedspine-20"
     },
     {
       "genre": "Historical Fiction",
-      "title": "Night Flower (The Coventry Adams Mysteries Book 1)",
+      "title": "Bandolero (Land of Promise Book 1)",
       "author": "Featured Daily Pick",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71l-aI-9EAL._AC_UL300_SR300,200_.jpg",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81lNVQ3Xj5L._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
       "price_uk": "FREE",
       "price_us": "FREE",
-      "rating": 4.5,
-      "reviews": "370",
+      "rating": 4.8,
+      "reviews": "17",
       "ctr_badge": "\u2605 #1 in Historical Fiction Today",
-      "hook": "A captivating historical mystery unfolds, where a single night's bloom holds secrets in a bygone era.",
-      "link_uk": "https://www.amazon.co.uk/Night-Flower-Coventry-Adams-Mysteries-ebook/dp/B0G66YJS9T",
-      "link_us": "https://www.amazon.com/Night-Flower-Coventry-Adams-Mysteries-ebook/dp/B0G66YJS9T"
+      "hook": "Journey to a bygone era where a lone 'bandolero' carves his legend across a challenging landscape.",
+      "link_uk": "https://www.amazon.co.uk/dp/B06Y5VP3LF?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B06Y5VP3LF?tag=curatedspine-20"
     },
     {
       "genre": "Literary Fiction",
-      "title": "The First Dryad (The First Collection)",
+      "title": "Bandolero (Land of Promise Book 1)",
       "author": "Featured Daily Pick",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81Tz+ZVYRwL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81lNVQ3Xj5L._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
       "price_uk": "FREE",
       "price_us": "FREE",
-      "rating": 4.4,
-      "reviews": "442",
+      "rating": 4.8,
+      "reviews": "17",
       "ctr_badge": "\u2605 #1 in Literary Fiction Today",
-      "hook": "A mystical journey into ancient forests, where nature's spirit awakens in an unforgettable tale of beginnings and power.",
-      "link_uk": "https://www.amazon.co.uk/First-Dryad-Teshelle-Combs-ebook/dp/B0BGYSYC9Q",
-      "link_us": "https://www.amazon.com/First-Dryad-Teshelle-Combs-ebook/dp/B0BGYSYC9Q"
+      "hook": "Journey into a sweeping historical narrative, where a lone figure navigates a landscape of promise and peril.",
+      "link_uk": "https://www.amazon.co.uk/dp/B06Y5VP3LF?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B06Y5VP3LF?tag=curatedspine-20"
+    },
+    {
+      "genre": "Romance",
+      "title": "Potential Threat: A Sweet Romantic Suspense (Black Tower Security Book 1)",
+      "author": "Featured Daily Pick",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/61TCOWg67GL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL300_SR300,200_.jpg",
+      "price_uk": "FREE",
+      "price_us": "FREE",
+      "rating": 4.6,
+      "reviews": "1,233",
+      "ctr_badge": "\u2605 #1 in Romance Today",
+      "hook": "A sweet romantic suspense promises both intrigue and heartwarming connection within the Black Tower Security series.",
+      "link_uk": "https://www.amazon.co.uk/dp/B09PLDK6B7?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B09PLDK6B7?tag=curatedspine-20"
     }
   ]
 }
