@@ -78,6 +78,13 @@ def format_store_links(raw_url):
     return clean_us, clean_uk
 
 
+def get_high_res_vertical_cover(img_url):
+    """Strips Amazon's horizontal letterbox padding (._AC_UL...SR...) and requests a crisp 300px vertical cover."""
+    if not img_url:
+        return ""
+    return re.sub(r'\._[^.]+_\.', '._SL300_.', img_url)
+
+
 def load_and_clean_history():
     if not os.path.exists(HISTORY_FILE):
         return {}
@@ -209,7 +216,8 @@ def scrape_genre(page, genre_name, url, sent_links):
             img_elem = card.query_selector("img")
             img_url = ""
             if img_elem:
-                img_url = img_elem.get_attribute("src") or ""
+                raw_img = img_elem.get_attribute("src") or ""
+                img_url = get_high_res_vertical_cover(raw_img)
                 if not title:
                     title = img_elem.get_attribute("alt") or ""
 
@@ -326,9 +334,9 @@ def build_bohemian_email_html(recommendations):
             cover_html = ""
             if b.get("image"):
                 cover_html = f"""
-                <td width="75" valign="top" style="padding-right: 16px;">
+                <td width="95" valign="top" style="padding-right: 18px;">
                   <a href="{us_link}" style="text-decoration:none;">
-                    <img src="{b['image']}" alt="Cover" width="75" style="width:75px; border-radius:4px; border:1px solid #D8CFC8; display:block;" />
+                    <img src="{b['image']}" alt="Cover" width="95" style="width:95px; height:auto; border-radius:4px; border:1px solid #D8CFC8; display:block; box-shadow: 0 2px 4px rgba(0,0,0,0.08);" />
                   </a>
                 </td>
                 """
@@ -481,7 +489,7 @@ def run_bot():
                 "--disable-setuid-sandbox"
             ]
         )
-        context = browser.new_page() if False else browser.new_context(
+        context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             locale="en-US",
             timezone_id="America/New_York",
@@ -510,9 +518,38 @@ def run_bot():
         history[link] = today_iso
     save_history(history)
 
+    # 1. Update website showcase JSON
     save_latest_issue_for_website(recommendations)
+
+    # 2. Build the Bohemian HTML Email
     html = build_bohemian_email_html(recommendations)
+
+    # 3. Broadcast to all subscribers via MailerLite!
     dispatch_via_mailerlite(html)
+
+    # 4. Optional backup: Send via Gmail SMTP if credentials are set
+    sender = os.environ.get("EMAIL_SENDER")
+    password = os.environ.get("EMAIL_PASSWORD")
+    receiver = os.environ.get("EMAIL_RECEIVER")
+
+    if sender and password and receiver:
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = f"[Admin Copy] The Curated Spine — {datetime.now().strftime('%d %b %Y')}"
+        msg["From"] = f"The Curated Spine <{sender}>"
+        msg["To"] = receiver
+        msg.attach(MIMEText(html, "html"))
+
+        try:
+            server = smtplib.SMTP("smtp.gmail.com", 587)
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(sender, password)
+            server.send_message(msg)
+            server.quit()
+            print("-> Admin Gmail copy sent successfully!")
+        except Exception as e:
+            print(f"-> Admin Gmail dispatch failed: {e}")
 
 
 if __name__ == "__main__":
