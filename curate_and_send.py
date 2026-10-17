@@ -389,29 +389,45 @@ def build_bohemian_email_html(recommendations):
 
 
 def save_latest_issue_for_website(recommendations):
-    featured = []
+    today_picks = []
+    recent_picks = []
+
+    # Grab the #1 book from each genre for "Today's Dispatch", and #2 for "Recent Favourites"
     for genre_label, books in recommendations.items():
         base_genre = GENRES.get(genre_label, {}).get("base_genre", genre_label)
         for i, b in enumerate(books):
-            if i == 0 and len(featured) < 4:
-                us_link, uk_link = format_store_links(b["link"])
-                featured.append({
-                    "genre": base_genre,
-                    "title": b["title"],
-                    "author": "Featured Daily Pick",
-                    "cover": b.get("image") or "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=300&auto=format&fit=crop",
-                    "price_uk": "FREE" if "0.00" in b["price"] else "£0.99",
-                    "price_us": "FREE" if "0.00" in b["price"] else b["price"],
-                    "rating": b["rating"] if b["rating"] > 0 else "New",
-                    "reviews": f"{b['reviews']:,}" if b["reviews"] > 0 else "New Release",
-                    "ctr_badge": f"★ #1 in {base_genre} Today",
-                    "hook": b.get("hook", ""),
-                    "link_uk": uk_link,
-                    "link_us": us_link
-                })
+            us_link, uk_link = format_store_links(b["link"])
+            card_data = {
+                "genre": base_genre,
+                "title": b["title"],
+                "cover": b.get("image") or "",
+                "price_uk": "Free" if "0.00" in b["price"] or "free" in b["price"].lower() else "£0.99",
+                "price_us": "Free" if "0.00" in b["price"] or "free" in b["price"].lower() else b["price"],
+                "rating": b["rating"] if b["rating"] > 0 else "New",
+                "reviews": f"{b['reviews']:,}" if b["reviews"] > 0 else "Hot Release",
+                "badge": f"★ Featured in {base_genre}" if i == 0 else f"Reader Pick • {base_genre}",
+                "hook": b.get("hook", ""),
+                "link_uk": uk_link,
+                "link_us": us_link
+            }
+            if i == 0 and len(today_picks) < 4:
+                today_picks.append(card_data)
+            elif i == 1 and len(recent_picks) < 4:
+                recent_picks.append(card_data)
+
+    # If fewer than 4 second-place books, pad with remaining top picks
+    if len(recent_picks) < 4:
+        recent_picks = (recent_picks + today_picks)[:4]
+
+    payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "display_date": datetime.now(timezone.utc).strftime("%A, %d %B %Y"),
+        "books": today_picks[:4],
+        "recent_books": recent_picks[:4]
+    }
     with open(LATEST_ISSUE_FILE, "w", encoding="utf-8") as f:
-        json.dump({"updated_at": datetime.now(timezone.utc).isoformat(), "books": featured[:4]}, f, indent=2)
-    print(f"-> Saved {len(featured[:4])} showcase books to {LATEST_ISSUE_FILE}!")
+        json.dump(payload, f, indent=2)
+    print(f"-> Saved {len(today_picks[:4])} today picks and {len(recent_picks[:4])} recent picks to {LATEST_ISSUE_FILE}!")
 
 
 def dispatch_via_mailerlite(html_content):
