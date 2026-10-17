@@ -1,516 +1,630 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Curated Spine | Daily Hand-Picked Kindle Deals</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1A1715;
-            color: #FAF7F2;
-            background-image: 
-                linear-gradient(to bottom, rgba(26, 23, 21, 0.88), rgba(26, 23, 21, 0.95)),
-                url('https://images.unsplash.com/photo-1507842229356-51c61504d3ab?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .serif-title {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-        }
-        .parchment-card {
-            background-color: #FAF7F2;
-            color: #1A1715;
-            border: 1px solid #D8CFC8;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-        }
-        .genre-card {
-            transition: all 0.2s ease;
-            border: 1.5px solid #D8CFC8;
-            background-color: #FFFFFF;
-        }
-        .genre-card.selected {
-            border-color: #8B3A2B;
-            background-color: #F8F1EC;
-        }
-        .checkbox-box {
-            transition: all 0.2s ease;
-        }
-        .genre-card.selected .checkbox-box {
-            background-color: #8B3A2B;
-            border-color: #8B3A2B;
-        }
-    </style>
-</head>
-<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#8B3A2B] selection:text-white">
+import os
+import re
+import json
+import smtplib
+import urllib.request
+import urllib.error
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from datetime import datetime, timedelta, timezone
+from playwright.sync_api import sync_playwright
+from playwright_stealth import stealth_sync
 
-    <!-- Top Navigation / Brand Bar -->
-    <header class="w-full py-6 px-4 text-center border-b border-[#3E3532]/60 bg-[#1A1715]/70 backdrop-blur-sm">
-        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-            <div class="flex items-center gap-2.5">
-                <span class="inline-block w-2 h-2 rounded-full bg-[#8B3A2B]"></span>
-                <span class="serif-title text-2xl font-bold tracking-wide text-[#FAF7F2]">The Curated Spine</span>
-            </div>
-            <p class="text-xs tracking-widest uppercase text-[#CBBAB3]">
-                Independent Literary Curation &bull; Free &amp; $0.99 Kindle Editions
-            </p>
-        </div>
-    </header>
+HISTORY_FILE = "sent_history.json"
+LATEST_ISSUE_FILE = "latest_issue.json"
+DAYS_TO_REMEMBER = 30
+AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "curatedspine-20")
+MIN_REVIEWS_BESTSELLERS = 50
 
-    <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-4 py-12 sm:py-16 w-full space-y-20">
+# House Priority Authors (+10,000 score boost & bypass minimum review filters)
+PRIORITY_AUTHORS = [
+    "tom draycott",
+    "livia huntingdon-jones",
+    "livia huntingdon jones"
+]
 
-        <!-- Hero + Vintage Library Subscription Card -->
-        <section class="text-center max-w-3xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2A2421] border border-[#4A3F3B] text-[#E59888] text-xs font-medium mb-6">
-                <span>★ Vetted Daily by AI &amp; Editorial Standards</span>
-            </div>
-            <h1 class="serif-title text-4xl sm:text-6xl font-bold text-[#FAF7F2] leading-tight mb-5">
-                Discover Accomplished Fiction.<br>
-                <span class="italic font-normal text-[#E59888]">Skip the Algorithm Clutter.</span>
-            </h1>
-            <p class="text-base sm:text-lg text-[#D8CFC8] max-w-2xl mx-auto leading-relaxed mb-10">
-                Every morning, we filter thousands of discounted Kindle books down to a concise, bookshop-quality shelf of free and $0.99 gems—strictly vetted so disguised erotica and low-effort filler never reach your inbox.
-            </p>
+# Acclaimed & Upmarket Authors Whitelist (+500 score boost when discounted under $2.99)
+CURATED_AUTHORS = [
+    # Literary & Upmarket Fiction
+    "kazuo ishiguro", "margaret atwood", "hilary mantel", "ian mcewan", "zadie smith",
+    "cormac mccarthy", "donna tartt", "ann patchett", "amor towles", "anthony doerr",
+    "celeste ng", "colson whitehead", "maggie o'farrell", "barbara kingsolver",
+    "richard powers", "elizabeth strout", "sally rooney", "david mitchell",
+    "hanya yanagihara", "jhumpa lahiri", "chimamanda ngozi adichie", "salman rushdie",
+    "julian barnes", "kate atkinson", "william boyd", "sebastian faulks",
+    # Historical Fiction
+    "ken follett", "bernard cornwell", "philippa gregory", "robert harris", "c. j. sansom",
+    "cj sansom", "conn iggulden", "kristin hannah", "paula mclain", "geraldine brooks",
+    "sarah waters", "kate quinn", "martha hall kelly", "ariel lawhon", "madeline miller",
+    "jennifer saint", "elodie harper", "stacy halls", "jessie burton", "edward rutherfurd",
+    # Science Fiction & Speculative
+    "adrian tchaikovsky", "andy weir", "blake crouch", "ted chiang", "liu cixin",
+    "cixin liu", "ursula k. le guin", "octavia e. butler", "william gibson",
+    "neal stephenson", "kim stanley robinson", "dan simmons", "alastair reynolds",
+    "iain m. banks", "peter f. hamilton", "john scalzi", "martha wells", "arkady martine",
+    "ann leckie", "jeff vandermeer", "emily st. john mandel", "susanna clarke",
+    "n. k. jemisin", "nk jemisin", "robin hobb", "guy gavriel kay", "lois mcmaster bujold",
+    # Upmarket & Acclaimed Romance
+    "emily henry", "beth o'leary", "mhairi mcfarlane", "abby jimenez", "talia hibbert",
+    "casey mcquiston", "helen hoang", "jasmine guillory", "aliazalea", "carley fortune",
+    "katherine center", "lisa kleypas", "julia quinn", "tessa dare", "courtney milan",
+    "evie dunmore", "cat sebastian", "kennedy ryan", "tia williams"
+]
 
-            <!-- Vintage Library Borrowing Card Form -->
-            <div class="parchment-card rounded-2xl p-6 sm:p-10 text-left max-w-2xl mx-auto relative overflow-hidden">
-                <div class="flex items-center justify-between border-b border-[#D8CFC8] pb-4 mb-6">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest text-[#8B3A2B] font-bold block">Reader Registration Card</span>
-                        <h2 class="serif-title text-2xl sm:text-3xl font-bold text-[#1A1715]">1. Select Your Reading Shelves</h2>
-                    </div>
-                    <button type="button" onclick="selectAllGenres()" class="text-xs font-semibold text-[#8B3A2B] hover:underline cursor-pointer">
-                        Select All Genres
-                    </button>
-                </div>
+GENRES = {
+    "Science Fiction & Fantasy": {
+        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tf=1",
+        "base_genre": "Sci-Fi",
+        "ml_group_id": "201220938717463907"
+    },
+    "Hot New Sci-Fi Releases": {
+        "url": "https://www.amazon.com/gp/new-releases/digital-text/158591011",
+        "base_genre": "Sci-Fi",
+        "ml_group_id": "201220938717463907"
+    },
+    "Historical Fiction": {
+        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Historical-Fiction/zgbs/digital-text/157059011?tf=1",
+        "base_genre": "Historical Fiction",
+        "ml_group_id": "201220954450298498"
+    },
+    "Hot New Historical Fiction": {
+        "url": "https://www.amazon.com/gp/new-releases/digital-text/157059011",
+        "base_genre": "Historical Fiction",
+        "ml_group_id": "201220954450298498"
+    },
+    "Literary Fiction": {
+        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/157053011?tf=1",
+        "base_genre": "Literary Fiction",
+        "ml_group_id": "201220964201006584"
+    },
+    "Hot New Literary Fiction": {
+        "url": "https://www.amazon.com/gp/new-releases/digital-text/157053011",
+        "base_genre": "Literary Fiction",
+        "ml_group_id": "201220964201006584"
+    },
+    "Romance": {
+        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Romance/zgbs/digital-text/158566011?tf=1",
+        "base_genre": "Romance",
+        "ml_group_id": "201220945613948200"
+    },
+    "Hot New Romance": {
+        "url": "https://www.amazon.com/gp/new-releases/digital-text/158566011",
+        "base_genre": "Romance",
+        "ml_group_id": "201220945613948200"
+    },
+}
 
-                <form id="custom-ml-form" onsubmit="submitToMailerLite(event)" class="space-y-6">
-                    <!-- 2x2 Genre Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                        <!-- Sci-Fi -->
-                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220938717463907">
-                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#1A1715]">Science Fiction &amp; Fantasy</div>
-                                <div class="text-xs text-[#6E655F] mt-0.5">Space opera, hard sci-fi, first contact &amp; epic speculative worlds.</div>
-                            </div>
+
+def format_store_links(raw_url):
+    """Strips bloated Amazon URLs down to the fast /dp/ASIN format and attaches curatedspine-20."""
+    match = re.search(r"/dp/([A-Z0-9]{10})", raw_url)
+    tag_suffix = f"?tag={AFFILIATE_TAG}" if AFFILIATE_TAG else ""
+
+    if match:
+        asin = match.group(1)
+        us_url = f"https://www.amazon.com/dp/{asin}{tag_suffix}"
+        uk_url = f"https://www.amazon.co.uk/dp/{asin}{tag_suffix}"
+        return us_url, uk_url
+
+    clean_us = raw_url.split("/ref=")[0]
+    clean_uk = clean_us.replace("amazon.com", "amazon.co.uk")
+    if tag_suffix and "?" not in clean_us:
+        clean_us += tag_suffix
+        clean_uk += tag_suffix
+    return clean_us, clean_uk
+
+
+def get_high_res_vertical_cover(img_url):
+    """Strips Amazon's horizontal letterbox padding (._AC_UL...SR...) and requests a crisp 300px vertical cover."""
+    if not img_url:
+        return ""
+    return re.sub(r'\._[^.]+_\.', '._SL300_.', img_url)
+
+
+def load_and_clean_history():
+    if not os.path.exists(HISTORY_FILE):
+        return {}
+    try:
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            history = json.load(f)
+    except Exception:
+        return {}
+
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=DAYS_TO_REMEMBER)
+
+    cleaned = {}
+    for link, date_str in history.items():
+        try:
+            sent_date = datetime.fromisoformat(date_str)
+            if sent_date > cutoff:
+                cleaned[link] = date_str
+        except ValueError:
+            continue
+    return cleaned
+
+
+def save_history(history):
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
+
+
+def vet_and_summarize_with_gemini(candidates, genre_name):
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key or not candidates:
+        for c in candidates:
+            c["hook"] = "An acclaimed selection hand-picked from today's top Kindle deals."
+        return candidates[:3]
+
+    allow_romance = "Romance" in genre_name
+    books_payload = [
+        {"index": i, "title": c["title"], "category": genre_name}
+        for i, c in enumerate(candidates)
+    ]
+
+    prompt = f"""
+    You are the strict literary editor for 'The Curated Spine', an upmarket, Dark Academia daily book newsletter.
+    Review these candidate books for the category '{genre_name}'.
+    Allow Romance in this category: {allow_romance}.
+
+    Tasks:
+    1. STRICT GENRE & QUALITY VETTING:
+       - If Allow Romance is False, set "keep": false for any book that appears to be steamy romance, erotica, harems, alpha/billionaire/alien/monster romance tropes (e.g. 'My Human Pet'), or low-effort spam.
+       - If the category contains 'Literary Fiction', set "keep": false for supernatural thrillers, generic crime/mystery pulp series ('Book 1', 'A Thriller'), horror, or low-brow commercial fluff. Only keep books that sound like genuine, character-driven, book-club or literary fiction.
+       - If the category contains 'Historical Fiction', set "keep": false for supernatural/paranormal/time-travel mashups (e.g. 'A Da Vinci Supernatural Thriller'), fantasy, or Amish/inspirational pulp. Keep only authentic historical fiction.
+    2. For every kept book, write a 1-sentence (max 24 words) intelligent, warm, independent-bookshop style "hook" based on the title and genre. Never use clichés like 'page-turner', 'thrilling', 'captivating', 'embark', 'unravel', or 'delve'.
+
+    Respond ONLY with a valid JSON array of objects in this exact format:
+    [
+      {{"index": 0, "keep": true, "hook": "A taut speculative mystery exploring humanity's first quiet contact with the unknown."}}
+    ]
+
+    Candidate Books:
+    {json.dumps(books_payload)}
+    """
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    req_body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json"}
+    }
+
+    try:
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(req_body).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=25) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            raw_text = result["candidates"][0]["content"]["parts"][0]["text"]
+            ai_decisions = json.loads(raw_text)
+
+        vetted = []
+        decision_map = {item["index"]: item for item in ai_decisions if isinstance(item, dict)}
+        for idx, c in enumerate(candidates):
+            decision = decision_map.get(idx, {"keep": True, "hook": ""})
+            if c.get("is_priority_author") or decision.get("keep", True):
+                c["hook"] = decision.get("hook") or "A standout deal climbing the Kindle charts today."
+                vetted.append(c)
+            else:
+                print(f"   [AI Literary Editor] Filtered out off-brand title: {c['title']}")
+
+        # Fallback if the AI editor rejected too many and left 0 picks
+        if not vetted and candidates:
+            fallback = candidates[0]
+            fallback["hook"] = "Selected from today's highest-rated Kindle promotions."
+            vetted = [fallback]
+
+        print(f"   [AI Curated] Kept {len(vetted[:3])} books with custom hooks.")
+        return vetted[:3]
+    except Exception as e:
+        print(f"   [AI Warning] Gemini check skipped ({e}). Using top mathematical picks.")
+        for c in candidates:
+            c["hook"] = "Selected from today's highest-rated Kindle promotions."
+        return candidates[:3]
+
+
+def scrape_genre(page, genre_name, url, sent_links):
+    print(f"\n-> Fetching {genre_name}...")
+    try:
+        response = page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(3000)
+    except Exception as e:
+        print(f"   [Error] Failed to load {url}: {e}")
+        return []
+
+    page_title = page.title()
+    print(f"   Page Title: '{page_title}' | Status: {response.status if response else 'Unknown'}")
+
+    if "robot check" in page_title.lower() or "captcha" in page_title.lower():
+        print("   [BLOCKED] Amazon presented a CAPTCHA / Robot Check.")
+        return []
+
+    page.mouse.wheel(0, 1000)
+    page.wait_for_timeout(2000)
+
+    book_cards = page.query_selector_all("div#gridItemRoot")
+    print(f"   Raw product cards detected: {len(book_cards)}")
+
+    candidates = []
+    is_new_release = "Hot New" in genre_name
+
+    for card in book_cards:
+        try:
+            title = ""
+            title_elem = card.query_selector("div[class*='line-clamp'], span.a-size-medium, div.p13n-sc-truncate")
+            if title_elem:
+                title = title_elem.inner_text().strip()
+
+            img_elem = card.query_selector("img")
+            img_url = ""
+            if img_elem:
+                raw_img = img_elem.get_attribute("src") or ""
+                img_url = get_high_res_vertical_cover(raw_img)
+                if not title:
+                    title = img_elem.get_attribute("alt") or ""
+
+            title = title.strip()
+            title_lower = title.lower()
+
+            if "Romance" not in genre_name and any(
+                kw in title_lower for kw in [
+                    "romance", "harem", "billionaire", "alpha's", "human pet",
+                    "reverse harem", "litrpg", "supernatural thriller", "paranormal"
+                ]
+            ):
+                continue
+
+            link_elem = card.query_selector("a.a-link-normal")
+            price_elem = card.query_selector("span._cDEzb_p13n-sc-price_3mJ9Z, span.p13n-sc-price")
+            rating_elem = card.query_selector("span.a-icon-alt")
+            reviews_elem = card.query_selector("span.a-size-small")
+
+            if not (title and link_elem and price_elem):
+                continue
+
+            if not is_new_release and not (rating_elem and reviews_elem):
+                continue
+
+            href = link_elem.get_attribute("href") or ""
+            raw_link = "https://www.amazon.com" + href.split("/ref=")[0] if href.startswith("/") else href
+
+            # Normalize link by ASIN for history deduplication
+            asin_match = re.search(r"/dp/([A-Z0-9]{10})", raw_link)
+            canonical_link = f"https://www.amazon.com/dp/{asin_match.group(1)}" if asin_match else raw_link
+
+            if canonical_link in sent_links or raw_link in sent_links:
+                continue
+
+            price = price_elem.inner_text().strip()
+
+            try:
+                clean_price_str = ''.join(c for c in price if c.isdigit() or c == '.')
+                if clean_price_str:
+                    if float(clean_price_str) > 2.99:
+                        continue
+                elif "free" not in price.lower():
+                    continue
+            except Exception:
+                continue
+
+            rating = 0.0
+            reviews = 0
+            if rating_elem and reviews_elem:
+                rating_text = rating_elem.inner_text().strip()
+                if rating_text:
+                    try:
+                        rating = float(rating_text.split()[0])
+                        reviews = int(reviews_elem.inner_text().replace(",", "").strip())
+                    except Exception:
+                        pass
+
+            card_text = card.inner_text().lower()
+            is_priority = any(author in card_text for author in PRIORITY_AUTHORS)
+            is_curated_vip = any(author in card_text for author in CURATED_AUTHORS)
+
+            # Enforce minimum review threshold on Best Seller charts unless Priority or VIP author
+            if not is_new_release and not is_priority and not is_curated_vip:
+                if reviews < MIN_REVIEWS_BESTSELLERS or rating < 4.1:
+                    continue
+
+            if is_new_release:
+                score = 1000 - len(candidates)
+            else:
+                score = (reviews / (reviews + 50)) * rating + (50 / (reviews + 50)) * 4.2
+
+            if is_priority:
+                score += 10000
+                print(f"   [Priority Author Match!] Boosted: {title}")
+            elif is_curated_vip:
+                score += 500
+                print(f"   [Curated Whitelist Match!] Boosted: {title}")
+
+            candidates.append({
+                "title": title,
+                "link": canonical_link,
+                "image": img_url,
+                "rating": rating,
+                "reviews": reviews,
+                "price": price,
+                "score": score,
+                "is_priority_author": is_priority
+            })
+        except Exception:
+            continue
+
+    print(f"   Parsed candidates (after deduplication & quality floor): {len(candidates)}")
+    candidates.sort(key=lambda b: b["score"], reverse=True)
+    return vet_and_summarize_with_gemini(candidates[:10], genre_name)
+
+
+def build_bohemian_email_html(recommendations):
+    date_str = datetime.now().strftime('%A, %d %B %Y')
+    html = f"""
+    <!DOCTYPE html>
+    <html>
+    <body style="margin:0; padding:0; background-color:#1A1715; font-family:'Georgia', serif; color:#2C2725;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1A1715; padding: 30px 12px;">
+        <tr>
+          <td align="center">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; background-color:#FAF7F2; border-radius: 12px; overflow: hidden; border: 1px solid #CBBAB3;">
+              <tr>
+                <td style="background-color:#231E1B; padding: 32px 24px; text-align: center; border-bottom: 2px solid #8B3A2B;">
+                  <p style="margin: 0 0 6px 0; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #CBBAB3;">{date_str}</p>
+                  <h1 style="margin: 0; font-size: 30px; color: #FAF7F2; font-weight: normal; font-family: 'Georgia', serif;">The Curated Spine</h1>
+                  <p style="margin: 8px 0 0 0; font-size: 14px; color: #EBE5DF; font-style: italic;">Your morning shelf of hand-picked Kindle deals</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 24px 24px 12px 24px;">
+    """
+
+    for genre, books in recommendations.items():
+        html += f"""
+                  <h2 style="font-size: 19px; color: #1A1715; border-bottom: 1px solid #D8CFC8; padding-bottom: 8px; margin-top: 20px; margin-bottom: 16px; font-family: 'Georgia', serif;">
+                    {genre}
+                  </h2>
+        """
+        for b in books:
+            us_link, uk_link = format_store_links(b['link'])
+            rating_display = f"<span style='color:#B45309;'>★ {b['rating']}</span> ({b['reviews']:,} ratings)" if b['reviews'] > 0 else "<span style='color:#8B3A2B; font-style:italic;'>★ Hot New Release</span>"
+            cover_html = ""
+            if b.get("image"):
+                cover_html = f"""
+                <td width="95" valign="top" style="padding-right: 18px;">
+                  <a href="{us_link}" style="text-decoration:none;">
+                    <img src="{b['image']}" alt="Cover" width="95" style="width:95px; height:auto; border-radius:4px; border:1px solid #D8CFC8; display:block; box-shadow: 0 2px 4px rgba(0,0,0,0.08);" />
+                  </a>
+                </td>
+                """
+
+            html += f"""
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border: 1px solid #EBE5DF; border-radius: 8px; padding: 14px; margin-bottom: 14px;">
+                    <tr>
+                      {cover_html}
+                      <td valign="top">
+                        <a href="{us_link}" style="font-size: 16px; font-weight: bold; color: #8B3A2B; text-decoration: none; line-height: 1.3;">
+                          {b['title']}
+                        </a>
+                        <div style="font-size: 13px; color: #5A524D; margin: 5px 0;">
+                          <strong style="color: #1A1715; background-color: #F3EDE4; padding: 2px 6px; border-radius: 4px;">{b['price']}</strong>
+                          &nbsp;&bull;&nbsp; {rating_display}
                         </div>
-
-                        <!-- Historical Fiction -->
-                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220954450298498">
-                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#1A1715]">Historical Fiction</div>
-                                <div class="text-xs text-[#6E655F] mt-0.5">Richly researched eras, ancient intrigue &amp; wartime drama.</div>
-                            </div>
-                        </div>
-
-                        <!-- Literary Fiction -->
-                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220964201006584">
-                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#1A1715]">Literature &amp; Fiction</div>
-                                <div class="text-xs text-[#6E655F] mt-0.5">Character-driven stories, contemporary classics &amp; book-club picks.</div>
-                            </div>
-                        </div>
-
-                        <!-- Romance -->
-                        <div class="genre-card rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220945613948200">
-                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#1A1715]">Romantic Fiction</div>
-                                <div class="text-xs text-[#6E655F] mt-0.5">Warm, well-crafted historical, contemporary &amp; slow-burn romance.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p id="genre-error" class="hidden text-xs font-semibold text-[#8B3A2B]">
-                        Please select at least one reading shelf above.
-                    </p>
-
-                    <!-- Email Input & Submit -->
-                    <div class="pt-2">
-                        <label for="subscriber-email" class="block text-xs font-bold uppercase tracking-wider text-[#4A423F] mb-2">
-                            2. Where Should We Send Your Morning Shelf?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-3">
-                            <input
-                                type="email"
-                                id="subscriber-email"
-                                required
-                                placeholder="Enter your best email address..."
-                                class="flex-1 px-4 py-3.5 rounded-lg bg-white border border-[#C4B7B1] text-[#1A1715] placeholder-[#8C827C] text-sm focus:outline-none focus:border-[#8B3A2B] focus:ring-2 focus:ring-[#8B3A2B]/20"
-                            />
-                            <button
-                                type="submit"
-                                id="submit-btn"
-                                class="px-7 py-3.5 rounded-lg bg-[#8B3A2B] hover:bg-[#722E21] text-[#FAF7F2] font-semibold text-sm tracking-wide transition-all shadow-md cursor-pointer shrink-0"
-                            >
-                                Join Free Dispatch &rarr;
-                            </button>
-                        </div>
-                        <p class="text-[11px] text-[#786E68] mt-2.5 flex items-center justify-between">
-                            <span>100% free forever. One-click unsubscribe in every issue.</span>
-                            <span class="font-medium text-[#8B3A2B]">Dispatched at 8:20 AM EST</span>
+                        <p style="font-size: 13.5px; color: #3D3633; font-style: italic; margin: 6px 0 10px 0; line-height: 1.45;">
+                          "{b.get('hook', '')}"
                         </p>
-                    </div>
-                </form>
-
-                <!-- Success Message -->
-                <div id="form-success" class="hidden text-center py-8 space-y-3">
-                    <div class="w-12 h-12 rounded-full bg-[#8B3A2B]/15 text-[#8B3A2B] flex items-center justify-center mx-auto text-xl font-bold">
-                        ✓
-                    </div>
-                    <h3 class="serif-title text-3xl font-bold text-[#1A1715]">Your Library Card is Stamped.</h3>
-                    <p class="text-sm text-[#4A423F] max-w-md mx-auto">
-                        Welcome to <em>The Curated Spine</em>. Watch your inbox tomorrow morning for your first hand-picked dispatch of Kindle deals.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Live Daily Dispatch Showcase Section -->
-        <section class="space-y-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#3E3532] pb-4">
-                <div>
-                    <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-[#E59888] font-semibold mb-1">
-                        <span class="w-2 h-2 rounded-full bg-[#E59888] animate-pulse"></span>
-                        <span>Inside Today's Issue</span>
-                    </div>
-                    <h2 class="serif-title text-3xl sm:text-4xl font-bold text-[#FAF7F2]">Today's Curated Dispatch</h2>
-                    <p id="dispatch-date-label" class="text-xs text-[#CBBAB3] mt-1">
-                        Live daily selections pulled directly from this morning's newsletter.
-                    </p>
-                </div>
-
-                <!-- Controls: Tab Switcher + US/UK Currency Toggle -->
-                <div class="flex flex-wrap items-center gap-3">
-                    <div class="inline-flex rounded-lg bg-[#231E1B] p-1 border border-[#3E3532]">
-                        <button type="button" id="tab-yesterday" onclick="switchShowcaseTab('yesterday')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer">
-                            Today's #1 Picks
-                        </button>
-                        <button type="button" id="tab-week" onclick="switchShowcaseTab('week')" class="px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer">
-                            More From Today's Shelf
-                        </button>
-                    </div>
-
-                    <div class="inline-flex rounded-lg bg-[#231E1B] p-1 border border-[#3E3532]">
-                        <button type="button" id="curr-US" onclick="switchCurrency('US')" class="px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer">
-                            US ($)
-                        </button>
-                        <button type="button" id="curr-UK" onclick="switchCurrency('UK')" class="px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer">
-                            UK (&pound;)
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2x2 Showcase Cards Grid -->
-            <div id="showcase-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <!-- Populated dynamically from latest_issue.json -->
-            </div>
-
-            <p class="text-center text-[11px] text-[#A39A96] italic">
-                * Kindle promotional prices are time-sensitive and verified at the time of our morning dispatch.
-            </p>
-        </section>
-
-        <!-- 3 Value Pillars -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
-                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
-                    $0
-                </div>
-                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Exceptional Value</h3>
-                <p class="text-xs text-[#4A423F] leading-relaxed">
-                    Every featured book is either completely <strong>Free ($0.00)</strong> or deeply discounted under <strong>$2.99 / &pound;1.99</strong>. No full-price padding.
-                </p>
-            </div>
-
-            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
-                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
-                    ★
-                </div>
-                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Thoughtfully Curated</h3>
-                <p class="text-xs text-[#4A423F] leading-relaxed">
-                    No disguised erotica in Sci-Fi, no low-effort spam. Just celebrated stories, vetted hidden gems, and verified reader favourites.
-                </p>
-            </div>
-
-            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
-                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
-                    ✦
-                </div>
-                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Your Next Favourite</h3>
-                <p class="text-xs text-[#4A423F] leading-relaxed">
-                    Expand your Kindle library with intelligent new releases and timeless backlist series starters before they go mainstream.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer with Author Partner Modal Trigger & Amazon Associate Disclosure -->
-    <footer class="w-full py-10 px-4 text-center border-t border-[#3E3532]/60 bg-[#14110F]/90 mt-12 space-y-4">
-        <div class="max-w-xl mx-auto px-4 py-3 rounded-lg bg-[#231E1B] border border-[#3E3532]">
-            <p class="text-xs text-[#D8CFC8]">
-                Are you an author running a Kindle Countdown Deal or free promotion?
-                <button type="button" onclick="openAuthorModal()" class="ml-1 text-[#E59888] font-semibold hover:text-[#FAF7F2] underline decoration-[#E59888] underline-offset-4 transition-all cursor-pointer">
-                    Inquire about our single daily Partner Spotlight slot &rarr;
-                </button>
-            </p>
-        </div>
-        <p class="text-xs text-[#A39A96]">
-            &copy; 2026 The Curated Spine. All rights reserved.
-        </p>
-        <p class="text-[11px] text-[#A39A96]/80 mt-2">
-            As an Amazon Associate, The Curated Spine earns from qualifying purchases.
-        </p>
-    </footer>
-
-    <!-- Author Spotlight Modal -->
-    <div id="author-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="parchment-card rounded-2xl max-w-md w-full p-6 sm:p-8 text-left relative">
-            <button type="button" onclick="closeAuthorModal()" class="absolute top-4 right-4 text-[#786E68] hover:text-[#1A1715] text-xl font-bold cursor-pointer">&times;</button>
-            <span class="text-[10px] uppercase tracking-widest text-[#8B3A2B] font-bold block mb-1">Partner Submissions</span>
-            <h3 class="serif-title text-2xl font-bold text-[#1A1715] mb-2">Author Partner Spotlight</h3>
-            <p class="text-xs text-[#4A423F] leading-relaxed mb-4">
-                We feature one vetted Partner Spotlight per genre in our daily dispatch. To request a slot for your upcoming Free Promotion or Kindle Countdown Deal, email our editorial desk with your 10-digit Amazon ASIN and promo dates:
-            </p>
-            <div class="p-3.5 rounded-lg bg-[#F3EDE4] border border-[#D8CFC8] text-center mb-5">
-                <a href="mailto:hello@thecuratedspine.com?subject=Author%20Partner%20Spotlight%20Inquiry%20(ASIN)" class="text-sm font-bold text-[#8B3A2B] hover:underline">
-                    hello@thecuratedspine.com
-                </a>
-            </div>
-            <button type="button" onclick="closeAuthorModal()" class="w-full py-2.5 rounded-lg bg-[#231E1B] text-[#FAF7F2] text-xs font-semibold cursor-pointer">
-                Close Window
-            </button>
-        </div>
-    </div>
-
-    <!-- Scripts: Genre Checkboxes, MailerLite Submission, and Live JSON Showcase Loader -->
-    <script>
-        function toggleGenre(card) {
-            card.classList.toggle('selected');
-            document.getElementById('genre-error').classList.add('hidden');
-        }
-
-        function selectAllGenres() {
-            document.querySelectorAll('.genre-card').forEach(c => c.classList.add('selected'));
-            document.getElementById('genre-error').classList.add('hidden');
-        }
-
-        function openAuthorModal() {
-            const modal = document.getElementById('author-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeAuthorModal() {
-            const modal = document.getElementById('author-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        async function submitToMailerLite(e) {
-            e.preventDefault();
-            const selectedCards = document.querySelectorAll('.genre-card.selected');
-            if (selectedCards.length === 0) {
-                document.getElementById('genre-error').classList.remove('hidden');
-                return;
-            }
-
-            const email = document.getElementById('subscriber-email').value.trim();
-            if (!email) return;
-
-            const btn = document.getElementById('submit-btn');
-            btn.disabled = true;
-            btn.textContent = 'Stamping Card...';
-
-            const formData = new FormData();
-            formData.append('fields[email]', email);
-            selectedCards.forEach(card => {
-                formData.append('groups[]', card.getAttribute('data-group'));
-            });
-            formData.append('ml-submit', '1');
-            formData.append('anticsrf', 'true');
-
-            try {
-                await fetch('https://assets.mailerlite.com/jsonp/2264587/forms/184715250918458732/subscribe', {
-                    method: 'POST',
-                    body: formData,
-                    mode: 'no-cors'
-                });
-            } catch (err) {
-                console.log('Subscription submitted:', err);
-            }
-
-            document.getElementById('custom-ml-form').classList.add('hidden');
-            document.getElementById('form-success').classList.remove('hidden');
-        }
-
-        // Live Showcase State
-        let currentTab = 'yesterday';
-        let currentCurrency = 'US';
-
-        // Fallback sample books only shown if latest_issue.json is missing
-        let showcaseData = {
-            yesterday: [
-                {
-                    genre: 'Sci-Fi',
-                    title: 'Galilee Rising: Starship Galilee Chronicles Book 1',
-                    cover: '',
-                    price_uk: 'Free',
-                    price_us: '$0.00',
-                    rating: '4.7',
-                    reviews: '30',
-                    badge: '★ Featured in Sci-Fi',
-                    hook: 'Embark on an epic cosmic journey as a starship rises to face unknown challenges in the vastness of space.',
-                    link_us: 'https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tag=curatedspine-20',
-                    link_uk: 'https://www.amazon.co.uk/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tag=curatedspine-20'
-                },
-                {
-                    genre: 'Historical Fiction',
-                    title: 'The Queen\'s Handmaid (Secrets of the Lost Empires Book 1)',
-                    cover: '',
-                    price_uk: 'Free',
-                    price_us: '$0.00',
-                    rating: '4.6',
-                    reviews: '1,083',
-                    badge: '★ Featured in Historical Fiction',
-                    hook: 'In Cleopatra\'s palace, a murdered mentor leaves behind ancient sealed scrolls that must reach Jerusalem before assassins strike.',
-                    link_us: 'https://www.amazon.com/dp/B097NCXQGL?tag=curatedspine-20',
-                    link_uk: 'https://www.amazon.co.uk/dp/B097NCXQGL?tag=curatedspine-20'
-                }
-            ],
-            week: []
-        };
-
-        function switchShowcaseTab(tab) {
-            currentTab = tab;
-            const btnYesterday = document.getElementById('tab-yesterday');
-            const btnWeek = document.getElementById('tab-week');
-            if (tab === 'yesterday') {
-                btnYesterday.className = 'px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer';
-                btnWeek.className = 'px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
-            } else {
-                btnWeek.className = 'px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer';
-                btnYesterday.className = 'px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
-            }
-            renderShowcase();
-        }
-
-        function switchCurrency(curr) {
-            currentCurrency = curr;
-            const btnUS = document.getElementById('curr-US');
-            const btnUK = document.getElementById('curr-UK');
-            if (curr === 'US') {
-                btnUS.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer';
-                btnUK.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
-            } else {
-                btnUK.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer';
-                btnUS.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
-            }
-            renderShowcase();
-        }
-
-        function renderShowcase() {
-            const grid = document.getElementById('showcase-grid');
-            if (!grid) return;
-            const items = showcaseData[currentTab] || [];
-
-            grid.innerHTML = items.map(book => {
-                const price = currentCurrency === 'UK' ? (book.price_uk || 'Free') : (book.price_us || '$0.00');
-                const primaryLink = currentCurrency === 'UK' ? (book.link_uk || book.link_us || '#') : (book.link_us || '#');
-                const ukLink = book.link_uk || primaryLink;
-                const badgeText = book.badge || book.ctr_badge || `★ Featured in ${book.genre}`;
-                const ratingText = (book.rating === 'New' || !book.rating) ? 'Hot New Release' : `${book.rating} (${book.reviews} ratings)`;
-
-                const coverGraphic = book.cover
-                    ? `<a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="w-24 shrink-0 block group">
-                         <img src="${book.cover}" alt="${book.title}" class="w-24 h-auto rounded border border-[#D8CFC8] shadow-md group-hover:scale-[1.03] transition-transform" />
-                       </a>`
-                    : `<a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="w-24 h-36 rounded bg-[#231E1B] text-[#FAF7F2] p-2.5 flex flex-col justify-between shrink-0 shadow-md border border-[#3E3532]">
-                         <div class="text-[8px] uppercase tracking-widest text-[#E59888] font-semibold truncate">${book.genre}</div>
-                         <div class="serif-title text-[11px] font-bold leading-tight line-clamp-3">${book.title}</div>
-                         <div class="text-[8px] text-[#CBBAB3] truncate">Kindle Edition</div>
-                       </a>`;
-
-                return `
-                <div class="parchment-card rounded-xl p-4 sm:p-5 text-left flex gap-4 items-start transition-all hover:shadow-xl">
-                    ${coverGraphic}
-                    <div class="flex-1 min-w-0">
-                        <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
-                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#8B3A2B]/15 text-[#8B3A2B]">
-                                ${badgeText}
-                            </span>
-                            <span class="text-[10px] font-medium text-[#786E68]">${book.genre}</span>
+                        <div>
+                          <a href="{us_link}" style="display:inline-block; font-size: 12px; font-weight: bold; color: #FFFFFF; background-color: #8B3A2B; padding: 6px 12px; border-radius: 4px; text-decoration: none;">
+                            View on Amazon &rarr;
+                          </a>
+                          <a href="{uk_link}" style="display:inline-block; font-size: 11px; color: #786E68; text-decoration: underline; margin-left: 10px;">
+                            UK (.co.uk)
+                          </a>
                         </div>
-                        <h4 class="serif-title font-bold text-[#1A1715] text-lg leading-snug mb-1">
-                            <a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="hover:text-[#8B3A2B] transition-colors">
-                                ${book.title}
-                            </a>
-                        </h4>
-                        <div class="flex items-center gap-2 text-xs mb-2">
-                            <span class="font-bold text-[#1A1715] bg-[#EBE5DF] px-2 py-0.5 rounded">${price}</span>
-                            <span class="text-[#C4B7B1]">&bull;</span>
-                            <span class="text-[#B45309] font-semibold">★ ${ratingText}</span>
-                        </div>
-                        <p class="text-xs text-[#4A423F] leading-relaxed italic mb-3.5">
-                            "${book.hook}"
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-bold text-[#FAF7F2] bg-[#8B3A2B] hover:bg-[#722E21] px-3.5 py-1.5 rounded transition-colors shadow-sm">
-                                View on Amazon &rarr;
-                            </a>
-                            <a href="${ukLink}" target="_blank" rel="noopener noreferrer" class="text-[11px] text-[#786E68] hover:text-[#1A1715] underline">
-                                UK (.co.uk)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
+                      </td>
+                    </tr>
+                  </table>
+            """
 
-        async function loadLiveShowcaseFromJSON() {
-            try {
-                const resp = await fetch('./latest_issue.json?t=' + Date.now());
-                if (!resp.ok) throw new Error('Could not fetch latest_issue.json');
-                const data = await resp.json();
+    html += """
+                </td>
+              </tr>
+              <tr>
+                <td style="background-color:#F3EDE4; padding: 20px 24px; text-align: center; border-top: 1px solid #EBE5DF; font-size: 12px; color: #786E68;">
+                  <p style="margin: 0 0 6px 0;">Prices and availability are accurate as of dispatch and may change quickly on Amazon. As an Amazon Associate, The Curated Spine earns from qualifying purchases.</p>
+                  <p style="margin: 0;">&copy; 2026 The Curated Spine &bull; <a href="https://thecuratedspine.com" style="color:#8B3A2B;">thecuratedspine.com</a> &bull; <a href="{$unsubscribe}" style="color:#786E68; text-decoration:underline;">Unsubscribe</a></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </body>
+    </html>
+    """
+    return html
 
-                if (data.display_date) {
-                    const dateEl = document.getElementById('dispatch-date-label');
-                    if (dateEl) {
-                        dateEl.textContent = `Updated ${data.display_date} • Live picks from today's morning newsletter`;
-                    }
-                }
 
-                if (data.books && data.books.length > 0) {
-                    showcaseData.yesterday = data.books;
-                    showcaseData.week = (data.recent_books && data.recent_books.length > 0) ? data.recent_books : data.books;
-                }
-            } catch (err) {
-                console.log('Using fallback showcase until next workflow run:', err);
+def save_latest_issue_for_website(recommendations):
+    today_picks = []
+    recent_picks = []
+
+    # Grab the #1 book from each main genre for "Today's Dispatch", and #2 for "More From Today's Shelf"
+    for genre_label, books in recommendations.items():
+        base_genre = GENRES.get(genre_label, {}).get("base_genre", genre_label)
+        for i, b in enumerate(books):
+            us_link, uk_link = format_store_links(b["link"])
+            card_data = {
+                "genre": base_genre,
+                "title": b["title"],
+                "cover": b.get("image") or "",
+                "price_uk": "Free" if "0.00" in b["price"] or "free" in b["price"].lower() else "£0.99",
+                "price_us": "Free" if "0.00" in b["price"] or "free" in b["price"].lower() else b["price"],
+                "rating": b["rating"] if b["rating"] > 0 else "New",
+                "reviews": f"{b['reviews']:,}" if b["reviews"] > 0 else "Hot Release",
+                "badge": f"★ Featured in {base_genre}" if i == 0 else f"Reader Pick • {base_genre}",
+                "hook": b.get("hook", ""),
+                "link_uk": uk_link,
+                "link_us": us_link
             }
-            renderShowcase();
-        }
+            if i == 0 and len(today_picks) < 4:
+                today_picks.append(card_data)
+            elif i == 1 and len(recent_picks) < 4:
+                recent_picks.append(card_data)
 
-        document.addEventListener('DOMContentLoaded', loadLiveShowcaseFromJSON);
-    </script>
-</body>
-</html>
+    if len(recent_picks) < 4:
+        recent_picks = (recent_picks + today_picks)[:4]
+
+    payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "display_date": datetime.now(timezone.utc).strftime("%A, %d %B %Y"),
+        "books": today_picks[:4],
+        "recent_books": recent_picks[:4]
+    }
+    with open(LATEST_ISSUE_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+    print(f"-> Saved {len(today_picks[:4])} today picks and {len(recent_picks[:4])} recent picks to {LATEST_ISSUE_FILE}!")
+
+
+def dispatch_via_mailerlite(html_content):
+    ml_key = os.environ.get("MAILERLITE_API_KEY")
+    sender_email = os.environ.get("MAILERLITE_SENDER_EMAIL", "hello@thecuratedspine.com")
+
+    if not ml_key:
+        print("-> No MAILERLITE_API_KEY found in GitHub Secrets. Skipping MailerLite broadcast.")
+        return
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {ml_key}",
+        "User-Agent": "TheCuratedSpineBot/1.0"
+    }
+
+    campaign_payload = {
+        "name": f"Daily Dispatch — {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+        "type": "regular",
+        "emails": [{
+            "subject": f"The Curated Spine — {datetime.now().strftime('%d %b %Y')}",
+            "from_name": "The Curated Spine",
+            "from": sender_email,
+            "content": html_content
+        }],
+        "groups": [
+            "201220938717463907",  # Sci-Fi
+            "201220954450298498",  # Historical Fiction
+            "201220964201006584",  # Literary Fiction
+            "201220945613948200"   # Romance
+        ]
+    }
+
+    try:
+        print(f"-> Creating MailerLite campaign from '{sender_email}'...")
+        req = urllib.request.Request(
+            "https://connect.mailerlite.com/api/campaigns",
+            data=json.dumps(campaign_payload).encode("utf-8"),
+            headers=headers,
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            campaign_data = json.loads(resp.read().decode("utf-8"))
+            campaign_id = campaign_data["data"]["id"]
+            print(f"   Campaign created! ID: {campaign_id}")
+
+        send_req = urllib.request.Request(
+            f"https://connect.mailerlite.com/api/campaigns/{campaign_id}/schedule",
+            data=json.dumps({"delivery": "instant"}).encode("utf-8"),
+            headers=headers,
+            method="POST"
+        )
+        with urllib.request.urlopen(send_req, timeout=30) as send_resp:
+            print("-> SUCCESS: MailerLite campaign dispatched to all subscribers!")
+
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode("utf-8", errors="ignore")
+        print(f"-> MailerLite HTTP Error {e.code}: {error_body}")
+    except Exception as e:
+        print(f"-> MailerLite API Error: {e}")
+
+
+def run_bot():
+    history = load_and_clean_history()
+    recommendations = {}
+    newly_recommended = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox"
+            ]
+        )
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            locale="en-US",
+            timezone_id="America/New_York",
+            viewport={"width": 1366, "height": 768},
+        )
+        page = context.new_page()
+        stealth_sync(page)
+
+        for genre, meta in GENRES.items():
+            top_picks = scrape_genre(page, genre, meta["url"], set(history.keys()))
+            if top_picks:
+                recommendations[genre] = top_picks
+                for b in top_picks:
+                    newly_recommended.append(b["link"])
+            page.wait_for_timeout(2000)
+
+        browser.close()
+
+    if not recommendations:
+        print("\n-> No new book deals found today. Exiting.")
+        save_history(history)
+        return
+
+    today_iso = datetime.now(timezone.utc).isoformat()
+    for link in newly_recommended:
+        history[link] = today_iso
+    save_history(history)
+
+    # 1. Update website showcase JSON
+    save_latest_issue_for_website(recommendations)
+
+    # 2. Build the Bohemian HTML Email
+    html = build_bohemian_email_html(recommendations)
+
+    # 3. Broadcast to all subscribers via MailerLite!
+    dispatch_via_mailerlite(html)
+
+    # 4. Optional backup: Send via Gmail SMTP if credentials are set
+    sender = os.environ.get("EMAIL_SENDER")
+    password = os.environ.get("EMAIL_PASSWORD")
+    receiver = os.environ.get("EMAIL_RECEIVER")
+
+    if sender and password and receiver:
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = f"[Admin Copy] The Curated Spine — {datetime.now().strftime('%d %b %Y')}"
+        msg["From"] = f"The Curated Spine <{sender}>"
+        msg["To"] = receiver
+        msg.attach(MIMEText(html, "html"))
+
+        try:
+            server = smtplib.SMTP("smtp.gmail.com", 587)
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(sender, password)
+            server.send_message(msg)
+            server.quit()
+            print("-> Admin Gmail copy sent successfully!")
+        except Exception as e:
+            print(f"-> Admin Gmail dispatch failed: {e}")
+
+
+if __name__ == "__main__":
+    run_bot()
