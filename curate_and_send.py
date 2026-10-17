@@ -14,6 +14,42 @@ HISTORY_FILE = "sent_history.json"
 LATEST_ISSUE_FILE = "latest_issue.json"
 DAYS_TO_REMEMBER = 30
 AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "curatedspine-20")
+MIN_REVIEWS_BESTSELLERS = 50
+
+# House Priority Authors (+10,000 score boost & bypass minimum review filters)
+PRIORITY_AUTHORS = [
+    "tom draycott",
+    "livia huntingdon-jones",
+    "livia huntingdon jones"
+]
+
+# Acclaimed & Upmarket Authors Whitelist (+500 score boost when discounted under $2.99)
+CURATED_AUTHORS = [
+    # Literary & Upmarket Fiction
+    "kazuo ishiguro", "margaret atwood", "hilary mantel", "ian mcewan", "zadie smith",
+    "cormac mccarthy", "donna tartt", "ann patchett", "amor towles", "anthony doerr",
+    "celeste ng", "colson whitehead", "maggie o'farrell", "barbara kingsolver",
+    "richard powers", "elizabeth strout", "sally rooney", "david mitchell",
+    "hanya yanagihara", "jhumpa lahiri", "chimamanda ngozi adichie", "salman rushdie",
+    "julian barnes", "kate atkinson", "william boyd", "sebastian faulks",
+    # Historical Fiction
+    "ken follett", "bernard cornwell", "philippa gregory", "robert harris", "c. j. sansom",
+    "cj sansom", "conn iggulden", "kristin hannah", "paula mclain", "geraldine brooks",
+    "sarah waters", "kate quinn", "martha hall kelly", "ariel lawhon", "madeline miller",
+    "jennifer saint", "elodie harper", "stacy halls", "jessie burton", "edward rutherfurd",
+    # Science Fiction & Speculative
+    "adrian tchaikovsky", "andy weir", "blake crouch", "ted chiang", "liu cixin",
+    "cixin liu", "ursula k. le guin", "octavia e. butler", "william gibson",
+    "neal stephenson", "kim stanley robinson", "dan simmons", "alastair reynolds",
+    "iain m. banks", "peter f. hamilton", "john scalzi", "martha wells", "arkady martine",
+    "ann leckie", "jeff vandermeer", "emily st. john mandel", "susanna clarke",
+    "n. k. jemisin", "nk jemisin", "robin hobb", "guy gavriel kay", "lois mcmaster bujold",
+    # Upmarket & Acclaimed Romance
+    "emily henry", "beth o'leary", "mhairi mcfarlane", "abby jimenez", "talia hibbert",
+    "casey mcquiston", "helen hoang", "jasmine guillory", "aliazalea", "carley fortune",
+    "katherine center", "lisa kleypas", "julia quinn", "tessa dare", "courtney milan",
+    "evie dunmore", "cat sebastian", "kennedy ryan", "tia williams"
+]
 
 GENRES = {
     "Science Fiction & Fantasy": {
@@ -36,13 +72,13 @@ GENRES = {
         "base_genre": "Historical Fiction",
         "ml_group_id": "201220954450298498"
     },
-    "Literature & Fiction": {
-        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literature-Fiction/zgbs/digital-text/157028011?tf=1",
+    "Literary Fiction": {
+        "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/157053011?tf=1",
         "base_genre": "Literary Fiction",
         "ml_group_id": "201220964201006584"
     },
-    "Hot New Lit & Fiction": {
-        "url": "https://www.amazon.com/gp/new-releases/digital-text/157028011",
+    "Hot New Literary Fiction": {
+        "url": "https://www.amazon.com/gp/new-releases/digital-text/157053011",
         "base_genre": "Literary Fiction",
         "ml_group_id": "201220964201006584"
     },
@@ -127,13 +163,16 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
     ]
 
     prompt = f"""
-    You are the editorial curator for 'The Curated Spine', an upmarket literary daily book newsletter.
+    You are the strict literary editor for 'The Curated Spine', an upmarket, Dark Academia daily book newsletter.
     Review these candidate books for the category '{genre_name}'.
     Allow Romance in this category: {allow_romance}.
 
     Tasks:
-    1. If Allow Romance is False, set "keep": false for any book that appears to be steamy romance, erotica, harems, alpha/billionaire/alien/monster romance tropes (e.g. 'My Human Pet'), or low-effort spam disguised in this category.
-    2. For every kept book, write a 1-sentence (max 24 words) intriguing, warm, independent-bookshop style "hook" based on the title and genre. Never use cheesy words like 'page-turner', 'thrilling', or 'delve'.
+    1. STRICT GENRE & QUALITY VETTING:
+       - If Allow Romance is False, set "keep": false for any book that appears to be steamy romance, erotica, harems, alpha/billionaire/alien/monster romance tropes (e.g. 'My Human Pet'), or low-effort spam.
+       - If the category contains 'Literary Fiction', set "keep": false for supernatural thrillers, generic crime/mystery pulp series ('Book 1', 'A Thriller'), horror, or low-brow commercial fluff. Only keep books that sound like genuine, character-driven, book-club or literary fiction.
+       - If the category contains 'Historical Fiction', set "keep": false for supernatural/paranormal/time-travel mashups (e.g. 'A Da Vinci Supernatural Thriller'), fantasy, or Amish/inspirational pulp. Keep only authentic historical fiction.
+    2. For every kept book, write a 1-sentence (max 24 words) intelligent, warm, independent-bookshop style "hook" based on the title and genre. Never use clichés like 'page-turner', 'thrilling', 'captivating', 'embark', 'unravel', or 'delve'.
 
     Respond ONLY with a valid JSON array of objects in this exact format:
     [
@@ -170,7 +209,13 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
                 c["hook"] = decision.get("hook") or "A standout deal climbing the Kindle charts today."
                 vetted.append(c)
             else:
-                print(f"   [AI Bouncer] Filtered out disguised romance/spam: {c['title']}")
+                print(f"   [AI Literary Editor] Filtered out off-brand title: {c['title']}")
+
+        # Fallback if the AI editor rejected too many and left 0 picks
+        if not vetted and candidates:
+            fallback = candidates[0]
+            fallback["hook"] = "Selected from today's highest-rated Kindle promotions."
+            vetted = [fallback]
 
         print(f"   [AI Curated] Kept {len(vetted[:3])} books with custom hooks.")
         return vetted[:3]
@@ -222,9 +267,13 @@ def scrape_genre(page, genre_name, url, sent_links):
                     title = img_elem.get_attribute("alt") or ""
 
             title = title.strip()
+            title_lower = title.lower()
 
             if "Romance" not in genre_name and any(
-                kw in title.lower() for kw in ["romance", "harem", "billionaire", "alpha's", "human pet", "reverse harem"]
+                kw in title_lower for kw in [
+                    "romance", "harem", "billionaire", "alpha's", "human pet",
+                    "reverse harem", "litrpg", "supernatural thriller", "paranormal"
+                ]
             ):
                 continue
 
@@ -272,16 +321,26 @@ def scrape_genre(page, genre_name, url, sent_links):
                     except Exception:
                         pass
 
+            card_text = card.inner_text().lower()
+            is_priority = any(author in card_text for author in PRIORITY_AUTHORS)
+            is_curated_vip = any(author in card_text for author in CURATED_AUTHORS)
+
+            # Enforce minimum review threshold on Best Seller charts unless Priority or VIP author
+            if not is_new_release and not is_priority and not is_curated_vip:
+                if reviews < MIN_REVIEWS_BESTSELLERS or rating < 4.1:
+                    continue
+
             if is_new_release:
                 score = 1000 - len(candidates)
             else:
                 score = (reviews / (reviews + 50)) * rating + (50 / (reviews + 50)) * 4.2
 
-            card_text = card.inner_text().lower()
-            is_priority = False
-            if "tom draycott" in card_text or "livia huntington jones" in card_text:
+            if is_priority:
                 score += 10000
-                is_priority = True
+                print(f"   [Priority Author Match!] Boosted: {title}")
+            elif is_curated_vip:
+                score += 500
+                print(f"   [Curated Whitelist Match!] Boosted: {title}")
 
             candidates.append({
                 "title": title,
@@ -296,9 +355,9 @@ def scrape_genre(page, genre_name, url, sent_links):
         except Exception:
             continue
 
-    print(f"   Parsed candidates (after deduplication): {len(candidates)}")
+    print(f"   Parsed candidates (after deduplication & quality floor): {len(candidates)}")
     candidates.sort(key=lambda b: b["score"], reverse=True)
-    return vet_and_summarize_with_gemini(candidates[:8], genre_name)
+    return vet_and_summarize_with_gemini(candidates[:10], genre_name)
 
 
 def build_bohemian_email_html(recommendations):
@@ -392,7 +451,7 @@ def save_latest_issue_for_website(recommendations):
     today_picks = []
     recent_picks = []
 
-    # Grab the #1 book from each genre for "Today's Dispatch", and #2 for "Recent Favourites"
+    # Grab the #1 book from each main genre for "Today's Dispatch", and #2 for "More From Today's Shelf"
     for genre_label, books in recommendations.items():
         base_genre = GENRES.get(genre_label, {}).get("base_genre", genre_label)
         for i, b in enumerate(books):
@@ -415,7 +474,6 @@ def save_latest_issue_for_website(recommendations):
             elif i == 1 and len(recent_picks) < 4:
                 recent_picks.append(card_data)
 
-    # If fewer than 4 second-place books, pad with remaining top picks
     if len(recent_picks) < 4:
         recent_picks = (recent_picks + today_picks)[:4]
 
