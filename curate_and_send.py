@@ -150,6 +150,64 @@ def save_history(history):
         json.dump(history, f, indent=2)
 
 
+def classify_and_hook_override_with_gemini(title, author_and_blurb, forced_genre=None):
+    """Uses Gemini to determine the best genre shelf and write a custom bookshop hook for an override ASIN."""
+    valid_genres = ["Science Fiction & Fantasy", "Historical Fiction", "Literary Fiction", "Romance"]
+    default_genre = forced_genre if forced_genre in valid_genres else "Historical Fiction"
+    default_hook = "A standout featured selection hand-picked for today's morning reading shelf."
+
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return default_genre, default_hook
+
+    prompt = f"""
+    You are the literary curator for 'The Curated Spine', an upmarket Dark Academia book newsletter.
+    Analyze this featured book and place it into the best matching genre shelf, then write a 1-sentence hook.
+
+    Book Title: {title}
+    Details / Blurb / Author: {author_and_blurb}
+
+    Valid Genre Shelves (You MUST pick one exact string from this list):
+    - "Science Fiction & Fantasy"
+    - "Historical Fiction"
+    - "Literary Fiction"
+    - "Romance"
+
+    Rules for the Hook:
+    - Write a warm, intelligent, 1-sentence independent-bookshop style hook (max 24 words) capturing what the book is about.
+    - Never use cheesy words like 'page-turner', 'thrilling', 'captivating', 'embark', 'unravel', or 'delve'.
+
+    Respond ONLY with a valid JSON object in this exact format:
+    {{"genre": "Historical Fiction", "hook": "In occupied France, an American spy builds a covert resistance network right under the nose of the Gestapo."}}
+    """
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    req_body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json"}
+    }
+
+    try:
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(req_body).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=25) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            raw_text = result["candidates"][0]["content"]["parts"][0]["text"]
+            parsed = json.loads(raw_text)
+            chosen_genre = forced_genre if forced_genre in valid_genres else parsed.get("genre", default_genre)
+            if chosen_genre not in valid_genres:
+                chosen_genre = default_genre
+            hook = parsed.get("hook") or default_hook
+            return chosen_genre, hook
+    except Exception as e:
+        print(f"   [Override AI Warning] Gemini classification fallback ({e})")
+        return default_genre, default_hook
+
+
 def vet_and_summarize_with_gemini(candidates, genre_name):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or not candidates:
@@ -227,7 +285,11 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
 
 
 def process_override_asins(page):
-    """Reads comma-separated ASINs from override_asins.txt, scrapes their details, and returns them grouped by genre."""
+    """
+    Reads comma-separated ASINs from override_asins.txt, searches Amazon's Kindle store
+    to bypass /dp/ bot-blocking, extracts cover/title/price/ratings, and uses Gemini to
+    assign the proper genre and write a bookshop hook.
+    """
     if not os.path.exists(OVERRIDE_FILE):
         return {}
 
@@ -240,89 +302,129 @@ def process_override_asins(page):
     if not raw_content:
         return {}
 
-    # Extract clean 10-character ASINs separated by commas, spaces, or newlines
-    asins = [
-        a.strip().upper()
-        for a in re.split(r'[,\s]+', raw_content)
-        if re.match(r'^[A-Z0-9]{10}$', a.strip().upper())
-    ]
-    if not asins:
+    # Supports plain ASINs (B0GHHS498X) or optional genre hint (B0GHHS498X:Romance)
+    tokens = [t.strip() for t in re.split(r'[,\n]+', raw_content) if t.strip()]
+    parsed_entries = []
+    for token in tokens:
+        parts = token.split(":", 1)
+        asin_candidate = parts[0].strip().upper()
+        genre_hint = parts[1].strip() if len(parts) > 1 else None
+        if re.match(r'^[A-Z0-9]{10}$', asin_candidate):
+            parsed_entries.append((asin_candidate, genre_hint))
+
+    if not parsed_entries:
         return {}
 
-    print(f"\n-> Found {len(asins)} manual override ASIN(s) in {OVERRIDE_FILE}: {asins}")
+    print(f"\n-> Found {len(parsed_entries)} manual override ASIN(s) in {OVERRIDE_FILE}: {parsed_entries}")
     injected_by_genre = {}
 
-    for asin in asins:
-        url = f"https://www.amazon.com/dp/{asin}"
-        print(f"   [Override] Fetching product page for ASIN {asin}...")
+    for asin, genre_hint in parsed_entries:
+        canonical_url = f"https://www.amazon.com/dp/{asin}"
+        search_url = f"https://www.amazon.com/s?k={asin}"
+        print(f"   [Override] Searching Amazon for ASIN {asin}...")
+
         try:
-            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.goto(search_url, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_timeout(2500)
 
-            # 1. Title
-            title_el = page.query_selector("#productTitle, #ebooksProductTitle")
-            title = title_el.inner_text().strip() if title_el else f"Featured Title ({asin})"
+            # Find the search result card matching this ASIN (or first result card)
+            card = page.query_selector(f"div[data-asin='{asin}']")
+            if not card:
+                card = page.query_selector("div[data-component-type='s-search-result']")
 
-            # 2. High-Res Vertical Cover
-            img_el = page.query_selector("#landingImage, #ebooksImgBlkFront, #imgBlkFront")
-            raw_img = (img_el.get_attribute("src") or "") if img_el else ""
-            img_url = get_high_res_vertical_cover(raw_img)
-
-            # 3. Price
+            title = ""
+            img_url = ""
             price = "$0.00"
-            price_el = page.query_selector(
-                "#kindle-price, .kindle-price .a-color-price, span.a-color-price, .a-price .a-offscreen"
-            )
-            if price_el:
-                raw_price = price_el.inner_text().strip()
-                if any(ch.isdigit() for ch in raw_price):
-                    price = raw_price
-
-            # 4. Rating & Reviews
             rating = 4.5
             reviews = 100
-            rating_el = page.query_selector("#acrPopover span.a-icon-alt")
-            reviews_el = page.query_selector("#acrCustomerReviewText")
-            if rating_el:
+            extra_context = ""
+
+            if card:
+                # 1. Title from search card
+                title_el = card.query_selector("h2 span, h2 a span, span.a-text-normal")
+                if title_el:
+                    title = title_el.inner_text().strip()
+
+                # 2. Cover image from search card
+                img_el = card.query_selector("img.s-image, img")
+                if img_el:
+                    raw_img = img_el.get_attribute("src") or ""
+                    img_url = get_high_res_vertical_cover(raw_img)
+                    if not title:
+                        title = (img_el.get_attribute("alt") or "").replace("Sponsored Ad - ", "").strip()
+
+                # 3. Full card text for author, series, and price extraction
+                extra_context = card.inner_text()
+
+                # 4. Rating & Reviews
+                rating_el = card.query_selector("span.a-icon-alt")
+                if rating_el:
+                    try:
+                        rating = float(rating_el.inner_text().strip().split()[0])
+                    except Exception:
+                        pass
+
+                reviews_el = card.query_selector("span.a-size-base.s-underline-text, a[href*='#customerReviews'] span")
+                if reviews_el:
+                    try:
+                        reviews = int(re.sub(r'[^\d]', '', reviews_el.inner_text()))
+                    except Exception:
+                        pass
+
+                # 5. Price from search card (looks for $0.00 or Kindle price)
+                price_el = card.query_selector("span.a-price span.a-offscreen")
+                if price_el:
+                    raw_p = price_el.inner_text().strip()
+                    if any(ch.isdigit() for ch in raw_p):
+                        price = raw_p
+                if "$0.00" in extra_context or "free" in extra_context.lower():
+                    price = "$0.00"
+
+                # Try clicking through from the search result to grab the full book blurb if available
                 try:
-                    rating = float(rating_el.inner_text().strip().split()[0])
-                except Exception:
-                    pass
-            if reviews_el:
-                try:
-                    reviews = int(re.sub(r'[^\d]', '', reviews_el.inner_text()))
+                    link_to_click = card.query_selector("h2 a, a.a-link-normal")
+                    if link_to_click:
+                        link_to_click.click(timeout=5000)
+                        page.wait_for_load_state("domcontentloaded", timeout=15000)
+                        page.wait_for_timeout(1500)
+                        blurb_el = page.query_selector(
+                            "#bookDescription_feature_div, #productDescription, #wayfinding-breadcrumbs_feature_div"
+                        )
+                        if blurb_el:
+                            extra_context += "\n" + blurb_el.inner_text()
+                        if not title:
+                            pt_el = page.query_selector("#productTitle, #ebooksProductTitle")
+                            if pt_el:
+                                title = pt_el.inner_text().strip()
                 except Exception:
                     pass
 
-            # 5. Auto-detect Genre from Amazon Breadcrumbs / Categories on page
-            crumb_el = page.query_selector("#wayfinding-breadcrumbs_feature_div, #detailBulletsWrapper_feature_div")
-            category_context = crumb_el.inner_text().lower() if crumb_el else page.inner_text("body").lower()
+            if not title:
+                title = f"Featured Selection ({asin})"
 
-            if "historical" in category_context or "world war" in category_context:
-                target_genre = "Historical Fiction"
-            elif "science fiction" in category_context or "space opera" in category_context or "fantasy" in category_context:
-                target_genre = "Science Fiction & Fantasy"
-            elif "romance" in category_context or "romantic" in category_context:
-                target_genre = "Romance"
-            else:
-                target_genre = "Literary Fiction"
+            # Ask Gemini to classify the exact genre and write a tailored bookshop hook
+            target_genre, custom_hook = classify_and_hook_override_with_gemini(
+                title=title,
+                author_and_blurb=extra_context[:1500],
+                forced_genre=genre_hint
+            )
 
             book_obj = {
                 "title": title,
-                "link": url,
+                "link": canonical_url,
                 "image": img_url,
                 "rating": rating,
                 "reviews": reviews,
                 "price": price,
+                "hook": custom_hook,
                 "score": 99999,
                 "is_priority_author": True
             }
-            vetted = vet_and_summarize_with_gemini([book_obj], target_genre)
-            injected_by_genre.setdefault(target_genre, []).extend(vetted)
-            print(f"   [Override Success] Queued '{title}' into {target_genre} ({price}, ★ {rating} / {reviews} reviews)")
+            injected_by_genre.setdefault(target_genre, []).append(book_obj)
+            print(f"   [Override Success] '{title}' -> {target_genre} | Cover: {'Yes' if img_url else 'No'} | {price} | ★ {rating}")
 
         except Exception as e:
-            print(f"   [Override Error] Could not scrape ASIN {asin}: {e}")
+            print(f"   [Override Error] Failed processing ASIN {asin}: {e}")
 
     # Clear override_asins.txt so they only send once
     try:
