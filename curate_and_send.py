@@ -12,6 +12,7 @@ from playwright_stealth import stealth_sync
 
 HISTORY_FILE = "sent_history.json"
 LATEST_ISSUE_FILE = "latest_issue.json"
+OVERRIDE_FILE = "override_asins.txt"
 DAYS_TO_REMEMBER = 30
 AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "curatedspine-20")
 MIN_REVIEWS_BESTSELLERS = 50
@@ -211,7 +212,6 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
             else:
                 print(f"   [AI Literary Editor] Filtered out off-brand title: {c['title']}")
 
-        # Fallback if the AI editor rejected too many and left 0 picks
         if not vetted and candidates:
             fallback = candidates[0]
             fallback["hook"] = "Selected from today's highest-rated Kindle promotions."
@@ -224,6 +224,115 @@ def vet_and_summarize_with_gemini(candidates, genre_name):
         for c in candidates:
             c["hook"] = "Selected from today's highest-rated Kindle promotions."
         return candidates[:3]
+
+
+def process_override_asins(page):
+    """Reads comma-separated ASINs from override_asins.txt, scrapes their details, and returns them grouped by genre."""
+    if not os.path.exists(OVERRIDE_FILE):
+        return {}
+
+    try:
+        with open(OVERRIDE_FILE, "r", encoding="utf-8") as f:
+            raw_content = f.read().strip()
+    except Exception:
+        return {}
+
+    if not raw_content:
+        return {}
+
+    # Extract clean 10-character ASINs separated by commas, spaces, or newlines
+    asins = [
+        a.strip().upper()
+        for a in re.split(r'[,\s]+', raw_content)
+        if re.match(r'^[A-Z0-9]{10}$', a.strip().upper())
+    ]
+    if not asins:
+        return {}
+
+    print(f"\n-> Found {len(asins)} manual override ASIN(s) in {OVERRIDE_FILE}: {asins}")
+    injected_by_genre = {}
+
+    for asin in asins:
+        url = f"https://www.amazon.com/dp/{asin}"
+        print(f"   [Override] Fetching product page for ASIN {asin}...")
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(2500)
+
+            # 1. Title
+            title_el = page.query_selector("#productTitle, #ebooksProductTitle")
+            title = title_el.inner_text().strip() if title_el else f"Featured Title ({asin})"
+
+            # 2. High-Res Vertical Cover
+            img_el = page.query_selector("#landingImage, #ebooksImgBlkFront, #imgBlkFront")
+            raw_img = (img_el.get_attribute("src") or "") if img_el else ""
+            img_url = get_high_res_vertical_cover(raw_img)
+
+            # 3. Price
+            price = "$0.00"
+            price_el = page.query_selector(
+                "#kindle-price, .kindle-price .a-color-price, span.a-color-price, .a-price .a-offscreen"
+            )
+            if price_el:
+                raw_price = price_el.inner_text().strip()
+                if any(ch.isdigit() for ch in raw_price):
+                    price = raw_price
+
+            # 4. Rating & Reviews
+            rating = 4.5
+            reviews = 100
+            rating_el = page.query_selector("#acrPopover span.a-icon-alt")
+            reviews_el = page.query_selector("#acrCustomerReviewText")
+            if rating_el:
+                try:
+                    rating = float(rating_el.inner_text().strip().split()[0])
+                except Exception:
+                    pass
+            if reviews_el:
+                try:
+                    reviews = int(re.sub(r'[^\d]', '', reviews_el.inner_text()))
+                except Exception:
+                    pass
+
+            # 5. Auto-detect Genre from Amazon Breadcrumbs / Categories on page
+            crumb_el = page.query_selector("#wayfinding-breadcrumbs_feature_div, #detailBulletsWrapper_feature_div")
+            category_context = crumb_el.inner_text().lower() if crumb_el else page.inner_text("body").lower()
+
+            if "historical" in category_context or "world war" in category_context:
+                target_genre = "Historical Fiction"
+            elif "science fiction" in category_context or "space opera" in category_context or "fantasy" in category_context:
+                target_genre = "Science Fiction & Fantasy"
+            elif "romance" in category_context or "romantic" in category_context:
+                target_genre = "Romance"
+            else:
+                target_genre = "Literary Fiction"
+
+            book_obj = {
+                "title": title,
+                "link": url,
+                "image": img_url,
+                "rating": rating,
+                "reviews": reviews,
+                "price": price,
+                "score": 99999,
+                "is_priority_author": True
+            }
+            vetted = vet_and_summarize_with_gemini([book_obj], target_genre)
+            injected_by_genre.setdefault(target_genre, []).extend(vetted)
+            print(f"   [Override Success] Queued '{title}' into {target_genre} ({price}, ★ {rating} / {reviews} reviews)")
+
+        except Exception as e:
+            print(f"   [Override Error] Could not scrape ASIN {asin}: {e}")
+
+    # Clear override_asins.txt so they only send once
+    try:
+        with open(OVERRIDE_FILE, "w", encoding="utf-8") as f:
+            f.write("")
+        print(f"-> Cleared {OVERRIDE_FILE} after queuing override books.")
+    except Exception as e:
+        print(f"-> Warning: Could not clear {OVERRIDE_FILE}: {e}")
+
+    return injected_by_genre
 
 
 def scrape_genre(page, genre_name, url, sent_links):
@@ -572,8 +681,18 @@ def run_bot():
         page = context.new_page()
         stealth_sync(page)
 
+        # 0. Check override_asins.txt first and queue any manual spotlight books
+        override_by_genre = process_override_asins(page)
+
         for genre, meta in GENRES.items():
             top_picks = scrape_genre(page, genre, meta["url"], set(history.keys()))
+
+            # Prepend any manual override books for this genre into Slot #1
+            if genre in override_by_genre:
+                injected = override_by_genre[genre]
+                injected_links = {b["link"] for b in injected}
+                top_picks = (injected + [b for b in top_picks if b["link"] not in injected_links])[:3]
+
             if top_picks:
                 recommendations[genre] = top_picks
                 for b in top_picks:
