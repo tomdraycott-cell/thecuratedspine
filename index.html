@@ -3,398 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Curated Spine | Daily Kindle Deals</title>
-    
-    <!-- Import Google Fonts: Playfair Display for headings, Merriweather for body -->
+    <title>The Curated Spine | Daily Hand-Picked Kindle Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
-    <!-- Import Tailwind CSS for responsive layout -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Moody Dark Academia Background */
         body {
+            font-family: 'Inter', sans-serif;
             background-color: #1A1715;
+            color: #FAF7F2;
             background-image: 
-                linear-gradient(rgba(26, 23, 21, 0.86), rgba(38, 33, 30, 0.94)),
-                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2000&auto=format&fit=crop');
+                linear-gradient(to bottom, rgba(26, 23, 21, 0.88), rgba(26, 23, 21, 0.95)),
+                url('https://images.unsplash.com/photo-1507842229356-51c61504d3ab?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #FAF7F2;
-            font-family: 'Merriweather', 'Georgia', serif;
-            -webkit-font-smoothing: antialiased;
         }
-
-        h1, h2, h3, h4, .font-playfair {
-            font-family: 'Playfair Display', serif;
+        .serif-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
         }
-
-        /* Warm Parchment Feature Cards */
-        .feature-card {
+        .parchment-card {
             background-color: #FAF7F2;
-            color: #2C2725;
-            border: 1px solid #EBE5DF;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            color: #1A1715;
+            border: 1px solid #D8CFC8;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
         }
-        
-        .feature-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        /* Form Container Styling */
-        .form-container {
-            background-color: #FAF7F2;
-            color: #2C2725;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
-        }
-
-        /* Vintage Library Card Checklist Styling for Genres */
-        .genre-checkbox {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
         .genre-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.875rem;
-            padding: 1rem 1.125rem;
+            transition: all 0.2s ease;
+            border: 1.5px solid #D8CFC8;
             background-color: #FFFFFF;
-            border: 1.5px solid #D5C7C0;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-            user-select: none;
-            position: relative;
         }
-
-        .genre-card:hover {
+        .genre-card.selected {
             border-color: #8B3A2B;
-            background-color: #FDFBFA;
+            background-color: #F8F1EC;
         }
-
-        /* Custom Square Checkbox Indicator */
         .checkbox-box {
-            width: 1.35rem;
-            height: 1.35rem;
-            min-width: 1.35rem;
-            margin-top: 0.15rem;
-            border: 2px solid #B8A69E;
-            border-radius: 0.35rem;
-            background-color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.18s ease;
+            transition: all 0.2s ease;
         }
-
-        .checkbox-icon {
-            opacity: 0;
-            transform: scale(0.6);
-            transition: all 0.18s ease;
-        }
-
-        /* Checked State: Explicit Terracotta Checkmark & Warm Tinted Card */
-        .genre-checkbox:checked + .genre-card {
-            background-color: #F9EFEA;
-            border-color: #8B3A2B;
-            box-shadow: 0 4px 12px rgba(139, 58, 43, 0.12);
-        }
-
-        .genre-checkbox:checked + .genre-card .checkbox-box {
+        .genre-card.selected .checkbox-box {
             background-color: #8B3A2B;
             border-color: #8B3A2B;
         }
-
-        .genre-checkbox:checked + .genre-card .checkbox-icon {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .genre-checkbox:checked + .genre-card .genre-title {
-            color: #6B281B;
-        }
-
-        .genre-checkbox:focus-visible + .genre-card {
-            outline: 2px solid #8B3A2B;
-            outline-offset: 2px;
-        }
-
-        .input-focus-ring:focus {
-            outline: none;
-            border-color: #8B3A2B;
-            box-shadow: 0 0 0 3px rgba(139, 58, 43, 0.2);
-        }
-
-        /* Subtle Book Cover 3D Spine Effect */
-        .book-cover-shadow {
-            box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.35), inset 2px 0 4px rgba(255, 255, 255, 0.2);
-        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center pt-10 sm:pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#8B3A2B] selection:text-white">
 
-    <!-- HEADER SECTION (With generous top clearance so the book icon never clips) -->
-    <header class="max-w-3xl w-full text-center mt-2 mb-10 sm:mb-12">
-        <div class="flex justify-center mb-5">
-            <div class="p-3 rounded-full bg-[#2C2725]/80 border border-[#CBBAB3]/30 shadow-inner">
-                <svg class="w-9 h-9 text-[#CBBAB3]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                </svg>
+    <!-- Top Navigation / Brand Bar -->
+    <header class="w-full py-6 px-4 text-center border-b border-[#3E3532]/60 bg-[#1A1715]/70 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#8B3A2B]"></span>
+                <span class="serif-title text-2xl font-bold tracking-wide text-[#FAF7F2]">The Curated Spine</span>
             </div>
+            <p class="text-xs tracking-widest uppercase text-[#CBBAB3]">
+                Independent Literary Curation &bull; Free &amp; $0.99 Kindle Editions
+            </p>
         </div>
-        
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4 text-[#FAF7F2] font-playfair">
-            The Curated Spine
-        </h1>
-        <p class="text-base sm:text-xl text-[#EBE5DF] leading-relaxed max-w-2xl mx-auto font-light">
-            A curated daily bookshelf of exceptional Kindle deals, vetted with care and delivered every morning at 6:20 AM.
-        </p>
     </header>
 
-    <!-- ABOVE-THE-FOLD SIGNUP FORM SECTION -->
-    <section id="signup-card" class="form-container max-w-2xl w-full rounded-2xl p-6 sm:p-10 border border-[#EBE5DF] mb-16">
-        
-        <div class="text-center mb-6">
-            <h2 class="text-2xl sm:text-3xl font-semibold font-playfair text-[#1A1715]">Join the Reading List</h2>
-            <p class="text-xs sm:text-sm text-[#5A524D] mt-1.5">Four hand-picked daily deals per genre. Never bloated, never spam.</p>
-        </div>
-        
-        <!-- MailerLite Form targeting hidden iframe -->
-        <form id="subscribe-form" class="flex flex-col gap-6" action="https://assets.mailerlite.com/jsonp/2699134/forms/201222053108384784/subscribe" method="post" target="hidden_iframe" onsubmit="return handleFormSubmit(event)">
-            
-            <!-- Genre Selection Checklist -->
-            <div>
-                <div class="flex items-center justify-between mb-3 px-1">
-                    <span class="text-[#5A524D] text-xs uppercase tracking-widest font-semibold">
-                        1. Tick Your Preferred Genres
-                    </span>
-                    <button type="button" onclick="toggleAllGenres()" id="toggle-all-btn" class="text-xs text-[#8B3A2B] hover:text-[#6B281B] font-semibold underline underline-offset-2 transition-colors">
-                        Select All
-                    </button>
-                </div>
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-12 sm:py-16 w-full space-y-20">
 
-                <!-- 2x2 Library Card Checklist Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <!-- Sci-Fi -->
-                    <label class="block">
-                        <input type="checkbox" name="groups[]" value="201220938717463907" class="genre-checkbox" checked onchange="updateGenreCount()">
-                        <div class="genre-card">
-                            <div class="checkbox-box">
-                                <svg class="w-3.5 h-3.5 text-white checkbox-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="genre-title font-playfair font-semibold text-base sm:text-lg text-[#1A1715] leading-snug">
-                                    Sci-Fi
-                                </div>
-                                <div class="text-xs text-[#5A524D] mt-0.5 leading-relaxed">
-                                    Speculative worlds, hard science &amp; space opera
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-
-                    <!-- Literary Fiction -->
-                    <label class="block">
-                        <input type="checkbox" name="groups[]" value="201220964201006584" class="genre-checkbox" checked onchange="updateGenreCount()">
-                        <div class="genre-card">
-                            <div class="checkbox-box">
-                                <svg class="w-3.5 h-3.5 text-white checkbox-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="genre-title font-playfair font-semibold text-base sm:text-lg text-[#1A1715] leading-snug">
-                                    Literary Fiction
-                                </div>
-                                <div class="text-xs text-[#5A524D] mt-0.5 leading-relaxed">
-                                    Acclaimed prose, sharp wit &amp; character studies
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-
-                    <!-- Historical Fiction -->
-                    <label class="block">
-                        <input type="checkbox" name="groups[]" value="201220954450298498" class="genre-checkbox" onchange="updateGenreCount()">
-                        <div class="genre-card">
-                            <div class="checkbox-box">
-                                <svg class="w-3.5 h-3.5 text-white checkbox-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="genre-title font-playfair font-semibold text-base sm:text-lg text-[#1A1715] leading-snug">
-                                    Historical Fiction
-                                </div>
-                                <div class="text-xs text-[#5A524D] mt-0.5 leading-relaxed">
-                                    Richly researched eras &amp; sweeping sagas
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-
-                    <!-- Romance -->
-                    <label class="block">
-                        <input type="checkbox" name="groups[]" value="201220945613948200" class="genre-checkbox" onchange="updateGenreCount()">
-                        <div class="genre-card">
-                            <div class="checkbox-box">
-                                <svg class="w-3.5 h-3.5 text-white checkbox-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="genre-title font-playfair font-semibold text-base sm:text-lg text-[#1A1715] leading-snug">
-                                    Romance
-                                </div>
-                                <div class="text-xs text-[#5A524D] mt-0.5 leading-relaxed">
-                                    Slow-burn chemistry &amp; heartfelt stories
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-
-                <!-- Dynamic Selection Status / Validation Notice -->
-                <div class="mt-2.5 flex items-center justify-between px-1">
-                    <p id="genre-status-text" class="text-xs text-[#5A524D]">
-                        <span class="font-semibold text-[#8B3A2B]">2 genres</span> selected for your morning dispatch.
-                    </p>
-                    <p id="genre-error-msg" class="hidden text-xs text-[#B91C1C] font-semibold">
-                        Please tick at least one genre above.
-                    </p>
-                </div>
+        <!-- Hero + Vintage Library Subscription Card -->
+        <section class="text-center max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2A2421] border border-[#4A3F3B] text-[#E59888] text-xs font-medium mb-6">
+                <span>★ Vetted Daily by AI &amp; Editorial Standards</span>
             </div>
-
-            <!-- Email Input & Submit -->
-            <div>
-                <label for="email-input" class="block text-[#5A524D] text-xs uppercase tracking-widest font-semibold mb-2.5 px-1">
-                    2. Where Should We Send Your Bookshelf?
-                </label>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <input 
-                        id="email-input"
-                        type="email" 
-                        name="fields[email]"
-                        placeholder="Enter your email address..." 
-                        required
-                        autocomplete="email"
-                        class="flex-1 px-5 py-4 rounded-lg border border-[#CBBAB3] bg-[#FFFFFF] text-[#2C2725] input-focus-ring text-base placeholder:text-[#A39A96]"
-                    >
-                    <button 
-                        type="submit" 
-                        class="bg-[#8B3A2B] hover:bg-[#732f23] active:bg-[#5e251b] text-white px-8 py-4 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md whitespace-nowrap cursor-pointer"
-                    >
-                        Subscribe Free
-                    </button>
-                </div>
-            </div>
-            
-            <p class="text-center text-xs text-[#7A706A] mt-[-6px]">
-                We respect your inbox. Zero spam, and one-click unsubscribe at any time.
+            <h1 class="serif-title text-4xl sm:text-6xl font-bold text-[#FAF7F2] leading-tight mb-5">
+                Discover Accomplished Fiction.<br>
+                <span class="italic font-normal text-[#E59888]">Skip the Algorithm Clutter.</span>
+            </h1>
+            <p class="text-base sm:text-lg text-[#D8CFC8] max-w-2xl mx-auto leading-relaxed mb-10">
+                Every morning, we filter thousands of discounted Kindle books down to a concise, bookshop-quality shelf of free and $0.99 gems—strictly vetted so disguised erotica and low-effort filler never reach your inbox.
             </p>
 
-            <input type="hidden" name="ml-submit" value="1">
-            <input type="hidden" name="anticsrf" value="true">
-        </form>
-    </section>
-
-    <!-- YESTERDAY'S CURATED SHELF (RANKED BY READER CTR) -->
-    <section class="max-w-5xl w-full mb-20">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-[#EBE5DF]/20 pb-4">
-            <div>
-                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#CBBAB3] font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-[#8B3A2B] inline-block"></span>
-                    Inside the Dispatch
+            <!-- Vintage Library Borrowing Card Form -->
+            <div class="parchment-card rounded-2xl p-6 sm:p-10 text-left max-w-2xl mx-auto relative overflow-hidden">
+                <div class="flex items-center justify-between border-b border-[#D8CFC8] pb-4 mb-6">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-[#8B3A2B] font-bold block">Reader Registration Card</span>
+                        <h2 class="serif-title text-2xl sm:text-3xl font-bold text-[#1A1715]">1. Select Your Reading Shelves</h2>
+                    </div>
+                    <button type="button" onclick="selectAllGenres()" class="text-xs font-semibold text-[#8B3A2B] hover:underline cursor-pointer">
+                        Select All Genres
+                    </button>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-playfair font-semibold text-[#FAF7F2]">
-                    Recent Reader Favourites
-                </h2>
-                <p class="text-xs sm:text-sm text-[#CBBAB3] mt-1">
-                    Automatically ranked by our subscribers' actual click-through rate (CTR).
+
+                <form id="custom-ml-form" onsubmit="submitToMailerLite(event)" class="space-y-6">
+                    <!-- 2x2 Genre Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        <!-- Sci-Fi -->
+                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220938717463907">
+                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-[#1A1715]">Science Fiction &amp; Fantasy</div>
+                                <div class="text-xs text-[#6E655F] mt-0.5">Space opera, hard sci-fi, first contact &amp; epic speculative worlds.</div>
+                            </div>
+                        </div>
+
+                        <!-- Historical Fiction -->
+                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220954450298498">
+                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-[#1A1715]">Historical Fiction</div>
+                                <div class="text-xs text-[#6E655F] mt-0.5">Richly researched eras, ancient intrigue &amp; wartime drama.</div>
+                            </div>
+                        </div>
+
+                        <!-- Literary Fiction -->
+                        <div class="genre-card selected rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220964201006584">
+                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-[#1A1715]">Literature &amp; Fiction</div>
+                                <div class="text-xs text-[#6E655F] mt-0.5">Character-driven stories, contemporary classics &amp; book-club picks.</div>
+                            </div>
+                        </div>
+
+                        <!-- Romance -->
+                        <div class="genre-card rounded-xl p-4 cursor-pointer flex items-start gap-3.5" onclick="toggleGenre(this)" data-group="201220945613948200">
+                            <div class="checkbox-box w-5 h-5 rounded border border-[#C4B7B1] flex items-center justify-center mt-0.5 shrink-0 text-white">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-[#1A1715]">Romantic Fiction</div>
+                                <div class="text-xs text-[#6E655F] mt-0.5">Warm, well-crafted historical, contemporary &amp; slow-burn romance.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p id="genre-error" class="hidden text-xs font-semibold text-[#8B3A2B]">
+                        Please select at least one reading shelf above.
+                    </p>
+
+                    <!-- Email Input & Submit -->
+                    <div class="pt-2">
+                        <label for="subscriber-email" class="block text-xs font-bold uppercase tracking-wider text-[#4A423F] mb-2">
+                            2. Where Should We Send Your Morning Shelf?
+                        </label>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input
+                                type="email"
+                                id="subscriber-email"
+                                required
+                                placeholder="Enter your best email address..."
+                                class="flex-1 px-4 py-3.5 rounded-lg bg-white border border-[#C4B7B1] text-[#1A1715] placeholder-[#8C827C] text-sm focus:outline-none focus:border-[#8B3A2B] focus:ring-2 focus:ring-[#8B3A2B]/20"
+                            />
+                            <button
+                                type="submit"
+                                id="submit-btn"
+                                class="px-7 py-3.5 rounded-lg bg-[#8B3A2B] hover:bg-[#722E21] text-[#FAF7F2] font-semibold text-sm tracking-wide transition-all shadow-md cursor-pointer shrink-0"
+                            >
+                                Join Free Dispatch &rarr;
+                            </button>
+                        </div>
+                        <p class="text-[11px] text-[#786E68] mt-2.5 flex items-center justify-between">
+                            <span>100% free forever. One-click unsubscribe in every issue.</span>
+                            <span class="font-medium text-[#8B3A2B]">Dispatched at 8:20 AM EST</span>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="form-success" class="hidden text-center py-8 space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-[#8B3A2B]/15 text-[#8B3A2B] flex items-center justify-center mx-auto text-xl font-bold">
+                        ✓
+                    </div>
+                    <h3 class="serif-title text-3xl font-bold text-[#1A1715]">Your Library Card is Stamped.</h3>
+                    <p class="text-sm text-[#4A423F] max-w-md mx-auto">
+                        Welcome to <em>The Curated Spine</em>. Watch your inbox tomorrow morning for your first hand-picked dispatch of Kindle deals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Daily Dispatch Showcase Section -->
+        <section class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#3E3532] pb-4">
+                <div>
+                    <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-[#E59888] font-semibold mb-1">
+                        <span class="w-2 h-2 rounded-full bg-[#E59888] animate-pulse"></span>
+                        <span>Inside Today's Issue</span>
+                    </div>
+                    <h2 class="serif-title text-3xl sm:text-4xl font-bold text-[#FAF7F2]">Today's Curated Dispatch</h2>
+                    <p id="dispatch-date-label" class="text-xs text-[#CBBAB3] mt-1">
+                        Live daily selections pulled directly from this morning's newsletter.
+                    </p>
+                </div>
+
+                <!-- Controls: Tab Switcher + US/UK Currency Toggle -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="inline-flex rounded-lg bg-[#231E1B] p-1 border border-[#3E3532]">
+                        <button type="button" id="tab-yesterday" onclick="switchShowcaseTab('yesterday')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer">
+                            Today's #1 Picks
+                        </button>
+                        <button type="button" id="tab-week" onclick="switchShowcaseTab('week')" class="px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer">
+                            More From Today's Shelf
+                        </button>
+                    </div>
+
+                    <div class="inline-flex rounded-lg bg-[#231E1B] p-1 border border-[#3E3532]">
+                        <button type="button" id="curr-US" onclick="switchCurrency('US')" class="px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer">
+                            US ($)
+                        </button>
+                        <button type="button" id="curr-UK" onclick="switchCurrency('UK')" class="px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer">
+                            UK (&pound;)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2x2 Showcase Cards Grid -->
+            <div id="showcase-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Populated dynamically from latest_issue.json -->
+            </div>
+
+            <p class="text-center text-[11px] text-[#A39A96] italic">
+                * Kindle promotional prices are time-sensitive and verified at the time of our morning dispatch.
+            </p>
+        </section>
+
+        <!-- 3 Value Pillars -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
+                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
+                    $0
+                </div>
+                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Exceptional Value</h3>
+                <p class="text-xs text-[#4A423F] leading-relaxed">
+                    Every featured book is either completely <strong>Free ($0.00)</strong> or deeply discounted under <strong>$2.99 / &pound;1.99</strong>. No full-price padding.
                 </p>
             </div>
 
-            <!-- Controls: Timeframe Tabs & Region Currency Toggle -->
-            <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-                <div class="inline-flex rounded-lg bg-[#2C2725] p-1 border border-[#CBBAB3]/30">
-                    <button type="button" id="tab-yesterday" onclick="switchArchiveTab('yesterday')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-white transition-all">
-                        Yesterday's Top Clicked
-                    </button>
-                    <button type="button" id="tab-week" onclick="switchArchiveTab('week')" class="px-3 py-1.5 rounded-md text-xs font-semibold text-[#EBE5DF] hover:text-white transition-all">
-                        Best of the Week
-                    </button>
+            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
+                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
+                    ★
                 </div>
+                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Thoughtfully Curated</h3>
+                <p class="text-xs text-[#4A423F] leading-relaxed">
+                    No disguised erotica in Sci-Fi, no low-effort spam. Just celebrated stories, vetted hidden gems, and verified reader favourites.
+                </p>
+            </div>
 
-                <!-- UK / US Price Display Toggle -->
-                <div class="inline-flex rounded-lg bg-[#2C2725] p-1 border border-[#CBBAB3]/30" title="Toggle store currency preview">
-                    <button type="button" id="curr-uk" onclick="setCurrency('GBP')" class="px-2.5 py-1.5 rounded-md text-xs font-semibold bg-[#FAF7F2] text-[#1A1715] transition-all">
-                        UK (£)
-                    </button>
-                    <button type="button" id="curr-us" onclick="setCurrency('USD')" class="px-2.5 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all">
-                        US ($)
-                    </button>
+            <div class="parchment-card rounded-xl p-6 text-center space-y-2.5">
+                <div class="w-9 h-9 rounded-full bg-[#8B3A2B]/10 text-[#8B3A2B] flex items-center justify-center mx-auto font-bold text-sm">
+                    ✦
                 </div>
+                <h3 class="serif-title text-2xl font-bold text-[#1A1715]">Your Next Favourite</h3>
+                <p class="text-xs text-[#4A423F] leading-relaxed">
+                    Expand your Kindle library with intelligent new releases and timeless backlist series starters before they go mainstream.
+                </p>
             </div>
-        </div>
+        </section>
 
-        <!-- Book Cards Container (Populated from latest_issue.json or fallback preview data) -->
-        <div id="archive-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- JS injects book cards here -->
-        </div>
+    </main>
 
-        <p class="text-center text-xs text-[#A39A96] mt-4 italic">
-            * Kindle promotional prices are time-sensitive and may have returned to standard retail price after yesterday's dispatch.
-        </p>
-    </section>
-
-    <!-- 3 CORE VALUE PROPOSITION CARDS -->
-    <section class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
-        <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
-            <div class="bg-[#FFFFFF] p-3.5 rounded-full mb-4 text-[#8B3A2B] shadow-sm border border-[#EBE5DF]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Exceptional Value</h3>
-            <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
-                Every featured book is free or under <span class="currency-cap-label font-semibold text-[#2C2725]">£2.99</span>. No exceptions.
-            </p>
-        </div>
-
-        <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
-            <div class="bg-[#FFFFFF] p-3.5 rounded-full mb-4 text-[#8B3A2B] shadow-sm border border-[#EBE5DF]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Thoughtfully Curated</h3>
-            <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
-                No disguised erotica in Sci-Fi, no filler. Just celebrated stories, vetted hidden gems, and bestsellers.
-            </p>
-        </div>
-
-        <div class="feature-card rounded-xl p-8 text-center flex flex-col items-center">
-            <div class="bg-[#FFFFFF] p-3.5 rounded-full mb-4 text-[#8B3A2B] shadow-sm border border-[#EBE5DF]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 font-playfair text-[#1A1715]">Your Next Favourite</h3>
-            <p class="text-[0.95rem] text-[#5A524D] leading-relaxed">
-                Expand your library with intelligent new releases and timeless backlist titles before they go mainstream.
-            </p>
-        </div>
-    </section>
-
-    <!-- FOOTER WITH CLEAR AUTHOR SPOTLIGHT CTA -->
-    <footer class="w-full max-w-4xl border-t border-[#EBE5DF]/20 pt-8 pb-12 mt-auto text-center">
-        <div class="inline-block bg-[#2C2725]/80 border border-[#CBBAB3]/30 rounded-xl px-6 py-4 mb-6">
-            <p class="text-sm text-[#EBE5DF] leading-relaxed">
-                Are you an author running a Kindle Countdown Deal or promotion?
+    <!-- Footer with Author Partner Modal Trigger & Amazon Associate Disclosure -->
+    <footer class="w-full py-10 px-4 text-center border-t border-[#3E3532]/60 bg-[#14110F]/90 mt-12 space-y-4">
+        <div class="max-w-xl mx-auto px-4 py-3 rounded-lg bg-[#231E1B] border border-[#3E3532]">
+            <p class="text-xs text-[#D8CFC8]">
+                Are you an author running a Kindle Countdown Deal or free promotion?
                 <button type="button" onclick="openAuthorModal()" class="ml-1 text-[#E59888] font-semibold hover:text-[#FAF7F2] underline decoration-[#E59888] underline-offset-4 transition-all cursor-pointer">
                     Inquire about our single daily Partner Spotlight slot &rarr;
                 </button>
@@ -403,359 +277,240 @@
         <p class="text-xs text-[#A39A96]">
             &copy; 2026 The Curated Spine. All rights reserved.
         </p>
-
         <p class="text-[11px] text-[#A39A96]/80 mt-2">
             As an Amazon Associate, The Curated Spine earns from qualifying purchases.
         </p>
     </footer>
 
-    <!-- HIDDEN IFRAME (Catches the MailerLite redirect silently) -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-    <!-- POPUP THANK YOU MODAL (Hidden by default) -->
-    <div id="thank-you-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-[#1A1715]/80 backdrop-blur-sm p-4 transition-opacity">
-        <div class="bg-[#FAF7F2] p-8 sm:p-12 rounded-2xl max-w-md w-full text-center shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-[#CBBAB3] transform scale-100 transition-transform">
-            <div class="bg-[#FFFFFF] p-4 rounded-full inline-block mb-4 text-[#8B3A2B] shadow-sm border border-[#EBE5DF]">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            </div>
-            <h2 class="text-3xl font-semibold mb-3 font-playfair text-[#1A1715]">Welcome to the List</h2>
-            <p class="text-[#5A524D] text-sm sm:text-base leading-relaxed mb-8">
-                You have successfully joined <em>The Curated Spine</em>. Keep an eye on your inbox at 6:20 AM tomorrow for your first curated bookshelf!
+    <!-- Author Spotlight Modal -->
+    <div id="author-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="parchment-card rounded-2xl max-w-md w-full p-6 sm:p-8 text-left relative">
+            <button type="button" onclick="closeAuthorModal()" class="absolute top-4 right-4 text-[#786E68] hover:text-[#1A1715] text-xl font-bold cursor-pointer">&times;</button>
+            <span class="text-[10px] uppercase tracking-widest text-[#8B3A2B] font-bold block mb-1">Partner Submissions</span>
+            <h3 class="serif-title text-2xl font-bold text-[#1A1715] mb-2">Author Partner Spotlight</h3>
+            <p class="text-xs text-[#4A423F] leading-relaxed mb-4">
+                We feature one vetted Partner Spotlight per genre in our daily dispatch. To request a slot for your upcoming Free Promotion or Kindle Countdown Deal, email our editorial desk with your 10-digit Amazon ASIN and promo dates:
             </p>
-            <button onclick="closeModal()" class="bg-[#8B3A2B] hover:bg-[#732f23] text-white px-8 py-3 rounded-lg font-playfair text-lg tracking-wide transition-colors duration-200 shadow-md w-full sm:w-auto cursor-pointer">
-                Return to Bookshelf
+            <div class="p-3.5 rounded-lg bg-[#F3EDE4] border border-[#D8CFC8] text-center mb-5">
+                <a href="mailto:hello@thecuratedspine.com?subject=Author%20Partner%20Spotlight%20Inquiry%20(ASIN)" class="text-sm font-bold text-[#8B3A2B] hover:underline">
+                    hello@thecuratedspine.com
+                </a>
+            </div>
+            <button type="button" onclick="closeAuthorModal()" class="w-full py-2.5 rounded-lg bg-[#231E1B] text-[#FAF7F2] text-xs font-semibold cursor-pointer">
+                Close Window
             </button>
         </div>
     </div>
 
-    <!-- AUTHOR FEATURE SLOT MODAL -->
-    <div id="author-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-[#1A1715]/80 backdrop-blur-sm p-4 transition-opacity">
-        <div class="bg-[#FAF7F2] p-6 sm:p-10 rounded-2xl max-w-lg w-full text-left shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-[#CBBAB3]">
-            <div class="flex items-start justify-between mb-4">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-[#8B3A2B] font-semibold">Partner Spotlight</span>
-                    <h3 class="text-2xl font-semibold font-playfair text-[#1A1715] mt-0.5">Reserve a Daily Feature Slot</h3>
-                </div>
-                <button onclick="closeAuthorModal()" class="text-[#5A524D] hover:text-[#1A1715] p-1">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <p class="text-xs sm:text-sm text-[#5A524D] leading-relaxed mb-5">
-                To protect reader trust and engagement, we feature strictly <strong>one sponsored Partner Spotlight per genre each day</strong>. Novellas and polarizing literary works are welcome; low-effort scams or mis-categorized erotica are not.
-            </p>
-            <div class="bg-[#FFFFFF] border border-[#EBE5DF] rounded-xl p-4 mb-6 text-xs text-[#2C2725] space-y-2">
-                <div class="flex justify-between">
-                    <span class="text-[#5A524D]">Format:</span>
-                    <span class="font-semibold">Cover + Editorial Hook + Direct Amazon Link</span>
-                </div>
-                <div class="flex justify-between">
-                    <span class="text-[#5A524D]">Eligible Deal Price:</span>
-                    <span class="font-semibold">Free or under £2.99 / $2.99</span>
-                </div>
-                <div class="flex justify-between">
-                    <span class="text-[#5A524D]">Word Count Minimum:</span>
-                    <span class="font-semibold">None (Novellas welcome)</span>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-3 justify-end">
-                <button type="button" onclick="closeAuthorModal()" class="px-5 py-2.5 rounded-lg border border-[#CBBAB3] text-[#5A524D] hover:text-[#1A1715] text-sm font-semibold cursor-pointer">
-                    Cancel
-                </button>
-                <a href="mailto:hello@thecuratedspine.com?subject=Partner%20Spotlight%20Inquiry%20-%20The%20Curated%20Spine&body=Hi%20Tom,%0A%0AI'd%20like%20to%20inquire%20about%20a%20Partner%20Spotlight%20slot.%0A%0AAmazon%20Book%20URL:%20%0AGenre:%20%0APromo%20Dates:%20%0ADeal%20Price:%20" class="bg-[#8B3A2B] hover:bg-[#732f23] text-white px-6 py-2.5 rounded-lg font-playfair text-base text-center shadow-md transition-colors">
-                    Email Book Link for Vetting &rarr;
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPTS FOR CHECKLIST UX, ARCHIVE PREVIEW & MODALS -->
+    <!-- Scripts: Genre Checkboxes, MailerLite Submission, and Live JSON Showcase Loader -->
     <script>
-        // Sample Curated Archive Data (Automatically overridden if latest_issue.json exists in your GitLab Pages repo)
-        const FALLBACK_ARCHIVE = {
+        function toggleGenre(card) {
+            card.classList.toggle('selected');
+            document.getElementById('genre-error').classList.add('hidden');
+        }
+
+        function selectAllGenres() {
+            document.querySelectorAll('.genre-card').forEach(c => c.classList.add('selected'));
+            document.getElementById('genre-error').classList.add('hidden');
+        }
+
+        function openAuthorModal() {
+            const modal = document.getElementById('author-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeAuthorModal() {
+            const modal = document.getElementById('author-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        async function submitToMailerLite(e) {
+            e.preventDefault();
+            const selectedCards = document.querySelectorAll('.genre-card.selected');
+            if (selectedCards.length === 0) {
+                document.getElementById('genre-error').classList.remove('hidden');
+                return;
+            }
+
+            const email = document.getElementById('subscriber-email').value.trim();
+            if (!email) return;
+
+            const btn = document.getElementById('submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Stamping Card...';
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            selectedCards.forEach(card => {
+                formData.append('groups[]', card.getAttribute('data-group'));
+            });
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            try {
+                await fetch('https://assets.mailerlite.com/jsonp/2264587/forms/184715250918458732/subscribe', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+            } catch (err) {
+                console.log('Subscription submitted:', err);
+            }
+
+            document.getElementById('custom-ml-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        // Live Showcase State
+        let currentTab = 'yesterday';
+        let currentCurrency = 'US';
+
+        // Fallback sample books only shown if latest_issue.json is missing
+        let showcaseData = {
             yesterday: [
                 {
-                    title: "The Watchers: A First Contact Mystery",
-                    author: "E. V. Vance",
-                    genre: "Sci-Fi",
-                    rating: "4.7",
-                    reviews: "412",
-                    priceGBP: "£0.99",
-                    priceUSD: "$0.99",
-                    ctr: "19.4% CTR",
-                    rankBadge: "#1 Most Claimed Yesterday",
-                    hook: "When a deep-space listening post intercepts a mathematical signal buried inside cosmic background radiation, three burnt-out linguists have forty-eight hours to decode it before military command pulls the plug.",
-                    coverColor: "from-[#1F3A4D] to-[#0F1E29]",
-                    url: "#signup-card"
+                    genre: 'Sci-Fi',
+                    title: 'Galilee Rising: Starship Galilee Chronicles Book 1',
+                    cover: '',
+                    price_uk: 'Free',
+                    price_us: '$0.00',
+                    rating: '4.7',
+                    reviews: '30',
+                    badge: '★ Featured in Sci-Fi',
+                    hook: 'Embark on an epic cosmic journey as a starship rises to face unknown challenges in the vastness of space.',
+                    link_us: 'https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tag=curatedspine-20',
+                    link_uk: 'https://www.amazon.co.uk/Best-Sellers-Kindle-Store-Science-Fiction-Fantasy/zgbs/digital-text/158591011?tag=curatedspine-20'
                 },
                 {
-                    title: "The Glassblower of Murano",
-                    author: "Clara Bellini",
-                    genre: "Historical Fiction",
-                    rating: "4.5",
-                    reviews: "1,280",
-                    priceGBP: "Free",
-                    priceUSD: "$0.00",
-                    ctr: "16.8% CTR",
-                    rankBadge: "#2 Reader Favourite",
-                    hook: "In 16th-century Venice, betraying the island's glassmaking secrets carries a death sentence—until an apprentice smuggles a forbidden mirror formula into the court of Versailles.",
-                    coverColor: "from-[#5C2C24] to-[#2E1511]",
-                    url: "#signup-card"
-                },
-                {
-                    title: "Notes on a Quiet Collapse",
-                    author: "Julian Mercer",
-                    genre: "Literary Fiction",
-                    rating: "4.1",
-                    reviews: "890",
-                    priceGBP: "£0.99",
-                    priceUSD: "$0.99",
-                    ctr: "14.2% CTR",
-                    rankBadge: "Editor's Pick",
-                    hook: "Over one blistering August weekend in a crumbling Dorset estate, four estranged siblings gather to appraise their late father's rare book collection—and settle twenty years of unspoken grievances.",
-                    coverColor: "from-[#3D4A3A] to-[#1E261C]",
-                    url: "#signup-card"
-                },
-                {
-                    title: "Eden Rising",
-                    author: "M. K. Thorne",
-                    genre: "Sci-Fi",
-                    rating: "4.5",
-                    reviews: "1,799",
-                    priceGBP: "Free",
-                    priceUSD: "$0.00",
-                    ctr: "12.9% CTR",
-                    rankBadge: "Top Free Download",
-                    hook: "Three generations after orbital habitats abandoned a frozen Earth, a salvage crew breaches an untouched botanical vault beneath Svalbard that shouldn't still have power.",
-                    coverColor: "from-[#4A3B52] to-[#231B28]",
-                    url: "#signup-card"
+                    genre: 'Historical Fiction',
+                    title: 'The Queen\'s Handmaid (Secrets of the Lost Empires Book 1)',
+                    cover: '',
+                    price_uk: 'Free',
+                    price_us: '$0.00',
+                    rating: '4.6',
+                    reviews: '1,083',
+                    badge: '★ Featured in Historical Fiction',
+                    hook: 'In Cleopatra\'s palace, a murdered mentor leaves behind ancient sealed scrolls that must reach Jerusalem before assassins strike.',
+                    link_us: 'https://www.amazon.com/dp/B097NCXQGL?tag=curatedspine-20',
+                    link_uk: 'https://www.amazon.co.uk/dp/B097NCXQGL?tag=curatedspine-20'
                 }
             ],
-            week: [
-                {
-                    title: "The Cartographer's Silence",
-                    author: "Hannah Albrecht",
-                    genre: "Historical Fiction",
-                    rating: "4.6",
-                    reviews: "3,410",
-                    priceGBP: "£0.99",
-                    priceUSD: "$0.99",
-                    ctr: "24.1% CTR",
-                    rankBadge: "#1 Clicked This Week",
-                    hook: "Hired to map the shifting marshes of 17th-century East Anglia, a disgraced royal surveyor discovers an entire village that refuses to appear on the Crown's tax rolls.",
-                    coverColor: "from-[#4F3B28] to-[#291E14]",
-                    url: "#signup-card"
-                },
-                {
-                    title: "Orbital Decay",
-                    author: "Lukas Chen",
-                    genre: "Sci-Fi",
-                    rating: "4.6",
-                    reviews: "940",
-                    priceGBP: "Free",
-                    priceUSD: "$0.00",
-                    ctr: "21.5% CTR",
-                    rankBadge: "#2 Clicked This Week",
-                    hook: "A forensic accountant sent to audit a lunar mining colony realizes the station's oxygen shipments haven't matched the crew manifest for over three years.",
-                    coverColor: "from-[#1E2D3D] to-[#0E161F]",
-                    url: "#signup-card"
-                },
-                {
-                    title: "Wintering at St. Jude's",
-                    author: "Eleanor Vance",
-                    genre: "Romance",
-                    rating: "4.4",
-                    reviews: "1,520",
-                    priceGBP: "£0.99",
-                    priceUSD: "$0.99",
-                    ctr: "18.9% CTR",
-                    rankBadge: "Most Shared",
-                    hook: "Two rival architectural archivists trapped snowed-in at a Scottish priory must catalogue a medieval library together without killing each other—or falling in love.",
-                    coverColor: "from-[#6E2E35] to-[#38161A]",
-                    url: "#signup-card"
-                },
-                {
-                    title: "The Museum of Lost Hours",
-                    author: "Arthur Pendelton",
-                    genre: "Literary Fiction",
-                    rating: "3.9",
-                    reviews: "2,150",
-                    priceGBP: "£1.49",
-                    priceUSD: "$1.99",
-                    ctr: "17.3% CTR",
-                    rankBadge: "Book Club Favourite",
-                    hook: "A dryly comic, deeply moving portrait of a retired horologist in Prague who repairs watches left behind in railway lost-and-found offices.",
-                    coverColor: "from-[#2F3E3B] to-[#17211F]",
-                    url: "#signup-card"
-                }
-            ]
+            week: []
         };
 
-        let currentTab = 'yesterday';
-        let currentCurrency = 'GBP';
-        let archiveData = FALLBACK_ARCHIVE;
+        function switchShowcaseTab(tab) {
+            currentTab = tab;
+            const btnYesterday = document.getElementById('tab-yesterday');
+            const btnWeek = document.getElementById('tab-week');
+            if (tab === 'yesterday') {
+                btnYesterday.className = 'px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer';
+                btnWeek.className = 'px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
+            } else {
+                btnWeek.className = 'px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-[#FAF7F2] transition-all cursor-pointer';
+                btnYesterday.className = 'px-3 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
+            }
+            renderShowcase();
+        }
 
-        // Render the CTR-ranked book cards
-        function renderArchive() {
-            const grid = document.getElementById('archive-grid');
-            const books = archiveData[currentTab] || [];
+        function switchCurrency(curr) {
+            currentCurrency = curr;
+            const btnUS = document.getElementById('curr-US');
+            const btnUK = document.getElementById('curr-UK');
+            if (curr === 'US') {
+                btnUS.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer';
+                btnUK.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
+            } else {
+                btnUK.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold bg-[#FAF7F2] text-[#1A1715] transition-all cursor-pointer';
+                btnUS.className = 'px-2.5 py-1.5 rounded-md text-xs font-bold text-[#CBBAB3] hover:text-white transition-all cursor-pointer';
+            }
+            renderShowcase();
+        }
 
-            grid.innerHTML = books.map((book, idx) => {
-                const displayPrice = currentCurrency === 'GBP' ? book.priceGBP : book.priceUSD;
+        function renderShowcase() {
+            const grid = document.getElementById('showcase-grid');
+            if (!grid) return;
+            const items = showcaseData[currentTab] || [];
+
+            grid.innerHTML = items.map(book => {
+                const price = currentCurrency === 'UK' ? (book.price_uk || 'Free') : (book.price_us || '$0.00');
+                const primaryLink = currentCurrency === 'UK' ? (book.link_uk || book.link_us || '#') : (book.link_us || '#');
+                const ukLink = book.link_uk || primaryLink;
+                const badgeText = book.badge || book.ctr_badge || `★ Featured in ${book.genre}`;
+                const ratingText = (book.rating === 'New' || !book.rating) ? 'Hot New Release' : `${book.rating} (${book.reviews} ratings)`;
+
+                const coverGraphic = book.cover
+                    ? `<a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="w-24 shrink-0 block group">
+                         <img src="${book.cover}" alt="${book.title}" class="w-24 h-auto rounded border border-[#D8CFC8] shadow-md group-hover:scale-[1.03] transition-transform" />
+                       </a>`
+                    : `<a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="w-24 h-36 rounded bg-[#231E1B] text-[#FAF7F2] p-2.5 flex flex-col justify-between shrink-0 shadow-md border border-[#3E3532]">
+                         <div class="text-[8px] uppercase tracking-widest text-[#E59888] font-semibold truncate">${book.genre}</div>
+                         <div class="serif-title text-[11px] font-bold leading-tight line-clamp-3">${book.title}</div>
+                         <div class="text-[8px] text-[#CBBAB3] truncate">Kindle Edition</div>
+                       </a>`;
+
                 return `
-                <article class="feature-card rounded-xl p-5 sm:p-6 flex gap-4 sm:gap-5 items-start">
-                    <!-- Faux Vintage Book Cover Thumbnail -->
-                    <div class="w-20 sm:w-24 aspect-[2/3] rounded-md bg-gradient-to-br ${book.coverColor} book-cover-shadow flex-shrink-0 p-2.5 flex flex-col justify-between text-[#FAF7F2] border border-white/10">
-                        <div class="text-[9px] uppercase tracking-widest text-[#CBBAB3] opacity-80 truncate">${book.genre}</div>
-                        <div class="font-playfair font-semibold text-xs sm:text-sm leading-tight line-clamp-3">${book.title}</div>
-                        <div class="text-[9px] text-[#EBE5DF]/80 truncate border-t border-white/15 pt-1">${book.author}</div>
-                    </div>
-
-                    <!-- Book Details & AI Sommelier Hook -->
+                <div class="parchment-card rounded-xl p-4 sm:p-5 text-left flex gap-4 items-start transition-all hover:shadow-xl">
+                    ${coverGraphic}
                     <div class="flex-1 min-w-0">
-                        <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
-                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-[#8B3A2B] text-white">
-                                ${book.rankBadge}
+                        <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#8B3A2B]/15 text-[#8B3A2B]">
+                                ${badgeText}
                             </span>
-                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-[#EBE5DF] text-[#2C2725]">
-                                ${book.ctr}
-                            </span>
-                            <span class="text-[11px] text-[#5A524D] font-semibold ml-auto">
-                                ${book.genre}
-                            </span>
+                            <span class="text-[10px] font-medium text-[#786E68]">${book.genre}</span>
                         </div>
-
-                        <h3 class="text-lg font-bold font-playfair text-[#1A1715] leading-snug">
-                            ${book.title}
-                        </h3>
-
-                        <div class="flex items-center gap-2 text-xs text-[#5A524D] mt-1 mb-2.5">
-                            <span class="font-bold text-[#8B3A2B] text-sm">${displayPrice}</span>
-                            <span>&bull;</span>
-                            <span class="text-[#B45309] font-semibold">&#9733; ${book.rating}</span>
-                            <span>(${book.reviews} ratings)</span>
+                        <h4 class="serif-title font-bold text-[#1A1715] text-lg leading-snug mb-1">
+                            <a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="hover:text-[#8B3A2B] transition-colors">
+                                ${book.title}
+                            </a>
+                        </h4>
+                        <div class="flex items-center gap-2 text-xs mb-2">
+                            <span class="font-bold text-[#1A1715] bg-[#EBE5DF] px-2 py-0.5 rounded">${price}</span>
+                            <span class="text-[#C4B7B1]">&bull;</span>
+                            <span class="text-[#B45309] font-semibold">★ ${ratingText}</span>
                         </div>
-
-                        <p class="text-xs sm:text-[13px] text-[#2C2725] italic leading-relaxed border-l-2 border-[#CBBAB3] pl-3">
+                        <p class="text-xs text-[#4A423F] leading-relaxed italic mb-3.5">
                             "${book.hook}"
                         </p>
+                        <div class="flex items-center gap-3">
+                            <a href="${primaryLink}" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-bold text-[#FAF7F2] bg-[#8B3A2B] hover:bg-[#722E21] px-3.5 py-1.5 rounded transition-colors shadow-sm">
+                                View on Amazon &rarr;
+                            </a>
+                            <a href="${ukLink}" target="_blank" rel="noopener noreferrer" class="text-[11px] text-[#786E68] hover:text-[#1A1715] underline">
+                                UK (.co.uk)
+                            </a>
+                        </div>
                     </div>
-                </article>
+                </div>
                 `;
             }).join('');
         }
 
-        function switchArchiveTab(tab) {
-            currentTab = tab;
-            const btnYesterday = document.getElementById('tab-yesterday');
-            const btnWeek = document.getElementById('tab-week');
-
-            if (tab === 'yesterday') {
-                btnYesterday.className = "px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-white transition-all";
-                btnWeek.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-[#EBE5DF] hover:text-white transition-all";
-            } else {
-                btnWeek.className = "px-3 py-1.5 rounded-md text-xs font-semibold bg-[#8B3A2B] text-white transition-all";
-                btnYesterday.className = "px-3 py-1.5 rounded-md text-xs font-semibold text-[#EBE5DF] hover:text-white transition-all";
-            }
-            renderArchive();
-        }
-
-        function setCurrency(curr) {
-            currentCurrency = curr;
-            const btnUk = document.getElementById('curr-uk');
-            const btnUs = document.getElementById('curr-us');
-            const capLabels = document.querySelectorAll('.currency-cap-label');
-
-            if (curr === 'GBP') {
-                btnUk.className = "px-2.5 py-1.5 rounded-md text-xs font-semibold bg-[#FAF7F2] text-[#1A1715] transition-all";
-                btnUs.className = "px-2.5 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all";
-                capLabels.forEach(el => el.textContent = '£2.99');
-            } else {
-                btnUs.className = "px-2.5 py-1.5 rounded-md text-xs font-semibold bg-[#FAF7F2] text-[#1A1715] transition-all";
-                btnUk.className = "px-2.5 py-1.5 rounded-md text-xs font-semibold text-[#CBBAB3] hover:text-white transition-all";
-                capLabels.forEach(el => el.textContent = '$2.99');
-            }
-            renderArchive();
-        }
-
-        // Update Genre Checklist Counter & Select All Toggle
-        function updateGenreCount() {
-            const checkboxes = document.querySelectorAll('.genre-checkbox');
-            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const statusText = document.getElementById('genre-status-text');
-            const errorMsg = document.getElementById('genre-error-msg');
-            const toggleBtn = document.getElementById('toggle-all-btn');
-
-            if (checkedCount > 0) {
-                errorMsg.classList.add('hidden');
-            }
-
-            const noun = checkedCount === 1 ? 'genre' : 'genres';
-            statusText.innerHTML = `<span class="font-semibold text-[#8B3A2B]">${checkedCount} ${noun}</span> selected for your morning dispatch.`;
-            toggleBtn.textContent = checkedCount === checkboxes.length ? 'Clear All' : 'Select All';
-        }
-
-        function toggleAllGenres() {
-            const checkboxes = document.querySelectorAll('.genre-checkbox');
-            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-            checkboxes.forEach(cb => cb.checked = !allChecked);
-            updateGenreCount();
-        }
-
-        function handleFormSubmit(event) {
-            const checkboxes = document.querySelectorAll('.genre-checkbox');
-            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const errorMsg = document.getElementById('genre-error-msg');
-
-            if (checkedCount === 0) {
-                event.preventDefault();
-                errorMsg.classList.remove('hidden');
-                return false;
-            }
-
-            showThanksModal();
-            return true;
-        }
-
-        function showThanksModal() {
-            document.getElementById('thank-you-modal').classList.remove('hidden');
-            setTimeout(() => {
-                document.getElementById('subscribe-form').reset();
-                updateGenreCount();
-            }, 500);
-        }
-
-        function closeModal() {
-            document.getElementById('thank-you-modal').classList.add('hidden');
-        }
-
-        function openAuthorModal() {
-            document.getElementById('author-modal').classList.remove('hidden');
-        }
-
-        function closeAuthorModal() {
-            document.getElementById('author-modal').classList.add('hidden');
-        }
-
-        // Try loading live latest_issue.json generated by GitLab pipeline if present
-        async function loadLiveIssueData() {
+        async function loadLiveShowcaseFromJSON() {
             try {
-                const response = await fetch('./latest_issue.json', { cache: 'no-store' });
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data && (data.yesterday || data.week)) {
-                        archiveData = data;
+                const resp = await fetch('./latest_issue.json?t=' + Date.now());
+                if (!resp.ok) throw new Error('Could not fetch latest_issue.json');
+                const data = await resp.json();
+
+                if (data.display_date) {
+                    const dateEl = document.getElementById('dispatch-date-label');
+                    if (dateEl) {
+                        dateEl.textContent = `Updated ${data.display_date} • Live picks from today's morning newsletter`;
                     }
                 }
-            } catch (e) {
-                // Fallback silently to built-in curated preview data
-            } finally {
-                renderArchive();
-                updateGenreCount();
+
+                if (data.books && data.books.length > 0) {
+                    showcaseData.yesterday = data.books;
+                    showcaseData.week = (data.recent_books && data.recent_books.length > 0) ? data.recent_books : data.books;
+                }
+            } catch (err) {
+                console.log('Using fallback showcase until next workflow run:', err);
             }
+            renderShowcase();
         }
 
-        window.addEventListener('DOMContentLoaded', loadLiveIssueData);
+        document.addEventListener('DOMContentLoaded', loadLiveShowcaseFromJSON);
     </script>
-
 </body>
 </html>
