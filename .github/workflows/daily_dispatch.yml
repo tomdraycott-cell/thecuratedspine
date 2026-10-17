@@ -41,5 +41,5 @@ jobs:
         run: |
           git config --global user.name "Curated Spine Bot"
           git config --global user.email "bot@thecuratedspine.com"
-          git add sent_history.json latest_issue.json || true
+          git add sent_history.json latest_issue.json override_asins.txt || true
           git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
