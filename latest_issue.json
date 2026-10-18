@@ -1,86 +1,60 @@
 {
-  "updated_at": "2026-10-17T18:28:28.750842+00:00",
-  "display_date": "Saturday, 17 October 2026",
+  "updated_at": "2026-10-18T12:53:18.769256+00:00",
+  "display_date": "Sunday, 18 October 2026",
   "books": [
     {
-      "genre": "Literary Fiction",
-      "title": "Watching Glass Shatter (Perceptions Of Glass Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/A1GXsWoGVCL._SL300_.jpg",
+      "genre": "Sci-Fi",
+      "title": "Contagion: Book One of the Viral Apocalypse Series",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/9163ft2MO9L._SL300_.jpg",
+      "price_uk": "Free",
+      "price_us": "Free",
+      "rating": 4.4,
+      "reviews": "1,309",
+      "badge": "\u2605 Featured in Sci-Fi",
+      "hook": "A chilling vision of a world reshaped by a relentless virus, where survival demands more than just endurance.",
+      "link_uk": "https://www.amazon.co.uk/dp/B09TY4D5L4?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B09TY4D5L4?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "A Kingdom's Cost: A Historical Novel of Scotland (The Black Douglas Trilogy Book 1)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81F6Im-TQ+L._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
       "rating": 4.3,
-      "reviews": "1,296",
-      "badge": "\u2605 Featured in Literary Fiction",
-      "hook": "This thoughtful narrative explores the nuanced fragmentation of self and relationships through a compelling lens.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0769LB2N3?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0769LB2N3?tag=curatedspine-20"
-    },
-    {
-      "genre": "Sci-Fi",
-      "title": "The Somatic Bridge: Gripping New Hard Sci-Fi Adventure. (Expansion Book 1)",
-      "cover": "https://m.media-amazon.com/images/I/71hubF7u7cL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.2,
-      "reviews": "163",
-      "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "For aficionados of rigorous science fiction, 'The Somatic Bridge' offers an adventurous exploration into advanced concepts and new realities.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0G546325L?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0G546325L?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "The Bracken Cove Book Club: Romantic Comedy Series",
-      "cover": "https://m.media-amazon.com/images/I/81eu6ycxwIL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.2,
-      "reviews": "258",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "Discover delightful connections and heartwarming humor within a coastal community book club in Bracken Cove.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0GHHS498X?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0GHHS498X?tag=curatedspine-20"
+      "reviews": "4,755",
+      "badge": "\u2605 Featured in Historical Fiction",
+      "hook": "A sweeping saga of medieval Scotland, this novel illuminates the power struggles and sacrifices shaping a nation.",
+      "link_uk": "https://www.amazon.co.uk/dp/B01DWTHKFI?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B01DWTHKFI?tag=curatedspine-20"
     }
   ],
   "recent_books": [
     {
-      "genre": "Literary Fiction",
-      "title": "Watching Glass Shatter (Perceptions Of Glass Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/A1GXsWoGVCL._SL300_.jpg",
+      "genre": "Sci-Fi",
+      "title": "Contagion: Book One of the Viral Apocalypse Series",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/9163ft2MO9L._SL300_.jpg",
+      "price_uk": "Free",
+      "price_us": "Free",
+      "rating": 4.4,
+      "reviews": "1,309",
+      "badge": "\u2605 Featured in Sci-Fi",
+      "hook": "A chilling vision of a world reshaped by a relentless virus, where survival demands more than just endurance.",
+      "link_uk": "https://www.amazon.co.uk/dp/B09TY4D5L4?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B09TY4D5L4?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "A Kingdom's Cost: A Historical Novel of Scotland (The Black Douglas Trilogy Book 1)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81F6Im-TQ+L._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
       "rating": 4.3,
-      "reviews": "1,296",
-      "badge": "\u2605 Featured in Literary Fiction",
-      "hook": "This thoughtful narrative explores the nuanced fragmentation of self and relationships through a compelling lens.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0769LB2N3?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0769LB2N3?tag=curatedspine-20"
-    },
-    {
-      "genre": "Sci-Fi",
-      "title": "The Somatic Bridge: Gripping New Hard Sci-Fi Adventure. (Expansion Book 1)",
-      "cover": "https://m.media-amazon.com/images/I/71hubF7u7cL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.2,
-      "reviews": "163",
-      "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "For aficionados of rigorous science fiction, 'The Somatic Bridge' offers an adventurous exploration into advanced concepts and new realities.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0G546325L?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0G546325L?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "The Bracken Cove Book Club: Romantic Comedy Series",
-      "cover": "https://m.media-amazon.com/images/I/81eu6ycxwIL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.2,
-      "reviews": "258",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "Discover delightful connections and heartwarming humor within a coastal community book club in Bracken Cove.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0GHHS498X?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0GHHS498X?tag=curatedspine-20"
+      "reviews": "4,755",
+      "badge": "\u2605 Featured in Historical Fiction",
+      "hook": "A sweeping saga of medieval Scotland, this novel illuminates the power struggles and sacrifices shaping a nation.",
+      "link_uk": "https://www.amazon.co.uk/dp/B01DWTHKFI?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B01DWTHKFI?tag=curatedspine-20"
     }
   ]
 }
