@@ -3,12 +3,11 @@ import json
 import urllib.parse
 import random
 from playwright.sync_api import sync_playwright
-import google.generativeai as genai
+from google import genai
 import requests
 
-# Configure Gemini AI
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+# Configure Gemini AI Client
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 CATEGORIES = [
     {"name": "Science Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction/zgbs/digital-text/158566011"},
@@ -27,7 +26,7 @@ def generate_hook_and_filter(title, author, genre):
     2. If it is a quality book, write a compelling, one-sentence editorial hook (under 95 characters) to entice readers. Do not use quotes.
     """
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(model='gemini-1.5-flash', contents=prompt)
         result = response.text.strip()
         if "REJECT" in result.upper():
             return None
@@ -96,7 +95,7 @@ def fetch_free_audiobook(page, genre_keyword):
         return {
             "title": title,
             "author": author,
-            "cover": cover.replace("180/180/False", "300/300/False") if cover else "", # Attempt to get higher res square
+            "cover": cover.replace("180/180/False", "300/300/False") if cover else "", 
             "kobo_url": f"https://www.kobo.com{link}",
             "spotify_url": f"https://open.spotify.com/search/{search_term}/audiobooks",
             "audible_url": f"https://www.audible.com/search?keywords={search_term}"
@@ -141,7 +140,6 @@ def main():
     today_picks = []
     
     with sync_playwright() as p:
-        # Use stealth browser to avoid bot detection
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
         
@@ -160,7 +158,8 @@ def main():
             
             if selected_kindle:
                 audio_bonus = fetch_free_audiobook(page, category['name'])
-                selected_kindle['audiobook'] = audio_bonus
+                if audio_bonus:
+                    selected_kindle['audiobook'] = audio_bonus
                 today_picks.append(selected_kindle)
                 
         browser.close()
