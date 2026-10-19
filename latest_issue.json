@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0GZ14SN6W",
-            "title": "Threshing Day (The Empyrean)",
-            "author": "Rebecca Yarros",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91k-wiQY3WL._AC_UL600_SR600,400_.jpg",
-            "amazon_url": "https://www.amazon.com/Threshing-Day-Empyrean-Rebecca-Yarros-ebook/dp/B0GZ14SN6W/ref=zg_bs_g_158566011_d_sccl_1/145-6566334-1065520",
+            "asin": "B0HLPBNG8W",
+            "title": "One Moore Time",
+            "author": "Mariana Zapata",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81LnSYjqPEL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/One-Moore-Time-Mariana-Zapata-ebook/dp/B0HLPBNG8W/ref=zg_bs_g_158566011_d_sccl_5/140-1787183-2152944",
             "hook": "An exciting new read to add to your digital library.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B09H6T8LTR",
-            "title": "Verity",
-            "author": "Colleen Hoover",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71upNFH8LWL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
-            "amazon_url": "https://www.amazon.com/Verity-Colleen-Hoover-ebook/dp/B09H6T8LTR/ref=zg_bs_g_158566011_d_sccl_2/145-6566334-1065520",
+            "asin": "B0HKYHDZMG",
+            "title": "Sweet Ruin (Makov Bratva Book 1)",
+            "author": "Nicole Fox",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Ob5IEHVtL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Sweet-Ruin-Makov-Bratva-Book-ebook/dp/B0HKYHDZMG/ref=zg_bs_g_158566011_d_sccl_6/140-1787183-2152944",
             "hook": "An exciting new read to add to your digital library.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GXGGXC91",
-            "title": "The Washwoman at the River's End (The Curse of the Fates Series Book 1)",
-            "author": "Megan Shade",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91-MDO4kmYL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
-            "amazon_url": "https://www.amazon.com/Washwoman-Rivers-Curse-Fates-Book-ebook/dp/B0GXGGXC91/ref=zg_bs_g_158566011_d_sccl_3/145-6566334-1065520",
+            "asin": "B0HKKB2T7V",
+            "title": "The Voicemail: A Secret Baby, Mafia Romance (Sinful Mafia Daddies)",
+            "author": "Natasha L. Black",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/710Sdat8noL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Voicemail-Secret-Romance-Sinful-Daddies-ebook/dp/B0HKKB2T7V/ref=zg_bs_g_158566011_d_sccl_7/140-1787183-2152944",
             "hook": "An exciting new read to add to your digital library.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GR711WBV",
-            "title": "A Court of Splintered Harmony: The Valkyrie Cycle, Movement I (A Court of Thorns and Roses Book 6)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/810PuG+z0hL._AC_UL600_SR600,400_.jpg",
-            "amazon_url": "https://www.amazon.com/Court-Splintered-Harmony-Thorns-Roses-ebook/dp/B0GR711WBV/ref=zg_bs_g_158566011_d_sccl_4/145-6566334-1065520",
+            "asin": "B0FTGG6G25",
+            "title": "Trust No One",
+            "author": "Mary Burton",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71MufjNgnsL._UX300__PJku-headphones-v2,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Trust-No-One-Mary-Burton-ebook/dp/B0FTGG6G25/ref=zg_bs_g_158566011_d_sccl_8/140-1787183-2152944",
             "hook": "An exciting new read to add to your digital library.",
             "genre": "Romance"
         }
