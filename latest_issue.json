@@ -1,86 +1,34 @@
 {
-  "updated_at": "2026-10-19T09:55:49.150816+00:00",
+  "updated_at": "2026-10-19T10:03:21.264079+00:00",
   "display_date": "Monday, 19 October 2026",
   "books": [
     {
       "genre": "Sci-Fi",
-      "title": "Shockwave (Star Kingdom Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/919IdC5kw6L._SL300_.jpg",
+      "title": "Zournal: Book 1: It All Started",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q7Aq9EOaL._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
       "rating": 4.4,
-      "reviews": "5,929",
+      "reviews": "712",
       "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "Prepare for galactic conflict as a new power emerges, threatening the fragile peace of the Star Kingdom.",
-      "link_uk": "https://www.amazon.co.uk/dp/B07R8GX4Y2?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B07R8GX4Y2?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "Sleigh Bell Dreams (Mistletoe Meadows Sweet Christmas romance book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71uua+8gXdL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.6,
-      "reviews": "2,428",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "A charming tale of festive cheer and budding affection set amidst winter's gentle embrace.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0DDHR6K7Z?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0DDHR6K7Z?tag=curatedspine-20"
+      "hook": "Discover the genesis of a fantastical saga, as a journal holds the keys to an unfolding destiny.",
+      "link_uk": "https://www.amazon.co.uk/dp/B06XC1W26S?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B06XC1W26S?tag=curatedspine-20"
     }
   ],
   "recent_books": [
     {
       "genre": "Sci-Fi",
-      "title": "Breakdown: A Post-Apocalyptic EMP Survival series (Dark Road Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81YFcv+MiYL._SL300_.jpg",
-      "price_uk": "\u00a30.99",
-      "price_us": "$2.99",
-      "rating": 4.4,
-      "reviews": "5,365",
-      "badge": "Reader Pick \u2022 Sci-Fi",
-      "hook": "Navigate a desolate landscape in this gripping post-apocalyptic saga, where survival hinges on desperate courage.",
-      "link_uk": "https://www.amazon.co.uk/dp/B07CWYHNZL?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B07CWYHNZL?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "One Small Spark: An Enemies to Lovers Small Town Romantic Comedy (Love in Sunshine)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71g3TzvxSgL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.6,
-      "reviews": "294",
-      "badge": "Reader Pick \u2022 Romance",
-      "hook": "Discover a heartwarming romantic comedy where initial sparks ignite an unexpected small-town connection.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0FHJVW47J?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0FHJVW47J?tag=curatedspine-20"
-    },
-    {
-      "genre": "Sci-Fi",
-      "title": "Shockwave (Star Kingdom Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/919IdC5kw6L._SL300_.jpg",
+      "title": "Zournal: Book 1: It All Started",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q7Aq9EOaL._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
       "rating": 4.4,
-      "reviews": "5,929",
+      "reviews": "712",
       "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "Prepare for galactic conflict as a new power emerges, threatening the fragile peace of the Star Kingdom.",
-      "link_uk": "https://www.amazon.co.uk/dp/B07R8GX4Y2?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B07R8GX4Y2?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "Sleigh Bell Dreams (Mistletoe Meadows Sweet Christmas romance book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71uua+8gXdL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.6,
-      "reviews": "2,428",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "A charming tale of festive cheer and budding affection set amidst winter's gentle embrace.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0DDHR6K7Z?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0DDHR6K7Z?tag=curatedspine-20"
+      "hook": "Discover the genesis of a fantastical saga, as a journal holds the keys to an unfolding destiny.",
+      "link_uk": "https://www.amazon.co.uk/dp/B06XC1W26S?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B06XC1W26S?tag=curatedspine-20"
     }
   ]
 }
