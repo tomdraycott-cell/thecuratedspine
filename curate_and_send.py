@@ -2,8 +2,8 @@ import os
 import re
 import json
 import urllib.parse
+import urllib.request
 import random
-import requests
 from playwright.sync_api import sync_playwright
 
 CATEGORIES = [
@@ -12,6 +12,29 @@ CATEGORIES = [
     {"name": "Literary Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/158566011"},
     {"name": "Romance", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Romance/zgbs/digital-text/158566011"}
 ]
+
+def http_request(url, method="GET", headers=None, payload=None, timeout=15):
+    """Native Python HTTP helper using urllib.request—no 'requests' package needed."""
+    if headers is None:
+        headers = {}
+    data = None
+    if payload is not None:
+        data = json.dumps(payload).encode("utf-8")
+        if "Content-Type" not in headers:
+            headers["Content-Type"] = "application/json"
+
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            body = resp.read().decode("utf-8")
+            return resp.status, json.loads(body) if body else {}
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="ignore")
+        print(f"HTTP {e.code} error on {url}: {err_body}")
+        return e.code, {}
+    except Exception as e:
+        print(f"Request error on {url}: {e}")
+        return 0, {}
 
 def load_sent_history():
     """Loads previously sent book identifiers from sent_history.json."""
@@ -54,7 +77,7 @@ def pop_override_asin():
         return None
 
 def generate_hook_and_filter(title, author, genre):
-    """Calls the Gemini REST API directly via requests—no google package installation required."""
+    """Calls the Gemini REST API using Python's built-in urllib.request."""
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
         return "An exciting new read to add to your digital library."
@@ -69,19 +92,19 @@ def generate_hook_and_filter(title, author, genre):
 
     for model_name in ["gemini-1.5-flash", "gemini-2.0-flash"]:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
-        try:
-            response = requests.post(
-                url,
-                json={"contents": [{"parts": [{"text": prompt}]}]},
-                timeout=15
-            )
-            if response.status_code == 200:
-                result = response.json()["candidates"][0]["content"]["parts"][0]["text"].strip().strip('"')
+        status, data = http_request(
+            url,
+            method="POST",
+            payload={"contents": [{"parts": [{"text": prompt}]}]}
+        )
+        if status == 200 and "candidates" in data:
+            try:
+                result = data["candidates"][0]["content"]["parts"][0]["text"].strip().strip('"')
                 if "REJECT" in result.upper():
                     return None
                 return result
-        except Exception as e:
-            print(f"Gemini API error ({model_name}): {e}")
+            except (KeyError, IndexError):
+                continue
 
     return "An exciting new read to add to your digital library."
 
@@ -191,7 +214,7 @@ def fetch_free_audiobook(page, genre_keyword):
         return None
 
 def dispatch_mailerlite(campaign_html):
-    """Creates and sends the MailerLite campaign, auto-detecting subscriber groups."""
+    """Creates and sends the MailerLite campaign using built-in urllib.request."""
     api_key = os.environ.get("MAILERLITE_API_KEY")
     sender_email = os.environ.get("MAILERLITE_SENDER_EMAIL", "newsletter@thecuratedspine.com")
     if not api_key:
@@ -201,7 +224,8 @@ def dispatch_mailerlite(campaign_html):
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "Authorization": f"Bearer {api_key}"
+        "Authorization": f"Bearer {api_key}",
+        "User-Agent": "TheCuratedSpineBot/1.0"
     }
 
     # Auto-fetch groups if MAILERLITE_GROUP_ID isn't explicitly set in environment variables
@@ -210,13 +234,9 @@ def dispatch_mailerlite(campaign_html):
     if env_group:
         group_ids = [env_group]
     else:
-        try:
-            grp_resp = requests.get("https://connect.mailerlite.com/api/groups", headers=headers, timeout=10)
-            if grp_resp.status_code == 200:
-                groups_data = grp_resp.json().get("data", [])
-                group_ids = [str(g["id"]) for g in groups_data]
-        except Exception as e:
-            print(f"Could not fetch MailerLite groups: {e}")
+        status, grp_data = http_request("https://connect.mailerlite.com/api/groups", headers=headers)
+        if status == 200:
+            group_ids = [str(g["id"]) for g in grp_data.get("data", [])]
 
     url = "https://connect.mailerlite.com/api/campaigns"
     payload = {
@@ -232,27 +252,27 @@ def dispatch_mailerlite(campaign_html):
         payload["groups"] = group_ids
 
     # 1. Create Campaign
-    response = requests.post(url, json=payload, headers=headers)
-    if response.status_code not in [200, 201]:
-        print(f"Failed to create campaign: {response.text}")
+    status, camp_data = http_request(url, method="POST", headers=headers, payload=payload)
+    if status not in [200, 201] or "data" not in camp_data:
+        print(f"Failed to create campaign (status {status})")
         return
 
-    campaign_id = response.json()["data"]["id"]
+    campaign_id = camp_data["data"]["id"]
 
     # 2. Add HTML Content
     content_payload = {
         "html": campaign_html,
         "plain_text": "Please view this email in an HTML-compatible email client or visit https://thecuratedspine.com"
     }
-    requests.put(f"{url}/{campaign_id}/content", json=content_payload, headers=headers)
+    http_request(f"{url}/{campaign_id}/content", method="PUT", headers=headers, payload=content_payload)
 
     # 3. Schedule Instant Delivery
     schedule_payload = {"delivery": "instant"}
-    sched_resp = requests.post(f"{url}/{campaign_id}/schedule", json=schedule_payload, headers=headers)
-    if sched_resp.status_code in [200, 201]:
+    sched_status, _ = http_request(f"{url}/{campaign_id}/schedule", method="POST", headers=headers, payload=schedule_payload)
+    if sched_status in [200, 201]:
         print(f"SUCCESS: MailerLite campaign dispatched! ID: {campaign_id}")
     else:
-        print(f"Campaign created ({campaign_id}), schedule response: {sched_resp.text}")
+        print(f"Campaign created ({campaign_id}), schedule status: {sched_status}")
 
 def main():
     sent_history = load_sent_history()
@@ -268,7 +288,6 @@ def main():
             print(f"-> Fetching {category['name']}...")
             selected_kindle = None
 
-            # Use override ASIN on the first slot if one was queued in override_asins.txt
             if index == 0 and override_asin:
                 selected_kindle = fetch_override_book(page, override_asin, category["name"])
 
