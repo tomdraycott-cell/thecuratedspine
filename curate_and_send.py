@@ -352,4 +352,56 @@ def main():
     """
 
     for pick in today_picks:
-        html_content += f
+        html_content += f"""
+        <div style="margin-bottom: 40px;">
+            <h2 style="color: #34495e; margin-bottom: 10px;">{pick['genre']}</h2>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="120" valign="top">
+                  <img src="{pick['cover']}" width="120" style="border-radius: 4px; display: block;" alt="{pick['title']}">
+                </td>
+                <td valign="top" style="padding-left: 20px;">
+                  <h3 style="margin: 0; color: #2980b9;">{pick['title']}</h3>
+                  <p style="margin: 5px 0; color: #555;">by {pick['author']}</p>
+                  <p style="font-style: italic; color: #666;">"{pick['hook']}"</p>
+                  <a href="{pick['amazon_url']}" style="display: inline-block; background: #2980b9; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-weight: bold;">Get it on Kindle</a>
+                </td>
+              </tr>
+            </table>
+        """
+
+        if pick.get("audiobook"):
+            audio = pick["audiobook"]
+            html_content += f"""
+            <!-- AUDIOBOOK BONUS SECTION -->
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eeeeee;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="80" valign="top">
+                    <img src="{audio['cover']}" width="80" height="80" style="border-radius: 4px; display: block; object-fit: cover;" alt="Audiobook Cover">
+                  </td>
+                  <td valign="middle" style="padding-left: 15px; font-family: Arial, sans-serif;">
+                    <p style="margin: 0; font-size: 12px; color: #888888; text-transform: uppercase;">🎧 Audio Companion</p>
+                    <p style="margin: 4px 0; font-size: 14px; font-weight: bold; color: #333333;">{audio['title']}</p>
+                    <p style="margin: 0; font-size: 13px;">
+                      <a href="{audio['spotify_url']}" style="color: #1DB954; text-decoration: none; font-weight: bold;">Spotify (Premium)</a> • 
+                      <a href="{audio['kobo_url']}" style="color: #000000; text-decoration: none;">Kobo</a> • 
+                      <a href="{audio['audible_url']}" style="color: #F5A623; text-decoration: none;">Audible</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            """
+        html_content += "</div>"
+
+    html_content += """
+        <hr style="border: 0; height: 1px; background: #eee; margin-top: 40px;">
+        <p style="text-align: center; font-size: 12px; color: #999;">You received this because you subscribed at <a href="https://thecuratedspine.com" style="color: #999;">thecuratedspine.com</a></p>
+    </div>
+    """
+
+    dispatch_mailerlite(html_content)
+
+if __name__ == "__main__":
+    main()
