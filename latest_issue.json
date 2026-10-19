@@ -1,112 +1,40 @@
 {
-  "updated_at": "2026-10-19T13:02:59.699805+00:00",
-  "display_date": "Monday, 19 October 2026",
-  "books": [
-    {
-      "genre": "Sci-Fi",
-      "title": "Revenge (Blackout Book 7)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81TumgM4DjL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.6,
-      "reviews": "56",
-      "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "This installment in the Blackout series promises a potent narrative of retribution amidst intricate fantastical or futuristic worlds.",
-      "link_uk": "https://www.amazon.co.uk/dp/B09F3W462Z?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B09F3W462Z?tag=curatedspine-20"
-    },
-    {
-      "genre": "Historical Fiction",
-      "title": "Mask of Duplicity (The Jacobite Chronicles Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81z5I-L5PsS._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.4,
-      "reviews": "12,269",
-      "badge": "\u2605 Featured in Historical Fiction",
-      "hook": "A compelling chronicle of deception and intrigue set against the turbulent backdrop of the Jacobite uprisings.",
-      "link_uk": "https://www.amazon.co.uk/dp/B00YSS7OKY?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B00YSS7OKY?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "Crown of Dreams (Culloden's Fire Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/914B9-IzRBL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.5,
-      "reviews": "1,304",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "A historical romance steeped in the aftermath of Culloden, where duty and desire ignite amidst Scottish rebellion.",
-      "link_uk": "https://www.amazon.co.uk/dp/B086XJF67P?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B086XJF67P?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "Sweet Ruin (Makov Bratva Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81Ob5IEHVtL._SL300_.jpg",
-      "price_uk": "\u00a30.99",
-      "price_us": "$2.99",
-      "rating": 4.4,
-      "reviews": "2,241",
-      "badge": "\u2605 Featured in Romance",
-      "hook": "Discover potent desires and perilous alliances ignited within the shadowy world of the Bratva.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0HKYHDZMG?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0HKYHDZMG?tag=curatedspine-20"
-    }
-  ],
-  "recent_books": [
-    {
-      "genre": "Sci-Fi",
-      "title": "Escape (Blackout Book 2)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81k32WvTdgL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.4,
-      "reviews": "170",
-      "badge": "Reader Pick \u2022 Sci-Fi",
-      "hook": "Discover the fraught struggle for freedom in this second volume of the compelling Blackout saga.",
-      "link_uk": "https://www.amazon.co.uk/dp/B09CLL48MB?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B09CLL48MB?tag=curatedspine-20"
-    },
-    {
-      "genre": "Romance",
-      "title": "The Voicemail: A Secret Baby, Mafia Romance (Sinful Mafia Daddies)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/710Sdat8noL._SL300_.jpg",
-      "price_uk": "\u00a30.99",
-      "price_us": "$0.99",
-      "rating": 4.4,
-      "reviews": "1,310",
-      "badge": "Reader Pick \u2022 Romance",
-      "hook": "A forgotten voicemail reveals a hidden family and dangerous ties to a powerful, protective mafia figure.",
-      "link_uk": "https://www.amazon.co.uk/dp/B0HKKB2T7V?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B0HKKB2T7V?tag=curatedspine-20"
-    },
-    {
-      "genre": "Sci-Fi",
-      "title": "Revenge (Blackout Book 7)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81TumgM4DjL._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.6,
-      "reviews": "56",
-      "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "This installment in the Blackout series promises a potent narrative of retribution amidst intricate fantastical or futuristic worlds.",
-      "link_uk": "https://www.amazon.co.uk/dp/B09F3W462Z?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B09F3W462Z?tag=curatedspine-20"
-    },
-    {
-      "genre": "Historical Fiction",
-      "title": "Mask of Duplicity (The Jacobite Chronicles Book 1)",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/81z5I-L5PsS._SL300_.jpg",
-      "price_uk": "Free",
-      "price_us": "Free",
-      "rating": 4.4,
-      "reviews": "12,269",
-      "badge": "\u2605 Featured in Historical Fiction",
-      "hook": "A compelling chronicle of deception and intrigue set against the turbulent backdrop of the Jacobite uprisings.",
-      "link_uk": "https://www.amazon.co.uk/dp/B00YSS7OKY?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B00YSS7OKY?tag=curatedspine-20"
-    }
-  ]
+    "books": [
+        {
+            "asin": "B0GZ14SN6W",
+            "title": "Threshing Day (The Empyrean)",
+            "author": "Rebecca Yarros",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91k-wiQY3WL._AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Threshing-Day-Empyrean-Rebecca-Yarros-ebook/dp/B0GZ14SN6W/ref=zg_bs_g_158566011_d_sccl_1/145-6566334-1065520",
+            "hook": "An exciting new read to add to your digital library.",
+            "genre": "Science Fiction"
+        },
+        {
+            "asin": "B09H6T8LTR",
+            "title": "Verity",
+            "author": "Colleen Hoover",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71upNFH8LWL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Verity-Colleen-Hoover-ebook/dp/B09H6T8LTR/ref=zg_bs_g_158566011_d_sccl_2/145-6566334-1065520",
+            "hook": "An exciting new read to add to your digital library.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B0GXGGXC91",
+            "title": "The Washwoman at the River's End (The Curse of the Fates Series Book 1)",
+            "author": "Megan Shade",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91-MDO4kmYL._UX300__PJku-sticker-v8,TopRight,0,-50_AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Washwoman-Rivers-Curse-Fates-Book-ebook/dp/B0GXGGXC91/ref=zg_bs_g_158566011_d_sccl_3/145-6566334-1065520",
+            "hook": "An exciting new read to add to your digital library.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0GR711WBV",
+            "title": "A Court of Splintered Harmony: The Valkyrie Cycle, Movement I (A Court of Thorns and Roses Book 6)",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/810PuG+z0hL._AC_UL600_SR600,400_.jpg",
+            "amazon_url": "https://www.amazon.com/Court-Splintered-Harmony-Thorns-Roses-ebook/dp/B0GR711WBV/ref=zg_bs_g_158566011_d_sccl_4/145-6566334-1065520",
+            "hook": "An exciting new read to add to your digital library.",
+            "genre": "Romance"
+        }
+    ]
 }
