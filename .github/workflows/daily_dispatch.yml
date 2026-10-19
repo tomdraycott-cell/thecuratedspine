@@ -45,7 +45,7 @@ jobs:
           git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
 
       - name: Install Bluesky SDK
-        run: pip install atproto
+        run: pip install atproto google-genai
 
       - name: Post daily update to Bluesky
         env:
