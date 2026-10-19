@@ -3,7 +3,6 @@ import re
 import json
 import urllib.parse
 import urllib.request
-import random
 from playwright.sync_api import sync_playwright
 
 CATEGORIES = [
@@ -14,7 +13,7 @@ CATEGORIES = [
 ]
 
 def http_request(url, method="GET", headers=None, payload=None, timeout=15):
-    """Native Python HTTP helper using urllib.request—no 'requests' package needed."""
+    """Native Python HTTP helper using urllib.request—no external packages needed."""
     if headers is None:
         headers = {}
     data = None
@@ -35,6 +34,11 @@ def http_request(url, method="GET", headers=None, payload=None, timeout=15):
     except Exception as e:
         print(f"Request error on {url}: {e}")
         return 0, {}
+
+def clean_book_title(raw_title):
+    """Strips series tags and subtitles so audiobook search engines match accurately."""
+    cleaned = re.split(r"[:\(\-\[]", raw_title)[0].strip()
+    return cleaned if len(cleaned) > 2 else raw_title.strip()
 
 def load_sent_history():
     """Loads previously sent book identifiers from sent_history.json."""
@@ -173,45 +177,57 @@ def fetch_kindle_books(page, category_url):
 
     return books
 
-def fetch_free_audiobook(page, genre_keyword):
-    """Scrapes Kobo for a free audiobook and generates cross-platform links."""
-    print(f"   -> Searching Kobo for free {genre_keyword} audiobooks...")
-    query = urllib.parse.quote(genre_keyword)
-    kobo_url = f"https://www.kobo.com/us/en/search?query={query}&fcmedia=AudioBook&fclanguages=en&fcprice=Free"
+def find_vetted_audiobook(page, candidate_books):
+    """
+    Checks if any of the top-rated Amazon Kindle books have a matching audiobook 
+    edition on Kobo/Spotify (which share Findaway Voices distribution).
+    """
+    print("   -> Cross-checking top Amazon books for wide audiobook editions...")
 
-    try:
-        page.goto(kobo_url, wait_until="domcontentloaded")
-        page.wait_for_selector(".item-detail", timeout=6000)
-        items = page.locator(".item-detail").all()
+    for candidate in candidate_books[:6]:
+        short_title = clean_book_title(candidate["title"])
+        author_last = candidate["author"].split()[-1] if candidate.get("author") else ""
+        query = urllib.parse.quote(f"{short_title} {author_last}".strip())
+        kobo_search_url = f"https://www.kobo.com/us/en/search?query={query}&fcmedia=AudioBook&fclanguages=en"
 
-        if not items:
-            return None
+        try:
+            page.goto(kobo_search_url, wait_until="domcontentloaded")
+            if page.locator(".item-detail").count() == 0:
+                continue
 
-        item = random.choice(items[:5])
-        title = item.locator(".title").inner_text().strip()
-        author_loc = item.locator(".contributor-name").first
-        author = author_loc.inner_text().strip() if author_loc.count() > 0 else ""
-        cover = item.locator(".item-image img").first.get_attribute("src") or ""
-        link = item.locator(".title a, a.title").first.get_attribute("href") or ""
+            first_item = page.locator(".item-detail").first
+            found_title = first_item.locator(".title").inner_text(timeout=3000).strip()
+            author_loc = first_item.locator(".contributor-name").first
+            found_author = author_loc.inner_text(timeout=2000).strip() if author_loc.count() > 0 else candidate["author"]
 
-        if cover.startswith("//"):
-            cover = "https:" + cover
-        cover = cover.replace("180/180/False", "300/300/False")
+            # Verify the result actually matches our Amazon book's core title
+            if short_title.lower()[:8] not in found_title.lower():
+                continue
 
-        full_kobo_url = link if link.startswith("http") else f"https://www.kobo.com{link}"
-        search_term = urllib.parse.quote(f"{title} {author}".strip())
+            cover = first_item.locator(".item-image img").first.get_attribute("src") or candidate["cover"]
+            if cover.startswith("//"):
+                cover = "https:" + cover
+            cover = cover.replace("180/180/False", "300/300/False")
 
-        return {
-            "title": title,
-            "author": author,
-            "cover": cover,
-            "kobo_url": full_kobo_url,
-            "spotify_url": f"https://open.spotify.com/search/{search_term}/audiobooks",
-            "audible_url": f"https://www.audible.com/search?keywords={search_term}"
-        }
-    except Exception as e:
-        print(f"   Audiobook scraping error: {e}")
-        return None
+            link = first_item.locator(".title a, a.title").first.get_attribute("href") or ""
+            full_kobo_url = link if link.startswith("http") else f"https://www.kobo.com{link}"
+
+            search_term = urllib.parse.quote(f"{short_title} {found_author}".strip())
+            print(f"   -> Matched vetted audiobook: {found_title} by {found_author}")
+
+            return {
+                "title": found_title,
+                "author": found_author,
+                "cover": cover,
+                "kobo_url": full_kobo_url,
+                "spotify_url": f"https://open.spotify.com/search/{search_term}/audiobooks",
+                "audible_url": f"https://www.audible.com/search?keywords={search_term}"
+            }
+        except Exception:
+            continue
+
+    print("   -> No matching wide audiobook found for this genre's top picks today.")
+    return None
 
 def dispatch_mailerlite(campaign_html):
     """Creates and sends the MailerLite campaign using built-in urllib.request."""
@@ -228,7 +244,6 @@ def dispatch_mailerlite(campaign_html):
         "User-Agent": "TheCuratedSpineBot/1.0"
     }
 
-    # Auto-fetch groups if MAILERLITE_GROUP_ID isn't explicitly set in environment variables
     group_ids = []
     env_group = os.environ.get("MAILERLITE_GROUP_ID")
     if env_group:
@@ -251,7 +266,6 @@ def dispatch_mailerlite(campaign_html):
     if group_ids:
         payload["groups"] = group_ids
 
-    # 1. Create Campaign
     status, camp_data = http_request(url, method="POST", headers=headers, payload=payload)
     if status not in [200, 201] or "data" not in camp_data:
         print(f"Failed to create campaign (status {status})")
@@ -259,14 +273,12 @@ def dispatch_mailerlite(campaign_html):
 
     campaign_id = camp_data["data"]["id"]
 
-    # 2. Add HTML Content
     content_payload = {
         "html": campaign_html,
         "plain_text": "Please view this email in an HTML-compatible email client or visit https://thecuratedspine.com"
     }
     http_request(f"{url}/{campaign_id}/content", method="PUT", headers=headers, payload=content_payload)
 
-    # 3. Schedule Instant Delivery
     schedule_payload = {"delivery": "instant"}
     sched_status, _ = http_request(f"{url}/{campaign_id}/schedule", method="POST", headers=headers, payload=schedule_payload)
     if sched_status in [200, 201]:
@@ -286,13 +298,13 @@ def main():
 
         for index, category in enumerate(CATEGORIES):
             print(f"-> Fetching {category['name']}...")
+            raw_books = fetch_kindle_books(page, category["url"])
             selected_kindle = None
 
             if index == 0 and override_asin:
                 selected_kindle = fetch_override_book(page, override_asin, category["name"])
 
             if not selected_kindle:
-                raw_books = fetch_kindle_books(page, category["url"])
                 for book in raw_books:
                     if book["asin"] in sent_history or book["title"] in sent_history:
                         continue
@@ -305,14 +317,15 @@ def main():
 
             if selected_kindle:
                 sent_history.append(selected_kindle.get("asin", selected_kindle["title"]))
-                audio_bonus = fetch_free_audiobook(page, category["name"])
+                # Check our selected book first, then fall back to the other top Amazon chart books
+                candidates = [selected_kindle] + [b for b in raw_books if b["title"] != selected_kindle["title"]]
+                audio_bonus = find_vetted_audiobook(page, candidates)
                 if audio_bonus:
                     selected_kindle["audiobook"] = audio_bonus
                 today_picks.append(selected_kindle)
 
         browser.close()
 
-    # Save updated history and latest issue JSON for Website & Bluesky Bot
     save_sent_history(sent_history)
     with open("latest_issue.json", "w", encoding="utf-8") as f:
         json.dump({"books": today_picks}, f, indent=4)
@@ -321,7 +334,6 @@ def main():
         print("No picks found today; aborting email dispatch.")
         return
 
-    # Build HTML Email
     html_content = """
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px;">
         <h1 style="text-align: center; color: #2c3e50;">The Curated Spine</h1>
@@ -359,11 +371,11 @@ def main():
                     <img src="{audio['cover']}" width="80" height="80" style="border-radius: 4px; display: block; object-fit: cover;" alt="Audiobook Cover">
                   </td>
                   <td valign="middle" style="padding-left: 15px; font-family: Arial, sans-serif;">
-                    <p style="margin: 0; font-size: 12px; color: #888888; text-transform: uppercase;">🎧 Audio Bonus</p>
+                    <p style="margin: 0; font-size: 12px; color: #888888; text-transform: uppercase;">🎧 Audio Companion</p>
                     <p style="margin: 4px 0; font-size: 14px; font-weight: bold; color: #333333;">{audio['title']}</p>
                     <p style="margin: 0; font-size: 13px;">
-                      <a href="{audio['kobo_url']}" style="color: #000000; text-decoration: none; font-weight: bold;">Kobo (Free)</a> • 
-                      <a href="{audio['spotify_url']}" style="color: #1DB954; text-decoration: none;">Spotify (Premium)</a> • 
+                      <a href="{audio['spotify_url']}" style="color: #1DB954; text-decoration: none; font-weight: bold;">Spotify (Premium)</a> • 
+                      <a href="{audio['kobo_url']}" style="color: #000000; text-decoration: none;">Kobo</a> • 
                       <a href="{audio['audible_url']}" style="color: #F5A623; text-decoration: none;">Audible</a>
                     </p>
                   </td>
