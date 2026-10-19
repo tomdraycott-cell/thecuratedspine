@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Gives you the manual "Run workflow" button in the Actions tab!
 
 permissions:
-  contents: write
+  contents: write # This gives the GITHUB_TOKEN permission to push updates back to the repo
 
 jobs:
   curate-and-send:
@@ -43,3 +43,12 @@ jobs:
           git config --global user.email "bot@thecuratedspine.com"
           git add sent_history.json latest_issue.json override_asins.txt || true
           git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
+
+      - name: Install Bluesky SDK
+        run: pip install atproto
+
+      - name: Post daily update to Bluesky
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+        run: python bsky_bot.py
