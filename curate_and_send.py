@@ -5,11 +5,12 @@ import urllib.parse
 import urllib.request
 from playwright.sync_api import sync_playwright
 
+# Each category now uses its true Amazon Node ID + "?_encoding=UTF8&tf=1" to force the Top 100 FREE chart
 CATEGORIES = [
-    {"name": "Science Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction/zgbs/digital-text/158566011"},
-    {"name": "Historical Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Historical-Fiction/zgbs/digital-text/158566011"},
-    {"name": "Literary Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/158566011"},
-    {"name": "Romance", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Romance/zgbs/digital-text/158566011"}
+    {"name": "Science Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction/zgbs/digital-text/158591011?_encoding=UTF8&tf=1"},
+    {"name": "Historical Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Historical-Fiction/zgbs/digital-text/157056011?_encoding=UTF8&tf=1"},
+    {"name": "Literary Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/157028011?_encoding=UTF8&tf=1"},
+    {"name": "Romance", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Romance/zgbs/digital-text/158566011?_encoding=UTF8&tf=1"}
 ]
 
 def http_request(url, method="GET", headers=None, payload=None, timeout=15):
@@ -137,7 +138,7 @@ def fetch_override_book(page, asin, genre_name):
         return None
 
 def fetch_kindle_books(page, category_url):
-    """Scrapes Amazon for the top free Kindle books in a category."""
+    """Scrapes Amazon for the top free Kindle books and strictly verifies $0.00 pricing."""
     page.goto(category_url, wait_until="domcontentloaded")
     books = []
 
@@ -145,8 +146,13 @@ def fetch_kindle_books(page, category_url):
         page.wait_for_selector(".zg-grid-general-faceout", timeout=8000)
         items = page.locator(".zg-grid-general-faceout").all()
 
-        for item in items[:15]:
+        for item in items[:20]:
             try:
+                card_text = item.inner_text()
+                # Strictly require $0.00 or Free to purchase (reject $5.99 paid books)
+                if "$0.00" not in card_text and "Free" not in card_text:
+                    continue
+
                 clamped = item.locator("div._cDEzb_p13n-sc-css-line-clamp-1_1Fn1y, div._cDEzb_p13n-sc-css-line-clamp-2_1Fn1y").all()
                 if len(clamped) >= 2:
                     title = clamped[0].inner_text().strip()
@@ -175,6 +181,7 @@ def fetch_kindle_books(page, category_url):
     except Exception as e:
         print(f"Amazon scraping error: {e}")
 
+    print(f"   -> Found {len(books)} verified $0.00 Kindle books in this category.")
     return books
 
 def find_vetted_audiobook(page, candidate_books):
@@ -200,7 +207,6 @@ def find_vetted_audiobook(page, candidate_books):
             author_loc = first_item.locator(".contributor-name").first
             found_author = author_loc.inner_text(timeout=2000).strip() if author_loc.count() > 0 else candidate["author"]
 
-            # Verify the result actually matches our Amazon book's core title
             if short_title.lower()[:8] not in found_title.lower():
                 continue
 
@@ -292,7 +298,12 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_page(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
+        # Force US English locale headers so Amazon serves US $0.00 pricing
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            locale="en-US"
+        )
+        page = context.new_page()
 
         override_asin = pop_override_asin()
 
@@ -317,7 +328,6 @@ def main():
 
             if selected_kindle:
                 sent_history.append(selected_kindle.get("asin", selected_kindle["title"]))
-                # Check our selected book first, then fall back to the other top Amazon chart books
                 candidates = [selected_kindle] + [b for b in raw_books if b["title"] != selected_kindle["title"]]
                 audio_bonus = find_vetted_audiobook(page, candidates)
                 if audio_bonus:
@@ -342,56 +352,4 @@ def main():
     """
 
     for pick in today_picks:
-        html_content += f"""
-        <div style="margin-bottom: 40px;">
-            <h2 style="color: #34495e; margin-bottom: 10px;">{pick['genre']}</h2>
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td width="120" valign="top">
-                  <img src="{pick['cover']}" width="120" style="border-radius: 4px; display: block;" alt="{pick['title']}">
-                </td>
-                <td valign="top" style="padding-left: 20px;">
-                  <h3 style="margin: 0; color: #2980b9;">{pick['title']}</h3>
-                  <p style="margin: 5px 0; color: #555;">by {pick['author']}</p>
-                  <p style="font-style: italic; color: #666;">"{pick['hook']}"</p>
-                  <a href="{pick['amazon_url']}" style="display: inline-block; background: #2980b9; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-weight: bold;">Get it on Kindle</a>
-                </td>
-              </tr>
-            </table>
-        """
-
-        if pick.get("audiobook"):
-            audio = pick["audiobook"]
-            html_content += f"""
-            <!-- AUDIOBOOK BONUS SECTION -->
-            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eeeeee;">
-              <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td width="80" valign="top">
-                    <img src="{audio['cover']}" width="80" height="80" style="border-radius: 4px; display: block; object-fit: cover;" alt="Audiobook Cover">
-                  </td>
-                  <td valign="middle" style="padding-left: 15px; font-family: Arial, sans-serif;">
-                    <p style="margin: 0; font-size: 12px; color: #888888; text-transform: uppercase;">🎧 Audio Companion</p>
-                    <p style="margin: 4px 0; font-size: 14px; font-weight: bold; color: #333333;">{audio['title']}</p>
-                    <p style="margin: 0; font-size: 13px;">
-                      <a href="{audio['spotify_url']}" style="color: #1DB954; text-decoration: none; font-weight: bold;">Spotify (Premium)</a> • 
-                      <a href="{audio['kobo_url']}" style="color: #000000; text-decoration: none;">Kobo</a> • 
-                      <a href="{audio['audible_url']}" style="color: #F5A623; text-decoration: none;">Audible</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            """
-        html_content += "</div>"
-
-    html_content += """
-        <hr style="border: 0; height: 1px; background: #eee; margin-top: 40px;">
-        <p style="text-align: center; font-size: 12px; color: #999;">You received this because you subscribed at <a href="https://thecuratedspine.com" style="color: #999;">thecuratedspine.com</a></p>
-    </div>
-    """
-
-    dispatch_mailerlite(html_content)
-
-if __name__ == "__main__":
-    main()
+        html_content += f
