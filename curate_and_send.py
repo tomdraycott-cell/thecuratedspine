@@ -3,11 +3,12 @@ import json
 import urllib.parse
 import random
 from playwright.sync_api import sync_playwright
-from google import genai
+import google.generativeai as genai
 import requests
 
-# Configure Gemini AI Client
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure Gemini AI Client (Classic Stable SDK)
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 CATEGORIES = [
     {"name": "Science Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction/zgbs/digital-text/158566011"},
@@ -26,7 +27,7 @@ def generate_hook_and_filter(title, author, genre):
     2. If it is a quality book, write a compelling, one-sentence editorial hook (under 95 characters) to entice readers. Do not use quotes.
     """
     try:
-        response = client.models.generate_content(model='gemini-1.5-flash', contents=prompt)
+        response = model.generate_content(prompt)
         result = response.text.strip()
         if "REJECT" in result.upper():
             return None
