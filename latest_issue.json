@@ -1,34 +1,112 @@
 {
-  "updated_at": "2026-10-19T10:03:21.264079+00:00",
+  "updated_at": "2026-10-19T10:17:57.195623+00:00",
   "display_date": "Monday, 19 October 2026",
   "books": [
     {
       "genre": "Sci-Fi",
-      "title": "Zournal: Book 1: It All Started",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q7Aq9EOaL._SL300_.jpg",
+      "title": "The Dragon Blood Collection, Books 1-3",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/91IHKfJtyYL._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
-      "rating": 4.4,
-      "reviews": "712",
+      "rating": 4.5,
+      "reviews": "26,722",
       "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "Discover the genesis of a fantastical saga, as a journal holds the keys to an unfolding destiny.",
-      "link_uk": "https://www.amazon.co.uk/dp/B06XC1W26S?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B06XC1W26S?tag=curatedspine-20"
+      "hook": "A sweeping fantasy saga inviting readers into a realm where ancient dragon blood shapes destinies across generations.",
+      "link_uk": "https://www.amazon.co.uk/dp/B00PXGD274?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B00PXGD274?tag=curatedspine-20"
+    },
+    {
+      "genre": "Sci-Fi",
+      "title": "Engineer of the Exotic (The Saucer Series Book 1)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81fKqkT594L._SL300_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$2.99",
+      "rating": 4.4,
+      "reviews": "621",
+      "badge": "\u2605 Featured in Sci-Fi",
+      "hook": "Explore the thrilling frontiers of alien technology with a curious mind navigating untold wonders.",
+      "link_uk": "https://www.amazon.co.uk/dp/B0HCB94N4R?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B0HCB94N4R?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "The Limping Lady: Based on the True Story of America's Most Decorated Female Spy (Forgotten Heroines of World War Two)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71Pk4T7xTnL._SL300_.jpg",
+      "price_uk": "Free",
+      "price_us": "Free",
+      "rating": 4.6,
+      "reviews": "2,299",
+      "badge": "\u2605 Featured in Historical Fiction",
+      "hook": "This historical account illuminates the courageous life of America's most decorated female spy during the tumultuous years of World War Two.",
+      "link_uk": "https://www.amazon.co.uk/dp/B0FNKLDVXL?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B0FNKLDVXL?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "The Lost Kingdom of Daughters: A Novel",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/91VmckC-zVL._SL300_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$1.99",
+      "rating": 4.3,
+      "reviews": "832",
+      "badge": "\u2605 Featured in Historical Fiction",
+      "hook": "Explore a forgotten matriarchal history, uncovering the intricate lives and legacies of women in a lost, foundational kingdom.",
+      "link_uk": "https://www.amazon.co.uk/dp/B0GHSSWGBX?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B0GHSSWGBX?tag=curatedspine-20"
     }
   ],
   "recent_books": [
     {
       "genre": "Sci-Fi",
-      "title": "Zournal: Book 1: It All Started",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q7Aq9EOaL._SL300_.jpg",
+      "title": "Onward (Blackout Book 6)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81Rj-KiMPrL._SL300_.jpg",
+      "price_uk": "Free",
+      "price_us": "Free",
+      "rating": 4.6,
+      "reviews": "67",
+      "badge": "Reader Pick \u2022 Sci-Fi",
+      "hook": "Join a resilient crew's desperate fight for survival through the shadows of a collapsing future.",
+      "link_uk": "https://www.amazon.co.uk/dp/B09DJDQD1X?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B09DJDQD1X?tag=curatedspine-20"
+    },
+    {
+      "genre": "Sci-Fi",
+      "title": "Starship Express",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/81Y-Q1dilWL._SL300_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$0.99",
+      "rating": 4.4,
+      "reviews": "1,374",
+      "badge": "Reader Pick \u2022 Sci-Fi",
+      "hook": "A high-stakes cosmic delivery service navigates perilous routes through unknown star systems.",
+      "link_uk": "https://www.amazon.co.uk/dp/B0HF8WCHQ2?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B0HF8WCHQ2?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "Queens of Themiscyra: The forgotten women, fierce queens and ancient myths of the Amazons, brought together in one epic story (Retold: The Grecian Women)",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/91WQt3IlsJL._SL300_.jpg",
       "price_uk": "Free",
       "price_us": "Free",
       "rating": 4.4,
-      "reviews": "712",
-      "badge": "\u2605 Featured in Sci-Fi",
-      "hook": "Discover the genesis of a fantastical saga, as a journal holds the keys to an unfolding destiny.",
-      "link_uk": "https://www.amazon.co.uk/dp/B06XC1W26S?tag=curatedspine-20",
-      "link_us": "https://www.amazon.com/dp/B06XC1W26S?tag=curatedspine-20"
+      "reviews": "1,330",
+      "badge": "Reader Pick \u2022 Historical Fiction",
+      "hook": "Explore the compelling narratives of Amazonian queens and ancient Grecian myths within this singular, richly imagined historical saga.",
+      "link_uk": "https://www.amazon.co.uk/dp/B09D774V4Z?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B09D774V4Z?tag=curatedspine-20"
+    },
+    {
+      "genre": "Historical Fiction",
+      "title": "The French Wife: Completely heartbreaking World War 2 fiction",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71RYILtZizL._SL300_.jpg",
+      "price_uk": "\u00a30.99",
+      "price_us": "$0.99",
+      "rating": 4.7,
+      "reviews": "55",
+      "badge": "Reader Pick \u2022 Historical Fiction",
+      "hook": "A poignant World War 2 narrative explores profound loss and resilience through the eyes of one French woman amidst conflict.",
+      "link_uk": "https://www.amazon.co.uk/dp/B0H6WKPL5G?tag=curatedspine-20",
+      "link_us": "https://www.amazon.com/dp/B0H6WKPL5G?tag=curatedspine-20"
     }
   ]
 }
