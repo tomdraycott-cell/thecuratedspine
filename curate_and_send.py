@@ -345,7 +345,7 @@ def main():
         page = context.new_page()
 
         override_asin = pop_override_asin()
-         fallback_seed = random.randint(0, 10)
+        fallback_seed = random.randint(0, 10)
 
         for index, category in enumerate(CATEGORIES):
             print(f"-> Fetching {category['name']}...")
