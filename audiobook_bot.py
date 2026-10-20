@@ -5,7 +5,7 @@ import requests
 from io import BytesIO
 from PIL import Image
 from playwright.sync_api import sync_playwright
-from atproto import Client, TextBuilder, models
+from atproto import Client, client_utils, models
 
 # --- CONFIGURATION ---
 TARGET_URLS = [
@@ -175,7 +175,7 @@ def generate_audio_hook(book):
     api_key = os.environ.get("GEMINI_API_KEY")
     fallback = f"Settle in for {book['duration']} of immersive, studio-voiced storytelling."
     if not api_key:
-        return fallback
+        return f'"{fallback}"'
 
     prompt = (
         f"Write a single, intriguing 1-sentence book hook (maximum 22 words) for the audiobook "
@@ -223,7 +223,7 @@ def post_to_bluesky(book, hook):
     rating_str = f" ⭐ {book['rating']}" if book.get("rating") else ""
     header = f"🎧 Evening Audio Find: {book['title']} by {book['author']} ({book['duration']}{rating_str})\n\n"
 
-    tb = TextBuilder()
+    tb = client_utils.TextBuilder()
     tb.text(header)
     tb.text(f"{hook}\n\n")
     tb.text("🔊 ")
