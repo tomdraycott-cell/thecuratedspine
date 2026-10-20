@@ -47,7 +47,7 @@ def get_varied_fallback(genre, index=0):
 
 def clean_amazon_cover_url(url):
     """
-    Strips Amazon's ._AC_UL600_SR600,400_ modifiers that add ugly white bars 
+    Strips Amazon's ._AC_UL600_SR600,400_ modifiers that add white sidebars 
     and Kindle Unlimited banners, returning the pure high-res vertical cover.
     """
     if not url:
@@ -231,7 +231,7 @@ def find_vetted_audiobook(page, candidate_books):
     """Checks if any of the top-rated Amazon Kindle books have a matching audiobook on Kobo/Spotify."""
     print("   -> Cross-checking top Amazon books for wide audiobook editions...")
 
-    for candidate in candidate_books[:6]:
+    for candidate in candidate_books[:12]:
         short_title = clean_book_title(candidate["title"])
         author_last = candidate["author"].split()[-1] if candidate.get("author") else ""
         query = urllib.parse.quote(f"{short_title} {author_last}".strip())
@@ -293,25 +293,29 @@ def dispatch_mailerlite(campaign_html):
     group_ids = []
     env_group = os.environ.get("MAILERLITE_GROUP_ID")
     if env_group:
-        group_ids = [env_group]
+        group_ids = [str(env_group)]
     else:
         status, grp_data = http_request("https://connect.mailerlite.com/api/groups", headers=headers)
         if status == 200:
             group_ids = [str(g["id"]) for g in grp_data.get("data", [])]
 
     url = "https://connect.mailerlite.com/api/campaigns"
+
+    # MailerLite v2 takes 'content' directly inside the emails object on creation
     payload = {
         "name": "Daily Curated Spine Dispatch",
         "type": "regular",
         "emails": [{
             "subject": "📚 Your Daily Curated Spine: Free Kindle & Audiobooks",
             "from_name": "The Curated Spine",
-            "from": sender_email
+            "from": sender_email,
+            "content": campaign_html
         }]
     }
     if group_ids:
         payload["groups"] = group_ids
 
+    # 1. Create Campaign (with HTML content included)
     status, camp_data = http_request(url, method="POST", headers=headers, payload=payload)
     if status not in [200, 201] or "data" not in camp_data:
         print(f"Failed to create campaign (status {status})")
@@ -319,18 +323,18 @@ def dispatch_mailerlite(campaign_html):
 
     campaign_id = camp_data["data"]["id"]
 
-    content_payload = {
-        "html": campaign_html,
-        "plain_text": "Please view this email in an HTML-compatible email client or visit https://thecuratedspine.com"
-    }
-    http_request(f"{url}/{campaign_id}/content", method="PUT", headers=headers, payload=content_payload)
-
+    # 2. Schedule Instant Delivery
     schedule_payload = {"delivery": "instant"}
-    sched_status, _ = http_request(f"{url}/{campaign_id}/schedule", method="POST", headers=headers, payload=schedule_payload)
+    sched_status, sched_data = http_request(
+        f"{url}/{campaign_id}/schedule",
+        method="POST",
+        headers=headers,
+        payload=schedule_payload
+    )
     if sched_status in [200, 201]:
         print(f"SUCCESS: MailerLite campaign dispatched! ID: {campaign_id}")
     else:
-        print(f"Campaign created ({campaign_id}), schedule status: {sched_status}")
+        print(f"Campaign created ({campaign_id}), schedule status: {sched_status} - {sched_data}")
 
 def main():
     sent_history = load_sent_history()
