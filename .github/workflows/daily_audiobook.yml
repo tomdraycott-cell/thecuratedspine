@@ -1,0 +1,42 @@
+name: Daily Evening Audiobook (Bluesky)
+
+on:
+  schedule:
+    # Runs at 17:00 UTC (6:00 PM UK BST / 5:00 PM UK GMT) every day
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Allows manual one-click testing when you are ready
+
+permissions:
+  contents: write
+
+jobs:
+  post-audiobook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright atproto pillow requests
+          playwright install chromium
+
+      - name: Run Evening Audiobook Bot
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python audiobook_bot.py
+
+      - name: Commit updated audiobook history
+        run: |
+          git config --global user.name "Curated Spine Bot"
+          git config --global user.email "bot@thecuratedspine.com"
+          git add posted_audiobooks.json || true
+          git diff --staged --quiet || git commit -m "Record posted audiobook"
+          git push
