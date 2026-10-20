@@ -1,17 +1,58 @@
 import os
 import re
 import json
+import random
 import urllib.parse
 import urllib.request
 from playwright.sync_api import sync_playwright
 
-# Each category now uses its true Amazon Node ID + "?_encoding=UTF8&tf=1" to force the Top 100 FREE chart
 CATEGORIES = [
     {"name": "Science Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Science-Fiction/zgbs/digital-text/158591011?_encoding=UTF8&tf=1"},
     {"name": "Historical Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Historical-Fiction/zgbs/digital-text/157056011?_encoding=UTF8&tf=1"},
     {"name": "Literary Fiction", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Literary-Fiction/zgbs/digital-text/157028011?_encoding=UTF8&tf=1"},
     {"name": "Romance", "url": "https://www.amazon.com/Best-Sellers-Kindle-Store-Romance/zgbs/digital-text/158566011?_encoding=UTF8&tf=1"}
 ]
+
+FALLBACK_HOOKS = {
+    "Science Fiction": [
+        "A high-stakes speculative journey into the unknown—free for your Kindle today.",
+        "Bold world-building and propulsive sci-fi tension, currently free to download.",
+        "An immersive futuristic escape climbing the Kindle charts today."
+    ],
+    "Historical Fiction": [
+        "Rich period detail and unforgettable characters bring the past vividly to life.",
+        "A sweeping historical tale steeped in atmosphere and intrigue.",
+        "Step into another era with today's top-trending historical read."
+    ],
+    "Literary Fiction": [
+        "Sharp prose and deeply human storytelling in today's standout literary pick.",
+        "A resonant, character-driven novel making waves on the charts today.",
+        "Thought-provoking fiction crafted for readers who linger over every page."
+    ],
+    "Romance": [
+        "Undeniable chemistry and heartfelt tension in today's featured romance.",
+        "A swoon-worthy, emotionally charged read—free for your Kindle today.",
+        "Sparks fly in this chart-topping romance pick."
+    ]
+}
+
+def get_varied_fallback(genre, index=0):
+    """Returns a distinct genre-specific hook so posts never look identical."""
+    options = FALLBACK_HOOKS.get(genre, [
+        "A standout chart-topping pick—free to download for a limited time.",
+        "Add this top-rated indie favorite to your Kindle queue today.",
+        "A gripping page-turner currently climbing the free Kindle charts."
+    ])
+    return options[index % len(options)]
+
+def clean_amazon_cover_url(url):
+    """
+    Strips Amazon's ._AC_UL600_SR600,400_ modifiers that add ugly white bars 
+    and Kindle Unlimited banners, returning the pure high-res vertical cover.
+    """
+    if not url:
+        return ""
+    return re.sub(r"\._[A-Za-z0-9,\-_]+_\.(jpg|png|jpeg)$", r"._SL1000_.\1", url, flags=re.IGNORECASE)
 
 def http_request(url, method="GET", headers=None, payload=None, timeout=15):
     """Native Python HTTP helper using urllib.request—no external packages needed."""
@@ -81,21 +122,22 @@ def pop_override_asin():
         print(f"Error reading override_asins.txt: {e}")
         return None
 
-def generate_hook_and_filter(title, author, genre):
-    """Calls the Gemini REST API using Python's built-in urllib.request."""
-    api_key = os.environ.get("GEMINI_API_KEY", "")
+def generate_hook_and_filter(title, author, genre, fallback_index=0):
+    """Calls the Gemini REST API using active 2.5/2.0 models, with varied genre fallbacks."""
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
-        return "An exciting new read to add to your digital library."
+        print("   -> Note: GEMINI_API_KEY not found in environment; using varied genre hook.")
+        return get_varied_fallback(genre, fallback_index)
 
     prompt = f"""
     You are an editorial assistant for a premium book curation newsletter called 'The Curated Spine'.
     Evaluate this book: "{title}" by {author}. Genre: {genre}.
     
     1. If the title sounds like cheap erotica, low-quality spam, or a wildly off-brand subgenre, reply with exactly: REJECT
-    2. If it is a quality book, write a compelling, one-sentence editorial hook (under 95 characters) to entice readers. Do not use quotes.
+    2. If it is a quality book, write a vivid, unique one-sentence editorial hook (under 90 characters) specific to "{title}" to entice readers. Do not use quotes.
     """
 
-    for model_name in ["gemini-1.5-flash", "gemini-2.0-flash"]:
+    for model_name in ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
         status, data = http_request(
             url,
@@ -111,7 +153,7 @@ def generate_hook_and_filter(title, author, genre):
             except (KeyError, IndexError):
                 continue
 
-    return "An exciting new read to add to your digital library."
+    return get_varied_fallback(genre, fallback_index)
 
 def fetch_override_book(page, asin, genre_name):
     """Fetches book details directly from an Amazon ASIN page."""
@@ -122,8 +164,9 @@ def fetch_override_book(page, asin, genre_name):
         title = page.locator("#productTitle").inner_text(timeout=5000).strip()
         author_loc = page.locator(".author a").first
         author = author_loc.inner_text(timeout=3000).strip() if author_loc.count() > 0 else "Featured Author"
-        cover = page.locator("#landingImage, #ebooksImgBlkFront").first.get_attribute("src")
-        hook = generate_hook_and_filter(title, author, genre_name) or "A standout featured selection for your Kindle."
+        raw_cover = page.locator("#landingImage, #ebooksImgBlkFront").first.get_attribute("src")
+        cover = clean_amazon_cover_url(raw_cover)
+        hook = generate_hook_and_filter(title, author, genre_name) or get_varied_fallback(genre_name, 0)
         return {
             "asin": asin,
             "genre": genre_name,
@@ -138,7 +181,7 @@ def fetch_override_book(page, asin, genre_name):
         return None
 
 def fetch_kindle_books(page, category_url):
-    """Scrapes Amazon for the top free Kindle books and strictly verifies $0.00 pricing."""
+    """Scrapes Amazon for the top free Kindle books and strips white padding from covers."""
     page.goto(category_url, wait_until="domcontentloaded")
     books = []
 
@@ -149,7 +192,6 @@ def fetch_kindle_books(page, category_url):
         for item in items[:20]:
             try:
                 card_text = item.inner_text()
-                # Strictly require $0.00 or Free to purchase (reject $5.99 paid books)
                 if "$0.00" not in card_text and "Free" not in card_text:
                     continue
 
@@ -161,7 +203,8 @@ def fetch_kindle_books(page, category_url):
                     title = item.locator("img").get_attribute("alt") or ""
                     author = "Indie Author"
 
-                cover = item.locator("img").first.get_attribute("src")
+                raw_cover = item.locator("img").first.get_attribute("src")
+                cover = clean_amazon_cover_url(raw_cover)
                 link = item.locator("a.a-link-normal").first.get_attribute("href")
 
                 if title and link:
@@ -185,10 +228,7 @@ def fetch_kindle_books(page, category_url):
     return books
 
 def find_vetted_audiobook(page, candidate_books):
-    """
-    Checks if any of the top-rated Amazon Kindle books have a matching audiobook 
-    edition on Kobo/Spotify (which share Findaway Voices distribution).
-    """
+    """Checks if any of the top-rated Amazon Kindle books have a matching audiobook on Kobo/Spotify."""
     print("   -> Cross-checking top Amazon books for wide audiobook editions...")
 
     for candidate in candidate_books[:6]:
@@ -298,7 +338,6 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        # Force US English locale headers so Amazon serves US $0.00 pricing
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             locale="en-US"
@@ -306,6 +345,7 @@ def main():
         page = context.new_page()
 
         override_asin = pop_override_asin()
+         fallback_seed = random.randint(0, 10)
 
         for index, category in enumerate(CATEGORIES):
             print(f"-> Fetching {category['name']}...")
@@ -319,7 +359,7 @@ def main():
                 for book in raw_books:
                     if book["asin"] in sent_history or book["title"] in sent_history:
                         continue
-                    hook = generate_hook_and_filter(book["title"], book["author"], category["name"])
+                    hook = generate_hook_and_filter(book["title"], book["author"], category["name"], fallback_seed + index)
                     if hook:
                         book["hook"] = hook
                         book["genre"] = category["name"]
