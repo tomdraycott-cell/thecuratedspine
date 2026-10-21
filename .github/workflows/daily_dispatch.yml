@@ -2,7 +2,7 @@ name: Daily Book Curation & Dispatch
 
 on:
   schedule:
-    # Runs automatically every morning at 06:20 UTC
+    # Runs automatically every day at 12:20 UTC
     - cron: '20 12 * * *'
   workflow_dispatch: # Gives you the manual "Run workflow" button in the Actions tab!
 
@@ -22,9 +22,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Playwright & Stealth
+      - name: Install Dependencies & Playwright
         run: |
-          pip install playwright "playwright-stealth<2.0.0"
+          pip install playwright "playwright-stealth<2.0.0" requests atproto pillow google-generativeai
           playwright install --with-deps chromium
 
       - name: Run Curation & Email Script
@@ -37,18 +37,16 @@ jobs:
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
         run: python curate_and_send.py
 
-      - name: Save Updated History & Website Showcase JSON
-        run: |
-          git config --global user.name "Curated Spine Bot"
-          git config --global user.email "bot@thecuratedspine.com"
-          git add sent_history.json latest_issue.json override_asins.txt || true
-          git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
-
-      - name: Install Bluesky SDK
-        run: pip install playwright requests atproto google-generativeai
-
       - name: Post daily update to Bluesky
         env:
           BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
           BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python bsky_bot.py
+
+      - name: Save Updated History & Website Showcase JSON
+        run: |
+          git config --global user.name "Curated Spine Bot"
+          git config --global user.email "bot@thecuratedspine.com"
+          git add sent_history.json latest_issue.json posted_kindle_books.json override_asins.txt || true
+          git diff --staged --quiet || (git commit -m "Auto-update daily book picks and history" && git push)
