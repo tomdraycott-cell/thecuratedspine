@@ -14,7 +14,6 @@ HISTORY_FILE = "posted_kindle_books.json"
 MIN_RATING = 4.2
 MIN_REVIEWS = 40
 
-# The 4 daily genres (Romance shifted slightly upmarket toward Contemporary/Women's Fiction)
 GENRES = [
     {
         "name": "Sci-Fi",
@@ -38,7 +37,6 @@ GENRES = [
     }
 ]
 
-# Downmarket / pulp tropes to automatically disqualify
 PULP_BLACKLIST = [
     "countess", "duke", "viscount", "earl", "marquess", "highlander", "laird",
     "rake", "billionaire", "millionaire", "tycoon", "ceo", "alpha", "omega",
@@ -48,7 +46,6 @@ PULP_BLACKLIST = [
     "mail order bride", "amish", "stepbrother", "bully", "dark romance"
 ]
 
-# Upmarket / bestseller trust signals that receive a massive Quality Score boost
 PRESTIGE_SIGNALS = [
     "usa today", "new york times", "nyt bestselling", "wall street journal",
     "sunday times", "award winner", "award-winning", "pulitzer", "booker",
@@ -77,19 +74,12 @@ def is_pulp_title(title):
 
 
 def clean_amazon_cover_url(img_url):
-    """Strips Amazon thumbnail resizing modifiers to fetch the crisp, unpadded full-res cover."""
     if not img_url:
         return ""
     return re.sub(r"\._[A-Za-z0-9,_\-]+_\.", ".", img_url)
 
 
 def calculate_quality_score(book):
-    """
-    Calculates a weighted Quality Score:
-    - Base score = rating * log10(reviews)
-    - +10.0 bonus for USA Today / NYT / Award Winner signals
-    - -5.0 penalty if pulp keywords appear in the extended blurb
-    """
     reviews = book.get("reviews", 0)
     rating = book.get("rating", 0.0)
     if reviews < MIN_REVIEWS or rating < MIN_RATING:
@@ -104,7 +94,6 @@ def calculate_quality_score(book):
             book["prestige_badge"] = signal.upper()
             break
 
-    # Secondary check on the blurb for downmarket tropes
     if any(bad in combined_text for bad in PULP_BLACKLIST):
         score -= 6.0
 
@@ -118,7 +107,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
     try:
         page.goto(genre_cfg["url"], wait_until="domcontentloaded", timeout=25000)
         page.wait_for_timeout(2000)
-        # Scroll to load the full Top 30–50 chart items
         for _ in range(3):
             page.mouse.wheel(0, 1500)
             page.wait_for_timeout(700)
@@ -127,7 +115,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
         for card in cards:
             try:
                 raw_text = card.inner_text(timeout=1000)
-                # Confirm it's genuinely $0.00
                 if "$0.00" not in raw_text and "Free" not in raw_text:
                     continue
 
@@ -143,7 +130,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
                 if asin in posted_asins:
                     continue
 
-                # Extract title & author from card lines
                 lines = [l.strip() for l in raw_text.splitlines() if l.strip()]
                 lines = [l for l in lines if not re.match(r"^#\d+$", l)]
                 if len(lines) < 2:
@@ -156,13 +142,11 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
                     print(f"  [Skipped Pulp Title]: {title}")
                     continue
 
-                # Extract rating & review count (e.g. "4.5 out of 5 stars" and "11,417")
                 rating_match = re.search(r"([345]\.\d)\s*out of 5", raw_text)
                 if not rating_match:
                     rating_match = re.search(r"\b([345]\.\d)\b", raw_text)
                 rating = float(rating_match.group(1)) if rating_match else 0.0
 
-                # Look for review count next to star rating
                 reviews = 0
                 rev_matches = re.findall(r"\b(\d{1,3}(?:,\d{3})+|\d{2,6})\b", raw_text)
                 for rm in rev_matches:
@@ -199,7 +183,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
         if not candidates:
             return None
 
-        # Sort by preliminary score (Rating * log10(Reviews)) and inspect the Top 5 product pages
         candidates.sort(key=lambda x: x["prelim_score"], reverse=True)
         finalists = candidates[:5]
 
@@ -208,7 +191,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
                 page.goto(book["url"], wait_until="domcontentloaded", timeout=18000)
                 page.wait_for_timeout(1200)
 
-                # Grab product description/blurb to check for "USA Today" / "New York Times"
                 desc_loc = page.locator("#bookDescription_feature_div").first
                 if desc_loc.count() > 0:
                     book["description"] = desc_loc.inner_text(timeout=1500).strip()
@@ -217,7 +199,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
                     if meta_desc.count() > 0:
                         book["description"] = meta_desc.get_attribute("content") or ""
 
-                # Grab crisp cover from product page if needed
                 main_img = page.locator("#ebooksImgBlkFront, #imgBlkFront, #landingImage").first
                 if main_img.count() > 0:
                     src = main_img.get_attribute("src") or ""
@@ -234,7 +215,6 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
             except Exception:
                 book["final_score"] = book["prelim_score"]
 
-        # Sort finalists by final Quality Score descending and pick #1
         finalists.sort(key=lambda x: x.get("final_score", 0), reverse=True)
         winner = finalists[0]
         print(f"🏆 WINNER ({genre_cfg['name']}): {winner['title']} (Score: {winner['final_score']})")
@@ -246,14 +226,13 @@ def find_top_book_for_genre(page, genre_cfg, posted_asins):
 
 
 def generate_book_hook(book):
-    """Generates a custom 1-sentence editorial hook via Gemini Flash."""
     api_key = os.environ.get("GEMINI_API_KEY")
     fallback = f"A standout {book['genre_name'].lower()} pick boasting {book['reviews']:,} reader ratings."
     if not api_key:
         return f'"{fallback}"'
 
     prompt = (
-        f"Write a sharp, intriguing 1-sentence editorial book hook (maximum 22 words) for "
+        f"Write a sharp, intriguing 1-sentence editorial book hook (maximum 18 words, under 110 characters) for "
         f"'{book['title']}' by {book['author']} ({book['genre_name']}). "
         f"Synopsis: {book.get('description', '')[:700]}. "
         f"Avoid cheesy clichés and exclamation marks. Return ONLY the single sentence inside quotes."
@@ -266,13 +245,14 @@ def generate_book_hook(book):
         )
         data = resp.json()
         text = data["candidates"][0]["content"]["parts"][0]["text"].strip().strip('"')
+        if len(text) > 125:
+            text = text[:122].rsplit(" ", 1)[0] + "..."
         return f'"{text}"'
     except Exception:
         return f'"{fallback}"'
 
 
 def download_and_prep_image(url):
-    """Downloads the unpadded vertical cover image and returns (bytes, width, height)."""
     if not url:
         return None, None, None
     try:
@@ -289,9 +269,16 @@ def download_and_prep_image(url):
 
 
 def post_book_to_bluesky(client, book, hook):
+    # Trim bloated Amazon subtitles so the post never exceeds Bluesky's 300-character limit
+    clean_title = book["title"]
+    if len(clean_title) > 65:
+        clean_title = clean_title.split(":")[0].strip()
+    if len(clean_title) > 65:
+        clean_title = clean_title[:62].rsplit(" ", 1)[0] + "..."
+
     header = (
         f"📚 Today's featured {book['genre_name']} on The Curated Spine:\n"
-        f"{book['title']}\n\n"
+        f"{clean_title}\n\n"
     )
 
     tb = client_utils.TextBuilder()
@@ -324,7 +311,7 @@ def post_book_to_bluesky(client, book, hook):
         )
 
     client.send_post(tb, embed=embed)
-    print(f"Posted to Bluesky: {book['title']}")
+    print(f"Posted to Bluesky: {clean_title}")
 
 
 if __name__ == "__main__":
@@ -361,7 +348,6 @@ if __name__ == "__main__":
         post_book_to_bluesky(bsky_client, book, hook)
         save_history(posted_asins)
 
-        # Wait 60 seconds between posts to keep Bluesky's spam filter completely happy
         if idx < len(selected_books) - 1:
             print("Waiting 60 seconds before next post...")
             time.sleep(60)
