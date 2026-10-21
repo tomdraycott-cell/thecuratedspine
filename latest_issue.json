@@ -1,30 +1,30 @@
 {
     "books": [
         {
-            "asin": "B016WS5FO4",
-            "title": "Archangel Down: Archangel Project. Book One",
-            "author": "C. Gockel",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/919p5qr6oTL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Archangel-Down-Project-Book-One-ebook/dp/B016WS5FO4/ref=zg_bs_g_158591011_d_sccl_5/135-9111217-9986260",
-            "hook": "When gods fall, a secret project sparks humanity's fight for survival.",
+            "asin": "B0HCDWQM5M",
+            "title": "That Annihilated Place (Far Away Places)",
+            "author": "C Xavier",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81D5Fkjr87L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/That-Annihilated-Place-Away-Places-ebook/dp/B0HCDWQM5M/ref=zg_bs_g_158591011_d_sccl_6/147-3728492-8228559",
+            "hook": "What secrets lurk in the dust of a universe-shattering annihilation?",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0837NH973",
-            "title": "Father Brown (Complete Collection): 53 Murder Mysteries: The Scandal of Father Brown, The Donnington Affair & The Mask of Midas\u2026 (Classic Literature & Fiction Book 100)",
-            "author": "G. K. Chesterton",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71C9yGwX9wL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Father-Brown-Complete-Collection-Donnington-ebook/dp/B0837NH973/ref=zg_bs_g_157056011_d_sccl_10/135-9111217-9986260",
-            "hook": "A quiet priest confronts profound evil in Chesterton's 53 enduring murder mysteries.",
+            "asin": "B00R1GECO6",
+            "title": "Stories on the Go: 101 Very Short Stories by 101 Authors",
+            "author": "Hugh Howey",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81M7TkVoySL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Stories-Go-Very-Short-Authors-ebook/dp/B00R1GECO6/ref=zg_bs_g_157056011_d_sccl_10/147-3728492-8228559",
+            "hook": "101 distinct historical windows, each a swift, immersive journey through time's rich tapestry.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08JCWKZRZ",
-            "title": "Take A Number: A Fake Dating Spicy Rom-Com (Wait With Me Book 4)",
-            "author": "Amy Daws",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81O96KPg8RL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Take-Number-Wait-Me-Book-ebook/dp/B08JCWKZRZ/ref=zg_bs_g_158566011_d_sccl_7/135-9111217-9986260",
-            "hook": "A doctor, a fake date, and a scorching prescription for laugh-out-loud romance.",
+            "asin": "B0D4SF8KRG",
+            "title": "All Too Well (Ember Falls Book 1)",
+            "author": "Corinne Michaels",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81S8bmQCX3L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/All-Too-Well-Corinne-Michaels-ebook/dp/B0D4SF8KRG/ref=zg_bs_g_158566011_d_sccl_7/147-3728492-8228559",
+            "hook": "A past remembered all too well ignites old flames in Ember Falls. Can their love survive?",
             "genre": "Romance"
         }
     ]
