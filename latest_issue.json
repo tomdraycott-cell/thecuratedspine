@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B07JFKM5RP",
-            "title": "Superdreadnought 1: A Military AI Space Opera",
-            "author": "CH Gideon",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vOIbyyyKL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Superdreadnought-Military-AI-Space-Opera-ebook/dp/B07JFKM5RP/ref=zg_bs_g_158591011_d_sccl_1/134-0301813-3908317",
-            "hook": "A sentient superdreadnought redefines galactic war in an epic space opera.",
+            "asin": "B0GDJDFVGT",
+            "title": "Noble Machinations (The Steampunk Adventures Book 1)",
+            "author": "C Xavier",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZdH3L6F5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Noble-Machinations-Steampunk-Adventures-Book-ebook/dp/B0GDJDFVGT/ref=zg_bs_g_158591011_d_sccl_4/132-1744201-8083513",
+            "hook": "Steampunk grandeur meets cunning machinations in an adventure of gears and glory.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B07X5FGL12",
-            "title": "The Complete Anne of Green Gables Collection",
-            "author": "L.M. Montgomery",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81SHEMbxcLL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Anne-Green-Gables-Collection-2020-ebook/dp/B07X5FGL12/ref=zg_bs_g_157056011_d_sccl_8/134-0301813-3908317",
-            "hook": "Follow Anne Shirley's spirited adventures, finding beauty and belonging.",
+            "asin": "B074DW4QB7",
+            "title": "Moby Dick - classic",
+            "author": "Herman Melville",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DftAlWuLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Moby-Dick-classic-Herman-Melville-ebook/dp/B074DW4QB7/ref=zg_bs_g_157056011_d_sccl_9/132-1744201-8083513",
+            "hook": "Man's mad hunt for a white whale becomes an epic struggle against fate and nature.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0CTJXP24D",
-            "title": "One Alpen Day",
-            "author": "Michele Davenport-Dutton",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/810KuY0RR7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/One-Alpen-Day-Michele-Davenport-Dutton-ebook/dp/B0CTJXP24D/ref=zg_bs_g_157028011_d_sccl_4/134-0301813-3908317",
-            "hook": "Journey through one profound Alpen day that reveals the landscape of a soul.",
+            "asin": "B0BL18H339",
+            "title": "The Trident's Justice (The Trident Series Book 2)",
+            "author": "George Norris",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61OiU9lX69L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tridents-Justice-Trident-Book-ebook/dp/B0BL18H339/ref=zg_bs_g_157028011_d_sccl_11/132-1744201-8083513",
+            "hook": "A searing exploration of power, consequence, and justice\u2019s sharpest tines.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0H7T9B9GQ",
-            "title": "Wild Prospects: A Corporate Retreat, Slow-Burn Romance (Suite Seductions Book 7)",
-            "author": "Peyton Lux",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71o3REDiYIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wild-Prospects-Corporate-Slow-Burn-Seductions-ebook/dp/B0H7T9B9GQ/ref=zg_bs_g_158566011_d_sccl_4/134-0301813-3908317",
-            "hook": "Corporate rivals find their wild prospects aren't just business in this slow-burn romance.",
+            "asin": "B08BNR9K73",
+            "title": "Homecoming King: A pro-football, enemies to lovers small-town romcom (Small-Town Royalty Book 1)",
+            "author": "Jami Albright",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81kitHVh4uL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Homecoming-King-enemies-lovers-small-town-ebook/dp/B08BNR9K73/ref=zg_bs_g_158566011_d_sccl_5/132-1744201-8083513",
+            "hook": "The homecoming king's return sparks a hilarious small-town enemies-to-lovers football feud.",
             "genre": "Romance"
         }
     ]
