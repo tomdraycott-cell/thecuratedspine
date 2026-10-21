@@ -3,7 +3,7 @@ name: Daily Book Curation & Dispatch
 on:
   schedule:
     # Runs automatically every day at 12:20 UTC
-    - cron: '20 12 * * *'
+    - cron: '20 12,20 * * *'
   workflow_dispatch: # Gives you the manual "Run workflow" button in the Actions tab!
 
 permissions:
