@@ -232,7 +232,7 @@ def generate_book_hook(book):
         return f'"{fallback}"'
 
     prompt = (
-        f"Write a sharp, intriguing 1-sentence editorial book hook (maximum 18 words, under 110 characters) for "
+        f"Write a sharp, intriguing 1-sentence editorial book hook (maximum 16 words, under 105 characters) for "
         f"'{book['title']}' by {book['author']} ({book['genre_name']}). "
         f"Synopsis: {book.get('description', '')[:700]}. "
         f"Avoid cheesy clichés and exclamation marks. Return ONLY the single sentence inside quotes."
@@ -245,8 +245,8 @@ def generate_book_hook(book):
         )
         data = resp.json()
         text = data["candidates"][0]["content"]["parts"][0]["text"].strip().strip('"')
-        if len(text) > 125:
-            text = text[:122].rsplit(" ", 1)[0] + "..."
+        if len(text) > 110:
+            text = text[:107].rsplit(" ", 1)[0] + "..."
         return f'"{text}"'
     except Exception:
         return f'"{fallback}"'
@@ -271,21 +271,21 @@ def download_and_prep_image(url):
 def post_book_to_bluesky(client, book, hook):
     # Trim bloated Amazon subtitles so the post never exceeds Bluesky's 300-character limit
     clean_title = book["title"]
-    if len(clean_title) > 65:
-        clean_title = clean_title.split(":")[0].strip()
-    if len(clean_title) > 65:
-        clean_title = clean_title[:62].rsplit(" ", 1)[0] + "..."
+    if len(clean_title) > 45:
+        clean_title = clean_title.split(":")[0].split("(")[0].strip()
+    if len(clean_title) > 55:
+        clean_title = clean_title[:52].rsplit(" ", 1)[0] + "..."
 
     header = (
-        f"📚 Today's featured {book['genre_name']} on The Curated Spine:\n"
-        f"{clean_title}\n\n"
+        f"📚 Today's FREE {book['genre_name']} on The Curated Spine:\n"
+        f"{clean_title} is currently $0.00 on Kindle!\n\n"
     )
 
     tb = client_utils.TextBuilder()
     tb.text(header)
     tb.text(f"{hook}\n\n")
     tb.text("🔗 ")
-    tb.link("Get on Amazon", book["url"])
+    tb.link("Get Free on Amazon", book["url"])
     tb.text(" • ")
     tb.link("thecuratedspine.com", "https://thecuratedspine.com")
     tb.text("\n\n")
@@ -303,7 +303,7 @@ def post_book_to_bluesky(client, book, hook):
         embed = models.AppBskyEmbedImages.Main(
             images=[
                 models.AppBskyEmbedImages.Image(
-                    alt=f"Book cover for {book['title']} by {book['author']} (⭐ {book['rating']} from {book['reviews']:,} reviews)",
+                    alt=f"Book cover for {book['title']} by {book['author']} (⭐ {book['rating']} from {book['reviews']:,} reviews. Currently $0.00 on Kindle)",
                     image=upload.blob,
                     aspect_ratio=models.AppBskyEmbedDefs.AspectRatio(width=w, height=h)
                 )
