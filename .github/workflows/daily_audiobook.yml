@@ -3,7 +3,7 @@ name: Daily Evening Audiobook (Bluesky)
 on:
   schedule:
     # Runs at 17:00 UTC (6:00 PM UK BST / 5:00 PM UK GMT) every day
-    - cron: '0 17,23 * * *'
+    - cron: '0 17,21,02 * * *'
   workflow_dispatch: # Allows manual one-click testing when you are ready
 
 permissions:
