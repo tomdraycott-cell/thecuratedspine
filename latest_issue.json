@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0GDJDFVGT",
-            "title": "Noble Machinations (The Steampunk Adventures Book 1)",
-            "author": "C Xavier",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZdH3L6F5L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Noble-Machinations-Steampunk-Adventures-Book-ebook/dp/B0GDJDFVGT/ref=zg_bs_g_158591011_d_sccl_4/132-1744201-8083513",
-            "hook": "Steampunk grandeur meets cunning machinations in an adventure of gears and glory.",
+            "asin": "B016WS5FO4",
+            "title": "Archangel Down: Archangel Project. Book One",
+            "author": "C. Gockel",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/919p5qr6oTL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Archangel-Down-Project-Book-One-ebook/dp/B016WS5FO4/ref=zg_bs_g_158591011_d_sccl_5/135-9111217-9986260",
+            "hook": "When gods fall, a secret project sparks humanity's fight for survival.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B074DW4QB7",
-            "title": "Moby Dick - classic",
-            "author": "Herman Melville",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DftAlWuLL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Moby-Dick-classic-Herman-Melville-ebook/dp/B074DW4QB7/ref=zg_bs_g_157056011_d_sccl_9/132-1744201-8083513",
-            "hook": "Man's mad hunt for a white whale becomes an epic struggle against fate and nature.",
+            "asin": "B0837NH973",
+            "title": "Father Brown (Complete Collection): 53 Murder Mysteries: The Scandal of Father Brown, The Donnington Affair & The Mask of Midas\u2026 (Classic Literature & Fiction Book 100)",
+            "author": "G. K. Chesterton",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71C9yGwX9wL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Father-Brown-Complete-Collection-Donnington-ebook/dp/B0837NH973/ref=zg_bs_g_157056011_d_sccl_10/135-9111217-9986260",
+            "hook": "A quiet priest confronts profound evil in Chesterton's 53 enduring murder mysteries.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0BL18H339",
-            "title": "The Trident's Justice (The Trident Series Book 2)",
-            "author": "George Norris",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61OiU9lX69L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tridents-Justice-Trident-Book-ebook/dp/B0BL18H339/ref=zg_bs_g_157028011_d_sccl_11/132-1744201-8083513",
-            "hook": "A searing exploration of power, consequence, and justice\u2019s sharpest tines.",
-            "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B08BNR9K73",
-            "title": "Homecoming King: A pro-football, enemies to lovers small-town romcom (Small-Town Royalty Book 1)",
-            "author": "Jami Albright",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81kitHVh4uL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Homecoming-King-enemies-lovers-small-town-ebook/dp/B08BNR9K73/ref=zg_bs_g_158566011_d_sccl_5/132-1744201-8083513",
-            "hook": "The homecoming king's return sparks a hilarious small-town enemies-to-lovers football feud.",
+            "asin": "B08JCWKZRZ",
+            "title": "Take A Number: A Fake Dating Spicy Rom-Com (Wait With Me Book 4)",
+            "author": "Amy Daws",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81O96KPg8RL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Take-Number-Wait-Me-Book-ebook/dp/B08JCWKZRZ/ref=zg_bs_g_158566011_d_sccl_7/135-9111217-9986260",
+            "hook": "A doctor, a fake date, and a scorching prescription for laugh-out-loud romance.",
             "genre": "Romance"
         }
     ]
