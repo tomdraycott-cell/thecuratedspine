@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B08M65QQ51",
-            "title": "When You Had Power (Nothing is Promised 1)",
-            "author": "Susan Kaye Quinn",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/812v6jJhJaL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/When-You-Power-Nothing-Promised-ebook/dp/B08M65QQ51/ref=zg_bs_g_158591011_d_sccl_4/145-6195935-6576758",
-            "hook": "Power crumbles, and yesterday's titans must claw for survival in a brutal new world.",
+            "asin": "B07JFKM5RP",
+            "title": "Superdreadnought 1: A Military AI Space Opera",
+            "author": "CH Gideon",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vOIbyyyKL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Superdreadnought-Military-AI-Space-Opera-ebook/dp/B07JFKM5RP/ref=zg_bs_g_158591011_d_sccl_1/134-0301813-3908317",
+            "hook": "A sentient superdreadnought redefines galactic war in an epic space opera.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B07336P35W",
-            "title": "Leo Tolstoy: The Complete Novels and Novellas (EverGreen Classics)",
-            "author": "Leo Tolstoy",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71BA+kBPuqL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Leo-Tolstoy-Complete-Novellas-EverGreen-ebook/dp/B07336P35W/ref=zg_bs_g_157056011_d_sccl_6/145-6195935-6576758",
-            "hook": "Unearth the depths of the Russian soul across Tolstoy's sprawling, essential narratives.",
+            "asin": "B07X5FGL12",
+            "title": "The Complete Anne of Green Gables Collection",
+            "author": "L.M. Montgomery",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81SHEMbxcLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Anne-Green-Gables-Collection-2020-ebook/dp/B07X5FGL12/ref=zg_bs_g_157056011_d_sccl_8/134-0301813-3908317",
+            "hook": "Follow Anne Shirley's spirited adventures, finding beauty and belonging.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0BQ3V9NHK",
-            "title": "Return to Serendipity: Serendipity Sunsets Book One",
-            "author": "Liza Lanter",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81B-Qho7HHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Return-Serendipity-Sunsets-Book-One-ebook/dp/B0BQ3V9NHK/ref=zg_bs_g_157028011_d_sccl_13/145-6195935-6576758",
-            "hook": "Return to where serendipity glows brightest in twilight's gentle embrace.",
+            "asin": "B0CTJXP24D",
+            "title": "One Alpen Day",
+            "author": "Michele Davenport-Dutton",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/810KuY0RR7L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/One-Alpen-Day-Michele-Davenport-Dutton-ebook/dp/B0CTJXP24D/ref=zg_bs_g_157028011_d_sccl_4/134-0301813-3908317",
+            "hook": "Journey through one profound Alpen day that reveals the landscape of a soul.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CT4Y8CM6",
-            "title": "An Unlikely Countess (Those Very Bad Fairbanks Book 13)",
-            "author": "Alyssa Clarke",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/811qlel8hBL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Unlikely-Countess-Those-Very-Fairbanks-ebook/dp/B0CT4Y8CM6/ref=zg_bs_g_158566011_d_sccl_4/145-6195935-6576758",
-            "hook": "An unlikely countess, a notorious Fairbanks. Their scandalous love is irresistible.",
+            "asin": "B0H7T9B9GQ",
+            "title": "Wild Prospects: A Corporate Retreat, Slow-Burn Romance (Suite Seductions Book 7)",
+            "author": "Peyton Lux",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71o3REDiYIL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wild-Prospects-Corporate-Slow-Burn-Seductions-ebook/dp/B0H7T9B9GQ/ref=zg_bs_g_158566011_d_sccl_4/134-0301813-3908317",
+            "hook": "Corporate rivals find their wild prospects aren't just business in this slow-burn romance.",
             "genre": "Romance"
         }
     ]
