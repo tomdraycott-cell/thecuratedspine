@@ -52,6 +52,12 @@ PRESTIGE_SIGNALS = [
     "hugo award", "nebula award", "edgar award", "book club", "national bestseller"
 ]
 
+COZY_SIGNALS = [
+    "cozy", "cosy", "small town", "bakery", "tea shop", "bookshop",
+    "sweet romance", "closed door", "feel-good", "heartwarming",
+    "amateur sleuth", "cat", "dog", "knitting", "witches"
+]
+
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -88,11 +94,16 @@ def calculate_quality_score(book):
     score = rating * math.log10(max(reviews, 10))
 
     combined_text = f"{book.get('title', '')} {book.get('description', '')}".lower()
+    
     for signal in PRESTIGE_SIGNALS:
         if signal in combined_text:
             score += 10.0
             book["prestige_badge"] = signal.upper()
             break
+
+    # Apply the Cozy Bias
+    if any(cozy_term in combined_text for cozy_term in COZY_SIGNALS):
+        score += 5.0
 
     if any(bad in combined_text for bad in PULP_BLACKLIST):
         score -= 6.0
@@ -269,7 +280,6 @@ def download_and_prep_image(url):
 
 
 def post_book_to_bluesky(client, book, hook):
-    # Trim bloated Amazon subtitles so the post never exceeds Bluesky's 300-character limit
     clean_title = book["title"]
     if len(clean_title) > 45:
         clean_title = clean_title.split(":")[0].split("(")[0].strip()
