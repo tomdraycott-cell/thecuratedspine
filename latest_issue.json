@@ -1,3 +1,40 @@
 {
-    "books": []
+    "books": [
+        {
+            "asin": "B0HLHTVL96",
+            "title": "Parallel Threads: Stories of Here & Elsewhere",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/818UbcyyPQL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Parallel-Threads-Stories-Here-Elsewhere-ebook/dp/B0HLHTVL96/ref=zg_bs_g_158591011_d_sccl_5/132-3970797-9972754",
+            "hook": "Threads of fate entwine through uncanny dimensions; discover infinite here-and-elsewheres.",
+            "genre": "Science Fiction"
+        },
+        {
+            "asin": "B0DLPCDLLR",
+            "title": "All the Promises We Cannot Keep",
+            "author": "CJ Redwine",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Hbb9-p9EL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/All-Promises-We-Cannot-Keep-ebook/dp/B0DLPCDLLR/ref=zg_bs_g_157056011_d_sccl_12/132-3970797-9972754",
+            "hook": "Hearts break and loyalties fray in a rich historical drama where every promise carries a heavy cost.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B0DXN7SGXL",
+            "title": "Second Chances (Intrepid Heroines Book 3)",
+            "author": "Andrea PIckens",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/913MdvQHGZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Second-Chances-Intrepid-Heroines-Book-ebook/dp/B0DXN7SGXL/ref=zg_bs_g_157028011_d_sccl_3/132-3970797-9972754",
+            "hook": "Intrepid heroines seek profound renewal, bravely navigating life's complex second acts.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0FT1Y54XY",
+            "title": "Montana Rebel: An Enemies-to-Lovers Cowboy Romance (Colton\u2019s Story) (The Stark Brothers of Montana Book 2)",
+            "author": "L.C. Reagan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61XbptIz3HL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Montana-Rebel-Enemies-Lovers-Brothers-ebook/dp/B0FT1Y54XY/ref=zg_bs_g_158566011_d_sccl_1/132-3970797-9972754",
+            "hook": "A defiant cowboy, a spirited rival: their Montana battle ignites an irresistible love.",
+            "genre": "Romance"
+        }
+    ]
 }
