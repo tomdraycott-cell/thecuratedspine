@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HL79LSG9",
-            "title": "STANDING ORDER (THE OUSTING Book 1)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vwnX0e68L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/STANDING-ORDER-OUSTING-Book-1-ebook/dp/B0HL79LSG9/ref=zg_bs_g_158591011_d_sccl_9/146-5888687-7639260",
-            "hook": "The iron grip of galactic law meets the unforgiving storm of revolution.",
+            "asin": "B07K631LDS",
+            "title": "Metrofloat New York",
+            "author": "William Quincy Belle",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j0r9XqZEL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Metrofloat-York-William-Quincy-Belle-ebook/dp/B07K631LDS/ref=zg_bs_g_158591011_d_sccl_6/136-3865065-7163768",
+            "hook": "Ascend to a spectacular New York where the city itself defies gravity.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00XFG1YA6",
-            "title": "Saga Six Pack \u2013 Beowulf, The Prose Edda, Gunnlaug The Worm-Tongue, Eric The Red, The Sea Fight and Sigurd The Volsung (Illustrated)",
-            "author": "Anonymous",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71SVY0KZ2QL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Saga-Six-Pack-Worm-Tongue-Illustrated-ebook/dp/B00XFG1YA6/ref=zg_bs_g_157056011_d_sccl_12/146-5888687-7639260",
-            "hook": "Ancient sagas roar to life: Norse gods, heroes, and monsters vividly illustrated.",
+            "asin": "B0HNTXDH3X",
+            "title": "The Shape of Freedom: Stories of Fate and Choice (Dreamscapes)",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71gAiOzrqPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Shape-Freedom-Stories-Choice-Dreamscapes-ebook/dp/B0HNTXDH3X/ref=zg_bs_g_157056011_d_sccl_5/136-3865065-7163768",
+            "hook": "Journey through history's vivid dreamscapes, where fate battles choice for freedom's shape.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B009FNE37O",
-            "title": "Derailed (Clayton Falls Book 1)",
-            "author": "Alyssa Rose Ivy",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91AzdYtM7aL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Derailed-Clayton-Falls-Book-1-ebook/dp/B009FNE37O/ref=zg_bs_g_157028011_d_sccl_5/146-5888687-7639260",
-            "hook": "Her carefully constructed world derails, revealing stark truths in Clayton Falls.",
+            "asin": "B07SFGLDJH",
+            "title": "The Star and the Shamrock",
+            "author": "Jean Grainger",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81synsrsorL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Star-Shamrock-Jean-Grainger-ebook/dp/B07SFGLDJH/ref=zg_bs_g_157028011_d_sccl_1/136-3865065-7163768",
+            "hook": "From Dublin's charm to dazzling Hollywood, a star's Irish heart.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CGY2PGZF",
-            "title": "Back Against the Wall (Lindell Book 1)",
-            "author": "Marie James",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/811QLraPD4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Back-Against-Wall-Enemies-Lovers-ebook/dp/B0CGY2PGZF/ref=zg_bs_g_158566011_d_sccl_5/146-5888687-7639260",
-            "hook": "Pushed to the edge, she finds herself defenseless... until a fierce love becomes her shield.",
+            "asin": "B0CBZW4DKF",
+            "title": "Since the Day We Danced (Hadley Cove Sweet Romance Book 1)",
+            "author": "Kerk Murray",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91vS1PlSw9L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Since-Danced-Hadley-Sweet-Romance-ebook/dp/B0CBZW4DKF/ref=zg_bs_g_158566011_d_sccl_5/136-3865065-7163768",
+            "hook": "Relive a sweet dance that sparks second-chance love in charming Hadley Cove.",
             "genre": "Romance"
         }
     ]
