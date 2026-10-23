@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B07K631LDS",
-            "title": "Metrofloat New York",
-            "author": "William Quincy Belle",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j0r9XqZEL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Metrofloat-York-William-Quincy-Belle-ebook/dp/B07K631LDS/ref=zg_bs_g_158591011_d_sccl_6/136-3865065-7163768",
-            "hook": "Ascend to a spectacular New York where the city itself defies gravity.",
+            "asin": "B07NZ87MJ9",
+            "title": "Digital Assassin (Pirates of the Milky Way Book 1)",
+            "author": "Jaxon Reed",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91DRiatUSZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Digital-Assassin-Pirates-Milky-Book-ebook/dp/B07NZ87MJ9/ref=zg_bs_g_158591011_d_sccl_11/142-1470288-4630816",
+            "hook": "A cybernetic killer joins daring star pirates, painting the Milky Way red one digital target at a time.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HNTXDH3X",
-            "title": "The Shape of Freedom: Stories of Fate and Choice (Dreamscapes)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71gAiOzrqPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Shape-Freedom-Stories-Choice-Dreamscapes-ebook/dp/B0HNTXDH3X/ref=zg_bs_g_157056011_d_sccl_5/136-3865065-7163768",
-            "hook": "Journey through history's vivid dreamscapes, where fate battles choice for freedom's shape.",
+            "asin": "B00KM5F40Y",
+            "title": "Tales from The Lake Vol.1 (The Tales from The Lake series of Horror Anthologies)",
+            "author": "Graham Masterton",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/A1D6bBThhCL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tales-Lake-Vol-1-Graham-Masterton-ebook/dp/B00KM5F40Y/ref=zg_bs_g_157056011_d_sccl_3/142-1470288-4630816",
+            "hook": "Masterton dives into history's darkest waters with unsettling lake horror.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B07SFGLDJH",
-            "title": "The Star and the Shamrock",
-            "author": "Jean Grainger",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81synsrsorL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Star-Shamrock-Jean-Grainger-ebook/dp/B07SFGLDJH/ref=zg_bs_g_157028011_d_sccl_1/136-3865065-7163768",
-            "hook": "From Dublin's charm to dazzling Hollywood, a star's Irish heart.",
+            "asin": "B0B6Z8BHFF",
+            "title": "The Night Belongs To Her: A Psychological Thriller (Dylan Harper Book 3)",
+            "author": "Justin Warren",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81A2MLaEUfL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Night-Belongs-Her-Psychological-Thriller-ebook/dp/B0B6Z8BHFF/ref=zg_bs_g_157028011_d_sccl_2/142-1470288-4630816",
+            "hook": "Who truly owns the night? Dylan Harper unravels a terrifying psychological power play.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CBZW4DKF",
-            "title": "Since the Day We Danced (Hadley Cove Sweet Romance Book 1)",
-            "author": "Kerk Murray",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91vS1PlSw9L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Since-Danced-Hadley-Sweet-Romance-ebook/dp/B0CBZW4DKF/ref=zg_bs_g_158566011_d_sccl_5/136-3865065-7163768",
-            "hook": "Relive a sweet dance that sparks second-chance love in charming Hadley Cove.",
+            "asin": "B09RJVMPSM",
+            "title": "Her Gold Country Cowboy: Small town opposites attract cowboy romance (Gold Country With Love - Book 1)",
+            "author": "Debra Salonen",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/914MJ-gyNCL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Her-Gold-Country-Valentine-contemporary-ebook/dp/B09RJVMPSM/ref=zg_bs_g_158566011_d_sccl_9/142-1470288-4630816",
+            "hook": "In Gold Country, a sharp city woman finds her cowboy opposite attraction.",
             "genre": "Romance"
         }
     ]
