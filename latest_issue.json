@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0GQJCL7CL",
-            "title": "FRACTAL: A McLeod and Masters Thriller (The McLeod and Masters Thriller Series Book 2)",
-            "author": "Cheryl P. Fallin",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q+4n+tJjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/FRACTAL-McLeod-Masters-Thriller-Book-ebook/dp/B0GQJCL7CL/ref=zg_bs_g_158591011_d_sccl_7/130-3848393-5585651",
-            "hook": "Unravel mind-bending fractal chaos before reality unravels itself.",
+            "asin": "B0HL79LSG9",
+            "title": "STANDING ORDER (THE OUSTING Book 1)",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vwnX0e68L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/STANDING-ORDER-OUSTING-Book-1-ebook/dp/B0HL79LSG9/ref=zg_bs_g_158591011_d_sccl_9/146-5888687-7639260",
+            "hook": "The iron grip of galactic law meets the unforgiving storm of revolution.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0BK3S96QT",
-            "title": "Blood Tingling Tales Vol. 1",
-            "author": "Steve Hudgins",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91XC-8E88dL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Blood-Tingling-Tales-Vol-1-ebook/dp/B0BK3S96QT/ref=zg_bs_g_157056011_d_sccl_3/130-3848393-5585651",
-            "hook": "Journey through forgotten eras where true terror lies woven into the very fabric of time.",
+            "asin": "B00XFG1YA6",
+            "title": "Saga Six Pack \u2013 Beowulf, The Prose Edda, Gunnlaug The Worm-Tongue, Eric The Red, The Sea Fight and Sigurd The Volsung (Illustrated)",
+            "author": "Anonymous",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71SVY0KZ2QL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Saga-Six-Pack-Worm-Tongue-Illustrated-ebook/dp/B00XFG1YA6/ref=zg_bs_g_157056011_d_sccl_12/146-5888687-7639260",
+            "hook": "Ancient sagas roar to life: Norse gods, heroes, and monsters vividly illustrated.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GGZMV6HP",
-            "title": "Hello, Rest of My Life",
-            "author": "Rick Lenz",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hDpgn2faL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Hello-Rest-Life-Rick-Lenz-ebook/dp/B0GGZMV6HP/ref=zg_bs_g_157028011_d_sccl_17/130-3848393-5585651",
-            "hook": "Witness a soul's tender awakening to life's profound, beautiful unknowns.",
+            "asin": "B009FNE37O",
+            "title": "Derailed (Clayton Falls Book 1)",
+            "author": "Alyssa Rose Ivy",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91AzdYtM7aL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Derailed-Clayton-Falls-Book-1-ebook/dp/B009FNE37O/ref=zg_bs_g_157028011_d_sccl_5/146-5888687-7639260",
+            "hook": "Her carefully constructed world derails, revealing stark truths in Clayton Falls.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GWXQMY3G",
-            "title": "Eyes of Steel - 1. Rise: A Viking Dark Epic Fantasy",
-            "author": "L\u00e9a Novels",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81m3tVATmfL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Eyes-Steel-Rise-Viking-Fantasy-ebook/dp/B0GWXQMY3G/ref=zg_bs_g_158566011_d_sccl_3/130-3848393-5585651",
-            "hook": "A brutal Viking saga ignites when eyes of steel meet in a dark epic romance.",
+            "asin": "B0CGY2PGZF",
+            "title": "Back Against the Wall (Lindell Book 1)",
+            "author": "Marie James",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/811QLraPD4L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Back-Against-Wall-Enemies-Lovers-ebook/dp/B0CGY2PGZF/ref=zg_bs_g_158566011_d_sccl_5/146-5888687-7639260",
+            "hook": "Pushed to the edge, she finds herself defenseless... until a fierce love becomes her shield.",
             "genre": "Romance"
         }
     ]
