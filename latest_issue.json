@@ -1,30 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0DK5SNLQM",
-            "title": "A Knack for Metal and Bone: An Epic Fantasy Steampunk Adventure (The Knack Book 1)",
-            "author": "Kim McDougall",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91aYNHoaKuL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Knack-Metal-Bone-Steampunk-Adventure-ebook/dp/B0DK5SNLQM/ref=zg_bs_g_158591011_d_sccl_5/136-8277158-0580634",
-            "hook": "Metal and bone bend to a unique knack in a thrilling steampunk epic.",
+            "asin": "B003UHVYQE",
+            "title": "Peace Warrior",
+            "author": "Steven L. Hawk",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71f-FUWNb4L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Peace-Warrior-Steven-L-Hawk-ebook/dp/B003UHVYQE/ref=zg_bs_g_158591011_d_sccl_5/142-5677095-3227609",
+            "hook": "His war-torn quest: to bring impossible peace to a brutal galaxy.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0DTYHV6HX",
-            "title": "County Lines: Rosie Marks Series: Introductory Novella",
-            "author": "Phil Holmes",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81pX5sLGGpL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/County-Lines-Rosie-Introductory-Novella-ebook/dp/B0DTYHV6HX/ref=zg_bs_g_157028011_d_sccl_7/136-8277158-0580634",
-            "hook": "Rosie Marks plunges into the dark heart of county lines Britain.",
-            "genre": "Literary Fiction"
+            "asin": "B01LX9BC0D",
+            "title": "Oakshot Complete Works of Edgar Allan Poe (Illustrated, Inline Footnotes) (Classics Book 1)",
+            "author": "Edgar Allan Poe",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/9185AZNUJ2L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Oakshot-Complete-Illustrated-Footnotes-Classics-ebook/dp/B01LX9BC0D/ref=zg_bs_g_157056011_d_sccl_17/142-5677095-3227609",
+            "hook": "Explore the complete, illustrated depths of Poe's gothic genius.",
+            "genre": "Historical Fiction"
         },
         {
-            "asin": "B07WGWGP5Z",
-            "title": "Uncovered (The Untangled Series Book 3)",
-            "author": "Ivy Layne",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/819D33Qz1cL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Uncovered-Untangled-Book-Ivy-Layne-ebook/dp/B07WGWGP5Z/ref=zg_bs_g_158566011_d_sccl_2/136-8277158-0580634",
-            "hook": "Uncover searing secrets and untangle a fate destined to ignite explosive love.",
+            "asin": "B08QR5MSP9",
+            "title": "The Marquis, the Minx, and the Mistletoe: A Steamy Regency Christmas Romance (The Somerton Scandals Book 4)",
+            "author": "Ava Devlin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91wWqRMTykL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Marquis-Minx-Mistletoe-Christmas-Somerton-ebook/dp/B08QR5MSP9/ref=zg_bs_g_158566011_d_sccl_5/142-5677095-3227609",
+            "hook": "This Christmas, a scandalous marquis and a spirited minx ignite a festive, fiery Regency romance.",
             "genre": "Romance"
         }
     ]
