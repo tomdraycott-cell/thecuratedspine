@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B07NZ87MJ9",
-            "title": "Digital Assassin (Pirates of the Milky Way Book 1)",
-            "author": "Jaxon Reed",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91DRiatUSZL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Digital-Assassin-Pirates-Milky-Book-ebook/dp/B07NZ87MJ9/ref=zg_bs_g_158591011_d_sccl_11/142-1470288-4630816",
-            "hook": "A cybernetic killer joins daring star pirates, painting the Milky Way red one digital target at a time.",
+            "asin": "B0BDD6GB52",
+            "title": "The Key to Kells: A Key Murphy Ancestral Memory Thriller",
+            "author": "Kevin Barry O'Connor",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91N+3ovSR8L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Key-Kells-Murphy-Thriller-ebook/dp/B0BDD6GB52/ref=zg_bs_g_158591011_d_sccl_3/140-5135147-5198322",
+            "hook": "Ancestral memories unleash Kells' ancient secrets and a thrilling, deadly heritage.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00KM5F40Y",
-            "title": "Tales from The Lake Vol.1 (The Tales from The Lake series of Horror Anthologies)",
-            "author": "Graham Masterton",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/A1D6bBThhCL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tales-Lake-Vol-1-Graham-Masterton-ebook/dp/B00KM5F40Y/ref=zg_bs_g_157056011_d_sccl_3/142-1470288-4630816",
-            "hook": "Masterton dives into history's darkest waters with unsettling lake horror.",
+            "asin": "B083WPZ83D",
+            "title": "Take Us to a Better Place: Stories",
+            "author": "Madeline Ashby",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91OQOcdjfZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Take-Us-Better-Place-Stories-ebook/dp/B083WPZ83D/ref=zg_bs_g_157056011_d_sccl_20/140-5135147-5198322",
+            "hook": "Ashby illuminates historical lives yearning for escape, finding hope in a harsh past.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0B6Z8BHFF",
-            "title": "The Night Belongs To Her: A Psychological Thriller (Dylan Harper Book 3)",
-            "author": "Justin Warren",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81A2MLaEUfL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Night-Belongs-Her-Psychological-Thriller-ebook/dp/B0B6Z8BHFF/ref=zg_bs_g_157028011_d_sccl_2/142-1470288-4630816",
-            "hook": "Who truly owns the night? Dylan Harper unravels a terrifying psychological power play.",
+            "asin": "B08WYVV7WZ",
+            "title": "The Gift At Sugar Sand Inn (Sugar Sand Beach Book 1)",
+            "author": "Leigh Duncan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rRaXIafOL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Gift-Sugar-Sand-Inn-Contemporary-ebook/dp/B08WYVV7WZ/ref=zg_bs_g_157028011_d_sccl_6/140-5135147-5198322",
+            "hook": "Beneath sun-drenched sands, an unexpected gift at the inn sparks life anew.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B09RJVMPSM",
-            "title": "Her Gold Country Cowboy: Small town opposites attract cowboy romance (Gold Country With Love - Book 1)",
-            "author": "Debra Salonen",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/914MJ-gyNCL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Her-Gold-Country-Valentine-contemporary-ebook/dp/B09RJVMPSM/ref=zg_bs_g_158566011_d_sccl_9/142-1470288-4630816",
-            "hook": "In Gold Country, a sharp city woman finds her cowboy opposite attraction.",
+            "asin": "B0F3G619J2",
+            "title": "How To Fake A Husband: A Small Town, Fake Marriage Romance (Emerald Creek Book 5)",
+            "author": "Bella Rivers",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81uWJKWDt6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/How-Fake-Husband-Bella-Rivers-ebook/dp/B0F3G619J2/ref=zg_bs_g_158566011_d_sccl_2/140-5135147-5198322",
+            "hook": "Small-town vows are fake, but their Emerald Creek chemistry is real.",
             "genre": "Romance"
         }
     ]
