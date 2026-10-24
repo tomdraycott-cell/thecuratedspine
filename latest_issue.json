@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0BDD6GB52",
-            "title": "The Key to Kells: A Key Murphy Ancestral Memory Thriller",
-            "author": "Kevin Barry O'Connor",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91N+3ovSR8L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Key-Kells-Murphy-Thriller-ebook/dp/B0BDD6GB52/ref=zg_bs_g_158591011_d_sccl_3/140-5135147-5198322",
-            "hook": "Ancestral memories unleash Kells' ancient secrets and a thrilling, deadly heritage.",
+            "asin": "B0DK5SNLQM",
+            "title": "A Knack for Metal and Bone: An Epic Fantasy Steampunk Adventure (The Knack Book 1)",
+            "author": "Kim McDougall",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91aYNHoaKuL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Knack-Metal-Bone-Steampunk-Adventure-ebook/dp/B0DK5SNLQM/ref=zg_bs_g_158591011_d_sccl_5/136-8277158-0580634",
+            "hook": "Metal and bone bend to a unique knack in a thrilling steampunk epic.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B083WPZ83D",
-            "title": "Take Us to a Better Place: Stories",
-            "author": "Madeline Ashby",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91OQOcdjfZL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Take-Us-Better-Place-Stories-ebook/dp/B083WPZ83D/ref=zg_bs_g_157056011_d_sccl_20/140-5135147-5198322",
-            "hook": "Ashby illuminates historical lives yearning for escape, finding hope in a harsh past.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B08WYVV7WZ",
-            "title": "The Gift At Sugar Sand Inn (Sugar Sand Beach Book 1)",
-            "author": "Leigh Duncan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rRaXIafOL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Gift-Sugar-Sand-Inn-Contemporary-ebook/dp/B08WYVV7WZ/ref=zg_bs_g_157028011_d_sccl_6/140-5135147-5198322",
-            "hook": "Beneath sun-drenched sands, an unexpected gift at the inn sparks life anew.",
+            "asin": "B0DTYHV6HX",
+            "title": "County Lines: Rosie Marks Series: Introductory Novella",
+            "author": "Phil Holmes",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81pX5sLGGpL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/County-Lines-Rosie-Introductory-Novella-ebook/dp/B0DTYHV6HX/ref=zg_bs_g_157028011_d_sccl_7/136-8277158-0580634",
+            "hook": "Rosie Marks plunges into the dark heart of county lines Britain.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0F3G619J2",
-            "title": "How To Fake A Husband: A Small Town, Fake Marriage Romance (Emerald Creek Book 5)",
-            "author": "Bella Rivers",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81uWJKWDt6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/How-Fake-Husband-Bella-Rivers-ebook/dp/B0F3G619J2/ref=zg_bs_g_158566011_d_sccl_2/140-5135147-5198322",
-            "hook": "Small-town vows are fake, but their Emerald Creek chemistry is real.",
+            "asin": "B07WGWGP5Z",
+            "title": "Uncovered (The Untangled Series Book 3)",
+            "author": "Ivy Layne",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/819D33Qz1cL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Uncovered-Untangled-Book-Ivy-Layne-ebook/dp/B07WGWGP5Z/ref=zg_bs_g_158566011_d_sccl_2/136-8277158-0580634",
+            "hook": "Uncover searing secrets and untangle a fate destined to ignite explosive love.",
             "genre": "Romance"
         }
     ]
