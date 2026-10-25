@@ -1,30 +1,21 @@
 {
     "books": [
         {
-            "asin": "B00PXGD274",
-            "title": "The Dragon Blood Collection, Books 1-3",
-            "author": "Lindsay Buroker",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91IHKfJtyYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dragon-Blood-Collection-Books-1-3-ebook/dp/B00PXGD274/ref=zg_bs_g_158591011_d_sccl_5/134-1409748-5223663",
-            "hook": "Blending sci-fi grit with mythic wonder, this space opera soars.",
+            "asin": "B0G4KYR63N",
+            "title": "Plateau Station: A thrilling scifi action adventure",
+            "author": "Mike Asher",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61PD2+L1dzL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Plateau-Station-gripping-action-adventure-ebook/dp/B0G4KYR63N/ref=zg_bs_g_158591011_d_sccl_4/137-6106345-1919948",
+            "hook": "Adrenaline-fueled sci-fi adventure erupts on distant Plateau Station.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B009YP7HEY",
-            "title": "A Taste of Romance: Four Original Harlequin Novellas",
-            "author": "Michele Hauf",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71l5a4k+OJL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Taste-Romance-Original-Harlequin-Novellas-ebook/dp/B009YP7HEY/ref=zg_bs_g_157056011_d_sccl_5/134-1409748-5223663",
-            "hook": "Four original Harlequin novellas: explore history's most fiery hearts.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0DZYLKPPB",
-            "title": "A Lady's Dangerous Secret (Scandalous Secrets Book 1)",
-            "author": "Hazel Haas",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91kNkkW2YOL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Ladys-Dangerous-Secret-Scandalous-Secrets-ebook/dp/B0DZYLKPPB/ref=zg_bs_g_158566011_d_sccl_8/134-1409748-5223663",
-            "hook": "A forbidden secret sparks scandal, igniting a lady's dangerous desire.",
+            "asin": "B0GNCV61ZW",
+            "title": "Vamps and Vendettas (Star-Crossed Chronicles Book 3)",
+            "author": "AK Nevermore",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/713DdOKSx6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Vamps-Vendettas-Star-Crossed-Chronicles-Book-ebook/dp/B0GNCV61ZW/ref=zg_bs_g_158566011_d_sccl_10/137-6106345-1919948",
+            "hook": "In book three, a fated love ignites a vengeful vampiric blood feud.",
             "genre": "Romance"
         }
     ]
