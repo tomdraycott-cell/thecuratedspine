@@ -1,21 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0G4KYR63N",
-            "title": "Plateau Station: A thrilling scifi action adventure",
-            "author": "Mike Asher",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61PD2+L1dzL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Plateau-Station-gripping-action-adventure-ebook/dp/B0G4KYR63N/ref=zg_bs_g_158591011_d_sccl_4/137-6106345-1919948",
-            "hook": "Adrenaline-fueled sci-fi adventure erupts on distant Plateau Station.",
+            "asin": "B0HNHT2NGD",
+            "title": "By Any Other Way (By Any Other Name Book 4)",
+            "author": "H. Peter Alesso",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q54apNHYL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Any-Other-Way-Name-Book-ebook/dp/B0HNHT2NGD/ref=zg_bs_g_158591011_d_sccl_5/143-6092880-0473143",
+            "hook": "Challenge identity's core where alternate paths redefine every truth.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0GNCV61ZW",
-            "title": "Vamps and Vendettas (Star-Crossed Chronicles Book 3)",
-            "author": "AK Nevermore",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/713DdOKSx6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Vamps-Vendettas-Star-Crossed-Chronicles-Book-ebook/dp/B0GNCV61ZW/ref=zg_bs_g_158566011_d_sccl_10/137-6106345-1919948",
-            "hook": "In book three, a fated love ignites a vengeful vampiric blood feud.",
+            "asin": "B0GX2YCWHF",
+            "title": "Because I'm Already Dead: A Collection of Short Stories About Love, War, and Other Life Stupidities",
+            "author": "Willi Lichtensohn",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zti0Pgf2L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Because-Already-Dead-Collection-Stupidities-ebook/dp/B0GX2YCWHF/ref=zg_bs_g_157056011_d_sccl_1/143-6092880-0473143",
+            "hook": "History's loves, wars, and absurdities, seen with stark, unburdened clarity.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B08ZGS5C7W",
+            "title": "Highland Games: A Grumpy Sunshine, Enemies-to-Lovers, Steamy Romcom (The Kinloch Series Book 1)",
+            "author": "Evie Alexander",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Lw38KD5WL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Highland-Games-sparkling-unputdownable-romantic-ebook/dp/B08ZGS5C7W/ref=zg_bs_g_158566011_d_sccl_11/143-6092880-0473143",
+            "hook": "Scottish brawn and sunny sass collide, sparking a steamy, laugh-out-loud enemies romance.",
             "genre": "Romance"
         }
     ]
