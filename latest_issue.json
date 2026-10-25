@@ -1,30 +1,30 @@
 {
     "books": [
         {
-            "asin": "B003UHVYQE",
-            "title": "Peace Warrior",
-            "author": "Steven L. Hawk",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71f-FUWNb4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Peace-Warrior-Steven-L-Hawk-ebook/dp/B003UHVYQE/ref=zg_bs_g_158591011_d_sccl_5/142-5677095-3227609",
-            "hook": "His war-torn quest: to bring impossible peace to a brutal galaxy.",
+            "asin": "B00PXGD274",
+            "title": "The Dragon Blood Collection, Books 1-3",
+            "author": "Lindsay Buroker",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91IHKfJtyYL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Dragon-Blood-Collection-Books-1-3-ebook/dp/B00PXGD274/ref=zg_bs_g_158591011_d_sccl_5/134-1409748-5223663",
+            "hook": "Blending sci-fi grit with mythic wonder, this space opera soars.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B01LX9BC0D",
-            "title": "Oakshot Complete Works of Edgar Allan Poe (Illustrated, Inline Footnotes) (Classics Book 1)",
-            "author": "Edgar Allan Poe",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/9185AZNUJ2L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Oakshot-Complete-Illustrated-Footnotes-Classics-ebook/dp/B01LX9BC0D/ref=zg_bs_g_157056011_d_sccl_17/142-5677095-3227609",
-            "hook": "Explore the complete, illustrated depths of Poe's gothic genius.",
+            "asin": "B009YP7HEY",
+            "title": "A Taste of Romance: Four Original Harlequin Novellas",
+            "author": "Michele Hauf",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71l5a4k+OJL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Taste-Romance-Original-Harlequin-Novellas-ebook/dp/B009YP7HEY/ref=zg_bs_g_157056011_d_sccl_5/134-1409748-5223663",
+            "hook": "Four original Harlequin novellas: explore history's most fiery hearts.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08QR5MSP9",
-            "title": "The Marquis, the Minx, and the Mistletoe: A Steamy Regency Christmas Romance (The Somerton Scandals Book 4)",
-            "author": "Ava Devlin",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91wWqRMTykL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Marquis-Minx-Mistletoe-Christmas-Somerton-ebook/dp/B08QR5MSP9/ref=zg_bs_g_158566011_d_sccl_5/142-5677095-3227609",
-            "hook": "This Christmas, a scandalous marquis and a spirited minx ignite a festive, fiery Regency romance.",
+            "asin": "B0DZYLKPPB",
+            "title": "A Lady's Dangerous Secret (Scandalous Secrets Book 1)",
+            "author": "Hazel Haas",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91kNkkW2YOL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ladys-Dangerous-Secret-Scandalous-Secrets-ebook/dp/B0DZYLKPPB/ref=zg_bs_g_158566011_d_sccl_8/134-1409748-5223663",
+            "hook": "A forbidden secret sparks scandal, igniting a lady's dangerous desire.",
             "genre": "Romance"
         }
     ]
