@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HNHT2NGD",
-            "title": "By Any Other Way (By Any Other Name Book 4)",
-            "author": "H. Peter Alesso",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q54apNHYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Any-Other-Way-Name-Book-ebook/dp/B0HNHT2NGD/ref=zg_bs_g_158591011_d_sccl_5/143-6092880-0473143",
-            "hook": "Challenge identity's core where alternate paths redefine every truth.",
+            "asin": "B0HLCKRH8C",
+            "title": "The Unwatched Door",
+            "author": "J.S. Ainslie",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71AmtTTFJvL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Unwatched-Door-J-S-Ainslie-ebook/dp/B0HLCKRH8C/ref=zg_bs_g_158591011_d_sccl_5/143-5007184-3183963",
+            "hook": "Uncover the cosmic portal no one guarded before it unwinds reality.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0GX2YCWHF",
-            "title": "Because I'm Already Dead: A Collection of Short Stories About Love, War, and Other Life Stupidities",
-            "author": "Willi Lichtensohn",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zti0Pgf2L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Because-Already-Dead-Collection-Stupidities-ebook/dp/B0GX2YCWHF/ref=zg_bs_g_157056011_d_sccl_1/143-6092880-0473143",
-            "hook": "History's loves, wars, and absurdities, seen with stark, unburdened clarity.",
+            "asin": "B0HNZT22D3",
+            "title": "THE YUELTIDE SLEUTHS: 10 LOW-ANGST HOLIDAY WHODUNITS OF MYSTERY ROMANCE AND WHIMSICAL SLEUTHING",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/814qKCui9zL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/YUELTIDE-SLEUTHS-LOW-ANGST-WHODUNITS-WHIMSICAL-ebook/dp/B0HNZT22D3/ref=zg_bs_g_157056011_d_sccl_13/143-5007184-3183963",
+            "hook": "Whimsical Yuletide mysteries ignite charming romance as sleuths unravel delightful holiday crimes.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08ZGS5C7W",
-            "title": "Highland Games: A Grumpy Sunshine, Enemies-to-Lovers, Steamy Romcom (The Kinloch Series Book 1)",
-            "author": "Evie Alexander",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Lw38KD5WL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Highland-Games-sparkling-unputdownable-romantic-ebook/dp/B08ZGS5C7W/ref=zg_bs_g_158566011_d_sccl_11/143-6092880-0473143",
-            "hook": "Scottish brawn and sunny sass collide, sparking a steamy, laugh-out-loud enemies romance.",
+            "asin": "B0FJSPCKHN",
+            "title": "Elderblood: Volume 1",
+            "author": "V.S. Theo",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tq1UllIVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Elderblood-1-V-S-Theo-ebook/dp/B0FJSPCKHN/ref=zg_bs_g_157028011_d_sccl_18/143-5007184-3183963",
+            "hook": "A primordial lineage unleashes a soul's profound, inescapable reckoning.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0DF4DCB2C",
+            "title": "The Mistletoe House (Chestnut Cove Christmas Book 1)",
+            "author": "Mia Kent",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/816y45xCD3L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Mistletoe-House-Chestnut-Cove-Christmas-ebook/dp/B0DF4DCB2C/ref=zg_bs_g_158566011_d_sccl_4/143-5007184-3183963",
+            "hook": "Discover enchanting love where Christmas magic blooms at Chestnut Cove's Mistletoe House.",
             "genre": "Romance"
         }
     ]
