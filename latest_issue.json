@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0HLCKRH8C",
-            "title": "The Unwatched Door",
-            "author": "J.S. Ainslie",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71AmtTTFJvL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Unwatched-Door-J-S-Ainslie-ebook/dp/B0HLCKRH8C/ref=zg_bs_g_158591011_d_sccl_5/143-5007184-3183963",
-            "hook": "Uncover the cosmic portal no one guarded before it unwinds reality.",
+            "asin": "B0HF75FR74",
+            "title": "The 4D Billiard Leap (The Xylar-7 Interplanetary Chronicles Book 6)",
+            "author": "Xylar Seven",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71SjJG55gsL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Billiard-Leap-Xylar-7-Interplanetary-Chronicles-ebook/dp/B0HF75FR74/ref=zg_bs_g_158591011_d_sccl_7/131-4547851-7063139",
+            "hook": "A perilous 4D billiard leap defies spacetime, reshaping Xylar-7's interplanetary destiny.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HNZT22D3",
-            "title": "THE YUELTIDE SLEUTHS: 10 LOW-ANGST HOLIDAY WHODUNITS OF MYSTERY ROMANCE AND WHIMSICAL SLEUTHING",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/814qKCui9zL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/YUELTIDE-SLEUTHS-LOW-ANGST-WHODUNITS-WHIMSICAL-ebook/dp/B0HNZT22D3/ref=zg_bs_g_157056011_d_sccl_13/143-5007184-3183963",
-            "hook": "Whimsical Yuletide mysteries ignite charming romance as sleuths unravel delightful holiday crimes.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0FJSPCKHN",
-            "title": "Elderblood: Volume 1",
-            "author": "V.S. Theo",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tq1UllIVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Elderblood-1-V-S-Theo-ebook/dp/B0FJSPCKHN/ref=zg_bs_g_157028011_d_sccl_18/143-5007184-3183963",
-            "hook": "A primordial lineage unleashes a soul's profound, inescapable reckoning.",
+            "asin": "B00I8OS77S",
+            "title": "Wind Chime Cafe (A Wind Chime Novel Book 1)",
+            "author": "Sophie Moss",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81KV6JdYl2L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wind-Chime-Cafe-Novel-Book-ebook/dp/B00I8OS77S/ref=zg_bs_g_157028011_d_sccl_14/131-4547851-7063139",
+            "hook": "Whispers of change drift through a coastal cafe, weaving new fates.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DF4DCB2C",
-            "title": "The Mistletoe House (Chestnut Cove Christmas Book 1)",
-            "author": "Mia Kent",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/816y45xCD3L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Mistletoe-House-Chestnut-Cove-Christmas-ebook/dp/B0DF4DCB2C/ref=zg_bs_g_158566011_d_sccl_4/143-5007184-3183963",
-            "hook": "Discover enchanting love where Christmas magic blooms at Chestnut Cove's Mistletoe House.",
+            "asin": "B0GX34XW58",
+            "title": "Total Jane Wreck: Grumpy Meets Sunshine, Low Spice but Swoon-Worthy (Sugar Pine Springs)",
+            "author": "Laurel Osterkamp",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/715eQTmRUHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Total-Jane-Wreck-Sunshine-Swoon-Worthy-ebook/dp/B0GX34XW58/ref=zg_bs_g_158566011_d_sccl_4/131-4547851-7063139",
+            "hook": "When a total Jane wreck meets a grumpy heart, Sugar Pine Springs ignites a sweet, swoon-worthy spark.",
             "genre": "Romance"
         }
     ]
