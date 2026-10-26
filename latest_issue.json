@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HF75FR74",
-            "title": "The 4D Billiard Leap (The Xylar-7 Interplanetary Chronicles Book 6)",
-            "author": "Xylar Seven",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71SjJG55gsL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Billiard-Leap-Xylar-7-Interplanetary-Chronicles-ebook/dp/B0HF75FR74/ref=zg_bs_g_158591011_d_sccl_7/131-4547851-7063139",
-            "hook": "A perilous 4D billiard leap defies spacetime, reshaping Xylar-7's interplanetary destiny.",
+            "asin": "B0HN5WJMXV",
+            "title": "Archangel Eyes",
+            "author": "Jonathan Malay",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81M9xZYitYL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Archangel-Eyes-Jonathan-Malay-ebook/dp/B0HN5WJMXV/ref=zg_bs_g_158591011_d_sccl_7/136-3863027-5035404",
+            "hook": "Unblinking archangel eyes witness humanity's inevitable, star-spanning destiny.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00I8OS77S",
-            "title": "Wind Chime Cafe (A Wind Chime Novel Book 1)",
-            "author": "Sophie Moss",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81KV6JdYl2L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wind-Chime-Cafe-Novel-Book-ebook/dp/B00I8OS77S/ref=zg_bs_g_157028011_d_sccl_14/131-4547851-7063139",
-            "hook": "Whispers of change drift through a coastal cafe, weaving new fates.",
+            "asin": "B0B31Q7478",
+            "title": "Whispers from Beyond: 30 Miniature Tales",
+            "author": "A. R. Redington",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91OoMbbYKPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Whispers-Beyond-30-Miniature-Tales-ebook/dp/B0B31Q7478/ref=zg_bs_g_157056011_d_sccl_3/136-3863027-5035404",
+            "hook": "History's spectral voices whisper forgotten truths in thirty compelling miniature tales.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B0GM9FF387",
+            "title": "License to Thrill: Lily Bollinger: Gripping WWII Historical Novel of Resistance, Betrayal, and Champagne (Champagne Widows Biographical Novels)",
+            "author": "Rebecca Rosenberg",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91eijuvBeXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/License-Thrill-Historical-Resistance-Biographical-ebook/dp/B0GM9FF387/ref=zg_bs_g_157028011_d_sccl_18/136-3863027-5035404",
+            "hook": "Under Nazi occupation, Lily Bollinger's champagne fueled a sparkling resistance.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GX34XW58",
-            "title": "Total Jane Wreck: Grumpy Meets Sunshine, Low Spice but Swoon-Worthy (Sugar Pine Springs)",
-            "author": "Laurel Osterkamp",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/715eQTmRUHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Total-Jane-Wreck-Sunshine-Swoon-Worthy-ebook/dp/B0GX34XW58/ref=zg_bs_g_158566011_d_sccl_4/131-4547851-7063139",
-            "hook": "When a total Jane wreck meets a grumpy heart, Sugar Pine Springs ignites a sweet, swoon-worthy spark.",
+            "asin": "B0D5VNSHF3",
+            "title": "For You I'd Break: A Small Town, Second Chance Romance (Peace Falls Series Book 1)",
+            "author": "Hannah Jordan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/715ITGhWJmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/You-Id-Break-Second-Romance-ebook/dp/B0D5VNSHF3/ref=zg_bs_g_158566011_d_sccl_7/136-3863027-5035404",
+            "hook": "Peace Falls offers a second chance: can their hearts break again, for love?",
             "genre": "Romance"
         }
     ]
