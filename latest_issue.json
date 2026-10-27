@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0HN5WJMXV",
-            "title": "Archangel Eyes",
-            "author": "Jonathan Malay",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81M9xZYitYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Archangel-Eyes-Jonathan-Malay-ebook/dp/B0HN5WJMXV/ref=zg_bs_g_158591011_d_sccl_7/136-3863027-5035404",
-            "hook": "Unblinking archangel eyes witness humanity's inevitable, star-spanning destiny.",
+            "asin": "B0GX3B3MQV",
+            "title": "Geometry of Grace (Emissary Series Book 1)",
+            "author": "M.D. Scur",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81u2uSuIL5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Geometry-Grace-Emissary-Book-1-ebook/dp/B0GX3B3MQV/ref=zg_bs_g_158591011_d_sccl_6/136-8926170-2732823",
+            "hook": "An emissary navigates the cosmos, revealing its stunning geometric grace.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0B31Q7478",
-            "title": "Whispers from Beyond: 30 Miniature Tales",
-            "author": "A. R. Redington",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91OoMbbYKPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Whispers-Beyond-30-Miniature-Tales-ebook/dp/B0B31Q7478/ref=zg_bs_g_157056011_d_sccl_3/136-3863027-5035404",
-            "hook": "History's spectral voices whisper forgotten truths in thirty compelling miniature tales.",
+            "asin": "B0CZK1GQ7P",
+            "title": "Fables from La Fontaine (Fable Anthologies)",
+            "author": "Samuel DenHartog",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81iu6VXrsGL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fables-Fontaine-Anthologies-Samuel-DenHartog-ebook/dp/B0CZK1GQ7P/ref=zg_bs_g_157056011_d_sccl_17/136-8926170-2732823",
+            "hook": "Timeless fables gain new teeth in a cunning historical reimagining of vice and virtue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GM9FF387",
-            "title": "License to Thrill: Lily Bollinger: Gripping WWII Historical Novel of Resistance, Betrayal, and Champagne (Champagne Widows Biographical Novels)",
-            "author": "Rebecca Rosenberg",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91eijuvBeXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/License-Thrill-Historical-Resistance-Biographical-ebook/dp/B0GM9FF387/ref=zg_bs_g_157028011_d_sccl_18/136-3863027-5035404",
-            "hook": "Under Nazi occupation, Lily Bollinger's champagne fueled a sparkling resistance.",
-            "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B0D5VNSHF3",
-            "title": "For You I'd Break: A Small Town, Second Chance Romance (Peace Falls Series Book 1)",
-            "author": "Hannah Jordan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/715ITGhWJmL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/You-Id-Break-Second-Romance-ebook/dp/B0D5VNSHF3/ref=zg_bs_g_158566011_d_sccl_7/136-3863027-5035404",
-            "hook": "Peace Falls offers a second chance: can their hearts break again, for love?",
+            "asin": "B0D4BNPV6T",
+            "title": "A Fighting Chance: A Regency Historical Romance (The Chances Book 1)",
+            "author": "Emily E K Murdoch",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81SKNtgixXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fighting-Chance-Regency-Historical-Romance-ebook/dp/B0D4BNPV6T/ref=zg_bs_g_158566011_d_sccl_3/136-8926170-2732823",
+            "hook": "In a world of strict rules, her fighting chance for a scandalous Regency love ignites.",
             "genre": "Romance"
         }
     ]
