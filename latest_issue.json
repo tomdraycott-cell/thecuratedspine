@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B09TJH24KB",
-            "title": "LOOP: A novel of Science-Fiction Horror",
-            "author": "William Kely McClung",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91Jzj71y4OL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/LOOP-Pulse-Pounding-Novel-Science-Fiction-Horror-ebook/dp/B09TJH24KB/ref=zg_bs_g_158591011_d_sccl_4/133-1848842-8900135",
-            "hook": "The future spirals into a terrifying sci-fi loop of endless horror.",
+            "asin": "B0GX31KVKM",
+            "title": "The End of Restraint: The Werno Doctrine - A Military Sci\u2011Fi Novel of Intergalactic War",
+            "author": "R. E. Graham",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hbF2ewHIL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/End-Restraint-Doctrine-Military-Intergalactic-ebook/dp/B0GX31KVKM/ref=zg_bs_g_158591011_d_sccl_1/147-2568779-6266118",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HKZLKJ7V",
-            "title": "Raw Blood and Nerve: Halloween Edition",
-            "author": "Alex Grass",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/717Uews06zL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Raw-Blood-Nerve-Alex-Grass-ebook/dp/B0HKZLKJ7V/ref=zg_bs_g_157056011_d_sccl_1/133-1848842-8900135",
-            "hook": "Journey into Halloween's raw history, where primal fear frays every nerve.",
+            "asin": "B0GX2ZJR61",
+            "title": "The Micro-Noir Omnibus: 66 Dark Psychological Stories",
+            "author": "Ahmed Hassan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Hut28OSmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Micro-Noir-Omnibus-Dark-Psychological-Stories-ebook/dp/B0GX2ZJR61/ref=zg_bs_g_157056011_d_sccl_4/147-2568779-6266118",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0F2XFPTZH",
-            "title": "Lawfully Ours: Sweet Western Historical Romance (Brides of Cedar Falls Book 9)",
-            "author": "Jovie Grace",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-d59fcPIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lawfully-Ours-Western-Historical-Romance-ebook/dp/B0F2XFPTZH/ref=zg_bs_g_158566011_d_sccl_3/133-1848842-8900135",
-            "hook": "Cedar Falls delivers a heartwarming Western tale of finding love, lawfully claimed.",
+            "asin": "B09K2PWGZ2",
+            "title": "After the Fact (A Jack Collins Thriller Book 1)",
+            "author": "Jeff Cooper",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ZXDsMKU0L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/After-Fact-Jeff-Cooper-ebook/dp/B09K2PWGZ2/ref=zg_bs_g_157028011_d_sccl_1/147-2568779-6266118",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0HL8BD8WJ",
+            "title": "Wild Ride (Wildwood Springs Book 1)",
+            "author": "Mandy Maree",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81AKfqk9xAL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wild-Ride-Wildwood-Springs-Book-ebook/dp/B0HL8BD8WJ/ref=zg_bs_g_158566011_d_sccl_1/147-2568779-6266118",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
