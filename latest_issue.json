@@ -1,30 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0GX3B3MQV",
-            "title": "Geometry of Grace (Emissary Series Book 1)",
-            "author": "M.D. Scur",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81u2uSuIL5L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Geometry-Grace-Emissary-Book-1-ebook/dp/B0GX3B3MQV/ref=zg_bs_g_158591011_d_sccl_6/136-8926170-2732823",
-            "hook": "An emissary navigates the cosmos, revealing its stunning geometric grace.",
+            "asin": "B09TJH24KB",
+            "title": "LOOP: A novel of Science-Fiction Horror",
+            "author": "William Kely McClung",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91Jzj71y4OL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/LOOP-Pulse-Pounding-Novel-Science-Fiction-Horror-ebook/dp/B09TJH24KB/ref=zg_bs_g_158591011_d_sccl_4/133-1848842-8900135",
+            "hook": "The future spirals into a terrifying sci-fi loop of endless horror.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0CZK1GQ7P",
-            "title": "Fables from La Fontaine (Fable Anthologies)",
-            "author": "Samuel DenHartog",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81iu6VXrsGL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Fables-Fontaine-Anthologies-Samuel-DenHartog-ebook/dp/B0CZK1GQ7P/ref=zg_bs_g_157056011_d_sccl_17/136-8926170-2732823",
-            "hook": "Timeless fables gain new teeth in a cunning historical reimagining of vice and virtue.",
+            "asin": "B0HKZLKJ7V",
+            "title": "Raw Blood and Nerve: Halloween Edition",
+            "author": "Alex Grass",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/717Uews06zL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Raw-Blood-Nerve-Alex-Grass-ebook/dp/B0HKZLKJ7V/ref=zg_bs_g_157056011_d_sccl_1/133-1848842-8900135",
+            "hook": "Journey into Halloween's raw history, where primal fear frays every nerve.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0D4BNPV6T",
-            "title": "A Fighting Chance: A Regency Historical Romance (The Chances Book 1)",
-            "author": "Emily E K Murdoch",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81SKNtgixXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Fighting-Chance-Regency-Historical-Romance-ebook/dp/B0D4BNPV6T/ref=zg_bs_g_158566011_d_sccl_3/136-8926170-2732823",
-            "hook": "In a world of strict rules, her fighting chance for a scandalous Regency love ignites.",
+            "asin": "B0F2XFPTZH",
+            "title": "Lawfully Ours: Sweet Western Historical Romance (Brides of Cedar Falls Book 9)",
+            "author": "Jovie Grace",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-d59fcPIL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lawfully-Ours-Western-Historical-Romance-ebook/dp/B0F2XFPTZH/ref=zg_bs_g_158566011_d_sccl_3/133-1848842-8900135",
+            "hook": "Cedar Falls delivers a heartwarming Western tale of finding love, lawfully claimed.",
             "genre": "Romance"
         }
     ]
