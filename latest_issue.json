@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0GX31KVKM",
-            "title": "The End of Restraint: The Werno Doctrine - A Military Sci\u2011Fi Novel of Intergalactic War",
-            "author": "R. E. Graham",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hbF2ewHIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/End-Restraint-Doctrine-Military-Intergalactic-ebook/dp/B0GX31KVKM/ref=zg_bs_g_158591011_d_sccl_1/147-2568779-6266118",
+            "asin": "B00V9KD02A",
+            "title": "In The Darkness",
+            "author": "Luke Smitherd",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91oqxXIGHyL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Darkness-Luke-Smitherd-ebook/dp/B00V9KD02A/ref=zg_bs_g_158591011_d_sccl_2/142-6310579-5093542",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0GX2ZJR61",
-            "title": "The Micro-Noir Omnibus: 66 Dark Psychological Stories",
-            "author": "Ahmed Hassan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Hut28OSmL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Micro-Noir-Omnibus-Dark-Psychological-Stories-ebook/dp/B0GX2ZJR61/ref=zg_bs_g_157056011_d_sccl_4/147-2568779-6266118",
+            "asin": "B08RWXCR3B",
+            "title": "Fangers Inc.: An Anthology of Vampire Stories (Fangers Inc. An Anthology of Vampire Stories)",
+            "author": "Samantha Diegutis",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/51wcqiI+NeL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fangers-Inc-Anthology-Vampire-Stories-ebook/dp/B08RWXCR3B/ref=zg_bs_g_157056011_d_sccl_4/142-6310579-5093542",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B09K2PWGZ2",
-            "title": "After the Fact (A Jack Collins Thriller Book 1)",
-            "author": "Jeff Cooper",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ZXDsMKU0L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/After-Fact-Jeff-Cooper-ebook/dp/B09K2PWGZ2/ref=zg_bs_g_157028011_d_sccl_1/147-2568779-6266118",
+            "asin": "B0FB48C6QV",
+            "title": "ONE MORE TO DIE the most gripping crime thriller you'll read this summer",
+            "author": "JOY ELLIS",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/810y+OiN6xL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/gripping-crime-thriller-youll-summer-ebook/dp/B0FB48C6QV/ref=zg_bs_g_157028011_d_sccl_2/142-6310579-5093542",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HL8BD8WJ",
-            "title": "Wild Ride (Wildwood Springs Book 1)",
-            "author": "Mandy Maree",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81AKfqk9xAL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wild-Ride-Wildwood-Springs-Book-ebook/dp/B0HL8BD8WJ/ref=zg_bs_g_158566011_d_sccl_1/147-2568779-6266118",
+            "asin": "B0FT6P9P7X",
+            "title": "Sweet Christmas Comeback (Frost Pine Ridge Book 1)",
+            "author": "Meredith Summers",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81VRQGvUiML._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Sweet-Christmas-Comeback-Frost-Ridge-ebook/dp/B0FT6P9P7X/ref=zg_bs_g_158566011_d_sccl_2/142-6310579-5093542",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
