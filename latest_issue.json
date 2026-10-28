@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0H6DB5PKS",
-            "title": "THE AI WHO WEPT",
-            "author": "Diyor Bek",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71hHvfsJQ3L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/AI-WHO-WEPT-Diyor-Bek-ebook/dp/B0H6DB5PKS/ref=zg_bs_g_158591011_d_sccl_5/145-5893963-6354264",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0DZJ6X72H",
+            "title": "Rooting for Kiran: A Fated Mate Alien Romance (The Mate-Cute Series)",
+            "author": "Meghan Monarch",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HmY6zekPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Rooting-Kiran-Fated-Romance-Mate-Cute-ebook/dp/B0DZJ6X72H/ref=zg_bs_g_158591011_d_sccl_4/136-9769715-6390760",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0D3C72WVS",
-            "title": "Pride and Perjury: Twelve Short Stories inspired by Pride and Prejudice (Warleigh Hall Press Jane Austen Series)",
-            "author": "Alice McVeigh",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81qOFKhlgXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Pride-Perjury-inspired-Prejudice-Warleigh-ebook/dp/B0D3C72WVS/ref=zg_bs_g_157056011_d_sccl_7/145-5893963-6354264",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B00SM08YLM",
+            "title": "Club Luxe Box Set (Books 1-3) (Billionaires Underground)",
+            "author": "Olivia Noble",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81I6iIK7-EL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Club-Luxe-Box-Set-Books-ebook/dp/B00SM08YLM/ref=zg_bs_g_157056011_d_sccl_8/136-9769715-6390760",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0G83F7659",
-            "title": "Against the Dark (A Parker Hand FBI Suspense Thriller\u2014Book One)",
-            "author": "Kate Bold",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71BE-ZULnrL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Against-Dark-Parker-Suspense-Thriller-Book-ebook/dp/B0G83F7659/ref=zg_bs_g_157028011_d_sccl_5/145-5893963-6354264",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B08P1Z9HZ8",
+            "title": "The Girl from Silent Lake: A totally gripping and heart-pounding crime thriller (Detective Kay Sharp Book 1)",
+            "author": "Leslie Wolfe",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/8149+CguZXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Girl-Silent-Lake-heart-pounding-Detective-ebook/dp/B08P1Z9HZ8/ref=zg_bs_g_157028011_d_sccl_6/136-9769715-6390760",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DRDR8R6H",
-            "title": "Finding Christmas (A Winterberry Hollow Christmas Book 1)",
-            "author": "Cindy Nichols",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j9d6c3ADL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Finding-Christmas-Winterberry-Hollow-Book-ebook/dp/B0DRDR8R6H/ref=zg_bs_g_158566011_d_sccl_3/145-5893963-6354264",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0GG58D1N4",
+            "title": "Hunter & The Hunted (Sinclaire Wolf Pack Book 4)",
+            "author": "Margot Primrose",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71uL58W2ogL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Hunter-Hunted-Sinclaire-Wolf-Pack-ebook/dp/B0GG58D1N4/ref=zg_bs_g_158566011_d_sccl_6/136-9769715-6390760",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
