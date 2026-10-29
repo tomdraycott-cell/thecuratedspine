@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0F4RN1P1L",
-            "title": "Ready, Aim, Fire: Book 1 Project Harvester (Sci-fi LitRPG) (Ready, Aim, Fire!)",
-            "author": "Mike Lin",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71b9dOgogJL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Ready-Aim-Fire-Project-Harvester-ebook/dp/B0F4RN1P1L/ref=zg_bs_g_158591011_d_sccl_2/130-8733002-9941516",
+            "asin": "B08D2BZN9T",
+            "title": "The Legacy: James (The Legacy Series Book 1)",
+            "author": "Tricia Wentworth",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/913Wo+DO3aL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Legacy-James-Book-ebook/dp/B08D2BZN9T/ref=zg_bs_g_158591011_d_sccl_5/131-5951132-2554119",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B015D715VW",
-            "title": "Nightlight Tales: A Collection of Horror Short Stories",
-            "author": "Anthony Renfro",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/913wuYUkoHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Nightlight-Tales-Collection-Horror-Stories-ebook/dp/B015D715VW/ref=zg_bs_g_157056011_d_sccl_8/130-8733002-9941516",
+            "asin": "B0HPBB7XFY",
+            "title": "Edgar Allan Poe: Novelas Completas (Spanish Edition)",
+            "author": "Edgar Allan Poe",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71AN4fXcXSL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Edgar-Allan-Poe-Novelas-Completas-ebook/dp/B0HPBB7XFY/ref=zg_bs_g_157056011_d_sccl_19/131-5951132-2554119",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0991S8DZ1",
-            "title": "The Patriot Oath: A Josh Kavanagh Thriller (The Josh Kavanagh Thrillers)",
-            "author": "Lloyd Lofthouse",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81oGe+5gCcL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Patriot-Oath-Lloyd-Lofthouse-ebook/dp/B0991S8DZ1/ref=zg_bs_g_157028011_d_sccl_2/130-8733002-9941516",
+            "asin": "B0B6RWCN6B",
+            "title": "Christmas in '45",
+            "author": "Mark W Sasse",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81X3cmrWfwL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Christmas-45-Mark-W-Sasse-ebook/dp/B0B6RWCN6B/ref=zg_bs_g_157028011_d_sccl_3/131-5951132-2554119",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DRWC5TDD",
-            "title": "Forty, Flirty & Fired: A Billionaire Boss Romantic Comedy (Forty and Flirty Billionaires Book 1)",
-            "author": "Lacey Monroe",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71qxLp9kJBL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Forty-Flirty-Fired-Relatable-Billionaire-ebook/dp/B0DRWC5TDD/ref=zg_bs_g_158566011_d_sccl_2/130-8733002-9941516",
+            "asin": "B097CJDZ9Q",
+            "title": "At First Sight: Global Security Unlimited 1",
+            "author": "Sharon Michalove",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81b9xWfJjdL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/At-First-Sight-Security-Unlimited-ebook/dp/B097CJDZ9Q/ref=zg_bs_g_158566011_d_sccl_3/131-5951132-2554119",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
