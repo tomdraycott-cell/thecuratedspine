@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B082Z61CC3",
-            "title": "Saving Eden: A YA Dystopian / Post-Apocalyptic Adventure (The Eden Saga Book 1)",
-            "author": "K. R. S. McEntire",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91H2btKGtSL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Saving-Eden-Dystopian-Post-Apocalyptic-Adventure-ebook/dp/B082Z61CC3/ref=zg_bs_g_158591011_d_sccl_4/132-6361271-9050002",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0F4RN1P1L",
+            "title": "Ready, Aim, Fire: Book 1 Project Harvester (Sci-fi LitRPG) (Ready, Aim, Fire!)",
+            "author": "Mike Lin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71b9dOgogJL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ready-Aim-Fire-Project-Harvester-ebook/dp/B0F4RN1P1L/ref=zg_bs_g_158591011_d_sccl_2/130-8733002-9941516",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0CKPCT9Y8",
-            "title": "The Nightmare Crypt Vol. 1: 16 Scary Stories",
-            "author": "Owen Mulligan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91VyKL54bVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Nightmare-Crypt-Vol-Scary-Stories-ebook/dp/B0CKPCT9Y8/ref=zg_bs_g_157056011_d_sccl_6/132-6361271-9050002",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B015D715VW",
+            "title": "Nightlight Tales: A Collection of Horror Short Stories",
+            "author": "Anthony Renfro",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/913wuYUkoHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Nightlight-Tales-Collection-Horror-Stories-ebook/dp/B015D715VW/ref=zg_bs_g_157056011_d_sccl_8/130-8733002-9941516",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B09WDX243L",
-            "title": "Amanda Cadabra and The Hanging Tree: A humorous British cozy mystery (The Amanda Cadabra British Urban Fantasy Mysteries Book 7)",
-            "author": "Holly Bell",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/811LOeKjcqL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Amanda-Cadabra-Hanging-Tree-Paranormal-ebook/dp/B09WDX243L/ref=zg_bs_g_157028011_d_sccl_9/132-6361271-9050002",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0991S8DZ1",
+            "title": "The Patriot Oath: A Josh Kavanagh Thriller (The Josh Kavanagh Thrillers)",
+            "author": "Lloyd Lofthouse",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81oGe+5gCcL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Patriot-Oath-Lloyd-Lofthouse-ebook/dp/B0991S8DZ1/ref=zg_bs_g_157028011_d_sccl_2/130-8733002-9941516",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B07YYNBK27",
-            "title": "Dragon Trial (Dragon Guard Book 1)",
-            "author": "Debbie Cassidy",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91EQugZropL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dragon-Trial-Guard-Book-ebook/dp/B07YYNBK27/ref=zg_bs_g_158566011_d_sccl_7/132-6361271-9050002",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0DRWC5TDD",
+            "title": "Forty, Flirty & Fired: A Billionaire Boss Romantic Comedy (Forty and Flirty Billionaires Book 1)",
+            "author": "Lacey Monroe",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71qxLp9kJBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Forty-Flirty-Fired-Relatable-Billionaire-ebook/dp/B0DRWC5TDD/ref=zg_bs_g_158566011_d_sccl_2/130-8733002-9941516",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
