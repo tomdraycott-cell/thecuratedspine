@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0H5SHTB67",
-            "title": "Static: The signal came back. So did she. (Dead Signal Book 1)",
-            "author": "Robert Tibbs",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/811cBdrbO5L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Static-signal-came-back-Signal-ebook/dp/B0H5SHTB67/ref=zg_bs_g_158591011_d_sccl_6/143-0784022-8783639",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0HM11SNHQ",
+            "title": "FILAMENT: A McLeod and Masters Thriller (The McLeod and Masters Thriller Series Book 3)",
+            "author": "Cheryl P. Fallin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81GEThor9KL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/FILAMENT-McLeod-Masters-Thriller-Book-ebook/dp/B0HM11SNHQ/ref=zg_bs_g_158591011_d_sccl_6/141-1595398-8694852",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0B1BFGBF7",
-            "title": "Fright Bites: Short Tales of Terror (Stories for Late at Night)",
-            "author": "Micah Edwards",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/819sH8Tr3RL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Fright-Bites-Short-Terror-Nightmare-ebook/dp/B0B1BFGBF7/ref=zg_bs_g_157056011_d_sccl_16/143-0784022-8783639",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B08HWX9664",
+            "title": "The Philip K. Dick Collection",
+            "author": "Philip K. Dick",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71JWH3MzKVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Philip-K-Dick-Collection-ebook/dp/B08HWX9664/ref=zg_bs_g_157056011_d_sccl_20/141-1595398-8694852",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B09ZWQT54Y",
-            "title": "Bottled Lightning",
-            "author": "L.M. Weeks",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XO3+bFIFL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Bottled-Lightning-L-M-Weeks-ebook/dp/B09ZWQT54Y/ref=zg_bs_g_157028011_d_sccl_3/143-0784022-8783639",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0DGFG5SFJ",
+            "title": "Our Lady of the Overlook: A Gripping Small-Town Murder Mystery (Overlook Trilogy Book 1) \u2014 Suspense, Secrets & Cold Case Twists (The Overlook Trilogy)",
+            "author": "R.L. Carpentier III",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/812g4IWXEuL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Our-Lady-Overlook-R-Carpentier-ebook/dp/B0DGFG5SFJ/ref=zg_bs_g_157028011_d_sccl_2/141-1595398-8694852",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CG5K7YP2",
-            "title": "Night of Mercy: Sweet, Small-Town Romantic Suspense (Heart Lake Book 11)",
-            "author": "Jo Grafford",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81+bEIDAKjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Night-Mercy-Sweet-Romantic-Suspense-ebook/dp/B0CG5K7YP2/ref=zg_bs_g_158566011_d_sccl_2/143-0784022-8783639",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0BJS99D2T",
+            "title": "Dirty Daddies: Three Forbidden Age-Gap Romances (Salacious)",
+            "author": "L.M. Mountford",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Kk9KuCymL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Dirty-Daddies-Younger-Collection-Delights-ebook/dp/B0BJS99D2T/ref=zg_bs_g_158566011_d_sccl_3/141-1595398-8694852",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
