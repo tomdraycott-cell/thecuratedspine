@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HPM6XK27",
-            "title": "In the Valley's Shadow: An EMP Post Apocalypse Prepper Survival Thriller (A Grid-Down Prepper Thriller Book 5)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81gMGY7vrPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Valleys-Shadow-Apocalypse-Survival-Grid-Down-ebook/dp/B0HPM6XK27/ref=zg_bs_g_158591011_d_sccl_6/135-6668921-1583105",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0H5SHTB67",
+            "title": "Static: The signal came back. So did she. (Dead Signal Book 1)",
+            "author": "Robert Tibbs",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/811cBdrbO5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Static-signal-came-back-Signal-ebook/dp/B0H5SHTB67/ref=zg_bs_g_158591011_d_sccl_6/143-0784022-8783639",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B07YHBCRBB",
-            "title": "Coffin Cemetery: Supernatural Horror with Scary Ghosts & Haunted Houses (Tormented Souls Series Book 1)",
-            "author": "Ron Ripley",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91Uvnr133US._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Coffin-Cemetery-Supernatural-Haunted-Tormented-ebook/dp/B07YHBCRBB/ref=zg_bs_g_157056011_d_sccl_18/135-6668921-1583105",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0B1BFGBF7",
+            "title": "Fright Bites: Short Tales of Terror (Stories for Late at Night)",
+            "author": "Micah Edwards",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/819sH8Tr3RL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fright-Bites-Short-Terror-Nightmare-ebook/dp/B0B1BFGBF7/ref=zg_bs_g_157056011_d_sccl_16/143-0784022-8783639",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FL3PZQY7",
-            "title": "Only for the Season: a billionaire holiday romance (Smuggler's Hideaway)",
-            "author": "D.E. Haggerty",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/818-dMD0k2L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Only-Season-billionaire-holiday-Brothers-ebook/dp/B0FL3PZQY7/ref=zg_bs_g_157028011_d_sccl_1/135-6668921-1583105",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B09ZWQT54Y",
+            "title": "Bottled Lightning",
+            "author": "L.M. Weeks",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XO3+bFIFL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Bottled-Lightning-L-M-Weeks-ebook/dp/B09ZWQT54Y/ref=zg_bs_g_157028011_d_sccl_3/143-0784022-8783639",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0D54Y18ST",
-            "title": "A Whole New Ball Game (Brooklyn Bats Book 1)",
-            "author": "Stephanie Rose",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Amkg+-bRL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Whole-New-Ball-Game-Romance-ebook/dp/B0D54Y18ST/ref=zg_bs_g_158566011_d_sccl_4/135-6668921-1583105",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0CG5K7YP2",
+            "title": "Night of Mercy: Sweet, Small-Town Romantic Suspense (Heart Lake Book 11)",
+            "author": "Jo Grafford",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81+bEIDAKjL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Night-Mercy-Sweet-Romantic-Suspense-ebook/dp/B0CG5K7YP2/ref=zg_bs_g_158566011_d_sccl_2/143-0784022-8783639",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
