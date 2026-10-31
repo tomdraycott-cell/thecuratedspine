@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0HM11SNHQ",
-            "title": "FILAMENT: A McLeod and Masters Thriller (The McLeod and Masters Thriller Series Book 3)",
-            "author": "Cheryl P. Fallin",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81GEThor9KL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/FILAMENT-McLeod-Masters-Thriller-Book-ebook/dp/B0HM11SNHQ/ref=zg_bs_g_158591011_d_sccl_6/141-1595398-8694852",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B09CN7278F",
+            "title": "Frankenskeeters (Snack Size Florida Story Book 1)",
+            "author": "Mary Fallon Miller",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xgV4oYdHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Frankenskeeters-Mary-Miller-ebook/dp/B09CN7278F/ref=zg_bs_g_158591011_d_sccl_7/131-2451846-2494206",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B08HWX9664",
-            "title": "The Philip K. Dick Collection",
-            "author": "Philip K. Dick",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71JWH3MzKVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Philip-K-Dick-Collection-ebook/dp/B08HWX9664/ref=zg_bs_g_157056011_d_sccl_20/141-1595398-8694852",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0DGFG5SFJ",
-            "title": "Our Lady of the Overlook: A Gripping Small-Town Murder Mystery (Overlook Trilogy Book 1) \u2014 Suspense, Secrets & Cold Case Twists (The Overlook Trilogy)",
-            "author": "R.L. Carpentier III",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/812g4IWXEuL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Our-Lady-Overlook-R-Carpentier-ebook/dp/B0DGFG5SFJ/ref=zg_bs_g_157028011_d_sccl_2/141-1595398-8694852",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0H2FJFC7H",
+            "title": "Lady Petra and the Wolf (Lords Fall First Book 2)",
+            "author": "Anna Valleria",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Zl8YpS05L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lady-Petra-Wolf-Lords-First-ebook/dp/B0H2FJFC7H/ref=zg_bs_g_157028011_d_sccl_7/131-2451846-2494206",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0BJS99D2T",
-            "title": "Dirty Daddies: Three Forbidden Age-Gap Romances (Salacious)",
-            "author": "L.M. Mountford",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Kk9KuCymL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dirty-Daddies-Younger-Collection-Delights-ebook/dp/B0BJS99D2T/ref=zg_bs_g_158566011_d_sccl_3/141-1595398-8694852",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0H7K7RV5H",
+            "title": "Through the Smoke : A Clean, Faith-Filled Firefighter Romance (The Station Sisters)",
+            "author": "Blake Lawson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81JPFr+MyJL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Through-Smoke-Faith-Filled-Firefighter-Romance-ebook/dp/B0H7K7RV5H/ref=zg_bs_g_158566011_d_sccl_5/131-2451846-2494206",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
