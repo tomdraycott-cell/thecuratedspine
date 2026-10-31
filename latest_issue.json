@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0DJSJR6MY",
-            "title": "Folktales from the Endless Frontier (Volume 1): A Weird Western Sci-Fi Fantasy Collection",
-            "author": "Brett Lurie",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ixMvAsJEL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Folktales-Endless-Frontier-Brett-Lurie-ebook/dp/B0DJSJR6MY/ref=zg_bs_g_158591011_d_sccl_1/130-0911953-2675344",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B09YQYQK7D",
+            "title": "Alien Heat (Surviving the Alien Reality Show (STARS) Book 1)",
+            "author": "Della Sands",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81wivkh-LeL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Alien-Heat-Surviving-Reality-STARS-ebook/dp/B09YQYQK7D/ref=zg_bs_g_158591011_d_sccl_4/145-8668712-1834049",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0DCD73Q2W",
-            "title": "Taking Flight: Crime and Mystery Stories by the Blackbird Writers",
-            "author": "Tracey S. Phillips",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/818KeF9580L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Taking-Flight-Mystery-Stories-Blackbird-ebook/dp/B0DCD73Q2W/ref=zg_bs_g_157056011_d_sccl_5/130-0911953-2675344",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B01NBM70AW",
+            "title": "Lords of the Underworld: The Darkest Sampler: An Alpha Male Paranormal Romance",
+            "author": "Gena Showalter",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/918DJ5LQ6nL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lords-Underworld-Darkest-Gena-Showalter-ebook/dp/B01NBM70AW/ref=zg_bs_g_157056011_d_sccl_16/145-8668712-1834049",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0HN3RKKKS",
-            "title": "Withered Lily: A Dark Serial Killer Thriller",
-            "author": "Miguel Estrada",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91Eetl8RyfL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Withered-Lily-Serial-Killer-Thriller-ebook/dp/B0HN3RKKKS/ref=zg_bs_g_157028011_d_sccl_1/130-0911953-2675344",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B07L2PJLYY",
+            "title": "Coroner To Coroner (The Yarn-Over Series Book 1)",
+            "author": "B.K. Baxter",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91uRbcFNzcL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Coroner-Yarn-Over-Book-1-ebook/dp/B07L2PJLYY/ref=zg_bs_g_157028011_d_sccl_4/145-8668712-1834049",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GK2NM17Z",
-            "title": "The Trouble with Tweed (Fabric of Love Book 1)",
-            "author": "Jill M. Beene",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91uNm7AAUXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Trouble-Tweed-Fabric-Love-Book-ebook/dp/B0GK2NM17Z/ref=zg_bs_g_158566011_d_sccl_2/130-0911953-2675344",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0CCQZXNRB",
+            "title": "All I Want For Christmas Is You: A Calamity Falls Small Town Christmas Romance (Mistletoe and Silver Foxes Book 1)",
+            "author": "Erika Kelly",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81mUjgCwcjL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/All-Want-Christmas-You-Calamity-ebook/dp/B0CCQZXNRB/ref=zg_bs_g_158566011_d_sccl_4/145-8668712-1834049",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
