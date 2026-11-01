@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B09YQYQK7D",
-            "title": "Alien Heat (Surviving the Alien Reality Show (STARS) Book 1)",
-            "author": "Della Sands",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81wivkh-LeL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Alien-Heat-Surviving-Reality-STARS-ebook/dp/B09YQYQK7D/ref=zg_bs_g_158591011_d_sccl_4/145-8668712-1834049",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0FRY3FTRJ",
+            "title": "Lyssalmaria: The Undead Duology - Book One",
+            "author": "Hayleigh Huntley",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71B-uF8-QZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lyssalmaria-Undead-Duology-Book-One-ebook/dp/B0FRY3FTRJ/ref=zg_bs_g_158591011_d_sccl_5/147-3648110-1894869",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B01NBM70AW",
-            "title": "Lords of the Underworld: The Darkest Sampler: An Alpha Male Paranormal Romance",
-            "author": "Gena Showalter",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/918DJ5LQ6nL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lords-Underworld-Darkest-Gena-Showalter-ebook/dp/B01NBM70AW/ref=zg_bs_g_157056011_d_sccl_16/145-8668712-1834049",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B0HPV244PC",
+            "title": "Harborside Lost and Found Cozy Mysteries Collection Box Set 1: Books 1-3: Clues and the Traveling Suitcase, Clues and the Las",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81aoGQ3e7kL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Harborside-Lost-Found-Mysteries-Collection-ebook/dp/B0HPV244PC/ref=zg_bs_g_157056011_d_sccl_7/147-3648110-1894869",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B07L2PJLYY",
-            "title": "Coroner To Coroner (The Yarn-Over Series Book 1)",
-            "author": "B.K. Baxter",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91uRbcFNzcL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Coroner-Yarn-Over-Book-1-ebook/dp/B07L2PJLYY/ref=zg_bs_g_157028011_d_sccl_4/145-8668712-1834049",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0CGMBD6KN",
+            "title": "KNUCKLEBONES: Book One",
+            "author": "Dave Trumbore",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/A1vdiO6EI4L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/KNUCKLEBONES-Book-One-Dave-Trumbore-ebook/dp/B0CGMBD6KN/ref=zg_bs_g_157028011_d_sccl_4/147-3648110-1894869",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CCQZXNRB",
-            "title": "All I Want For Christmas Is You: A Calamity Falls Small Town Christmas Romance (Mistletoe and Silver Foxes Book 1)",
-            "author": "Erika Kelly",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81mUjgCwcjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/All-Want-Christmas-You-Calamity-ebook/dp/B0CCQZXNRB/ref=zg_bs_g_158566011_d_sccl_4/145-8668712-1834049",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0FH34596S",
+            "title": "This Time Around: A second-chance romance with a hot single dad and the woman who never got over him (The Can't Have Hearts Club Book 3)",
+            "author": "Tawna Fenske",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71V0jTHnzAL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/This-Time-Around-second-chance-romance-ebook/dp/B0FH34596S/ref=zg_bs_g_158566011_d_sccl_5/147-3648110-1894869",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
