@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HJHSVL5N",
-            "title": "CRIMINAL GRAMMAR: The Callous Matchmaker (IONA VENN IMPOSSIBLE-CRIME THRILLERS Book 1)",
-            "author": "Zoe Birdwhistle",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71c3qoCW8+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/CRIMINAL-GRAMMAR-Matchmaker-IMPOSSIBLE-CRIME-THRILLERS-ebook/dp/B0HJHSVL5N/ref=zg_bs_g_158591011_d_sccl_4/146-2005364-6837740",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0GHSGY73J",
+            "title": "Romanced by the Alien Dads",
+            "author": "Carlotta Page",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81BsTOl8RXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Romanced-Alien-Dads-Carlotta-Page-ebook/dp/B0GHSGY73J/ref=zg_bs_g_158591011_d_sccl_6/137-3982429-5449932",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0DTTTQ7FT",
-            "title": "Otherworldly: An Anthology",
-            "author": "Eric C Ross",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61bGCzEKN4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Otherworldly-Anthology-Eric-C-Ross-ebook/dp/B0DTTTQ7FT/ref=zg_bs_g_157056011_d_sccl_7/146-2005364-6837740",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0FGQFRQZD",
+            "title": "Dark Speculations: Tales of Various Shapes & Shadows Volume 2",
+            "author": "Robin Nemesszeghy",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81FWYCAoxuL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Dark-Speculations-Various-Shapes-Shadows-ebook/dp/B0FGQFRQZD/ref=zg_bs_g_157056011_d_sccl_16/137-3982429-5449932",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FJ8LTMJX",
-            "title": "Without Him: Two Brothers, Two Divergent Paths, One Unbreakable Bond",
-            "author": "Lindsay Law",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71wgZPPmsKL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Without-Him-Brothers-Divergent-Unbreakable-ebook/dp/B0FJ8LTMJX/ref=zg_bs_g_157028011_d_sccl_6/146-2005364-6837740",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B08FTBKKLT",
+            "title": "Wild (The Border Brides Book 2)",
+            "author": "Jill Barnett",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91ZZyIBWVxL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wild-Border-Brides-Book-2-ebook/dp/B08FTBKKLT/ref=zg_bs_g_157028011_d_sccl_10/137-3982429-5449932",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CLGPY2TL",
-            "title": "Santa's Secret: A Pine Bend Christmas Cold Case",
-            "author": "Michelle Cornish",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71jK6OLsmUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Santas-Secret-Pine-Bend-Christmas-ebook/dp/B0CLGPY2TL/ref=zg_bs_g_158566011_d_sccl_5/146-2005364-6837740",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0DF6MLZ9M",
+            "title": "Adrift (Wrecked Book 1)",
+            "author": "Ellie Pond",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81YXKfBu23L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Adrift-Wrecked-Book-Ellie-Pond-ebook/dp/B0DF6MLZ9M/ref=zg_bs_g_158566011_d_sccl_7/137-3982429-5449932",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
