@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0GHSGY73J",
-            "title": "Romanced by the Alien Dads",
-            "author": "Carlotta Page",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81BsTOl8RXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Romanced-Alien-Dads-Carlotta-Page-ebook/dp/B0GHSGY73J/ref=zg_bs_g_158591011_d_sccl_6/137-3982429-5449932",
+            "asin": "B0H34J9FKR",
+            "title": "The She-Spider's Prize: A Forbidden Spider Monster Romance (Lusty Coil Monsters Book 2)",
+            "author": "P Maitland",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jGi0BbjkL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/She-Spiders-Prize-Forbidden-Monster-Monsters-ebook/dp/B0H34J9FKR/ref=zg_bs_g_158591011_d_sccl_7/130-3261882-0078464",
             "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0FGQFRQZD",
-            "title": "Dark Speculations: Tales of Various Shapes & Shadows Volume 2",
-            "author": "Robin Nemesszeghy",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81FWYCAoxuL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dark-Speculations-Various-Shapes-Shadows-ebook/dp/B0FGQFRQZD/ref=zg_bs_g_157056011_d_sccl_16/137-3982429-5449932",
+            "asin": "B005M94EAQ",
+            "title": "Here Be Monsters - An Anthology of Monster Tales",
+            "author": "M.T. Murphy",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71z6en7X19L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Here-Be-Monsters-Anthology-Monster-ebook/dp/B005M94EAQ/ref=zg_bs_g_157056011_d_sccl_13/130-3261882-0078464",
             "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08FTBKKLT",
-            "title": "Wild (The Border Brides Book 2)",
-            "author": "Jill Barnett",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91ZZyIBWVxL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wild-Border-Brides-Book-2-ebook/dp/B08FTBKKLT/ref=zg_bs_g_157028011_d_sccl_10/137-3982429-5449932",
+            "asin": "B0GZHQQWY2",
+            "title": "Pandora's Box and the Lost Boys (The Book of Souls 3)",
+            "author": "Kevin Moore",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81MfpLLB5DL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Pandoras-Lost-Boys-Book-Souls-ebook/dp/B0GZHQQWY2/ref=zg_bs_g_157028011_d_sccl_13/130-3261882-0078464",
             "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DF6MLZ9M",
-            "title": "Adrift (Wrecked Book 1)",
-            "author": "Ellie Pond",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81YXKfBu23L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Adrift-Wrecked-Book-Ellie-Pond-ebook/dp/B0DF6MLZ9M/ref=zg_bs_g_158566011_d_sccl_7/137-3982429-5449932",
+            "asin": "B09LNCTZDF",
+            "title": "Wicked Empire: A Dark Mafia, High School Bully Romance (Knight's Ridge Empire Book 3)",
+            "author": "Tracy Lorraine",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81FcyPXogVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wicked-Empire-Knights-Ridge-Book-ebook/dp/B09LNCTZDF/ref=zg_bs_g_158566011_d_sccl_9/130-3261882-0078464",
             "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
