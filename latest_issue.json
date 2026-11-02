@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0H34J9FKR",
-            "title": "The She-Spider's Prize: A Forbidden Spider Monster Romance (Lusty Coil Monsters Book 2)",
-            "author": "P Maitland",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jGi0BbjkL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/She-Spiders-Prize-Forbidden-Monster-Monsters-ebook/dp/B0H34J9FKR/ref=zg_bs_g_158591011_d_sccl_7/130-3261882-0078464",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0GTX39YQW",
+            "title": "A Lesson in Violence (Punga and the Silver Siren Book 1)",
+            "author": "Robert J. Duperre",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81x9BBSxO6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lesson-Violence-Punga-Silver-Siren-ebook/dp/B0GTX39YQW/ref=zg_bs_g_158591011_d_sccl_1/136-6410394-0910333",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B005M94EAQ",
-            "title": "Here Be Monsters - An Anthology of Monster Tales",
-            "author": "M.T. Murphy",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71z6en7X19L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Here-Be-Monsters-Anthology-Monster-ebook/dp/B005M94EAQ/ref=zg_bs_g_157056011_d_sccl_13/130-3261882-0078464",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0CBQLP1R3",
+            "title": "Soulless Overlook: an Overlook Collection",
+            "author": "HARGROVE PERTH",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/817H69dm7vL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Soulless-Overlook-Collection-HARGROVE-PERTH-ebook/dp/B0CBQLP1R3/ref=zg_bs_g_157056011_d_sccl_9/136-6410394-0910333",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GZHQQWY2",
-            "title": "Pandora's Box and the Lost Boys (The Book of Souls 3)",
-            "author": "Kevin Moore",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81MfpLLB5DL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Pandoras-Lost-Boys-Book-Souls-ebook/dp/B0GZHQQWY2/ref=zg_bs_g_157028011_d_sccl_13/130-3261882-0078464",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0FL3VL5FV",
+            "title": "Murder Among the Moonflowers (Clover Haven Mysteries Book 2)",
+            "author": "Kristy T Dixon",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81MU05T4F7L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Murder-Among-Moonflowers-Clover-Mysteries-ebook/dp/B0FL3VL5FV/ref=zg_bs_g_157028011_d_sccl_1/136-6410394-0910333",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B09LNCTZDF",
-            "title": "Wicked Empire: A Dark Mafia, High School Bully Romance (Knight's Ridge Empire Book 3)",
-            "author": "Tracy Lorraine",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81FcyPXogVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wicked-Empire-Knights-Ridge-Book-ebook/dp/B09LNCTZDF/ref=zg_bs_g_158566011_d_sccl_9/130-3261882-0078464",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0FH99DFM9",
+            "title": "A Baby for Christmas: A Sweet Romance (Home for Christmas Book 1)",
+            "author": "Laura Haley-McNeil",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Lawf-ot6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Baby-Christmas-Sweet-Romance-Home-ebook/dp/B0FH99DFM9/ref=zg_bs_g_158566011_d_sccl_1/136-6410394-0910333",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
