@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0GTX39YQW",
-            "title": "A Lesson in Violence (Punga and the Silver Siren Book 1)",
-            "author": "Robert J. Duperre",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81x9BBSxO6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lesson-Violence-Punga-Silver-Siren-ebook/dp/B0GTX39YQW/ref=zg_bs_g_158591011_d_sccl_1/136-6410394-0910333",
+            "asin": "B0GRNT7WR1",
+            "title": "Burn (The Turning Book 1)",
+            "author": "Carin Hart",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91NOMIfak5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Burn-Turning-Book-Carin-Hart-ebook/dp/B0GRNT7WR1/ref=zg_bs_g_158591011_d_sccl_4/135-2482154-6467769",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0CBQLP1R3",
-            "title": "Soulless Overlook: an Overlook Collection",
-            "author": "HARGROVE PERTH",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/817H69dm7vL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Soulless-Overlook-Collection-HARGROVE-PERTH-ebook/dp/B0CBQLP1R3/ref=zg_bs_g_157056011_d_sccl_9/136-6410394-0910333",
+            "asin": "B081VLC2NJ",
+            "title": "The House Isador Boxed Set: Their Vampire Queen Books 1-6",
+            "author": "Joely Sue Burkhart",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81H6pWpJgTL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/House-Isador-Boxed-Set-Vampire-ebook/dp/B081VLC2NJ/ref=zg_bs_g_157056011_d_sccl_16/135-2482154-6467769",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FL3VL5FV",
-            "title": "Murder Among the Moonflowers (Clover Haven Mysteries Book 2)",
-            "author": "Kristy T Dixon",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81MU05T4F7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Murder-Among-Moonflowers-Clover-Mysteries-ebook/dp/B0FL3VL5FV/ref=zg_bs_g_157028011_d_sccl_1/136-6410394-0910333",
+            "asin": "B0CFVTGKN2",
+            "title": "Faking the Fall: A Sweet Romantic Comedy (Harvest Hollow Love Stories)",
+            "author": "Julie Christianson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81UUWwvsf3L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Faking-Fall-Dating-Celebrity-RomCom-ebook/dp/B0CFVTGKN2/ref=zg_bs_g_157028011_d_sccl_3/135-2482154-6467769",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FH99DFM9",
-            "title": "A Baby for Christmas: A Sweet Romance (Home for Christmas Book 1)",
-            "author": "Laura Haley-McNeil",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Lawf-ot6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Baby-Christmas-Sweet-Romance-Home-ebook/dp/B0FH99DFM9/ref=zg_bs_g_158566011_d_sccl_1/136-6410394-0910333",
+            "asin": "B09MBGT692",
+            "title": "A Broken Heart Mended: A Military Sweet Cowboy Romance in Big Sky Country (Crooked Arrow Ranch Book 1)",
+            "author": "Jenna Hendricks",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91J33Zd-J9L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Broken-Heart-Mended-Military-Romance-ebook/dp/B09MBGT692/ref=zg_bs_g_158566011_d_sccl_2/135-2482154-6467769",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
