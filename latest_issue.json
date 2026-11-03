@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0CW1C98FY",
-            "title": "New Atlantis",
-            "author": "I. Mannien",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71VjWkZ4zLL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/New-Atlantis-I-Mannien-ebook/dp/B0CW1C98FY/ref=zg_bs_g_158591011_d_sccl_5/145-5710413-2727923",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B076YL6SDR",
+            "title": "SECRET SALVATION (Salvation Trilogy Book 1)",
+            "author": "Chad Josey",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81WZswXRC9L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/SECRET-SALVATION-Salvation-Trilogy-Book-ebook/dp/B076YL6SDR/ref=zg_bs_g_158591011_d_sccl_1/138-9886531-3723843",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0H137C5XN",
-            "title": "Buzz Books 2026: Fall/Winter",
-            "author": "Publishers Lunch",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71VfMBe8vYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Buzz-Books-2026-Fall-Winter-ebook/dp/B0H137C5XN/ref=zg_bs_g_157056011_d_sccl_13/145-5710413-2727923",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B006ZOP1T0",
+            "title": "A Valentine from Harlequin: Six Degrees of Romance",
+            "author": "Nancy Warren",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/51fzgBgf7xL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Valentine-Harlequin-Six-Degrees-Romance-ebook/dp/B006ZOP1T0/ref=zg_bs_g_157056011_d_sccl_18/138-9886531-3723843",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08M491YW6",
-            "title": "The Defendant's Father: A legal thriller of the accused murderer in Gresham's guest room (Michael Gresham Legal Thrillers)",
-            "author": "John Ellsworth",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91VSlSok21L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Defendants-Father-Michael-Gresham-ebook/dp/B08M491YW6/ref=zg_bs_g_157028011_d_sccl_1/145-5710413-2727923",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0H2NNXQTW",
+            "title": "Death in the Dillweeds: An Apothecary Shop Mystery (Apothecary Shop Mysteries Book 1)",
+            "author": "Kristy Tate",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91EQxTLy6UL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Death-Dillweeds-Apothecary-Mystery-Mysteries-ebook/dp/B0H2NNXQTW/ref=zg_bs_g_157028011_d_sccl_2/138-9886531-3723843",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FNQ371HN",
-            "title": "Magic, Mirth & Mayhem: A Midlife Cozy Fantasy of Yarn, Secrets & Second Chances (The Havenwood Cove Cozy Fantasy Mysteries Book 1)",
-            "author": "Susie Swenson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91l7Qltf0QL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Magic-Mirth-Mayhem-Havenwood-Mysteries-ebook/dp/B0FNQ371HN/ref=zg_bs_g_158566011_d_sccl_6/145-5710413-2727923",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0HLXXQ6VD",
+            "title": "The Earl's Defiant Wallflower (The Dukes of War Book 2)",
+            "author": "Erica Ridley",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tX+y0FdgL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Earls-Defiant-Wallflower-Dukes-Book-ebook/dp/B0HLXXQ6VD/ref=zg_bs_g_158566011_d_sccl_3/138-9886531-3723843",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
