@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B076YL6SDR",
-            "title": "SECRET SALVATION (Salvation Trilogy Book 1)",
-            "author": "Chad Josey",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81WZswXRC9L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/SECRET-SALVATION-Salvation-Trilogy-Book-ebook/dp/B076YL6SDR/ref=zg_bs_g_158591011_d_sccl_1/138-9886531-3723843",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0FQG1S63H",
+            "title": "Boltguns and Duct Tape (Spaceship Mechanic Book 1)",
+            "author": "Jamie McFarlane",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81LcMOPj3fL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Boltguns-Duct-Tape-Spaceship-Mechanic-ebook/dp/B0FQG1S63H/ref=zg_bs_g_158591011_d_sccl_4/135-9483334-6658155",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B006ZOP1T0",
-            "title": "A Valentine from Harlequin: Six Degrees of Romance",
-            "author": "Nancy Warren",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/51fzgBgf7xL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Valentine-Harlequin-Six-Degrees-Romance-ebook/dp/B006ZOP1T0/ref=zg_bs_g_157056011_d_sccl_18/138-9886531-3723843",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B00YNCZ53S",
+            "title": "Onward, Voyager: A Collection of Teasers of Bestselling Science Fiction and Fantasy Novels by Harper Voyager",
+            "author": "Chuck Wendig",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91oXDDktZ7L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Onward-Voyager-Science-Fiction-Fantasy-ebook/dp/B00YNCZ53S/ref=zg_bs_g_157056011_d_sccl_15/135-9483334-6658155",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0H2NNXQTW",
-            "title": "Death in the Dillweeds: An Apothecary Shop Mystery (Apothecary Shop Mysteries Book 1)",
-            "author": "Kristy Tate",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91EQxTLy6UL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Death-Dillweeds-Apothecary-Mystery-Mysteries-ebook/dp/B0H2NNXQTW/ref=zg_bs_g_157028011_d_sccl_2/138-9886531-3723843",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0BVJFHJCK",
+            "title": "Athenaeum, Inc. : Door Number Three",
+            "author": "Dan Kemp",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-vE+T5yAL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Athenaeum-Inc-Door-Number-Three-ebook/dp/B0BVJFHJCK/ref=zg_bs_g_157028011_d_sccl_3/135-9483334-6658155",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HLXXQ6VD",
-            "title": "The Earl's Defiant Wallflower (The Dukes of War Book 2)",
-            "author": "Erica Ridley",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tX+y0FdgL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Earls-Defiant-Wallflower-Dukes-Book-ebook/dp/B0HLXXQ6VD/ref=zg_bs_g_158566011_d_sccl_3/138-9886531-3723843",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B08TY6HSHQ",
+            "title": "Billionaire Lumberjack: A Standalone Billionaire Mountain Man Forced Proximity Romance (Lumberjacks in Love Book 1)",
+            "author": "Gwyn McNamee",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/919jZ+6P6qL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Billionaire-Lumberjack-Standalone-Mountain-Proximity-ebook/dp/B08TY6HSHQ/ref=zg_bs_g_158566011_d_sccl_7/135-9483334-6658155",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
