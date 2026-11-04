@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0FQG1S63H",
-            "title": "Boltguns and Duct Tape (Spaceship Mechanic Book 1)",
-            "author": "Jamie McFarlane",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81LcMOPj3fL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Boltguns-Duct-Tape-Spaceship-Mechanic-ebook/dp/B0FQG1S63H/ref=zg_bs_g_158591011_d_sccl_4/135-9483334-6658155",
+            "asin": "B08PDRSCN4",
+            "title": "Noxx: Alien Adoption Agency #1",
+            "author": "Tasha Black",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/919xrN4HqqL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Noxx-Alien-Adoption-Agency-1-ebook/dp/B08PDRSCN4/ref=zg_bs_g_158591011_d_sccl_7/147-0441277-9386934",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00YNCZ53S",
-            "title": "Onward, Voyager: A Collection of Teasers of Bestselling Science Fiction and Fantasy Novels by Harper Voyager",
-            "author": "Chuck Wendig",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91oXDDktZ7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Onward-Voyager-Science-Fiction-Fantasy-ebook/dp/B00YNCZ53S/ref=zg_bs_g_157056011_d_sccl_15/135-9483334-6658155",
+            "asin": "B0HL5DJ2Y4",
+            "title": "Spanish Short Stories for Intermediate Adults: 18 Latin American Stories with Richer Dialogue to Build Fluency and Confidence",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q5npk0XmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Spanish-Short-Stories-Intermediate-Adults-ebook/dp/B0HL5DJ2Y4/ref=zg_bs_g_157056011_d_sccl_16/147-0441277-9386934",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0BVJFHJCK",
-            "title": "Athenaeum, Inc. : Door Number Three",
-            "author": "Dan Kemp",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-vE+T5yAL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Athenaeum-Inc-Door-Number-Three-ebook/dp/B0BVJFHJCK/ref=zg_bs_g_157028011_d_sccl_3/135-9483334-6658155",
+            "asin": "B013KNYGVC",
+            "title": "The Janitor and the Spy (The Thornhill Trilogy Book 1)",
+            "author": "S. W. Ellenwood",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91joYrdPFeL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Janitor-Spy-Thornhill-Book-ebook/dp/B013KNYGVC/ref=zg_bs_g_157028011_d_sccl_5/147-0441277-9386934",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B08TY6HSHQ",
-            "title": "Billionaire Lumberjack: A Standalone Billionaire Mountain Man Forced Proximity Romance (Lumberjacks in Love Book 1)",
-            "author": "Gwyn McNamee",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/919jZ+6P6qL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Billionaire-Lumberjack-Standalone-Mountain-Proximity-ebook/dp/B08TY6HSHQ/ref=zg_bs_g_158566011_d_sccl_7/135-9483334-6658155",
+            "asin": "B0D4MHNNHH",
+            "title": "Offshore Ambush: a Second Chance, Forced Proximity Clean Romantic Suspense set on the Gulf coast (Jeopardized Reunions)",
+            "author": "Sherri Wilson Johnson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81WaNjQwu7L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Offshore-Ambush-Jeopardized-Reunions-Johnson-ebook/dp/B0D4MHNNHH/ref=zg_bs_g_158566011_d_sccl_8/147-0441277-9386934",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
