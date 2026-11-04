@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B08PDRSCN4",
-            "title": "Noxx: Alien Adoption Agency #1",
-            "author": "Tasha Black",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/919xrN4HqqL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Noxx-Alien-Adoption-Agency-1-ebook/dp/B08PDRSCN4/ref=zg_bs_g_158591011_d_sccl_7/147-0441277-9386934",
+            "asin": "B0FVTDKR96",
+            "title": "RIVENNIA: A Game of Wagers",
+            "author": "Jaime Urencio",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/813geBrCmmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/RIVENNIA-Game-Wagers-Jaime-Urencio-ebook/dp/B0FVTDKR96/ref=zg_bs_g_158591011_d_sccl_3/133-8181658-7285355",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HL5DJ2Y4",
-            "title": "Spanish Short Stories for Intermediate Adults: 18 Latin American Stories with Richer Dialogue to Build Fluency and Confidence",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q5npk0XmL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Spanish-Short-Stories-Intermediate-Adults-ebook/dp/B0HL5DJ2Y4/ref=zg_bs_g_157056011_d_sccl_16/147-0441277-9386934",
+            "asin": "B018EAG04M",
+            "title": "One Night with a Cowboy: A Western Romance Sampler",
+            "author": "Linda Lael Miller",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/A1nICndvkJL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/One-Night-Cowboy-Western-Romance-ebook/dp/B018EAG04M/ref=zg_bs_g_157056011_d_sccl_17/133-8181658-7285355",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B013KNYGVC",
-            "title": "The Janitor and the Spy (The Thornhill Trilogy Book 1)",
-            "author": "S. W. Ellenwood",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91joYrdPFeL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Janitor-Spy-Thornhill-Book-ebook/dp/B013KNYGVC/ref=zg_bs_g_157028011_d_sccl_5/147-0441277-9386934",
+            "asin": "B0H2WZY4GC",
+            "title": "As the Curtain Fell (Close to Home - A Thriller Collection Book 1)",
+            "author": "Danielle Stewart",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71iKDXXNxzL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Curtain-Fell-Close-Home-Collection-ebook/dp/B0H2WZY4GC/ref=zg_bs_g_157028011_d_sccl_2/133-8181658-7285355",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0D4MHNNHH",
-            "title": "Offshore Ambush: a Second Chance, Forced Proximity Clean Romantic Suspense set on the Gulf coast (Jeopardized Reunions)",
-            "author": "Sherri Wilson Johnson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81WaNjQwu7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Offshore-Ambush-Jeopardized-Reunions-Johnson-ebook/dp/B0D4MHNNHH/ref=zg_bs_g_158566011_d_sccl_8/147-0441277-9386934",
+            "asin": "B0FMY4PHNF",
+            "title": "Please Send Snow: A Sweet Small Town Romance (Angel Mountain Christmas Book 1)",
+            "author": "Clara Pines",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/816TeeqPxvL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Please-Send-Snow-Mountain-Christmas-ebook/dp/B0FMY4PHNF/ref=zg_bs_g_158566011_d_sccl_2/133-8181658-7285355",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
