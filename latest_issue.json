@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0CPQ8SHFW",
-            "title": "Invictus Omnibus",
-            "author": "Rachel Neumeier",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81r-OaF4sQL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Invictus-Omnibus-Rachel-Neumeier-ebook/dp/B0CPQ8SHFW/ref=zg_bs_g_158591011_d_sccl_8/135-9998469-4498836",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0H2RCPQWS",
+            "title": "When The World Went Still - The Solar Interference Series Book 1",
+            "author": "J.R. Tate",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ViVLHj-uL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/When-World-Went-Still-Interference-ebook/dp/B0H2RCPQWS/ref=zg_bs_g_158591011_d_sccl_1/133-8210998-6847855",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0H6XHHJSQ",
-            "title": "What They Owe (Best Served Cold)",
-            "author": "Shakuita Johnson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81IsyGi6rdL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/What-They-Best-Served-Cold-ebook/dp/B0H6XHHJSQ/ref=zg_bs_g_157056011_d_sccl_15/135-9998469-4498836",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B08N4BL8W9",
+            "title": "50 Masterpieces you have to read before you die Vol: 4 (2021 Edition)",
+            "author": "Ry\u016bnosuke Akutagawa",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81JJae7mliL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Masterpieces-you-have-read-before-ebook/dp/B08N4BL8W9/ref=zg_bs_g_157056011_d_sccl_11/133-8210998-6847855",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FMFFQW4V",
-            "title": "Cheat: A clever and utterly gripping psychological thriller by Philip Anthony Smith.",
-            "author": "Philip Anthony Smith",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/814FgCYSAfL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Cheat-utterly-gripping-psychological-thriller-ebook/dp/B0FMFFQW4V/ref=zg_bs_g_157028011_d_sccl_13/135-9998469-4498836",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0H9VCHZVF",
+            "title": "Return to Ruby's Ranch: Ruby's Ranch Series Book 1",
+            "author": "Rhonda Frankhouser",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/913qjl2ceBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Return-Rubys-Ranch-Book-ebook/dp/B0H9VCHZVF/ref=zg_bs_g_157028011_d_sccl_4/133-8210998-6847855",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0F9SQZKVC",
-            "title": "Tell Them That I'm Coming (Sombra Demons)",
-            "author": "Sarah Spade",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tMZAGWu5L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tell-Them-Coming-Sombra-Demons-ebook/dp/B0F9SQZKVC/ref=zg_bs_g_158566011_d_sccl_9/135-9998469-4498836",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0DJ8934YJ",
+            "title": "Fallen Dove (Fallen Lords MC 2nd Gen Book 1)",
+            "author": "Winter Travers",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81TaUkfc6ZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fallen-Dove-Lords-2nd-Book-ebook/dp/B0DJ8934YJ/ref=zg_bs_g_158566011_d_sccl_3/133-8210998-6847855",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
