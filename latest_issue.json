@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0HLPZ3BZ9",
-            "title": "Helios Crown: A Sci-Fi Mystery Thriller",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/816kQIkfSGL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Helios-Crown-Sci-Fi-Mystery-Thriller-ebook/dp/B0HLPZ3BZ9/ref=zg_bs_g_158591011_d_sccl_7/135-0544660-3341550",
+            "asin": "B0CPQ8SHFW",
+            "title": "Invictus Omnibus",
+            "author": "Rachel Neumeier",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81r-OaF4sQL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Invictus-Omnibus-Rachel-Neumeier-ebook/dp/B0CPQ8SHFW/ref=zg_bs_g_158591011_d_sccl_8/135-9998469-4498836",
             "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B083QBL6L8",
-            "title": "Little Women: Complete Series",
-            "author": "Louisa May Alcott",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71kSNUHq+1L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Little-Women-Complete-Novels-Wives-ebook/dp/B083QBL6L8/ref=zg_bs_g_157056011_d_sccl_13/135-0544660-3341550",
+            "asin": "B0H6XHHJSQ",
+            "title": "What They Owe (Best Served Cold)",
+            "author": "Shakuita Johnson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81IsyGi6rdL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/What-They-Best-Served-Cold-ebook/dp/B0H6XHHJSQ/ref=zg_bs_g_157056011_d_sccl_15/135-9998469-4498836",
             "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GX58ZHJX",
-            "title": "Dead Run: A thriller (Bruno Johnson Crime Thrillers Book 1)",
-            "author": "David Putnam",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Id2CiXmQL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dead-Run-thriller-Johnson-Thrillers-ebook/dp/B0GX58ZHJX/ref=zg_bs_g_157028011_d_sccl_3/135-0544660-3341550",
+            "asin": "B0FMFFQW4V",
+            "title": "Cheat: A clever and utterly gripping psychological thriller by Philip Anthony Smith.",
+            "author": "Philip Anthony Smith",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/814FgCYSAfL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Cheat-utterly-gripping-psychological-thriller-ebook/dp/B0FMFFQW4V/ref=zg_bs_g_157028011_d_sccl_13/135-9998469-4498836",
             "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B07WP6QVN1",
-            "title": "Special Delivery: A Standalone Holiday Romance",
-            "author": "Lauren Blakely",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/717VAYJPd9L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Special-Delivery-Always-Satisfied-Book-ebook/dp/B07WP6QVN1/ref=zg_bs_g_158566011_d_sccl_8/135-0544660-3341550",
+            "asin": "B0F9SQZKVC",
+            "title": "Tell Them That I'm Coming (Sombra Demons)",
+            "author": "Sarah Spade",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tMZAGWu5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tell-Them-Coming-Sombra-Demons-ebook/dp/B0F9SQZKVC/ref=zg_bs_g_158566011_d_sccl_9/135-9998469-4498836",
             "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
