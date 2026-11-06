@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HQFPWQTS",
-            "title": "The Warning Came Too Late: An EMP Post Apocalypse Prepper Survival Thriller",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81VOlEMeMWL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Warning-Came-Too-Late-Apocalypse-ebook/dp/B0HQFPWQTS/ref=zg_bs_g_158591011_d_sccl_3/147-4924474-9668546",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0GGXBCLQQ",
+            "title": "Accidental Dark Lord (Worst Villain Series Book 1)",
+            "author": "C Xavier",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81pBS+mhcUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Accidental-Dark-Lord-C-Xavier-ebook/dp/B0GGXBCLQQ/ref=zg_bs_g_158591011_d_sccl_6/136-8322858-6359104",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0FNLN3WQ8",
-            "title": "Karma: What Goes Around... Comes Around...",
-            "author": "Ebony Evans",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/51ryKVvG9XL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Karma-What-Goes-Around-Comes-ebook/dp/B0FNLN3WQ8/ref=zg_bs_g_157056011_d_sccl_1/147-4924474-9668546",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0F495F72S",
+            "title": "Vanished: Six Days In Seven Ways",
+            "author": "Kaylynn Hunt",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71eWrSydJHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Vanished-Six-Days-Seven-Ways-ebook/dp/B0F495F72S/ref=zg_bs_g_157056011_d_sccl_5/136-8322858-6359104",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GMCLFXQ8",
-            "title": "Learning to Breathe Again: A Novel (The Work of Becoming Trilogy Book 1)",
-            "author": "Tonya Cam",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/815H9nHsN8L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Learning-Breathe-Again-Becoming-Trilogy-ebook/dp/B0GMCLFXQ8/ref=zg_bs_g_157028011_d_sccl_3/147-4924474-9668546",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0H8L1JRD4",
+            "title": "The Alchemy of Souls: The Sun Series (The Secret World of Maggie Grey Book Series 5)",
+            "author": "Granger",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81UMe3ee64L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Alchemy-Souls-Secret-World-Maggie-ebook/dp/B0H8L1JRD4/ref=zg_bs_g_157028011_d_sccl_3/136-8322858-6359104",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FZMS9WH9",
-            "title": "Wherever Love Finds You",
-            "author": "T'Lyn",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71yUrMMWLJL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Wherever-Love-Finds-You-TLyn-ebook/dp/B0FZMS9WH9/ref=zg_bs_g_158566011_d_sccl_4/147-4924474-9668546",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0DXC331LY",
+            "title": "The Three Brothers (The Secret World of Maggie Grey Book Series 3)",
+            "author": ". Granger",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81t-NZX092L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Three-Brothers-Secret-World-Maggie-ebook/dp/B0DXC331LY/ref=zg_bs_g_158566011_d_sccl_5/136-8322858-6359104",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
