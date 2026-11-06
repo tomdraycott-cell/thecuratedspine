@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0DHSL34BK",
-            "title": "Pressed (The Planar Pages Book 3)",
-            "author": "D. Hale Rambo",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bTaVsoTUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Pressed-Planar-Pages-Book-3-ebook/dp/B0DHSL34BK/ref=zg_bs_g_158591011_d_sccl_2/146-7719909-8279805",
+            "asin": "B0HQFPWQTS",
+            "title": "The Warning Came Too Late: An EMP Post Apocalypse Prepper Survival Thriller",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81VOlEMeMWL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Warning-Came-Too-Late-Apocalypse-ebook/dp/B0HQFPWQTS/ref=zg_bs_g_158591011_d_sccl_3/147-4924474-9668546",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0D2GKDWMT",
-            "title": "In This House: Five Families, Five Stories, and The Secrets A House Holds.",
+            "asin": "B0FNLN3WQ8",
+            "title": "Karma: What Goes Around... Comes Around...",
             "author": "Ebony Evans",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81JCSB17zcL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/This-House-Families-Stories-Secrets-ebook/dp/B0D2GKDWMT/ref=zg_bs_g_157056011_d_sccl_1/146-7719909-8279805",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/51ryKVvG9XL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Karma-What-Goes-Around-Comes-ebook/dp/B0FNLN3WQ8/ref=zg_bs_g_157056011_d_sccl_1/147-4924474-9668546",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0F4NFSTRT",
-            "title": "For The Weekend: A Grumpy Sunshine Fake Dating Romance (Stone Family Series Book 4)",
-            "author": "Sophie Andrews",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71YkR5+1O+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Weekend-Grumpy-Sunshine-Dating-Romance-ebook/dp/B0F4NFSTRT/ref=zg_bs_g_157028011_d_sccl_2/146-7719909-8279805",
+            "asin": "B0GMCLFXQ8",
+            "title": "Learning to Breathe Again: A Novel (The Work of Becoming Trilogy Book 1)",
+            "author": "Tonya Cam",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/815H9nHsN8L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Learning-Breathe-Again-Becoming-Trilogy-ebook/dp/B0GMCLFXQ8/ref=zg_bs_g_157028011_d_sccl_3/147-4924474-9668546",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HBR6DBC1",
-            "title": "Write Here With You (Another Love Series Book 2)",
-            "author": "Meisha G.",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71r4pBflwsL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Write-Here-Another-Love-Book-ebook/dp/B0HBR6DBC1/ref=zg_bs_g_158566011_d_sccl_4/146-7719909-8279805",
+            "asin": "B0FZMS9WH9",
+            "title": "Wherever Love Finds You",
+            "author": "T'Lyn",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71yUrMMWLJL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Wherever-Love-Finds-You-TLyn-ebook/dp/B0FZMS9WH9/ref=zg_bs_g_158566011_d_sccl_4/147-4924474-9668546",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
