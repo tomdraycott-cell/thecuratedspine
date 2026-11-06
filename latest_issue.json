@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0BZK5DF7R",
-            "title": "Falling Stars",
-            "author": "Julie Rogers",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81a2QwMthJL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Falling-Stars-Julie-Rogers-ebook/dp/B0BZK5DF7R/ref=zg_bs_g_158591011_d_sccl_3/140-5309453-7504216",
+            "asin": "B0DHSL34BK",
+            "title": "Pressed (The Planar Pages Book 3)",
+            "author": "D. Hale Rambo",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bTaVsoTUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Pressed-Planar-Pages-Book-3-ebook/dp/B0DHSL34BK/ref=zg_bs_g_158591011_d_sccl_2/146-7719909-8279805",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0FNWZPGD3",
-            "title": "Bruised Hearts & Bloody Hands (Stories for the House of Synners Book 1)",
-            "author": "Nydia Synn",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71OvbhpKieL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Bruised-Hearts-Bloody-Stories-Synners-ebook/dp/B0FNWZPGD3/ref=zg_bs_g_157056011_d_sccl_14/140-5309453-7504216",
+            "asin": "B0D2GKDWMT",
+            "title": "In This House: Five Families, Five Stories, and The Secrets A House Holds.",
+            "author": "Ebony Evans",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81JCSB17zcL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/This-House-Families-Stories-Secrets-ebook/dp/B0D2GKDWMT/ref=zg_bs_g_157056011_d_sccl_1/146-7719909-8279805",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0CYP1WDHL",
-            "title": "Hard Blows: Short Stories of Mystery, Crime and Suspense (Allison Culbertson Legal Thriller)",
-            "author": "Morley Swingle",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71iuury9yrL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Hard-Blows-Stories-Suspense-Culbertson-ebook/dp/B0CYP1WDHL/ref=zg_bs_g_157028011_d_sccl_6/140-5309453-7504216",
+            "asin": "B0F4NFSTRT",
+            "title": "For The Weekend: A Grumpy Sunshine Fake Dating Romance (Stone Family Series Book 4)",
+            "author": "Sophie Andrews",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71YkR5+1O+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Weekend-Grumpy-Sunshine-Dating-Romance-ebook/dp/B0F4NFSTRT/ref=zg_bs_g_157028011_d_sccl_2/146-7719909-8279805",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DGDKHW83",
-            "title": "Inflamed In His Love",
-            "author": "Tay Mo'Nae",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ofcyp1NaL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Inflamed-His-Love-Tay-MoNae-ebook/dp/B0DGDKHW83/ref=zg_bs_g_158566011_d_sccl_4/140-5309453-7504216",
+            "asin": "B0HBR6DBC1",
+            "title": "Write Here With You (Another Love Series Book 2)",
+            "author": "Meisha G.",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71r4pBflwsL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Write-Here-Another-Love-Book-ebook/dp/B0HBR6DBC1/ref=zg_bs_g_158566011_d_sccl_4/146-7719909-8279805",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
