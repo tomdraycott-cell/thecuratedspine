@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0GGXBCLQQ",
-            "title": "Accidental Dark Lord (Worst Villain Series Book 1)",
-            "author": "C Xavier",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81pBS+mhcUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Accidental-Dark-Lord-C-Xavier-ebook/dp/B0GGXBCLQQ/ref=zg_bs_g_158591011_d_sccl_6/136-8322858-6359104",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0FD9GXJRV",
+            "title": "THE CONTAINMENT CODE : A Story of Soul Swaps, Divine Memory, and a System Breach (THE CHOSEN FILES)",
+            "author": "Dia Gage",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71nhiEzQDPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/CONTAINMENT-CODE-Divine-Memory-System-ebook/dp/B0FD9GXJRV/ref=zg_bs_g_158591011_d_sccl_7/146-7877756-5154239",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0F495F72S",
-            "title": "Vanished: Six Days In Seven Ways",
+            "asin": "B0CG2WMKPV",
+            "title": "The Freestyle Cypher (The Cypher Series)",
             "author": "Kaylynn Hunt",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71eWrSydJHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Vanished-Six-Days-Seven-Ways-ebook/dp/B0F495F72S/ref=zg_bs_g_157056011_d_sccl_5/136-8322858-6359104",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91IwcZ-CjBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Freestyle-Cypher-Kaylynn-Hunt-ebook/dp/B0CG2WMKPV/ref=zg_bs_g_157056011_d_sccl_6/146-7877756-5154239",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0H8L1JRD4",
-            "title": "The Alchemy of Souls: The Sun Series (The Secret World of Maggie Grey Book Series 5)",
+            "asin": "B0FLW3ZDS6",
+            "title": "The Mortal Affairs (The Secret World of Maggie Grey Book Series 4)",
             "author": "Granger",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81UMe3ee64L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Alchemy-Souls-Secret-World-Maggie-ebook/dp/B0H8L1JRD4/ref=zg_bs_g_157028011_d_sccl_3/136-8322858-6359104",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71B5XkKb+PL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Mortal-Affairs-Secret-World-Maggie-ebook/dp/B0FLW3ZDS6/ref=zg_bs_g_157028011_d_sccl_6/146-7877756-5154239",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DXC331LY",
-            "title": "The Three Brothers (The Secret World of Maggie Grey Book Series 3)",
-            "author": ". Granger",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81t-NZX092L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Three-Brothers-Secret-World-Maggie-ebook/dp/B0DXC331LY/ref=zg_bs_g_158566011_d_sccl_5/136-8322858-6359104",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0FXN51YP2",
+            "title": "Seven Minutes In Heaven",
+            "author": "elle kayson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/714eexBN65L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Seven-Minutes-Heaven-elle-kayson-ebook/dp/B0FXN51YP2/ref=zg_bs_g_158566011_d_sccl_6/146-7877756-5154239",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
