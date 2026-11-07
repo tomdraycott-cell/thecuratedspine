@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0FD9GXJRV",
-            "title": "THE CONTAINMENT CODE : A Story of Soul Swaps, Divine Memory, and a System Breach (THE CHOSEN FILES)",
-            "author": "Dia Gage",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71nhiEzQDPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/CONTAINMENT-CODE-Divine-Memory-System-ebook/dp/B0FD9GXJRV/ref=zg_bs_g_158591011_d_sccl_7/146-7877756-5154239",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0HG9XGYRT",
+            "title": "Toolbert is Here to Help: Grease and Glory: Book 1: An Action Packed Sci-Fi Comedy Adventure",
+            "author": "Morgan Quaid",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81KbTNxSFVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Toolbert-Here-Help-Grease-Adventure-ebook/dp/B0HG9XGYRT/ref=zg_bs_g_158591011_d_sccl_5/130-3216214-0230903",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0CG2WMKPV",
-            "title": "The Freestyle Cypher (The Cypher Series)",
-            "author": "Kaylynn Hunt",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91IwcZ-CjBL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Freestyle-Cypher-Kaylynn-Hunt-ebook/dp/B0CG2WMKPV/ref=zg_bs_g_157056011_d_sccl_6/146-7877756-5154239",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0FSQSSMZ6",
+            "title": "If Only For One Night",
+            "author": "Nadia Nicole",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81nzo+JYpnL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Only-One-Night-Nadia-Nicole-ebook/dp/B0FSQSSMZ6/ref=zg_bs_g_157056011_d_sccl_6/130-3216214-0230903",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FLW3ZDS6",
-            "title": "The Mortal Affairs (The Secret World of Maggie Grey Book Series 4)",
-            "author": "Granger",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71B5XkKb+PL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Mortal-Affairs-Secret-World-Maggie-ebook/dp/B0FLW3ZDS6/ref=zg_bs_g_157028011_d_sccl_6/146-7877756-5154239",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0H3DPD6CH",
+            "title": "MURDER IN MYKONOS a gripping mystery full of twists (Chief Inspector Andreas Kaldis Mysteries Book 1)",
+            "author": "Jeffrey Siger",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81fTTfiX8SL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/MYKONOS-gripping-mystery-Inspector-Mysteries-ebook/dp/B0H3DPD6CH/ref=zg_bs_g_157028011_d_sccl_1/130-3216214-0230903",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FXN51YP2",
-            "title": "Seven Minutes In Heaven",
-            "author": "elle kayson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/714eexBN65L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Seven-Minutes-Heaven-elle-kayson-ebook/dp/B0FXN51YP2/ref=zg_bs_g_158566011_d_sccl_6/146-7877756-5154239",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0DV953KZD",
+            "title": "Stolen Kisses: A Grumpy-Sunshine Romance (The Sterling Brothers Book 1)",
+            "author": "Layla Hagen",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bQiGY4h+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Stolen-Kisses-Grumpy-Sunshine-Sterling-Brothers-ebook/dp/B0DV953KZD/ref=zg_bs_g_158566011_d_sccl_2/130-3216214-0230903",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
