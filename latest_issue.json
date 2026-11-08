@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B07KDWWL3C",
-            "title": "Olivia: Rebirth of the Anointed (The Goldenborn Legacy Book 1)",
+            "asin": "B0FFXZHD65",
+            "title": "Olivia: Reckoning of the Anointed (The Goldenborn Legacy Book 3)",
             "author": "Miki Starr",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Uhmtdri+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Olivia-Rebirth-Anointed-Miki-Starr-ebook/dp/B07KDWWL3C/ref=zg_bs_g_158591011_d_sccl_6/135-6481445-3484434",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71xlzHVBkhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Olivia-Reckoning-Anointed-Goldenborn-Saga-ebook/dp/B0FFXZHD65/ref=zg_bs_g_158591011_d_sccl_7/145-1823478-6878612",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0CYR8KVZC",
-            "title": "The Freestyle Cypher Vol. 2: The Suspense of It All (The Cypher Series)",
-            "author": "Kaylynn Hunt",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81n295hdfIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Freestyle-Cypher-Vol-Suspense-All-ebook/dp/B0CYR8KVZC/ref=zg_bs_g_157056011_d_sccl_6/135-6481445-3484434",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0FTDFQY7T",
+            "title": "Unbreak My Heart",
+            "author": "Naya Morgan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XgWbU9cmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Unbreak-My-Heart-Naya-Morgan-ebook/dp/B0FTDFQY7T/ref=zg_bs_g_157056011_d_sccl_8/145-1823478-6878612",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0D43K86GZ",
-            "title": "The Secret World of Maggie Grey (The Secret World of Maggie Grey Book Series 1)",
-            "author": "Granger",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71hng8BaksL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Secret-World-Maggie-Grey-Collins-ebook/dp/B0D43K86GZ/ref=zg_bs_g_157028011_d_sccl_6/135-6481445-3484434",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
-            "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B0CXBHSWW9",
-            "title": "Intolerable (The Phoenix Club Book 3)",
-            "author": "Darcy Burke",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/815x48Wc+pL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Intolerable-Phoenix-Club-Book-3-ebook/dp/B0CXBHSWW9/ref=zg_bs_g_158566011_d_sccl_4/135-6481445-3484434",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0DYM6SDH7",
+            "title": "Meet Cute or Your Money Back (SEALed with a Kiss)",
+            "author": "Katana Collins",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71D3difO3TL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Meet-Cute-Your-Money-Back-ebook/dp/B0DYM6SDH7/ref=zg_bs_g_158566011_d_sccl_5/145-1823478-6878612",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
