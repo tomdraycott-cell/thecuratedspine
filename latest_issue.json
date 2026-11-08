@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0B5QJYH1N",
-            "title": "Vertical City",
-            "author": "Tristan Scott",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81PX-NxSr0L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Vertical-City-Tristan-Scott-ebook/dp/B0B5QJYH1N/ref=zg_bs_g_158591011_d_sccl_2/130-3707481-3838759",
+            "asin": "B0DH7X1GHR",
+            "title": "Olivia: Rise of the Anointed (The Goldenborn Legacy Book 2)",
+            "author": "Miki Starr",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71qzVJnmyjL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Olivia-Rise-Anointed-Goldenborn-Saga-ebook/dp/B0DH7X1GHR/ref=zg_bs_g_158591011_d_sccl_5/147-5206985-0133337",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0DY5R32DX",
-            "title": "The Games Lovers Play",
-            "author": "K. Blaze",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91PFh4MZqjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Games-Lovers-Play-K-Blaze-ebook/dp/B0DY5R32DX/ref=zg_bs_g_157056011_d_sccl_8/130-3707481-3838759",
+            "asin": "B0HQ8JNP5N",
+            "title": "Murder by Accident: And Other Dark Tales \u2014 Second Edition Expanded \u2014 A Domestic Thriller Novella: One family. One lockdown. O",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q2948bIgL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Murder-Accident-Expanded-lockdown-accident-ebook/dp/B0HQ8JNP5N/ref=zg_bs_g_157056011_d_sccl_20/147-5206985-0133337",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0DJDP5KN2",
-            "title": "Temper's Mistake (The Deputy Temper Series Book 1)",
-            "author": "Richard DeGrandpre",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/917GnSa2DwL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tempers-Mistake-Deputy-Temper-Book-ebook/dp/B0DJDP5KN2/ref=zg_bs_g_157028011_d_sccl_1/130-3707481-3838759",
+            "asin": "B0D64ZN9RX",
+            "title": "Point of Origin (A Samantha Church Mystery Book 7)",
+            "author": "Betta Ferrendelli",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71+GdJOJSHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Point-Origin-Samantha-Church-Mystery-ebook/dp/B0D64ZN9RX/ref=zg_bs_g_157028011_d_sccl_4/147-5206985-0133337",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0D2FMTTJW",
-            "title": "Ella Gets the D",
-            "author": "Tanvier Peart",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81OnGzFCJUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Ella-Gets-D-Tanvier-Peart-ebook/dp/B0D2FMTTJW/ref=zg_bs_g_158566011_d_sccl_5/130-3707481-3838759",
+            "asin": "B0D7F34Q1K",
+            "title": "Bearing North (Grizzly Protection: Alaska Shifter Branch Book 1)",
+            "author": "Elva Birch",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/814B2ivrxaL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Bearing-North-Day-Care-Shifters-ebook/dp/B0D7F34Q1K/ref=zg_bs_g_158566011_d_sccl_7/147-5206985-0133337",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
