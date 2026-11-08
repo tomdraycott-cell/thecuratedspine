@@ -1,29 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0FFXZHD65",
-            "title": "Olivia: Reckoning of the Anointed (The Goldenborn Legacy Book 3)",
-            "author": "Miki Starr",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71xlzHVBkhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Olivia-Reckoning-Anointed-Goldenborn-Saga-ebook/dp/B0FFXZHD65/ref=zg_bs_g_158591011_d_sccl_7/145-1823478-6878612",
+            "asin": "B0B5QJYH1N",
+            "title": "Vertical City",
+            "author": "Tristan Scott",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81PX-NxSr0L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Vertical-City-Tristan-Scott-ebook/dp/B0B5QJYH1N/ref=zg_bs_g_158591011_d_sccl_2/130-3707481-3838759",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0FTDFQY7T",
-            "title": "Unbreak My Heart",
-            "author": "Naya Morgan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XgWbU9cmL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Unbreak-My-Heart-Naya-Morgan-ebook/dp/B0FTDFQY7T/ref=zg_bs_g_157056011_d_sccl_8/145-1823478-6878612",
+            "asin": "B0DY5R32DX",
+            "title": "The Games Lovers Play",
+            "author": "K. Blaze",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91PFh4MZqjL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Games-Lovers-Play-K-Blaze-ebook/dp/B0DY5R32DX/ref=zg_bs_g_157056011_d_sccl_8/130-3707481-3838759",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0DYM6SDH7",
-            "title": "Meet Cute or Your Money Back (SEALed with a Kiss)",
-            "author": "Katana Collins",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71D3difO3TL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Meet-Cute-Your-Money-Back-ebook/dp/B0DYM6SDH7/ref=zg_bs_g_158566011_d_sccl_5/145-1823478-6878612",
+            "asin": "B0DJDP5KN2",
+            "title": "Temper's Mistake (The Deputy Temper Series Book 1)",
+            "author": "Richard DeGrandpre",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/917GnSa2DwL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tempers-Mistake-Deputy-Temper-Book-ebook/dp/B0DJDP5KN2/ref=zg_bs_g_157028011_d_sccl_1/130-3707481-3838759",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0D2FMTTJW",
+            "title": "Ella Gets the D",
+            "author": "Tanvier Peart",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81OnGzFCJUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ella-Gets-D-Tanvier-Peart-ebook/dp/B0D2FMTTJW/ref=zg_bs_g_158566011_d_sccl_5/130-3707481-3838759",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
