@@ -1,40 +1,31 @@
 {
     "books": [
         {
-            "asin": "B0DH7X1GHR",
-            "title": "Olivia: Rise of the Anointed (The Goldenborn Legacy Book 2)",
-            "author": "Miki Starr",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71qzVJnmyjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Olivia-Rise-Anointed-Goldenborn-Saga-ebook/dp/B0DH7X1GHR/ref=zg_bs_g_158591011_d_sccl_5/147-5206985-0133337",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0HQVHTN3T",
+            "title": "Home Before the Snow: An EMP Post Apocalypse Prepper Survival Thriller Boxset",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61CdzmIJ+FL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Home-Before-Snow-Apocalypse-Survival-ebook/dp/B0HQVHTN3T/ref=zg_bs_g_158591011_d_sccl_1/138-1994405-6848204",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HQ8JNP5N",
-            "title": "Murder by Accident: And Other Dark Tales \u2014 Second Edition Expanded \u2014 A Domestic Thriller Novella: One family. One lockdown. O",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Q2948bIgL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Murder-Accident-Expanded-lockdown-accident-ebook/dp/B0HQ8JNP5N/ref=zg_bs_g_157056011_d_sccl_20/147-5206985-0133337",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B0GX32ZBJ4",
+            "title": "Short Stories for Seniors Who Love a Good Mystery: 25 Large Print Cozy Mystery Stories That Entertain, Engage, and Gently Keep the Mind Sharp (Easy Moments for Seniors Book 2)",
+            "author": "Owen R. Vance",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DlPZa2XpL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Short-Stories-Seniors-Love-Mystery-ebook/dp/B0GX32ZBJ4/ref=zg_bs_g_157056011_d_sccl_11/138-1994405-6848204",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0D64ZN9RX",
-            "title": "Point of Origin (A Samantha Church Mystery Book 7)",
-            "author": "Betta Ferrendelli",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71+GdJOJSHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Point-Origin-Samantha-Church-Mystery-ebook/dp/B0D64ZN9RX/ref=zg_bs_g_157028011_d_sccl_4/147-5206985-0133337",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B08V8KNNQ8",
+            "title": "The French Fraud: Cozy Mystery (Justine French Mysteries Book 1)",
+            "author": "Myrtle Morse",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xD878KJbL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/French-Fraud-Mystery-Justine-Mysteries-ebook/dp/B08V8KNNQ8/ref=zg_bs_g_157028011_d_sccl_1/138-1994405-6848204",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B0D7F34Q1K",
-            "title": "Bearing North (Grizzly Protection: Alaska Shifter Branch Book 1)",
-            "author": "Elva Birch",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/814B2ivrxaL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Bearing-North-Day-Care-Shifters-ebook/dp/B0D7F34Q1K/ref=zg_bs_g_158566011_d_sccl_7/147-5206985-0133337",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
-            "genre": "Romance"
         }
     ]
 }
