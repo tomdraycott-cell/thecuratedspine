@@ -1,31 +1,40 @@
 {
     "books": [
         {
-            "asin": "B0HQVHTN3T",
-            "title": "Home Before the Snow: An EMP Post Apocalypse Prepper Survival Thriller Boxset",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61CdzmIJ+FL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Home-Before-Snow-Apocalypse-Survival-ebook/dp/B0HQVHTN3T/ref=zg_bs_g_158591011_d_sccl_1/138-1994405-6848204",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0HKH1D7PM",
+            "title": "The Tachyon Wake",
+            "author": "Jeffrey Jay",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71wWnUFK7NL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tachyon-Wake-Jeffrey-Jay-ebook/dp/B0HKH1D7PM/ref=zg_bs_g_158591011_d_sccl_3/140-7976206-2505644",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0GX32ZBJ4",
-            "title": "Short Stories for Seniors Who Love a Good Mystery: 25 Large Print Cozy Mystery Stories That Entertain, Engage, and Gently Keep the Mind Sharp (Easy Moments for Seniors Book 2)",
-            "author": "Owen R. Vance",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DlPZa2XpL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Short-Stories-Seniors-Love-Mystery-ebook/dp/B0GX32ZBJ4/ref=zg_bs_g_157056011_d_sccl_11/138-1994405-6848204",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0DY9JG36P",
+            "title": "Heartwarming Short Stories for Seniors: Relaxing and Uplifting Short Stories for Seniors \u2013 Large Print Edition (Easy Moments for Seniors Book 3)",
+            "author": "orvian studio",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rLgk3jipL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Heartwarming-Short-Stories-Seniors-Uplifting-ebook/dp/B0DY9JG36P/ref=zg_bs_g_157056011_d_sccl_8/140-7976206-2505644",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08V8KNNQ8",
-            "title": "The French Fraud: Cozy Mystery (Justine French Mysteries Book 1)",
-            "author": "Myrtle Morse",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xD878KJbL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/French-Fraud-Mystery-Justine-Mysteries-ebook/dp/B08V8KNNQ8/ref=zg_bs_g_157028011_d_sccl_1/138-1994405-6848204",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B082GDCXTQ",
+            "title": "Rocking Player (Steel Series Book 1)",
+            "author": "Victoria Pinder",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71kVGBfvjVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Rocking-Player-Single-Second-Romance-ebook/dp/B082GDCXTQ/ref=zg_bs_g_157028011_d_sccl_2/140-7976206-2505644",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0GN4SFVSW",
+            "title": "Chasing Shadows (The McBride Legacy Book 1)",
+            "author": "Bertie Stein",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81GI3WQWcRL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Chasing-Shadows-McBride-Legacy-Book-ebook/dp/B0GN4SFVSW/ref=zg_bs_g_158566011_d_sccl_2/140-7976206-2505644",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "genre": "Romance"
         }
     ]
 }
