@@ -1,13 +1,40 @@
 {
     "books": [
         {
-            "asin": "B0HQYKJXRC",
-            "title": "Pulse and Ice: An EMP Post Apocalypse Prepper Survival Thriller",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71vQGF6QCXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/dp/B0HQYKJXRC/ref=zg_bs_g_158591011_d_sccl_1/133-4452674-3199301",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B006UH2NRU",
+            "title": "Proxy: He Takes the Place of Those About to Die... (A Story of Super Powers and Loss) (The Infected Book 1)",
+            "author": "P.S. Power",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/7171hhv2TCL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Proxy-Infected-Book-P-S-Power-ebook/dp/B006UH2NRU/ref=zg_bs_g_158591011_d_sccl_1/133-5983873-7035137",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
+        },
+        {
+            "asin": "B0HLV1PJBL",
+            "title": "Nobody Meant to Invent This: 35 Surprising True Stories of Accidental Inventions That Changed Everyday Life (Large Print Short Stories for Seniors to Read Aloud) (Short True Stories for Seniors)",
+            "author": "Martin Leon",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71vABR+GBsL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Nobody-Meant-Invent-This-Surprising-ebook/dp/B0HLV1PJBL/ref=zg_bs_g_157056011_d_sccl_10/133-5983873-7035137",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B0CTHRHTCG",
+            "title": "Nancy Wake: World War II Women Spies",
+            "author": "Kit Sergeant",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81oYQMhh79L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Nancy-Wake-World-Women-Spies-ebook/dp/B0CTHRHTCG/ref=zg_bs_g_157028011_d_sccl_1/133-5983873-7035137",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B078NFFZFF",
+            "title": "Bentley: Billionaire Opposites Attract romance (Vested Interest Book 1)",
+            "author": "Melanie Moreland",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71zxoAYk5XL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Bentley-Vested-Interest-Melanie-Moreland-ebook/dp/B078NFFZFF/ref=zg_bs_g_158566011_d_sccl_1/133-5983873-7035137",
+            "hook": "Sparks fly in this chart-topping romance pick.",
+            "genre": "Romance"
         }
     ]
 }
