@@ -1,40 +1,13 @@
 {
     "books": [
         {
-            "asin": "B0HKH1D7PM",
-            "title": "The Tachyon Wake",
-            "author": "Jeffrey Jay",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71wWnUFK7NL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tachyon-Wake-Jeffrey-Jay-ebook/dp/B0HKH1D7PM/ref=zg_bs_g_158591011_d_sccl_3/140-7976206-2505644",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0HQYKJXRC",
+            "title": "Pulse and Ice: An EMP Post Apocalypse Prepper Survival Thriller",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71vQGF6QCXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/dp/B0HQYKJXRC/ref=zg_bs_g_158591011_d_sccl_1/133-4452674-3199301",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
-        },
-        {
-            "asin": "B0DY9JG36P",
-            "title": "Heartwarming Short Stories for Seniors: Relaxing and Uplifting Short Stories for Seniors \u2013 Large Print Edition (Easy Moments for Seniors Book 3)",
-            "author": "orvian studio",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rLgk3jipL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Heartwarming-Short-Stories-Seniors-Uplifting-ebook/dp/B0DY9JG36P/ref=zg_bs_g_157056011_d_sccl_8/140-7976206-2505644",
-            "hook": "Step into another era with today's top-trending historical read.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B082GDCXTQ",
-            "title": "Rocking Player (Steel Series Book 1)",
-            "author": "Victoria Pinder",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71kVGBfvjVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Rocking-Player-Single-Second-Romance-ebook/dp/B082GDCXTQ/ref=zg_bs_g_157028011_d_sccl_2/140-7976206-2505644",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
-            "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B0GN4SFVSW",
-            "title": "Chasing Shadows (The McBride Legacy Book 1)",
-            "author": "Bertie Stein",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81GI3WQWcRL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Chasing-Shadows-McBride-Legacy-Book-ebook/dp/B0GN4SFVSW/ref=zg_bs_g_158566011_d_sccl_2/140-7976206-2505644",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
-            "genre": "Romance"
         }
     ]
 }
