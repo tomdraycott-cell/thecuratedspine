@@ -1,38 +1,29 @@
 {
     "books": [
         {
-            "asin": "B0HPZCD32P",
-            "title": "Mandatory Alignment: A LitRPG Adventure",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81eh8yqxIqL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Mandatory-Alignment-Adventure-Oliver-Westphal-ebook/dp/B0HPZCD32P/ref=zg_bs_g_158591011_d_sccl_3/145-9362020-4536409",
+            "asin": "B0D11J8CNB",
+            "title": "The Shepherd: An Epic Space Opera Adventure (Shepherd Security Services Book 1)",
+            "author": "Robert M. Kerns",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Bh9Lz+Z+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Shepherd-Space-Adventure-Security-Services-ebook/dp/B0D11J8CNB/ref=zg_bs_g_158591011_d_sccl_2/140-1840368-2571560",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HQXHXM3Q",
-            "title": "Three American Interiors (Annotated and illustrated): Classic American Literature Collection: Emerson, Dickinson and Chopin (",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61CR0OoyaaL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Three-American-Interiors-Annotated-illustrated-ebook/dp/B0HQXHXM3Q/ref=zg_bs_g_157056011_d_sccl_9/145-9362020-4536409",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0FLWCZXG9",
-            "title": "The Catalogue: A High-Stakes Espionage Thriller (V.E.N.O.M. Series Book 1)",
-            "author": "Ty Mitchell",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81aykJOAQ3L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Catalogue-Thriller-V-N-M-ebook/dp/B0FLWCZXG9/ref=zg_bs_g_157028011_d_sccl_2/145-9362020-4536409",
+            "asin": "B0D71GNRZJ",
+            "title": "The Cowboy\u2019s Family Christmas (The Halligans of Montana Book 2)",
+            "author": "Kaz Delaney",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81f9pwXrYjL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Cowboys-Family-Christmas-Halligans-Montana-ebook/dp/B0D71GNRZJ/ref=zg_bs_g_157028011_d_sccl_4/140-1840368-2571560",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0H8TTC547",
-            "title": "Ghosts of Ex-mas Past: A Spicy Holiday Romance Inspired by A Christmas Carol",
-            "author": "J E Reid",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vnv2P3U4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Ghosts-Ex-mas-Past-Inspired-Christmas-ebook/dp/B0H8TTC547/ref=zg_bs_g_158566011_d_sccl_2/145-9362020-4536409",
+            "asin": "B0CLTDP8D2",
+            "title": "Always and Forever (The Second Chance Brides Book 1)",
+            "author": "Wendy Lindstrom",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/815J5tTYLaL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Always-Forever-Second-Chance-Brides-ebook/dp/B0CLTDP8D2/ref=zg_bs_g_158566011_d_sccl_5/140-1840368-2571560",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
