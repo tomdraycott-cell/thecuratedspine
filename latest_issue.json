@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0D11J8CNB",
-            "title": "The Shepherd: An Epic Space Opera Adventure (Shepherd Security Services Book 1)",
-            "author": "Robert M. Kerns",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Bh9Lz+Z+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Shepherd-Space-Adventure-Security-Services-ebook/dp/B0D11J8CNB/ref=zg_bs_g_158591011_d_sccl_2/140-1840368-2571560",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B01AH7GZ6I",
+            "title": "Destiny Rejected (Destiny Series Book 1)",
+            "author": "Felicia Jedlicka",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/916aN5-5N5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Destiny-Rejected-Felicia-Jedlicka-ebook/dp/B01AH7GZ6I/ref=zg_bs_g_158591011_d_sccl_2/130-5561242-6648649",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0D71GNRZJ",
-            "title": "The Cowboy\u2019s Family Christmas (The Halligans of Montana Book 2)",
-            "author": "Kaz Delaney",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81f9pwXrYjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Cowboys-Family-Christmas-Halligans-Montana-ebook/dp/B0D71GNRZJ/ref=zg_bs_g_157028011_d_sccl_4/140-1840368-2571560",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0H9GFC3F2",
+            "title": "7 Stories for Your Coffee Break: A Little Fictions Collection",
+            "author": "Sarah Tinney",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71IXLsgsJ5L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Stories-Your-Coffee-Break-Collection-ebook/dp/B0H9GFC3F2/ref=zg_bs_g_157056011_d_sccl_14/130-5561242-6648649",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B00W4F5D92",
+            "title": "The Last Teacher: A Stand-Alone Mackenzie Mystery (Mackenzie August, Killer Mysteries,)",
+            "author": "Alan Lee",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71wPMAFcUtL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Last-Teacher-Stand-Alone-Mackenzie-Mystery-ebook/dp/B00W4F5D92/ref=zg_bs_g_157028011_d_sccl_5/130-5561242-6648649",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CLTDP8D2",
-            "title": "Always and Forever (The Second Chance Brides Book 1)",
-            "author": "Wendy Lindstrom",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/815J5tTYLaL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Always-Forever-Second-Chance-Brides-ebook/dp/B0CLTDP8D2/ref=zg_bs_g_158566011_d_sccl_5/140-1840368-2571560",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B09C937JPM",
+            "title": "Welcome To Winterville: A festive enemies-to-lovers small-town second-chance romance",
+            "author": "Carrie Elks",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HWlAXZj+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Welcome-Winterville-Small-Holiday-Romance-ebook/dp/B09C937JPM/ref=zg_bs_g_158566011_d_sccl_4/130-5561242-6648649",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
