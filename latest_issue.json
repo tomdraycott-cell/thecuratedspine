@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0CW1B25KC",
-            "title": "Project Mind River: (Book 1 - Sci Fi Action Adventure AI) (Techs Future Promise and Peril)",
-            "author": "Dave Spacer",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81aWam4sOyL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Project-Mind-River-Future-Promise-ebook/dp/B0CW1B25KC/ref=zg_bs_g_158591011_d_sccl_3/134-9469611-2062526",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0GDJG34R8",
+            "title": "Phoenix Rising: Absolution: Book Three of the Phoenix Saga: Alien Invasion, Military Sci-Fi Novella",
+            "author": "JP Robertson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81uE-1bGI+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Phoenix-Rising-Absolution-Invasion-Military-ebook/dp/B0GDJG34R8/ref=zg_bs_g_158591011_d_sccl_1/142-4273426-7158456",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0G49S7JVC",
-            "title": "Short Stories for Seniors with Heart: Gentle Humor, Nostalgic Moments, And Feel-Good Endings In Every Story",
-            "author": "James Hartwell",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81VQ5pCcryL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Short-Stories-Seniors-Heart-Nostalgic-ebook/dp/B0G49S7JVC/ref=zg_bs_g_157056011_d_sccl_1/134-9469611-2062526",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0HK4VZ1Y2",
+            "title": "Once upon 18 times: Eighteen Literary Reimaginings of Little Red Riding Hood",
+            "author": "M Rouse",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81y2JerSAWL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Once-upon-18-times-Reimaginings-ebook/dp/B0HK4VZ1Y2/ref=zg_bs_g_157056011_d_sccl_1/142-4273426-7158456",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GQCVYHLL",
-            "title": "The Staircase: A murder mystery (The Fane and Blackwood Mysteries Book 1)",
-            "author": "AG Barnett",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71m6ZfFoxAL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Staircase-murder-mystery-Blackwood-Mysteries-ebook/dp/B0GQCVYHLL/ref=zg_bs_g_157028011_d_sccl_1/134-9469611-2062526",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B07ML82T93",
+            "title": "The Follower: The Suspenseful, Addictive Psychological Thriller",
+            "author": "Jason Starr",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81nqtOuu3vL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Follower-Jason-Starr-ebook/dp/B07ML82T93/ref=zg_bs_g_157028011_d_sccl_2/142-4273426-7158456",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FK41CN79",
-            "title": "Single Wish (Single Dads of Dragonfly Lake Book 5)",
-            "author": "Amy Knupp",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81QuI7seL+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Single-Wish-Dads-Dragonfly-Lake-ebook/dp/B0FK41CN79/ref=zg_bs_g_158566011_d_sccl_2/134-9469611-2062526",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0CNCFHV2H",
+            "title": "I'll Be Married for Christmas: A Military Marriage of Convenience Romantic Comedy (Married to the Military Romances Book 1)",
+            "author": "Claire Cain",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71XmCAIVMBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ill-Be-Married-Christmas-Convenience-ebook/dp/B0CNCFHV2H/ref=zg_bs_g_158566011_d_sccl_2/142-4273426-7158456",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
