@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B01JMS9CA4",
-            "title": "The After War: (Book One of The After War Series)",
-            "author": "Brandon Zenner",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81CFtaCuf6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/After-War-Book-One-ebook/dp/B01JMS9CA4/ref=zg_bs_g_158591011_d_sccl_2/140-0349429-3161847",
+            "asin": "B0HRCG2T2W",
+            "title": "Eighteen Miles Dark: An EMP Post Apocalypse Prepper Survival Thriller",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/816DIdWmavL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/dp/B0HRCG2T2W/ref=zg_bs_g_158591011_d_sccl_3/144-4772353-7515152",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B08P9Y5ZZL",
-            "title": "Short Horror Stories Volumes 1-3 (Paranormal Suspense Collection) (Short Horror Anthology Series Book 1)",
-            "author": "Richard Van Gramberg",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91ilvQIi4OL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Stories-Paranormal-Suspense-Collection-Collections-ebook/dp/B08P9Y5ZZL/ref=zg_bs_g_157056011_d_sccl_3/140-0349429-3161847",
+            "asin": "B0F5YXD83V",
+            "title": "FED UP 2: Dysfunctional Families: Tales of Revenge (Revenge Series)",
+            "author": "Bien-Aime Wenda",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71KCoHAxWCL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/FED-UP-Dysfunctional-Families-Revenge-ebook/dp/B0F5YXD83V/ref=zg_bs_g_157056011_d_sccl_2/144-4772353-7515152",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0HDK8KF25",
-            "title": "Third Places Lost: Book one in the \"Cost of Authenticity\" \u2014 Trilogy",
-            "author": "Loyd Searle",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j3QYdYLhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Third-Places-Lost-Authenticity-Trilogy-ebook/dp/B0HDK8KF25/ref=zg_bs_g_157028011_d_sccl_3/140-0349429-3161847",
+            "asin": "B0H7K4LRYZ",
+            "title": "The Ungoverned",
+            "author": "Andy Stock",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71flXAjRuyL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ungoverned-Andy-Stock-ebook/dp/B0H7K4LRYZ/ref=zg_bs_g_157028011_d_sccl_3/144-4772353-7515152",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0F464BQ1G",
-            "title": "Tennessee Wishes: Sweet Romance, City Lights, Country Dreams, and a Killer in the Shadows",
-            "author": "Melissa Roos",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/715irVUt9QL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tennessee-Wishes-Romance-Country-Shadows-ebook/dp/B0F464BQ1G/ref=zg_bs_g_158566011_d_sccl_3/140-0349429-3161847",
+            "asin": "B0D139K26D",
+            "title": "Made for Mistletoe: A Small-Town Holiday Romance (The Walkers of River's Edge Book 3)",
+            "author": "Nan Reinhardt",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jK+RCbqhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Made-Mistletoe-Walkers-Rivers-Edge-ebook/dp/B0D139K26D/ref=zg_bs_g_158566011_d_sccl_3/144-4772353-7515152",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
