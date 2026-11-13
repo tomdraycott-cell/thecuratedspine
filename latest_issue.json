@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0HRCG2T2W",
-            "title": "Eighteen Miles Dark: An EMP Post Apocalypse Prepper Survival Thriller",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/816DIdWmavL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/dp/B0HRCG2T2W/ref=zg_bs_g_158591011_d_sccl_3/144-4772353-7515152",
+            "asin": "B0HJF6KCR4",
+            "title": "Black Seed: Book One of the Black Seed Saga",
+            "author": "Stephen O'Bryan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Xr+sMvrTL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Black-Seed-Book-One-Saga-ebook/dp/B0HJF6KCR4/ref=zg_bs_g_158591011_d_sccl_5/135-1404942-0003529",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0F5YXD83V",
-            "title": "FED UP 2: Dysfunctional Families: Tales of Revenge (Revenge Series)",
-            "author": "Bien-Aime Wenda",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71KCoHAxWCL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/FED-UP-Dysfunctional-Families-Revenge-ebook/dp/B0F5YXD83V/ref=zg_bs_g_157056011_d_sccl_2/144-4772353-7515152",
+            "asin": "B0HP5KNVVY",
+            "title": "6 Rounds of Strange Fiction: Volume 2",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-zJKg7bUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/6-Rounds-Strange-Fiction-2-ebook/dp/B0HP5KNVVY/ref=zg_bs_g_157056011_d_sccl_4/135-1404942-0003529",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0H7K4LRYZ",
-            "title": "The Ungoverned",
-            "author": "Andy Stock",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71flXAjRuyL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Ungoverned-Andy-Stock-ebook/dp/B0H7K4LRYZ/ref=zg_bs_g_157028011_d_sccl_3/144-4772353-7515152",
+            "asin": "B0FR7LFFGG",
+            "title": "The Forgotten Night: An addictive technothriller featuring a tenacious female sleuth (Lexie Logan Book 1)",
+            "author": "J. T. Bishop",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71sTuKjgQhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Forgotten-Night-addictive-technothriller-featuring-ebook/dp/B0FR7LFFGG/ref=zg_bs_g_157028011_d_sccl_3/135-1404942-0003529",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0D139K26D",
-            "title": "Made for Mistletoe: A Small-Town Holiday Romance (The Walkers of River's Edge Book 3)",
-            "author": "Nan Reinhardt",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jK+RCbqhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Made-Mistletoe-Walkers-Rivers-Edge-ebook/dp/B0D139K26D/ref=zg_bs_g_158566011_d_sccl_3/144-4772353-7515152",
+            "asin": "B08599HJ61",
+            "title": "Love is What You Bake of it: A single dad small town romance (The Meraki Series Book 1)",
+            "author": "Effie Kammenou",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81a9jAYbILL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Love-What-Bake-Meraki-Book-ebook/dp/B08599HJ61/ref=zg_bs_g_158566011_d_sccl_2/135-1404942-0003529",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
