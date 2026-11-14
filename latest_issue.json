@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0HDYLBJ6L",
-            "title": "Orphan of Empire: An Origins Novella. A Sci-Fi Thriller. Enter the Dodecahedral",
-            "author": "S. A. Melia",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Z054YcG1L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Orphan-Empire-Novella-Thriller-Dodecahedral-ebook/dp/B0HDYLBJ6L/ref=zg_bs_g_158591011_d_sccl_6/134-4944529-8443764",
+            "asin": "B07GTVYDBC",
+            "title": "Reactive: A Young Adult Dystopian Romance (The Elite Trials Book 1)",
+            "author": "Becky Moynihan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZuoQNKL9L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Reactive-Young-Dystopian-Romance-Trials-ebook/dp/B07GTVYDBC/ref=zg_bs_g_158591011_d_sccl_2/147-6146296-4506308",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HG2ZMLPH",
-            "title": "Around Every Corner: eighteen micro thrillers",
-            "author": "Inga Jones",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZxhgowHnL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Around-Every-Corner-eighteen-thrillers-ebook/dp/B0HG2ZMLPH/ref=zg_bs_g_157056011_d_sccl_1/134-4944529-8443764",
+            "asin": "B0FNKK9LG6",
+            "title": "Midnight Terrors: Scary Short Horror Stories To Tell in the Dark",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81b5y8qxOeL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Midnight-Terrors-Scary-Horror-Stories-ebook/dp/B0FNKK9LG6/ref=zg_bs_g_157056011_d_sccl_5/147-6146296-4506308",
             "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0763MXYDT",
-            "title": "Show Me the Way (Fight for Me Book 1)",
-            "author": "A.L. Jackson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91CBQ56OkhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Show-Me-Way-L-Jackson-ebook/dp/B0763MXYDT/ref=zg_bs_g_157028011_d_sccl_6/134-4944529-8443764",
+            "asin": "B0HJ6WXMKY",
+            "title": "Sins of the Father: A Prohibition-Era Crime Thriller (The Consentino Crime Saga Book 1)",
+            "author": "Vincent B. Davis II",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81PJ-FVp8aL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Sins-Father-Prohibition-Era-Thriller-Consentino-ebook/dp/B0HJ6WXMKY/ref=zg_bs_g_157028011_d_sccl_8/147-6146296-4506308",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0BMXS959N",
-            "title": "Love & Family: Clean & Wholesome Thanksgiving Romance (Holidays in Hallbrook)",
-            "author": "Elsie Davis",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/910UQvjC5eL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Love-Family-Wholesome-Romances-Hallbrook-ebook/dp/B0BMXS959N/ref=zg_bs_g_158566011_d_sccl_4/134-4944529-8443764",
+            "asin": "B0CP1L6XMQ",
+            "title": "Need You To Choose Me: A single dad surprise pregnancy small town romance (Bluebonnet Creek Book 2)",
+            "author": "Anna B. Doe",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81764SGdLUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Need-You-Choose-pregnancy-Bluebonnet-ebook/dp/B0CP1L6XMQ/ref=zg_bs_g_158566011_d_sccl_5/147-6146296-4506308",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
