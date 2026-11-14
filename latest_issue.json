@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HJF6KCR4",
-            "title": "Black Seed: Book One of the Black Seed Saga",
-            "author": "Stephen O'Bryan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Xr+sMvrTL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Black-Seed-Book-One-Saga-ebook/dp/B0HJF6KCR4/ref=zg_bs_g_158591011_d_sccl_5/135-1404942-0003529",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0HDYLBJ6L",
+            "title": "Orphan of Empire: An Origins Novella. A Sci-Fi Thriller. Enter the Dodecahedral",
+            "author": "S. A. Melia",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Z054YcG1L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Orphan-Empire-Novella-Thriller-Dodecahedral-ebook/dp/B0HDYLBJ6L/ref=zg_bs_g_158591011_d_sccl_6/134-4944529-8443764",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HP5KNVVY",
-            "title": "6 Rounds of Strange Fiction: Volume 2",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-zJKg7bUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/6-Rounds-Strange-Fiction-2-ebook/dp/B0HP5KNVVY/ref=zg_bs_g_157056011_d_sccl_4/135-1404942-0003529",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B0HG2ZMLPH",
+            "title": "Around Every Corner: eighteen micro thrillers",
+            "author": "Inga Jones",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZxhgowHnL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Around-Every-Corner-eighteen-thrillers-ebook/dp/B0HG2ZMLPH/ref=zg_bs_g_157056011_d_sccl_1/134-4944529-8443764",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FR7LFFGG",
-            "title": "The Forgotten Night: An addictive technothriller featuring a tenacious female sleuth (Lexie Logan Book 1)",
-            "author": "J. T. Bishop",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71sTuKjgQhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Forgotten-Night-addictive-technothriller-featuring-ebook/dp/B0FR7LFFGG/ref=zg_bs_g_157028011_d_sccl_3/135-1404942-0003529",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0763MXYDT",
+            "title": "Show Me the Way (Fight for Me Book 1)",
+            "author": "A.L. Jackson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91CBQ56OkhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Show-Me-Way-L-Jackson-ebook/dp/B0763MXYDT/ref=zg_bs_g_157028011_d_sccl_6/134-4944529-8443764",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B08599HJ61",
-            "title": "Love is What You Bake of it: A single dad small town romance (The Meraki Series Book 1)",
-            "author": "Effie Kammenou",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81a9jAYbILL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Love-What-Bake-Meraki-Book-ebook/dp/B08599HJ61/ref=zg_bs_g_158566011_d_sccl_2/135-1404942-0003529",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0BMXS959N",
+            "title": "Love & Family: Clean & Wholesome Thanksgiving Romance (Holidays in Hallbrook)",
+            "author": "Elsie Davis",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/910UQvjC5eL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Love-Family-Wholesome-Romances-Hallbrook-ebook/dp/B0BMXS959N/ref=zg_bs_g_158566011_d_sccl_4/134-4944529-8443764",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
