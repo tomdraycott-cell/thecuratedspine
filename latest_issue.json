@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B07GTVYDBC",
-            "title": "Reactive: A Young Adult Dystopian Romance (The Elite Trials Book 1)",
-            "author": "Becky Moynihan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZuoQNKL9L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Reactive-Young-Dystopian-Romance-Trials-ebook/dp/B07GTVYDBC/ref=zg_bs_g_158591011_d_sccl_2/147-6146296-4506308",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0FR3V5ZQR",
+            "title": "Rovik Miller - Core Miner",
+            "author": "Rico Liemanto",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61rorvy1JXL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Rovik-Miller-Miner-Rico-Liemanto-ebook/dp/B0FR3V5ZQR/ref=zg_bs_g_158591011_d_sccl_1/134-5053490-6544814",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0FNKK9LG6",
-            "title": "Midnight Terrors: Scary Short Horror Stories To Tell in the Dark",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81b5y8qxOeL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Midnight-Terrors-Scary-Horror-Stories-ebook/dp/B0FNKK9LG6/ref=zg_bs_g_157056011_d_sccl_5/147-6146296-4506308",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0G2BKK1G7",
+            "title": "Christmas Romance Advent book: 25 Days of Heartwarming Christmas Love Stories \u2014 A Festive Holiday Romance Advent Calendar of Love, Hope, and Miracles",
+            "author": "viola lane",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71B9rf9j5-L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Christmas-Romance-Advent-book-Heartwarming-ebook/dp/B0G2BKK1G7/ref=zg_bs_g_157056011_d_sccl_9/134-5053490-6544814",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0HJ6WXMKY",
-            "title": "Sins of the Father: A Prohibition-Era Crime Thriller (The Consentino Crime Saga Book 1)",
-            "author": "Vincent B. Davis II",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81PJ-FVp8aL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Sins-Father-Prohibition-Era-Thriller-Consentino-ebook/dp/B0HJ6WXMKY/ref=zg_bs_g_157028011_d_sccl_8/147-6146296-4506308",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0DGDBD1SM",
+            "title": "Quiet Longing (Quiet Love Book 2)",
+            "author": "L.H. Cosway",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/718SPsTUzLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Quiet-Longing-Love-Book-ebook/dp/B0DGDBD1SM/ref=zg_bs_g_157028011_d_sccl_1/134-5053490-6544814",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0CP1L6XMQ",
-            "title": "Need You To Choose Me: A single dad surprise pregnancy small town romance (Bluebonnet Creek Book 2)",
-            "author": "Anna B. Doe",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81764SGdLUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Need-You-Choose-pregnancy-Bluebonnet-ebook/dp/B0CP1L6XMQ/ref=zg_bs_g_158566011_d_sccl_5/147-6146296-4506308",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0HLPWCSZQ",
+            "title": "Just For The Wedding: A Brother's Best Friend Fake Engagement Billionaire Romance (Edison Park Book 1)",
+            "author": "Nora Silvane",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71xJ0UREzUL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Just-Wedding-Brothers-Engagement-Billionaire-ebook/dp/B0HLPWCSZQ/ref=zg_bs_g_158566011_d_sccl_3/134-5053490-6544814",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
