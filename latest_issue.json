@@ -1,29 +1,29 @@
 {
     "books": [
         {
-            "asin": "B09Y8NJS3P",
-            "title": "Xiveri Mates: A SciFi Alien Romance Collection (Books 1-3 with Exclusive Novella) (Xiveri Mates Collections Book 1)",
-            "author": "Elizabeth Stephens",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91X1B9mcCZL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Xiveri-Mates-Romance-Collection-Exclusive-ebook/dp/B09Y8NJS3P/ref=zg_bs_g_158591011_d_sccl_2/146-0329878-2669123",
+            "asin": "B083TXWDH3",
+            "title": "Hotel Chelsea: A Gripping, Unputdownable Suspense Thriller (World's Scariest Places Book 6)",
+            "author": "Jeremy Bates",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/716saYjP4fL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Hotel-Chelsea-Worlds-Scariest-Places-ebook/dp/B083TXWDH3/ref=zg_bs_g_158591011_d_sccl_1/136-8884993-2974957",
             "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0BNLT2B1D",
-            "title": "Any Fin For Love",
-            "author": "Petie McCarty",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/710OGkxNLhL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Any-Fin-Love-Petie-McCarty-ebook/dp/B0BNLT2B1D/ref=zg_bs_g_157028011_d_sccl_5/146-0329878-2669123",
+            "asin": "B0GQQS46PP",
+            "title": "Protecting his Witness: A Second Chance Military Romance (Shattered SEALs Book 1)",
+            "author": "Amy Gamet",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81PQGhV3WpL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Protecting-his-Witness-Military-Shattered-ebook/dp/B0GQQS46PP/ref=zg_bs_g_157028011_d_sccl_2/136-8884993-2974957",
             "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DPGFLCGG",
-            "title": "Complicated Past: A Second Chance Military Romance (Bad Karma Special Ops Book 5)",
-            "author": "Tracy Brody",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71QbmlFEIkL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Complicated-Past-Military-Romance-Special-ebook/dp/B0DPGFLCGG/ref=zg_bs_g_158566011_d_sccl_5/146-0329878-2669123",
+            "asin": "B0BWNSBJT2",
+            "title": "A Little Taste: A small-town, single-dad romance. (Be Still)",
+            "author": "Tia Louise",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81EejSdiOGL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Little-Taste-small-town-single-dad-romance-ebook/dp/B0BWNSBJT2/ref=zg_bs_g_158566011_d_sccl_4/136-8884993-2974957",
             "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
