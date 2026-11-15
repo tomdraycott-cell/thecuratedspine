@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0FR3V5ZQR",
-            "title": "Rovik Miller - Core Miner",
-            "author": "Rico Liemanto",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61rorvy1JXL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Rovik-Miller-Miner-Rico-Liemanto-ebook/dp/B0FR3V5ZQR/ref=zg_bs_g_158591011_d_sccl_1/134-5053490-6544814",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B09Y8NJS3P",
+            "title": "Xiveri Mates: A SciFi Alien Romance Collection (Books 1-3 with Exclusive Novella) (Xiveri Mates Collections Book 1)",
+            "author": "Elizabeth Stephens",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91X1B9mcCZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Xiveri-Mates-Romance-Collection-Exclusive-ebook/dp/B09Y8NJS3P/ref=zg_bs_g_158591011_d_sccl_2/146-0329878-2669123",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0G2BKK1G7",
-            "title": "Christmas Romance Advent book: 25 Days of Heartwarming Christmas Love Stories \u2014 A Festive Holiday Romance Advent Calendar of Love, Hope, and Miracles",
-            "author": "viola lane",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71B9rf9j5-L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Christmas-Romance-Advent-book-Heartwarming-ebook/dp/B0G2BKK1G7/ref=zg_bs_g_157056011_d_sccl_9/134-5053490-6544814",
-            "hook": "Step into another era with today's top-trending historical read.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0DGDBD1SM",
-            "title": "Quiet Longing (Quiet Love Book 2)",
-            "author": "L.H. Cosway",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/718SPsTUzLL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Quiet-Longing-Love-Book-ebook/dp/B0DGDBD1SM/ref=zg_bs_g_157028011_d_sccl_1/134-5053490-6544814",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0BNLT2B1D",
+            "title": "Any Fin For Love",
+            "author": "Petie McCarty",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/710OGkxNLhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Any-Fin-Love-Petie-McCarty-ebook/dp/B0BNLT2B1D/ref=zg_bs_g_157028011_d_sccl_5/146-0329878-2669123",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HLPWCSZQ",
-            "title": "Just For The Wedding: A Brother's Best Friend Fake Engagement Billionaire Romance (Edison Park Book 1)",
-            "author": "Nora Silvane",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71xJ0UREzUL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Just-Wedding-Brothers-Engagement-Billionaire-ebook/dp/B0HLPWCSZQ/ref=zg_bs_g_158566011_d_sccl_3/134-5053490-6544814",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0DPGFLCGG",
+            "title": "Complicated Past: A Second Chance Military Romance (Bad Karma Special Ops Book 5)",
+            "author": "Tracy Brody",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71QbmlFEIkL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Complicated-Past-Military-Romance-Special-ebook/dp/B0DPGFLCGG/ref=zg_bs_g_158566011_d_sccl_5/146-0329878-2669123",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
