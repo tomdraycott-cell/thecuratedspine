@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0H6SN5GVJ",
-            "title": "Unidentified (Invasion Volume One)",
-            "author": "Nathan Hystad",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71bV4w0Rd3L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Unidentified-Invasion-One-Nathan-Hystad-ebook/dp/B0H6SN5GVJ/ref=zg_bs_g_158591011_d_sccl_3/136-3796818-2677113",
+            "asin": "B0DWGKM91S",
+            "title": "Fragile Threads: A Post-Apocalyptic Survival Novel (The Ties That Bind Book 1)",
+            "author": "JB Landrey",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81NuopmFHoL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Fragile-Threads-Post-Apocalyptic-Survival-Novel-ebook/dp/B0DWGKM91S/ref=zg_bs_g_158591011_d_sccl_7/145-7054500-0576435",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B07KT4HDVC",
-            "title": "All I Want for Christmas: A Holiday Sampler",
-            "author": "Maisey Yates",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81KWzYV7qRL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/All-Want-Christmas-Holiday-Sampler-ebook/dp/B07KT4HDVC/ref=zg_bs_g_157056011_d_sccl_15/136-3796818-2677113",
+            "asin": "B0HQVY4TMP",
+            "title": "Reclaiming the Real You \u2013 The Act of Asking: A Narrative Guide to Asking Others to Support Your Personal and Professional Suc",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61xtB6ttt0L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Reclaiming-Real-You-Narrative-Professional-ebook/dp/B0HQVY4TMP/ref=zg_bs_g_157056011_d_sccl_18/145-7054500-0576435",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0D2ZK9PTY",
-            "title": "Exes Don't: A Second Chance Romantic Comedy (Fall In Love Series Book 3)",
-            "author": "Leah Dobrinska",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71s6mGMmnYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Exes-Dont-Second-Chance-Romantic-ebook/dp/B0D2ZK9PTY/ref=zg_bs_g_157028011_d_sccl_6/136-3796818-2677113",
+            "asin": "B09BBGWCTM",
+            "title": "Lucky Girl: A Dose of Darkness Novella (Doctors of Darkness Book 5)",
+            "author": "Ellery A. Kane",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HftR0XHmL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lucky-Girl-Darkness-Novella-Doctors-ebook/dp/B09BBGWCTM/ref=zg_bs_g_157028011_d_sccl_8/145-7054500-0576435",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0BXW52SCH",
-            "title": "The Stoat and the Debutante (The Shifter Season Book 7)",
-            "author": "Laura Greenwood",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/814krhTzzxL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Stoat-Debutante-Shifter-Season-Book-ebook/dp/B0BXW52SCH/ref=zg_bs_g_158566011_d_sccl_10/136-3796818-2677113",
+            "asin": "B075M9VN27",
+            "title": "The Promise He Kept (After the Mission Book 2)",
+            "author": "Barbara Ankrum",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91vyqxkbKiL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Promise-Kept-After-Mission-Book-ebook/dp/B075M9VN27/ref=zg_bs_g_158566011_d_sccl_12/145-7054500-0576435",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
