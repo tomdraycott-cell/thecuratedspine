@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0DWGKM91S",
-            "title": "Fragile Threads: A Post-Apocalyptic Survival Novel (The Ties That Bind Book 1)",
-            "author": "JB Landrey",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81NuopmFHoL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Fragile-Threads-Post-Apocalyptic-Survival-Novel-ebook/dp/B0DWGKM91S/ref=zg_bs_g_158591011_d_sccl_7/145-7054500-0576435",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B09183JGBD",
+            "title": "The Accidental World",
+            "author": "K.A. Griffin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91EpAjdhZ1L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Accidental-World-K-Griffin-ebook/dp/B09183JGBD/ref=zg_bs_g_158591011_d_sccl_14/139-2767553-6442042",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HQVY4TMP",
-            "title": "Reclaiming the Real You \u2013 The Act of Asking: A Narrative Guide to Asking Others to Support Your Personal and Professional Suc",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61xtB6ttt0L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Reclaiming-Real-You-Narrative-Professional-ebook/dp/B0HQVY4TMP/ref=zg_bs_g_157056011_d_sccl_18/145-7054500-0576435",
-            "hook": "Step into another era with today's top-trending historical read.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B09BBGWCTM",
-            "title": "Lucky Girl: A Dose of Darkness Novella (Doctors of Darkness Book 5)",
-            "author": "Ellery A. Kane",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HftR0XHmL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lucky-Girl-Darkness-Novella-Doctors-ebook/dp/B09BBGWCTM/ref=zg_bs_g_157028011_d_sccl_8/145-7054500-0576435",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0053HWAWQ",
+            "title": "Whiskey Rebellion: An Addison Holmes Mystery (Addison Holmes Mysteries Book 1)",
+            "author": "Liliana Hart",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81er3C1gfbL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Whiskey-Rebellion-Addison-Mystery-Mysteries-ebook/dp/B0053HWAWQ/ref=zg_bs_g_157028011_d_sccl_9/139-2767553-6442042",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B075M9VN27",
-            "title": "The Promise He Kept (After the Mission Book 2)",
-            "author": "Barbara Ankrum",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91vyqxkbKiL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Promise-Kept-After-Mission-Book-ebook/dp/B075M9VN27/ref=zg_bs_g_158566011_d_sccl_12/145-7054500-0576435",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0BS58W3RB",
+            "title": "Just One Chance (A Porch by the Sea\u2014Book Two)",
+            "author": "Sophie Love",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81BleN1bJeL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Just-One-Chance-Porch-Sea-Book-ebook/dp/B0BS58W3RB/ref=zg_bs_g_158566011_d_sccl_13/139-2767553-6442042",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
