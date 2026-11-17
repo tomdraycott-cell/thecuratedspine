@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0H6QWRHSD",
-            "title": "Roots of Resilience: A Verdi Novel \u00b7 Book 1",
-            "author": "B. Vale",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71GhJbrW0ML._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Roots-Resilience-Verdi-Novel-Book-ebook/dp/B0H6QWRHSD/ref=zg_bs_g_158591011_d_sccl_9/140-8059958-1156861",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0HPZ2C52S",
+            "title": "The Glass Inheritance: An Island Erased from Every Map",
+            "author": "James A Arkin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ka2tIwKML._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Glass-Inheritance-Island-Erased-Every-ebook/dp/B0HPZ2C52S/ref=zg_bs_g_158591011_d_sccl_6/138-9617846-7267036",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HQMNPBTM",
-            "title": "Desire Paths",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/818cynmBiEL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Desire-Paths-John-Warford-ebook/dp/B0HQMNPBTM/ref=zg_bs_g_157056011_d_sccl_19/140-8059958-1156861",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B078SYNP3F",
-            "title": "The Man by the Sea (The Slim Hardy Mysteries Book 1)",
-            "author": "Jack Benton",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81e32slTPiL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Man-Slim-Hardy-Mystery-Book-ebook/dp/B078SYNP3F/ref=zg_bs_g_157028011_d_sccl_14/140-8059958-1156861",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0B72JMBN9",
+            "title": "A Hollow Soul: A Soul Saga",
+            "author": "Raquel Gabrielle",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/811IAgvSIwL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Hollow-Soul-Saga-ebook/dp/B0B72JMBN9/ref=zg_bs_g_157028011_d_sccl_14/138-9617846-7267036",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B08QDQX8S6",
-            "title": "The Blond Devil of the Sea (Pirates of the Isles Book 1)",
-            "author": "Celeste Barclay",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81UuPPTpa0L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Blond-Devil-Sea-Enemies-Romance-ebook/dp/B08QDQX8S6/ref=zg_bs_g_158566011_d_sccl_13/140-8059958-1156861",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0CHWKBGYV",
+            "title": "The Curse Keepers",
+            "author": "D.G. Swank",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/814p1O7BsIL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Curse-Keepers-D-G-Swank-ebook/dp/B0CHWKBGYV/ref=zg_bs_g_158566011_d_sccl_10/138-9617846-7267036",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
