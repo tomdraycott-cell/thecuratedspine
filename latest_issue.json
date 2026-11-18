@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HPMB5GST",
-            "title": "THE WRONG DOWN: Book One",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/912qT0u2gLL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/WRONG-DOWN-Book-One-ebook/dp/B0HPMB5GST/ref=zg_bs_g_158591011_d_sccl_8/140-5597463-3347946",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0DH2VGTM5",
+            "title": "Legacy of The Peace (Ascensio Aeterna Book 1)",
+            "author": "Van Erie",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81s-dkIi9ML._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Legacy-Peace-Ascensio-Aeterna-Book-ebook/dp/B0DH2VGTM5/ref=zg_bs_g_158591011_d_sccl_1/141-5254728-6194754",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B07R994T3X",
-            "title": "An Amish Christmas Promise (Green Mountain Blessings Book 1)",
-            "author": "Jo Ann Brown",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ntyx7QWnL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Amish-Christmas-Promise-Mountain-Blessings-ebook/dp/B07R994T3X/ref=zg_bs_g_157028011_d_sccl_16/140-5597463-3347946",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0F87Q5HCJ",
+            "title": "Decaf: Coffee Break Bundle: Dark Humor Short Reads (Coffee Break Bundle Series)",
+            "author": "Jinx James",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81OdkOCNCLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Decaf-Coffee-Break-Bundle-Amusing-ebook/dp/B0F87Q5HCJ/ref=zg_bs_g_157056011_d_sccl_1/141-5254728-6194754",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B0FQ498SFY",
+            "title": "Sinister Summer (Serenity's Plain Secrets Book 21)",
+            "author": "Karen Ann Hopkins",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tISulEJ6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Sinister-Summer-Serenitys-Plain-Secrets-ebook/dp/B0FQ498SFY/ref=zg_bs_g_157028011_d_sccl_1/141-5254728-6194754",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GX2WGJRR",
-            "title": "His Savage Vow: A Dark Mafia Romance (Savage Vows Duet Book 1)",
-            "author": "Lane Hart",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bhBwibz4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/His-Savage-Vow-Mafia-Romance-ebook/dp/B0GX2WGJRR/ref=zg_bs_g_158566011_d_sccl_12/140-5597463-3347946",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0HHGCM412",
+            "title": "Stuck Together This Christmas: A Sweet Romantic Comedy (Holidays Happen Book 1)",
+            "author": "Cecily Vance",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/711j4DHam4L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Stuck-Together-This-Christmas-Romantic-ebook/dp/B0HHGCM412/ref=zg_bs_g_158566011_d_sccl_1/141-5254728-6194754",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
