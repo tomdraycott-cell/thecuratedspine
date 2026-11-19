@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B00GXOFUYS",
-            "title": "The Irish End Games, Books 1-3",
-            "author": "Susan Kiernan-Lewis",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XIJpq8ChL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Irish-End-Games-Books-1-3-ebook/dp/B00GXOFUYS/ref=zg_bs_g_158591011_d_sccl_3/136-9071205-4976313",
+            "asin": "B085XK7FW3",
+            "title": "Broken: Love After the Apocalypse (After the Plague Book 1)",
+            "author": "Imogen Keeper",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71g3f7CPPZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Broken-Apocalypse-Romance-Novel-Plague-ebook/dp/B085XK7FW3/ref=zg_bs_g_158591011_d_sccl_1/135-0002525-4413900",
             "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00ZT63Q2Y",
-            "title": "Prep For Doom",
-            "author": "E.R. Arroyo",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Nxcc4pwvL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Prep-Doom-R-Arroyo-ebook/dp/B00ZT63Q2Y/ref=zg_bs_g_157056011_d_sccl_9/136-9071205-4976313",
+            "asin": "B0H2SRHSGM",
+            "title": "Sweet Heat: An Anthology of Sweet Romance, Funny Drama, and Sweet Moments of Heat",
+            "author": "Indya",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tPzASQnYL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Sweet-Heat-Anthology-Romance-Moments-ebook/dp/B0H2SRHSGM/ref=zg_bs_g_157056011_d_sccl_4/135-0002525-4413900",
             "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B08H6XLZ6G",
-            "title": "Mile High Mayhem (FBI-K9 Series Book 4)",
-            "author": "Jodi Burnett",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q82nnQYBL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Mile-High-Mayhem-FBI-K9-Book-ebook/dp/B08H6XLZ6G/ref=zg_bs_g_157028011_d_sccl_5/136-9071205-4976313",
+            "asin": "B0HLKPV2ZC",
+            "title": "Almost Us: A Spicy Second-Chance Romance with Childhood Friends and a Kiss He Never Forgot (The Men of Number Twelve)",
+            "author": "Brooke Hartwell",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XiYE+vSVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Almost-Us-Second-Chance-Romance-Childhood-ebook/dp/B0HLKPV2ZC/ref=zg_bs_g_157028011_d_sccl_1/135-0002525-4413900",
             "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B07X8T495S",
-            "title": "Long Lost Christmas (Sweetheart, Montana Book 1)",
-            "author": "Joan Kilby",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jJdRVj-CL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Long-Lost-Christmas-Joan-Kilby-ebook/dp/B07X8T495S/ref=zg_bs_g_158566011_d_sccl_3/136-9071205-4976313",
+            "asin": "B0HKPVXQS4",
+            "title": "Picture Perfect Snow - Christmas in Snow Falls",
+            "author": "Cassidy Berg",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91h6V5wJKrL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Picture-Perfect-Snow-Christmas-Falls-ebook/dp/B0HKPVXQS4/ref=zg_bs_g_158566011_d_sccl_2/135-0002525-4413900",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
