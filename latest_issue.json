@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B00KAP9B7S",
-            "title": "No Middle Ground: An Action-packed Military Space Opera (Spineward Sectors- Middleton's Pride Book 1)",
-            "author": "Caleb Wachter",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91uON2oeTyL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Middle-Ground-Action-packed-Spineward-Middletons-ebook/dp/B00KAP9B7S/ref=zg_bs_g_158591011_d_sccl_2/143-8896316-7991429",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B00GXOFUYS",
+            "title": "The Irish End Games, Books 1-3",
+            "author": "Susan Kiernan-Lewis",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XIJpq8ChL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Irish-End-Games-Books-1-3-ebook/dp/B00GXOFUYS/ref=zg_bs_g_158591011_d_sccl_3/136-9071205-4976313",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0H4216PN9",
-            "title": "Echoes From Around the Globe: Women's Voices",
-            "author": "The Memory Keepers",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/814x2+WGr3L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Echoes-Around-Globe-Womens-Voices-ebook/dp/B0H4216PN9/ref=zg_bs_g_157056011_d_sccl_2/143-8896316-7991429",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B00ZT63Q2Y",
+            "title": "Prep For Doom",
+            "author": "E.R. Arroyo",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Nxcc4pwvL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Prep-Doom-R-Arroyo-ebook/dp/B00ZT63Q2Y/ref=zg_bs_g_157056011_d_sccl_9/136-9071205-4976313",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0CKYC5FGJ",
-            "title": "Relentless: A Cat-and-Mouse Game: Kill or Be Killed. (Kate Preacher Thriller Series Book 1)",
-            "author": "Michael Maloof",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HB6H2KeGL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Relentless-Gripping-International-Michael-Maloof-ebook/dp/B0CKYC5FGJ/ref=zg_bs_g_157028011_d_sccl_3/143-8896316-7991429",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B08H6XLZ6G",
+            "title": "Mile High Mayhem (FBI-K9 Series Book 4)",
+            "author": "Jodi Burnett",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81q82nnQYBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Mile-High-Mayhem-FBI-K9-Book-ebook/dp/B08H6XLZ6G/ref=zg_bs_g_157028011_d_sccl_5/136-9071205-4976313",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0GR1JL6X7",
-            "title": "Denial",
-            "author": "A. M. Wilson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81iZnxJBAtL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Denial-M-Wilson-ebook/dp/B0GR1JL6X7/ref=zg_bs_g_158566011_d_sccl_2/143-8896316-7991429",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B07X8T495S",
+            "title": "Long Lost Christmas (Sweetheart, Montana Book 1)",
+            "author": "Joan Kilby",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jJdRVj-CL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Long-Lost-Christmas-Joan-Kilby-ebook/dp/B07X8T495S/ref=zg_bs_g_158566011_d_sccl_3/136-9071205-4976313",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
