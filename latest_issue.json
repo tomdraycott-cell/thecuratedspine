@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B085XK7FW3",
-            "title": "Broken: Love After the Apocalypse (After the Plague Book 1)",
-            "author": "Imogen Keeper",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71g3f7CPPZL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Broken-Apocalypse-Romance-Novel-Plague-ebook/dp/B085XK7FW3/ref=zg_bs_g_158591011_d_sccl_1/135-0002525-4413900",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B0BSLZ31D1",
+            "title": "The Mage of Shimmer Mountain: LitRPG Book 1: Crafting Magics",
+            "author": "Adam Sampson",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91EcrKhnaQL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Mage-Shimmer-Mountain-LitRPG-Crafting-ebook/dp/B0BSLZ31D1/ref=zg_bs_g_158591011_d_sccl_1/135-9763017-4053912",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0H2SRHSGM",
-            "title": "Sweet Heat: An Anthology of Sweet Romance, Funny Drama, and Sweet Moments of Heat",
-            "author": "Indya",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81tPzASQnYL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Sweet-Heat-Anthology-Romance-Moments-ebook/dp/B0H2SRHSGM/ref=zg_bs_g_157056011_d_sccl_4/135-0002525-4413900",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B07MF7D5XQ",
+            "title": "Untamed Destinies: A Romance Anthology",
+            "author": "Kim Petersen",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81vtxXW6jLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Untamed-Destinies-Anthology-Kim-Petersen-ebook/dp/B07MF7D5XQ/ref=zg_bs_g_157056011_d_sccl_3/135-9763017-4053912",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0HLKPV2ZC",
-            "title": "Almost Us: A Spicy Second-Chance Romance with Childhood Friends and a Kiss He Never Forgot (The Men of Number Twelve)",
-            "author": "Brooke Hartwell",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81XiYE+vSVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Almost-Us-Second-Chance-Romance-Childhood-ebook/dp/B0HLKPV2ZC/ref=zg_bs_g_157028011_d_sccl_1/135-0002525-4413900",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0FQFJ4H23",
+            "title": "Commander Daddy: A Small Town Grumpy Mountain Man Romance (Timber Creek Daddies Book 1)",
+            "author": "Lizzie Sparks",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/913i9+1VvzL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Commander-Daddy-Timber-Creek-Daddies-ebook/dp/B0FQFJ4H23/ref=zg_bs_g_157028011_d_sccl_4/135-9763017-4053912",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HKPVXQS4",
-            "title": "Picture Perfect Snow - Christmas in Snow Falls",
-            "author": "Cassidy Berg",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91h6V5wJKrL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Picture-Perfect-Snow-Christmas-Falls-ebook/dp/B0HKPVXQS4/ref=zg_bs_g_158566011_d_sccl_2/135-0002525-4413900",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B07QHBSHV3",
+            "title": "Honeymoon in Paris (City of Love Book 3)",
+            "author": "Juliette Sobanet",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/7162rxQRISL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Honeymoon-Paris-City-Love-Book-ebook/dp/B07QHBSHV3/ref=zg_bs_g_158566011_d_sccl_4/135-9763017-4053912",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
