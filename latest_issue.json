@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0CR5X1WJQ",
-            "title": "ARCTIC REVELATION: A Thousand Lifetimes in the Blink of An Eye (The Revelation Series Book 1)",
-            "author": "Hugh Finch",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91GYPUnNunL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/ARCTIC-REVELATION-Thousand-Lifetimes-Blink-ebook/dp/B0CR5X1WJQ/ref=zg_bs_g_158591011_d_sccl_1/134-0376075-7382345",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B088F7HP9H",
+            "title": "The Woodcutter: A Page-Turning Dark Fantasy Thriller",
+            "author": "Jonathan Maas",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/A19UjCATy6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Woodcutter-Page-Turning-Dark-Fantasy-Thriller-ebook/dp/B088F7HP9H/ref=zg_bs_g_158591011_d_sccl_2/134-1260433-1410720",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0BFP1VLFQ",
-            "title": "Lair of the Eldritch Dark: The Collected Works of Clark Ashton Smith (Illustrated)",
-            "author": "Clark Ashton Smith",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/818ZXHU0VDL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lair-Eldritch-Dark-Collected-Illustrated-ebook/dp/B0BFP1VLFQ/ref=zg_bs_g_157056011_d_sccl_16/134-0376075-7382345",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0HS3S6YG6",
+            "title": "The Crooked Path (Illustrated): Classic Tales of Witchcraft and Persecution (Library Mirabilis)",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71J5MqSw8AL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Crooked-Path-Illustrated-Witchcraft-Persecution-ebook/dp/B0HS3S6YG6/ref=zg_bs_g_157056011_d_sccl_14/134-1260433-1410720",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B09RZVG7RK",
-            "title": "Forbidden Touch: A steamy billionaire romance (The Dufort Dynasty Book 2)",
-            "author": "Juliette N. Banks",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Oaby4B7CL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Forbidden-Touch-billionaire-romance-Dynasty-ebook/dp/B09RZVG7RK/ref=zg_bs_g_157028011_d_sccl_1/134-0376075-7382345",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0DXN9WZGG",
+            "title": "Marshal of Snowdonia: A Frank Marshal Crime Thriller",
+            "author": "Simon McCleave",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/811fxhfDVqL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Marshal-Snowdonia-Frank-Crime-Thriller-ebook/dp/B0DXN9WZGG/ref=zg_bs_g_157028011_d_sccl_2/134-1260433-1410720",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0G64HP4JP",
-            "title": "Let Me Keep You: A Second Chance Small Town Romance (Let Me trilogy Book 1)",
-            "author": "Brooke Fox",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hmb-Fn4JL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Let-Me-Keep-You-Romance-ebook/dp/B0G64HP4JP/ref=zg_bs_g_158566011_d_sccl_2/134-0376075-7382345",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0HFFZKKF9",
+            "title": "Saving Imogene (Seal Team - Tango Series Book 1)",
+            "author": "Nicole Flockton",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xFakXfqPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Saving-Imogene-Seal-Team-Tango-ebook/dp/B0HFFZKKF9/ref=zg_bs_g_158566011_d_sccl_3/134-1260433-1410720",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
