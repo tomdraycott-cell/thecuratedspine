@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0FN6P1QNK",
-            "title": "Reset (After The Pulse Book 1)",
-            "author": "Mark Tufo",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81RDumKVIwL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Reset-After-Pulse-Book-1-ebook/dp/B0FN6P1QNK/ref=zg_bs_g_158591011_d_sccl_3/136-6728156-5070417",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0CR5X1WJQ",
+            "title": "ARCTIC REVELATION: A Thousand Lifetimes in the Blink of An Eye (The Revelation Series Book 1)",
+            "author": "Hugh Finch",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91GYPUnNunL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/ARCTIC-REVELATION-Thousand-Lifetimes-Blink-ebook/dp/B0CR5X1WJQ/ref=zg_bs_g_158591011_d_sccl_1/134-0376075-7382345",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HRKW88GT",
-            "title": "The Dead of Winter (Illustrated): Classic Tales of Snow, Ice and Winter Horror (Library Mirabilis)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71XSON99LVL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Dead-Winter-Illustrated-Classic-Mirabilis-ebook/dp/B0HRKW88GT/ref=zg_bs_g_157056011_d_sccl_17/136-6728156-5070417",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0BFP1VLFQ",
+            "title": "Lair of the Eldritch Dark: The Collected Works of Clark Ashton Smith (Illustrated)",
+            "author": "Clark Ashton Smith",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/818ZXHU0VDL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Lair-Eldritch-Dark-Collected-Illustrated-ebook/dp/B0BFP1VLFQ/ref=zg_bs_g_157056011_d_sccl_16/134-0376075-7382345",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0B43WGL4L",
-            "title": "A Bayou Christmas (Louisiana Book 3)",
-            "author": "Susan Sands",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/916118FthIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Bayou-Christmas-Louisiana-Book-ebook/dp/B0B43WGL4L/ref=zg_bs_g_157028011_d_sccl_1/136-6728156-5070417",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B09RZVG7RK",
+            "title": "Forbidden Touch: A steamy billionaire romance (The Dufort Dynasty Book 2)",
+            "author": "Juliette N. Banks",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Oaby4B7CL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Forbidden-Touch-billionaire-romance-Dynasty-ebook/dp/B09RZVG7RK/ref=zg_bs_g_157028011_d_sccl_1/134-0376075-7382345",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B07H4G4SVN",
-            "title": "Operation Sex Kitten: San Diego Social Scene Book 1",
-            "author": "Tess Summers",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71baMRsFPrL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Operation-Sex-Kitten-Diego-Social-ebook/dp/B07H4G4SVN/ref=zg_bs_g_158566011_d_sccl_6/136-6728156-5070417",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0G64HP4JP",
+            "title": "Let Me Keep You: A Second Chance Small Town Romance (Let Me trilogy Book 1)",
+            "author": "Brooke Fox",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hmb-Fn4JL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Let-Me-Keep-You-Romance-ebook/dp/B0G64HP4JP/ref=zg_bs_g_158566011_d_sccl_2/134-0376075-7382345",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
