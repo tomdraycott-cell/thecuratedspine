@@ -1,38 +1,11 @@
 {
     "books": [
         {
-            "asin": "B0FFQM19BH",
-            "title": "Predator Dominion: A Heart-Pounding Thriller of Genetic Experiments, Survival, and Suspense (The Shadow Directive Book 1)",
-            "author": "R.D. Brady",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81G36KTwXGL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Predator-Dominion-Heart-Pounding-Experiments-Directive-ebook/dp/B0FFQM19BH/ref=zg_bs_g_158591011_d_sccl_5/143-6618357-2760322",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
-            "genre": "Science Fiction"
-        },
-        {
-            "asin": "B0HKGMCFD8",
-            "title": "The Best Parts of Moby-Dick & Billy Budd (Annotated)",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Imd2DQC2L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Best-Parts-Moby-Dick-Billy-Annotated-ebook/dp/B0HKGMCFD8/ref=zg_bs_g_157056011_d_sccl_2/143-6618357-2760322",
-            "hook": "Step into another era with today's top-trending historical read.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B0BGMG7QWR",
-            "title": "Diversion: Dwayne Morrow Mystery #4 (Dwayne Morrow Mysteries)",
-            "author": "Darin Miller",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HKTu+UwHL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Diversion-Dwayne-Morrow-Mystery-Mysteries-ebook/dp/B0BGMG7QWR/ref=zg_bs_g_157028011_d_sccl_5/143-6618357-2760322",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
-            "genre": "Literary Fiction"
-        },
-        {
-            "asin": "B001OWEEFA",
-            "title": "Deadly Love (Francesca Cahill Series Book 1)",
-            "author": "Brenda Joyce",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81AIY5-mkIL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Deadly-Love-Francesca-Cahill-Novel-ebook/dp/B001OWEEFA/ref=zg_bs_g_158566011_d_sccl_7/143-6618357-2760322",
+            "asin": "B088616PKJ",
+            "title": "Seducing Donovan: Steamy Bodyguard Romantic Comedy (Almost Perfect Series Book 3)",
+            "author": "Lisa Lanay",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-fLzO3RiL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Seducing-Donovan-Almost-Perfect-Lanay-ebook/dp/B088616PKJ/ref=zg_bs_g_158566011_d_sccl_5/143-3184210-8892958",
             "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
