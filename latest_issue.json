@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B088F7HP9H",
-            "title": "The Woodcutter: A Page-Turning Dark Fantasy Thriller",
-            "author": "Jonathan Maas",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/A19UjCATy6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Woodcutter-Page-Turning-Dark-Fantasy-Thriller-ebook/dp/B088F7HP9H/ref=zg_bs_g_158591011_d_sccl_2/134-1260433-1410720",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0FFQM19BH",
+            "title": "Predator Dominion: A Heart-Pounding Thriller of Genetic Experiments, Survival, and Suspense (The Shadow Directive Book 1)",
+            "author": "R.D. Brady",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81G36KTwXGL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Predator-Dominion-Heart-Pounding-Experiments-Directive-ebook/dp/B0FFQM19BH/ref=zg_bs_g_158591011_d_sccl_5/143-6618357-2760322",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HS3S6YG6",
-            "title": "The Crooked Path (Illustrated): Classic Tales of Witchcraft and Persecution (Library Mirabilis)",
+            "asin": "B0HKGMCFD8",
+            "title": "The Best Parts of Moby-Dick & Billy Budd (Annotated)",
             "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71J5MqSw8AL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Crooked-Path-Illustrated-Witchcraft-Persecution-ebook/dp/B0HS3S6YG6/ref=zg_bs_g_157056011_d_sccl_14/134-1260433-1410720",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Imd2DQC2L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Best-Parts-Moby-Dick-Billy-Annotated-ebook/dp/B0HKGMCFD8/ref=zg_bs_g_157056011_d_sccl_2/143-6618357-2760322",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0DXN9WZGG",
-            "title": "Marshal of Snowdonia: A Frank Marshal Crime Thriller",
-            "author": "Simon McCleave",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/811fxhfDVqL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Marshal-Snowdonia-Frank-Crime-Thriller-ebook/dp/B0DXN9WZGG/ref=zg_bs_g_157028011_d_sccl_2/134-1260433-1410720",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0BGMG7QWR",
+            "title": "Diversion: Dwayne Morrow Mystery #4 (Dwayne Morrow Mysteries)",
+            "author": "Darin Miller",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81HKTu+UwHL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Diversion-Dwayne-Morrow-Mystery-Mysteries-ebook/dp/B0BGMG7QWR/ref=zg_bs_g_157028011_d_sccl_5/143-6618357-2760322",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HFFZKKF9",
-            "title": "Saving Imogene (Seal Team - Tango Series Book 1)",
-            "author": "Nicole Flockton",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xFakXfqPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Saving-Imogene-Seal-Team-Tango-ebook/dp/B0HFFZKKF9/ref=zg_bs_g_158566011_d_sccl_3/134-1260433-1410720",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B001OWEEFA",
+            "title": "Deadly Love (Francesca Cahill Series Book 1)",
+            "author": "Brenda Joyce",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81AIY5-mkIL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Deadly-Love-Francesca-Cahill-Novel-ebook/dp/B001OWEEFA/ref=zg_bs_g_158566011_d_sccl_7/143-6618357-2760322",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
