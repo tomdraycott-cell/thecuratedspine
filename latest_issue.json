@@ -1,12 +1,39 @@
 {
     "books": [
         {
-            "asin": "B088616PKJ",
-            "title": "Seducing Donovan: Steamy Bodyguard Romantic Comedy (Almost Perfect Series Book 3)",
-            "author": "Lisa Lanay",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81-fLzO3RiL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Seducing-Donovan-Almost-Perfect-Lanay-ebook/dp/B088616PKJ/ref=zg_bs_g_158566011_d_sccl_5/143-3184210-8892958",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B0HPD16FC9",
+            "title": "The White Rose Will Not Fall: A Time-Travel Novel of Love and Resistance",
+            "author": "Rami Raz",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zq4pgmFFL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/White-Rose-Will-Not-Fall-ebook/dp/B0HPD16FC9/ref=zg_bs_g_158591011_d_sccl_4/147-9350345-2334253",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "genre": "Science Fiction"
+        },
+        {
+            "asin": "B0HS58GWY1",
+            "title": "Before the Robot: Thirteen Forgotten Stories of Artificial Minds and Machine Societies, 300\u20131924",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61ddfpQP+TL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Before-Robot-Forgotten-Artificial-Societies-ebook/dp/B0HS58GWY1/ref=zg_bs_g_157056011_d_sccl_12/147-9350345-2334253",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "genre": "Historical Fiction"
+        },
+        {
+            "asin": "B007FIQMHU",
+            "title": "Tall Man in Ray-Bans (A John Tall Wolf Novel Book 1)",
+            "author": "Joseph Flynn",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rHeWJ6FyL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tall-Ray-Bans-John-Wolf-Novel-ebook/dp/B007FIQMHU/ref=zg_bs_g_157028011_d_sccl_7/147-9350345-2334253",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "genre": "Literary Fiction"
+        },
+        {
+            "asin": "B0C6V5MCK4",
+            "title": "Her Breakfast Bear Mate (Crescent Lake Shifters Book 2)",
+            "author": "Arizona Tape",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zl0vkRdBL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Breakfast-Bear-Mate-Crescent-Bears-ebook/dp/B0C6V5MCK4/ref=zg_bs_g_158566011_d_sccl_5/147-9350345-2334253",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
