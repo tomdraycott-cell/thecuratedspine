@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0HPD16FC9",
-            "title": "The White Rose Will Not Fall: A Time-Travel Novel of Love and Resistance",
-            "author": "Rami Raz",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zq4pgmFFL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/White-Rose-Will-Not-Fall-ebook/dp/B0HPD16FC9/ref=zg_bs_g_158591011_d_sccl_4/147-9350345-2334253",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0HMRWJ3TK",
+            "title": "Two Hundred Days: A Mars Mission Thriller",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81pSY4scNLL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Two-Hundred-Days-Mission-Thriller-ebook/dp/B0HMRWJ3TK/ref=zg_bs_g_158591011_d_sccl_5/132-0244703-5320040",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HS58GWY1",
-            "title": "Before the Robot: Thirteen Forgotten Stories of Artificial Minds and Machine Societies, 300\u20131924",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/61ddfpQP+TL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Before-Robot-Forgotten-Artificial-Societies-ebook/dp/B0HS58GWY1/ref=zg_bs_g_157056011_d_sccl_12/147-9350345-2334253",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
-            "genre": "Historical Fiction"
-        },
-        {
-            "asin": "B007FIQMHU",
-            "title": "Tall Man in Ray-Bans (A John Tall Wolf Novel Book 1)",
-            "author": "Joseph Flynn",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rHeWJ6FyL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Tall-Ray-Bans-John-Wolf-Novel-ebook/dp/B007FIQMHU/ref=zg_bs_g_157028011_d_sccl_7/147-9350345-2334253",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B08D6JR8FC",
+            "title": "A Long Shadow: British Detective Series (Chief Inspector Shadow Mystery Book 1)",
+            "author": "H L Marsay",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/910p9lCc67L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Long-Shadow-Chief-Inspector-Mystery-ebook/dp/B08D6JR8FC/ref=zg_bs_g_157028011_d_sccl_11/132-0244703-5320040",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0C6V5MCK4",
-            "title": "Her Breakfast Bear Mate (Crescent Lake Shifters Book 2)",
-            "author": "Arizona Tape",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zl0vkRdBL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Breakfast-Bear-Mate-Crescent-Bears-ebook/dp/B0C6V5MCK4/ref=zg_bs_g_158566011_d_sccl_5/147-9350345-2334253",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B081D545DB",
+            "title": "Unexpected: A Single Mom Romance (Love in LA)",
+            "author": "Jenna Hartley",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81WNX74dAVL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Unexpected-Love-Jenna-Hartley-ebook/dp/B081D545DB/ref=zg_bs_g_158566011_d_sccl_7/132-0244703-5320040",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
