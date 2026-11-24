@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HHQ97MNY",
-            "title": "Pioneer Promise (Promise Series Book 1)",
-            "author": "Robert Lary",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DqdIcez+L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Pioneer-Promise-Book-1-ebook/dp/B0HHQ97MNY/ref=zg_bs_g_158591011_d_sccl_3/145-1786338-8307146",
-            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
+            "asin": "B0HSMDTPJY",
+            "title": "One Tank of Gas: An EMP Post Apocalypse Prepper Survival Thriller",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hutgAvAwL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/dp/B0HSMDTPJY/ref=zg_bs_g_158591011_d_sccl_2/146-3012114-7253064",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B00AD59YT0",
-            "title": "Countdown To A Kiss (A New Year's Eve Anthology)",
-            "author": "Colleen Gleason",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/910e6VmqJ6L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Countdown-Kiss-New-Years-Anthology-ebook/dp/B00AD59YT0/ref=zg_bs_g_157056011_d_sccl_14/145-1786338-8307146",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0HS3X1ZF3",
+            "title": "CHRISTMAS HAVEN : Eight Heartwarming Christian Christmas Romantic Suspense Stories of Faith, Forgiveness, Courage, and Love",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81n4NzKKN7L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/CHRISTMAS-HAVEN-Heartwarming-Christian-Forgiveness-ebook/dp/B0HS3X1ZF3/ref=zg_bs_g_157056011_d_sccl_5/146-3012114-7253064",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0HP8PCCDL",
-            "title": "Last Words (Angie Gomez Murder Mysteries Book 1)",
-            "author": "In\u00e9s Saint",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j5wzozu8L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Words-Angie-Gomez-Murder-Mysteries-ebook/dp/B0HP8PCCDL/ref=zg_bs_g_157028011_d_sccl_2/145-1786338-8307146",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0CLL17FVG",
+            "title": "Seasonable Doubt (Cass Leary Legal Thriller Series)",
+            "author": "Robin James",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zWI5UbdcL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Seasonable-Doubt-Leary-Legal-Thriller-ebook/dp/B0CLL17FVG/ref=zg_bs_g_157028011_d_sccl_1/146-3012114-7253064",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0FVW87WGY",
-            "title": "Bedford County Christmas Collection",
-            "author": "Jennifer Sienes",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ICZTmgFuL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Bedford-County-Christmas-Collection-Jennifer-ebook/dp/B0FVW87WGY/ref=zg_bs_g_158566011_d_sccl_2/145-1786338-8307146",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B0HFXCMTD8",
+            "title": "Loon Call: A Marella Lake Novel (Marella Lake Small Town Romance Series Book 1)",
+            "author": "Wrobyn Writer",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81sFTiWnzDL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Loon-Call-Marella-Novel-Romance-ebook/dp/B0HFXCMTD8/ref=zg_bs_g_158566011_d_sccl_1/146-3012114-7253064",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
