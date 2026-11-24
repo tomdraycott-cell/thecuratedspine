@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B0HSMDTPJY",
-            "title": "One Tank of Gas: An EMP Post Apocalypse Prepper Survival Thriller",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81hutgAvAwL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/dp/B0HSMDTPJY/ref=zg_bs_g_158591011_d_sccl_2/146-3012114-7253064",
-            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "asin": "B009VR4U0O",
+            "title": "TekWar (The TekWar Series Book 1)",
+            "author": "William Shatner",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jf9sE-0fL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/TekWar-Book-1-William-Shatner-ebook/dp/B009VR4U0O/ref=zg_bs_g_158591011_d_sccl_2/131-2280605-5364048",
+            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HS3X1ZF3",
-            "title": "CHRISTMAS HAVEN : Eight Heartwarming Christian Christmas Romantic Suspense Stories of Faith, Forgiveness, Courage, and Love",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81n4NzKKN7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/CHRISTMAS-HAVEN-Heartwarming-Christian-Forgiveness-ebook/dp/B0HS3X1ZF3/ref=zg_bs_g_157056011_d_sccl_5/146-3012114-7253064",
-            "hook": "Step into another era with today's top-trending historical read.",
+            "asin": "B09Q1QDWTN",
+            "title": "Coming Up Short: A Psychological Horror Series",
+            "author": "Charles Welch",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/812jfzkDl-L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Coming-Up-Short-Charles-Welch-ebook/dp/B09Q1QDWTN/ref=zg_bs_g_157056011_d_sccl_1/131-2280605-5364048",
+            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0CLL17FVG",
-            "title": "Seasonable Doubt (Cass Leary Legal Thriller Series)",
-            "author": "Robin James",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81zWI5UbdcL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Seasonable-Doubt-Leary-Legal-Thriller-ebook/dp/B0CLL17FVG/ref=zg_bs_g_157028011_d_sccl_1/146-3012114-7253064",
-            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
+            "asin": "B0GT6QSJS8",
+            "title": "The Duchess: A Novel (The Twomomma Chronicles Book 1)",
+            "author": "Virginia Lee Mattie",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ufcHpqiEL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Duchess-Novel-Twomomma-Chronicles-Book-ebook/dp/B0GT6QSJS8/ref=zg_bs_g_157028011_d_sccl_1/131-2280605-5364048",
+            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0HFXCMTD8",
-            "title": "Loon Call: A Marella Lake Novel (Marella Lake Small Town Romance Series Book 1)",
-            "author": "Wrobyn Writer",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81sFTiWnzDL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Loon-Call-Marella-Novel-Romance-ebook/dp/B0HFXCMTD8/ref=zg_bs_g_158566011_d_sccl_1/146-3012114-7253064",
-            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
+            "asin": "B08N5821J9",
+            "title": "A Heart Worth Healing: A Heartwarming Historical Western Romance (Sage Canyon Book 1)",
+            "author": "Cara Devlin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/817jRlvd8uL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Heart-Worth-Healing-Canyon-Novel-ebook/dp/B08N5821J9/ref=zg_bs_g_158566011_d_sccl_2/131-2280605-5364048",
+            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
             "genre": "Romance"
         }
     ]
