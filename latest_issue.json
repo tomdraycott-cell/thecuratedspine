@@ -1,38 +1,38 @@
 {
     "books": [
         {
-            "asin": "B0DJWRVVSK",
-            "title": "A Slice of Sky (The Last Call Series Book 1)",
-            "author": "Nancy Moser",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91zVynrFVeL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Slice-Sky-Last-Call-Book-ebook/dp/B0DJWRVVSK/ref=zg_bs_g_158591011_d_sccl_1/139-6882352-3265244",
+            "asin": "B0HHQ97MNY",
+            "title": "Pioneer Promise (Promise Series Book 1)",
+            "author": "Robert Lary",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71DqdIcez+L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Pioneer-Promise-Book-1-ebook/dp/B0HHQ97MNY/ref=zg_bs_g_158591011_d_sccl_3/145-1786338-8307146",
             "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B007RV7FSA",
-            "title": "Lemon and Lace: Short Stories (Coffee Break Read Book 1)",
-            "author": "Jenny Worstall",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Hf3heu0yL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Lemon-Lace-Short-Stories-coffee-ebook/dp/B007RV7FSA/ref=zg_bs_g_157056011_d_sccl_20/139-6882352-3265244",
+            "asin": "B00AD59YT0",
+            "title": "Countdown To A Kiss (A New Year's Eve Anthology)",
+            "author": "Colleen Gleason",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/910e6VmqJ6L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Countdown-Kiss-New-Years-Anthology-ebook/dp/B00AD59YT0/ref=zg_bs_g_157056011_d_sccl_14/145-1786338-8307146",
             "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0BLW6KQF4",
-            "title": "Christmas in Eagle Bend ('Tis the Season Book 5)",
-            "author": "Kathleen Shoop",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81GiW73-n7L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Christmas-Eagle-Bend-Season-Book-ebook/dp/B0BLW6KQF4/ref=zg_bs_g_157028011_d_sccl_1/139-6882352-3265244",
+            "asin": "B0HP8PCCDL",
+            "title": "Last Words (Angie Gomez Murder Mysteries Book 1)",
+            "author": "In\u00e9s Saint",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81j5wzozu8L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Words-Angie-Gomez-Murder-Mysteries-ebook/dp/B0HP8PCCDL/ref=zg_bs_g_157028011_d_sccl_2/145-1786338-8307146",
             "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0DPLWFDBT",
-            "title": "A Texas Soldier\u2019s Love: Second Chance Military Small-Town Romance (The Men of Service Texas Book 1)",
-            "author": "Julie Benson",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81VEY1ChRjL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Texas-Soldiers-Love-Service-Book-ebook/dp/B0DPLWFDBT/ref=zg_bs_g_158566011_d_sccl_1/139-6882352-3265244",
+            "asin": "B0FVW87WGY",
+            "title": "Bedford County Christmas Collection",
+            "author": "Jennifer Sienes",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ICZTmgFuL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Bedford-County-Christmas-Collection-Jennifer-ebook/dp/B0FVW87WGY/ref=zg_bs_g_158566011_d_sccl_2/145-1786338-8307146",
             "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
