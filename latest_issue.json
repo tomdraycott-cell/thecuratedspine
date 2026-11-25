@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B009VR4U0O",
-            "title": "TekWar (The TekWar Series Book 1)",
-            "author": "William Shatner",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81jf9sE-0fL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/TekWar-Book-1-William-Shatner-ebook/dp/B009VR4U0O/ref=zg_bs_g_158591011_d_sccl_2/131-2280605-5364048",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0D4C7MH9Z",
+            "title": "The Survivors (Books 1-12) (The Survivors Ultimate Collection Book 1)",
+            "author": "Nathan Hystad",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71Hjm28xNwL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Survivors-Books-1-12-Nathan-Hystad-ebook/dp/B0D4C7MH9Z/ref=zg_bs_g_158591011_d_sccl_2/146-9692857-2002904",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B09Q1QDWTN",
-            "title": "Coming Up Short: A Psychological Horror Series",
-            "author": "Charles Welch",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/812jfzkDl-L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Coming-Up-Short-Charles-Welch-ebook/dp/B09Q1QDWTN/ref=zg_bs_g_157056011_d_sccl_1/131-2280605-5364048",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B00C4TK334",
+            "title": "12 Common Core Essentials: Literature: Selections from New and Classic Books for the English Language Arts Standards for Middle and High School",
+            "author": "Harper Academic",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bAt+qWgZL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Common-Core-Essentials-Literature-Selections-ebook/dp/B00C4TK334/ref=zg_bs_g_157056011_d_sccl_20/146-9692857-2002904",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0GT6QSJS8",
-            "title": "The Duchess: A Novel (The Twomomma Chronicles Book 1)",
-            "author": "Virginia Lee Mattie",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81ufcHpqiEL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Duchess-Novel-Twomomma-Chronicles-Book-ebook/dp/B0GT6QSJS8/ref=zg_bs_g_157028011_d_sccl_1/131-2280605-5364048",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0053E4TNC",
+            "title": "Tropical Heat (The Fred Carver Mysteries Book 1)",
+            "author": "John Lutz",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bsGh2pJzL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Tropical-Heat-Fred-Carver-Mysteries-ebook/dp/B0053E4TNC/ref=zg_bs_g_157028011_d_sccl_1/146-9692857-2002904",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B08N5821J9",
-            "title": "A Heart Worth Healing: A Heartwarming Historical Western Romance (Sage Canyon Book 1)",
-            "author": "Cara Devlin",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/817jRlvd8uL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Heart-Worth-Healing-Canyon-Novel-ebook/dp/B08N5821J9/ref=zg_bs_g_158566011_d_sccl_2/131-2280605-5364048",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B0FR2K6J8X",
+            "title": "Year of the Fox: A Slow Burn Regency Romance (Ladies' Revenge Club Book 5)",
+            "author": "Ava Devlin",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81UfjMhB7CL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Year-Fox-Regency-Romance-Revenge-ebook/dp/B0FR2K6J8X/ref=zg_bs_g_158566011_d_sccl_3/146-9692857-2002904",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
