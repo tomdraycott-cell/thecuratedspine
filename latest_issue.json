@@ -1,30 +1,39 @@
 {
     "books": [
         {
-            "asin": "B07S1R8L43",
-            "title": "Deceptive Visions",
-            "author": "Daniel McMillan",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ZvUoN9QiL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Deceptive-Visions-Daniel-McMillan-ebook/dp/B07S1R8L43/ref=zg_bs_g_157056011_d_sccl_19/138-9907123-4647220",
-            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
+            "asin": "B0GQ3CB39R",
+            "title": "Daughters of the Mist",
+            "author": "Chris Pugmire",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81qePtJp7aL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Daughters-Mist-Chris-Pugmire-ebook/dp/B0GQ3CB39R/ref=zg_bs_g_158591011_d_sccl_1/139-7939447-8175313",
+            "hook": "Bold world-building and propulsive sci-fi tension, currently free to download.",
+            "genre": "Science Fiction"
+        },
+        {
+            "asin": "B0BT8F25S2",
+            "title": "Prompted, Issue 01: Reedsy's literary magazine (Prompted Magazine Book 1)",
+            "author": "Reedsy Ltd",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71GvIiJLfhL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Prompted-Issue-01-Reedsys-Magazine-ebook/dp/B0BT8F25S2/ref=zg_bs_g_157056011_d_sccl_15/139-7939447-8175313",
+            "hook": "Step into another era with today's top-trending historical read.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FG77YT46",
-            "title": "Whispering Pines\u2026Unsolved: A Southern Sass Podcast Mystery (Murder, Mystery, and Mom Book 1)",
-            "author": "Brittany E. Brinegar",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Uy2MqakPL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Whispering-Pines-Unsolved-Southern-Podcast-ebook/dp/B0FG77YT46/ref=zg_bs_g_157028011_d_sccl_1/138-9907123-4647220",
-            "hook": "A resonant, character-driven novel making waves on the charts today.",
+            "asin": "B0D3WZTPKH",
+            "title": "Country Frost (King Creek Cowboys Book 8)",
+            "author": "Cheyenne McCray",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91iKRlbBR8L._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Country-Frost-King-Creek-Cowboys-ebook/dp/B0D3WZTPKH/ref=zg_bs_g_157028011_d_sccl_3/139-7939447-8175313",
+            "hook": "Sharp prose and deeply human storytelling in today's standout literary pick.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B089MB1HX8",
-            "title": "A Sheriff's Star (Home to Oak Hollow Book 1)",
-            "author": "Makenna Lee",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/812hYzWFgnL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Sheriffs-Star-Home-Hollow-Book-ebook/dp/B089MB1HX8/ref=zg_bs_g_158566011_d_sccl_1/138-9907123-4647220",
-            "hook": "Sparks fly in this chart-topping romance pick.",
+            "asin": "B098JN1WB8",
+            "title": "Nerves of Steel (Hart and Drake Medical Suspense Book 1)",
+            "author": "CJ Lyons",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/817DbVmu3nL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Nerves-Steel-Drake-Medical-Suspense-ebook/dp/B098JN1WB8/ref=zg_bs_g_158566011_d_sccl_3/139-7939447-8175313",
+            "hook": "A swoon-worthy, emotionally charged read\u2014free for your Kindle today.",
             "genre": "Romance"
         }
     ]
