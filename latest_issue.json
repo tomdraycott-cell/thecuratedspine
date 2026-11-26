@@ -1,39 +1,30 @@
 {
     "books": [
         {
-            "asin": "B0GHLC39YW",
-            "title": "The Rat Kings",
-            "author": "Vladimir Provorov",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91QJRV6XoSL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Rat-Kings-Vladimir-Provorov-ebook/dp/B0GHLC39YW/ref=zg_bs_g_158591011_d_sccl_4/143-5924305-3630210",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
-            "genre": "Science Fiction"
-        },
-        {
-            "asin": "B0DCTYPTHS",
-            "title": "Good Nonsense: Volume 1: Balderdash (Good Nonsense Anthology)",
-            "author": "Dana Lockhart",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81bGRkDbH4L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Good-Nonsense-Balderdash-Anthology-ebook/dp/B0DCTYPTHS/ref=zg_bs_g_157056011_d_sccl_6/143-5924305-3630210",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B07S1R8L43",
+            "title": "Deceptive Visions",
+            "author": "Daniel McMillan",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/71ZvUoN9QiL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Deceptive-Visions-Daniel-McMillan-ebook/dp/B07S1R8L43/ref=zg_bs_g_157056011_d_sccl_19/138-9907123-4647220",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0FTZW1XPZ",
-            "title": "Destroyed in Little Leaf Creek (A Little Leaf Creek Cozy Mystery Book 29)",
-            "author": "Cindy Bell",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/916RsFimHwL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Destroyed-Little-Leaf-Creek-Mystery-ebook/dp/B0FTZW1XPZ/ref=zg_bs_g_157028011_d_sccl_5/143-5924305-3630210",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0FG77YT46",
+            "title": "Whispering Pines\u2026Unsolved: A Southern Sass Podcast Mystery (Murder, Mystery, and Mom Book 1)",
+            "author": "Brittany E. Brinegar",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81Uy2MqakPL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Whispering-Pines-Unsolved-Southern-Podcast-ebook/dp/B0FG77YT46/ref=zg_bs_g_157028011_d_sccl_1/138-9907123-4647220",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B00J1WU41S",
-            "title": "Finding Home (True North Book 1): A Dark-Edged Second Chance, Military, Brother's Best Friend Romance",
-            "author": "Aurora Wilding",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/813S6KbkcvL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/True-North-Book-Finding-Livie-ebook/dp/B00J1WU41S/ref=zg_bs_g_158566011_d_sccl_4/143-5924305-3630210",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B089MB1HX8",
+            "title": "A Sheriff's Star (Home to Oak Hollow Book 1)",
+            "author": "Makenna Lee",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/812hYzWFgnL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Sheriffs-Star-Home-Hollow-Book-ebook/dp/B089MB1HX8/ref=zg_bs_g_158566011_d_sccl_1/138-9907123-4647220",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
