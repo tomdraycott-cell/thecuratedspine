@@ -1,39 +1,39 @@
 {
     "books": [
         {
-            "asin": "B01A4XY0UI",
-            "title": "Milijun: A Thrilling Tale of First Contact and Alien Interaction (Milijun - A Gripping First Contact Series Book 1)",
-            "author": "Clayton Graham",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81xbh+GbqvL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Milijun-would-alien-interaction-really-ebook/dp/B01A4XY0UI/ref=zg_bs_g_158591011_d_sccl_4/143-1421851-8608722",
-            "hook": "A high-stakes speculative journey into the unknown\u2014free for your Kindle today.",
+            "asin": "B0HRK51DS9",
+            "title": "Death Orbit",
+            "author": "Frank Urena",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81rbl0uUwdL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Death-Orbit-Frank-Urena-ebook/dp/B0HRK51DS9/ref=zg_bs_g_158591011_d_sccl_4/133-6560309-2913769",
+            "hook": "An immersive futuristic escape climbing the Kindle charts today.",
             "genre": "Science Fiction"
         },
         {
-            "asin": "B0HJHSSZ7G",
-            "title": "Written Between Dreams: A Collection of Short Stories",
-            "author": "Indie Author",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/817t+3PW77L._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Written-Between-Dreams-Collection-Stories-ebook/dp/B0HJHSSZ7G/ref=zg_bs_g_157056011_d_sccl_7/143-1421851-8608722",
-            "hook": "A sweeping historical tale steeped in atmosphere and intrigue.",
+            "asin": "B0HMCY7CYB",
+            "title": "12 Nights of Christmas: Holiday Love Stories",
+            "author": "Mercedes De Kooke",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/91XFfikSdbL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/12-Nights-Christmas-Holiday-Stories-ebook/dp/B0HMCY7CYB/ref=zg_bs_g_157056011_d_sccl_12/133-6560309-2913769",
+            "hook": "Rich period detail and unforgettable characters bring the past vividly to life.",
             "genre": "Historical Fiction"
         },
         {
-            "asin": "B0B1QTGFP6",
-            "title": "Psychic for Hire (Paranormal Temp Agency Book 2)",
-            "author": "Molly Fitz",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/91Y40Pi29PL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Psychic-Hire-Paranormal-Temp-Agency-ebook/dp/B0B1QTGFP6/ref=zg_bs_g_157028011_d_sccl_6/143-1421851-8608722",
-            "hook": "Thought-provoking fiction crafted for readers who linger over every page.",
+            "asin": "B0H578TQBF",
+            "title": "The Ghost of Christmas Hearts: A Sweet & Cozy Holiday Fantasy Romance (Spirits in Waiting Book 3)",
+            "author": "Indie Author",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81wyeNJtmtL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Ghost-Christmas-Hearts-Holiday-Fantasy-ebook/dp/B0H578TQBF/ref=zg_bs_g_157028011_d_sccl_1/133-6560309-2913769",
+            "hook": "A resonant, character-driven novel making waves on the charts today.",
             "genre": "Literary Fiction"
         },
         {
-            "asin": "B0H292XD8Z",
-            "title": "The Moment She Let Go: A Sweet Small-Town Christian Romance (Letters to the Wrong Address)",
-            "author": "Dawn Haynes",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/81S7a83k6NL._SL1000_.jpg",
-            "amazon_url": "https://www.amazon.com/Moment-She-Let-Small-Town-Christian-ebook/dp/B0H292XD8Z/ref=zg_bs_g_158566011_d_sccl_4/143-1421851-8608722",
-            "hook": "Undeniable chemistry and heartfelt tension in today's featured romance.",
+            "asin": "B081LKQ49T",
+            "title": "Christmas with Dr. Darling: A Clean Friends to Lovers Romance (Best Friends to Forever)",
+            "author": "Barbara Lohr",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/81uM1bQfggL._SL1000_.jpg",
+            "amazon_url": "https://www.amazon.com/Christmas-Dr-Darling-Friends-Romance-ebook/dp/B081LKQ49T/ref=zg_bs_g_158566011_d_sccl_2/133-6560309-2913769",
+            "hook": "Sparks fly in this chart-topping romance pick.",
             "genre": "Romance"
         }
     ]
